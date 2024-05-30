@@ -1,0 +1,16 @@
+{
+  "name": "roq/Route",
+  "type": "message",
+  "comment": "Route",
+  "values": [
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "status",
+      "type": "roq/RouteRequestStatus",
+      "comment": "Response to the request"
+    }
+  ]
+}

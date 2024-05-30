@@ -1,0 +1,23 @@
+{
+  "name": "roq/UpdateAction",
+  "type": "enum",
+  "comment": "Enumeration of update actions",
+  "values": [
+    {
+      "name": "New",
+      "comment": "New"
+    },
+    {
+      "name": "Change",
+      "comment": "Change"
+    },
+    {
+      "name": "Delete",
+      "comment": "Delete"
+    },
+    {
+      "name": "Trade",
+      "comment": "Trade  !!! FOR INTERNAL USE !!!"
+    }
+  ]
+}

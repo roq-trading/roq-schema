@@ -1,0 +1,13 @@
+{
+  "name": "roq/RemoveRoutes",
+  "type": "message",
+  "comment": "Remove route(s)",
+  "values": [
+    {
+      "name": "strategy_ids",
+      "type": "std/uint32",
+      "array": "std/span",
+      "comment": "List of strategy_id's to remove"
+    }
+  ]
+}

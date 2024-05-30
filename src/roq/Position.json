@@ -1,0 +1,27 @@
+{
+  "name": "roq/Position",
+  "type": "message",
+  "comment": "Position",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "roq/Exchange"
+    },
+    {
+      "name": "symbol",
+      "type": "roq/Symbol"
+    },
+    {
+      "name": "long_position",
+      "type": "std/double",
+      "default": " = 0.0",
+      "comment": "Position (long)"
+    },
+    {
+      "name": "short_position",
+      "type": "std/double",
+      "default": " = 0.0",
+      "comment": "Position (short)"
+    }
+  ]
+}

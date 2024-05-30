@@ -1,0 +1,13 @@
+{
+  "name": "roq/AddRoutes",
+  "type": "message",
+  "comment": "Add route(s)",
+  "values": [
+    {
+      "name": "strategy_ids",
+      "type": "std/uint32",
+      "array": "std/span",
+      "comment": "List of strategy_id's to add"
+    }
+  ]
+}

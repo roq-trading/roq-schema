@@ -1,0 +1,45 @@
+{
+  "name": "roq/Portfolio",
+  "type": "message",
+  "comment": "Portfolio",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "User (optional)"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "positions",
+      "type": "roq/Position",
+      "array": "std/span",
+      "comment": "Position updates"
+    },
+    {
+      "name": "update_type",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    },
+    {
+      "name": "exchange_time_utc",
+      "type": "std/nanoseconds"
+    },
+    {
+      "name": "session_id",
+      "type": "roq/UUID",
+      "comment": "Reference (UUID)"
+    },
+    {
+      "name": "seqno",
+      "type": "std/uint64",
+      "comment": "Reference (sequencing)"
+    }
+  ]
+}

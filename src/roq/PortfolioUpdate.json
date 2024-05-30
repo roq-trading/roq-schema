@@ -1,0 +1,35 @@
+{
+  "name": "roq/PortfolioUpdate",
+  "type": "message",
+  "comment": "Portfolio update",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "User (optional)"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "positions",
+      "type": "roq/Position",
+      "array": "std/span",
+      "comment": "Position updates"
+    },
+    {
+      "name": "update_type",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    },
+    {
+      "name": "exchange_time_utc",
+      "type": "std/nanoseconds"
+    }
+  ]
+}

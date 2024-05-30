@@ -1,0 +1,32 @@
+{
+  "name": "roq/CancelAllOrders",
+  "type": "message",
+  "comment": "Cancel all orders (best effort)",
+  "values": [
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "order_id",
+      "type": "std/uint64"
+    },
+    {
+      "name": "exchange",
+      "type": "std/string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std/string_view"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "side",
+      "type": "roq/Side",
+      "comment": "Side"
+    }
+  ]
+}

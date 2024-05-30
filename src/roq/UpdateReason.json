@@ -1,0 +1,23 @@
+{
+  "name": "roq/UpdateReason",
+  "type": "enum",
+  "comment": "Enumeration of update reasons",
+  "values": [
+    {
+      "name": "Created",
+      "comment": "Created"
+    },
+    {
+      "name": "Modified",
+      "comment": "Modified"
+    },
+    {
+      "name": "Canceled",
+      "comment": "Canceled"
+    },
+    {
+      "name": "Filled",
+      "comment": "Filled"
+    }
+  ]
+}

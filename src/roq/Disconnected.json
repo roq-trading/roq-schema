@@ -1,0 +1,12 @@
+{
+  "name": "roq/Disconnected",
+  "type": "message",
+  "comment": "Disconnected",
+  "values": [
+    {
+      "name": "order_cancel_policy",
+      "type": "roq/OrderCancelPolicy",
+      "comment": "Cancel orders on disconnect?"
+    }
+  ]
+}

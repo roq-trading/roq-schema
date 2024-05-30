@@ -1,0 +1,26 @@
+{
+  "name": "roq/RateLimitsUpdate",
+  "type": "message",
+  "comment": "Rate-limits update",
+  "values": [
+    {
+      "name": "stream_id",
+      "type": "std/uint16"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "origin",
+      "type": "roq/Origin",
+      "comment": "Origin"
+    },
+    {
+      "name": "rate_limits",
+      "type": "roq/RateLimit",
+      "array": "std/span",
+      "comment": "Rate-limits updates"
+    }
+  ]
+}

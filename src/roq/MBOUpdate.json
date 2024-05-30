@@ -1,0 +1,43 @@
+{
+  "name": "roq/MBOUpdate",
+  "type": "struct",
+  "comment": "Represents an update to be applied to an order book",
+  "values": [
+    {
+      "name": "price",
+      "type": "std/double",
+      "comment": "Price level"
+    },
+    {
+      "name": "quantity",
+      "type": "std/double",
+      "default": " = {}",
+      "comment": "Order quantity (remaining unless update action is fill)"
+    },
+    {
+      "name": "priority",
+      "type": "std/uint64",
+      "comment": "Queue priority (optional)"
+    },
+    {
+      "name": "order_id",
+      "type": "roq/MBOOrderId",
+      "comment": "Order identifier (optional when deleting)"
+    },
+    {
+      "name": "side",
+      "type": "roq/Side",
+      "comment": "Order side (optional when updating an existing order)"
+    },
+    {
+      "name": "action",
+      "type": "roq/UpdateAction",
+      "comment": "Update action"
+    },
+    {
+      "name": "reason",
+      "type": "roq/UpdateReason",
+      "comment": "Update reason (optional)"
+    }
+  ]
+}

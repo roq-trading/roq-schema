@@ -1,0 +1,32 @@
+{
+  "name": "roq/RiskLimitsUpdate",
+  "type": "message",
+  "comment": "Risk limits (publish) !!! EXPERIMENTAL !!!",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "User name (optional)"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view",
+      "comment": "Account name (optional)"
+    },
+    {
+      "name": "limits",
+      "type": "roq/RiskLimit",
+      "array": "std/span",
+      "comment": "Risk limits per {exchange, symbol}"
+    },
+    {
+      "name": "update_type",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    }
+  ]
+}

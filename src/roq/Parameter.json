@@ -1,0 +1,33 @@
+{
+  "name": "roq/Parameter",
+  "type": "struct",
+  "comment": "Represents a single parameter",
+  "values": [
+    {
+      "name": "label",
+      "type": "roq/ParameterKey",
+      "comment": "Label"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "account",
+      "type": "roq/Account"
+    },
+    {
+      "name": "exchange",
+      "type": "roq/Exchange"
+    },
+    {
+      "name": "symbol",
+      "type": "roq/Symbol"
+    },
+    {
+      "name": "value",
+      "type": "roq/ParameterValue",
+      "comment": "Value"
+    }
+  ]
+}

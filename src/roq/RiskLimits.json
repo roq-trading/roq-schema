@@ -1,0 +1,37 @@
+{
+  "name": "roq/RiskLimits",
+  "type": "message",
+  "comment": "Risk limits (receive) !!! EXPERIMENTAL !!!",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "User name (optional)"
+    },
+    {
+      "name": "strategy_id",
+      "type": "std/uint32"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view",
+      "comment": "Account name (optional)"
+    },
+    {
+      "name": "limits",
+      "type": "roq/RiskLimit",
+      "array": "std/span",
+      "comment": "Risk limits per {exchange, symbol}"
+    },
+    {
+      "name": "session_id",
+      "type": "roq/UUID",
+      "comment": "Reference (UUID)"
+    },
+    {
+      "name": "seqno",
+      "type": "std/uint64",
+      "comment": "Reference (sequencing)"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "roq/Connected",
+  "type": "message",
+  "comment": "Connected to gateway",
+  "values": []
+}

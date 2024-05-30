@@ -1,0 +1,6 @@
+{
+  "name": "roq/Stop",
+  "type": "message",
+  "comment": "Signals a stop event",
+  "values": []
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roq/RateLimitType",
+  "type": "enum",
+  "comment": "Rate limit type",
+  "values": [
+    {
+      "name": "OrderAction",
+      "comment": "Any order action: create, modify, cancel, etc."
+    },
+    {
+      "name": "CreateOrder",
+      "comment": "Only create order"
+    },
+    {
+      "name": "Request",
+      "comment": "Requests (count)"
+    },
+    {
+      "name": "RequestWeight",
+      "comment": "Requests (weighted)"
+    }
+  ]
+}

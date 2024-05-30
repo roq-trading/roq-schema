@@ -1,0 +1,29 @@
+{
+  "name": "roq/GatewayStatus",
+  "type": "message",
+  "comment": "Update relating to current gateway service status",
+  "values": [
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "supported",
+      "type": "roq/SupportType",
+      "array": "roq/Mask",
+      "comment": "Supported update types"
+    },
+    {
+      "name": "available",
+      "type": "roq/SupportType",
+      "array": "roq/Mask",
+      "comment": "Available update types (union of all streams, one or more available)"
+    },
+    {
+      "name": "unavailable",
+      "type": "roq/SupportType",
+      "array": "roq/Mask",
+      "comment": "Unavailable update types (union of all streams, one or more unavailable)"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "roq/OrderType",
+  "type": "enum",
+  "comment": "Enumeration of order types",
+  "values": [
+    {
+      "name": "Market"
+    },
+    {
+      "name": "Limit"
+    }
+  ]
+}
