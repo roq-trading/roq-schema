@@ -11,13 +11,14 @@ build:
   script_env:
     - ROQ_BUILD_NUMBER
     - ROQ_BUILD_TYPE
-  script: python -m pip install . -vvv
 
 requirements:
   build:
-    - python
-    - setuptools
-    - rsync
+    - {{ compiler('cxx') }}
+    - clangdev
+    - cmake
+    - doxygen
+    - make
 
 about:
   home: https://roq-trading.com
