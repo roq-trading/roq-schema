@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/TradeReportRejectReason",
+  "tag": 751,
+  "comment": "Reason Trade Capture Request was rejected.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Successful",
+      "raw": "0",
+      "comment": "Successful (default)"
+    },
+    {
+      "name": "InvalidParty",
+      "raw": "1",
+      "comment": "Invalid party information"
+    },
+    {
+      "name": "UnknownInstrument",
+      "raw": "2",
+      "comment": "Unknown instrument"
+    },
+    {
+      "name": "UnauthorizedToReportTrades",
+      "raw": "3",
+      "comment": "Unauthorized to report trades"
+    },
+    {
+      "name": "InvalidTradeType",
+      "raw": "4",
+      "comment": "Invalid trade type"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

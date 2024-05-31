@@ -1,0 +1,63 @@
+{
+  "name": "roq/fix/CxlRejReason",
+  "tag": 102,
+  "comment": "Code to identify reason for cancel rejection",
+  "type": "enum",
+  "values": [
+    {
+      "name": "TooLateToCancel",
+      "raw": "0",
+      "comment": "Too late to cancel"
+    },
+    {
+      "name": "UnknownOrder",
+      "raw": "1",
+      "comment": "Unknown order"
+    },
+    {
+      "name": "BrokerExchangeOption",
+      "raw": "2",
+      "comment": "Broker / Exchange Option"
+    },
+    {
+      "name": "OrderAlreadyPendingCancelOrReplace",
+      "raw": "3",
+      "comment": "Order already in Pending Cancel or Pending Replace status"
+    },
+    {
+      "name": "UnableToProcessOrderMassCancelRequest",
+      "raw": "4",
+      "comment": "Unable to process Order Mass Cancel Request <q>"
+    },
+    {
+      "name": "OrigOrdModTimeNotMatchingTransactTime",
+      "raw": "5",
+      "comment": "OrigOrdModTime <586> did not match last TransactTime <60> of order"
+    },
+    {
+      "name": "DuplicateClOrdId",
+      "raw": "6",
+      "comment": "Duplicate ClOrdID <11> received"
+    },
+    {
+      "name": "PriceExceedsCurrentPrice",
+      "raw": "7",
+      "comment": "Price exceeds current price"
+    },
+    {
+      "name": "PriceExceedsCurrentPriceBand",
+      "raw": "8",
+      "comment": "Price exceeds current price band"
+    },
+    {
+      "name": "InvalidPriceIncrement",
+      "raw": "18",
+      "comment": "Invalid price increment"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

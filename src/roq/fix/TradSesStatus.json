@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/TradSesStatus",
+  "tag": 340,
+  "comment": "State of the trading session",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Halted",
+      "raw": "1",
+      "comment": "Halted"
+    },
+    {
+      "name": "Open",
+      "raw": "2",
+      "comment": "Open"
+    },
+    {
+      "name": "Closed",
+      "raw": "3",
+      "comment": "Closed"
+    },
+    {
+      "name": "PreOpen",
+      "raw": "4",
+      "comment": "Pre-Open"
+    },
+    {
+      "name": "PreClose",
+      "raw": "5",
+      "comment": "Pre-Close"
+    },
+    {
+      "name": "RequestRejected",
+      "raw": "6",
+      "comment": "Request Rejected"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "roq/fix/ExecTransType",
+  "comment": "ExecTransType",
+  "tag": 20,
+  "comment": "Identifies transaction type *** Deprecated in FIX.4.2 ***",
+  "type": "enum",
+  "values": [
+    {
+      "name": "NEW",
+      "raw": "0"
+    },
+    {
+      "name": "CANCEL",
+      "raw": "1"
+    },
+    {
+      "name": "CORRECT",
+      "raw": "2"
+    },
+    {
+      "name": "STATUS",
+      "raw": "3"
+    }
+  ]
+}

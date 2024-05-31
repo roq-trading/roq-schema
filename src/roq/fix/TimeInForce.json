@@ -1,0 +1,74 @@
+{
+  "name": "roq/fix/TimeInForce",
+  "tag": 59,
+  "comment":
+      "Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Day",
+      "raw": "0",
+      "comment": "Day (or session)"
+    },
+    {
+      "name": "GTC",
+      "raw": "1",
+      "comment": "Good Till Cancel (GTC)"
+    },
+    {
+      "name": "OPG",
+      "raw": "2",
+      "comment": "At the Opening (OPG)"
+    },
+    {
+      "name": "IOC",
+      "raw": "3",
+      "comment": "Immediate Or Cancel (IOC)"
+    },
+    {
+      "name": "FOK",
+      "raw": "4",
+      "comment": "Fill Or Kill (FOK)"
+    },
+    {
+      "name": "GTX",
+      "raw": "5",
+      "comment": "Good Till Crossing (GTX)"
+    },
+    {
+      "name": "GTD",
+      "raw": "6",
+      "comment": "Good Till Date (GTD)"
+    },
+    {
+      "name": "AtTheClose",
+      "raw": "7",
+      "comment": "At the Close"
+    },
+    {
+      "name": "GoodThroughCrossing",
+      "raw": "8",
+      "comment": "Good Through Crossing"
+    },
+    {
+      "name": "AtCrossing",
+      "raw": "9",
+      "comment": "At Crossing"
+    },
+    {
+      "name": "GoodForTime",
+      "raw": "A",
+      "comment": "XXX"
+    },
+    {
+      "name": "GFA",
+      "raw": "B",
+      "comment": "XXX"
+    },
+    {
+      "name": "GFM",
+      "raw": "C",
+      "comment": "XXX"
+    }
+  ]
+}

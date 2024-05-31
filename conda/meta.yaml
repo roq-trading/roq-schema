@@ -1,0 +1,29 @@
+package:
+  name: roq-schema
+  version: {{ GIT_DESCRIBE_TAG }}
+
+source:
+  git_url: ..
+
+build:
+  noarch: generic
+  number: {{ ROQ_BUILD_NUMBER if ROQ_BUILD_NUMBER is defined else GIT_DESCRIBE_NUMBER }}
+  script_env:
+    - ROQ_BUILD_NUMBER
+    - ROQ_BUILD_TYPE
+  script: python -m pip install . -vvv
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - rsync
+
+about:
+  home: https://roq-trading.com
+  doc_url: https://roq-trading.com/docs
+  dev_url: https://github.com/roq-trading
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Roq Schema

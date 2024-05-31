@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/SecurityRequestResult",
+  "tag": 560,
+  "comment": "The results returned to a Security Request message",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Valid",
+      "raw": "0",
+      "comment": "Valid request"
+    },
+    {
+      "name": "InvalidOrUnsupported",
+      "raw": "1",
+      "comment": "Invalid or unsupported request"
+    },
+    {
+      "name": "NoInstrumentsFound",
+      "raw": "2",
+      "comment": "No instruments found that match selection criteria"
+    },
+    {
+      "name": "NotAuthorized",
+      "raw": "3",
+      "comment": "Not authorized to retrieve instrument data"
+    },
+    {
+      "name": "TemporarilyUnavailable",
+      "raw": "4",
+      "comment": "Instrument data temporarily unavailable"
+    },
+    {
+      "name": "NotSupported",
+      "raw": "5",
+      "comment": "Request for instrument data not supported"
+    }
+  ]
+}

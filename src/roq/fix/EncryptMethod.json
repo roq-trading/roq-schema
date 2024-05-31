@@ -1,0 +1,43 @@
+{
+  "name": "roq/fix/EncryptMethod",
+  "tag": 98,
+  "comment": "Method of encryption",
+  "type": "enum",
+  "values": [
+    {
+      "name": "None",
+      "raw": "0",
+      "comment": "None / Other"
+    },
+    {
+      "name": "PKCS",
+      "raw": "1",
+      "comment": "PKCS (Proprietary)"
+    },
+    {
+      "name": "DES",
+      "raw": "2",
+      "comment": "DES (ECB Mode)"
+    },
+    {
+      "name": "PKCS_DES",
+      "raw": "3",
+      "comment": "PKCS / DES (Proprietary)"
+    },
+    {
+      "name": "PGP_DES",
+      "raw": "4",
+      "comment": "PGP / DES (Defunct)"
+    },
+    {
+      "name": "PGP_DES_MD5",
+      "raw": "5",
+      "comment": "PGP / DES-MD5 (See app note on FIX web site)"
+    },
+    {
+      "name": "PEM",
+      "raw": "6",
+      "comment": "PEM / DES-MD5 (see app note on FIX web site)"
+    }
+  ]
+}

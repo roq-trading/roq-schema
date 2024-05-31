@@ -1,0 +1,44 @@
+{
+  "name": "roq/codec/fix/SecListGrp",
+  "type": "item",
+  "values": [
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 231,
+      "name": "ContractMultiplier",
+      "type": "roq/Decimal",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 562,
+      "name": "MinTradeVol",
+      "type": "roq/Decimal",
+      "inbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 969,
+      "name": "MinPriceIncrement",
+      "type": "roq/Decimal",
+      "inbound": {}
+    }
+  ]
+}

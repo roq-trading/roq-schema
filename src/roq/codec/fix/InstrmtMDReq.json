@@ -1,0 +1,20 @@
+{
+  "name": "roq/codec/fix/InstrmtMDReq",
+  "type": "item",
+  "values": [
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    }
+  ]
+}

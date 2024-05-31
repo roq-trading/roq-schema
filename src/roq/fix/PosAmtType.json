@@ -1,0 +1,98 @@
+{
+  "name": "roq/fix/PosAmtType",
+  "tag": 707,
+  "comment": "Type of Position amount.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "CashAmount",
+      "raw": "CASH",
+      "comment": "Cash Amount (Corporate Event)"
+    },
+    {
+      "name": "CashResidualAmount",
+      "raw": "CRES",
+      "comment": "Cash Residual Amount"
+    },
+    {
+      "name": "FinalMarkToMarketAmount",
+      "raw": "FMTM",
+      "comment": "Final Mark-to-Market Amount"
+    },
+    {
+      "name": "IncrementalMarkToMarketAmount",
+      "raw": "IMTM",
+      "comment": "Incremental Mark-to-Market Amount"
+    },
+    {
+      "name": "PremiumAmount",
+      "raw": "PREM",
+      "comment": "Premium Amount"
+    },
+    {
+      "name": "StartOfDayMarkToMarketAmount",
+      "raw": "SMTM",
+      "comment": "Start-of-Day Mark-to-Market Amount"
+    },
+    {
+      "name": "TradeVariationAmount",
+      "raw": "TVAR",
+      "comment": "Trade Variation Amount"
+    },
+    {
+      "name": "ValueAdjustedAmount",
+      "raw": "VADJ",
+      "comment": "Value Adjusted Amount"
+    },
+    {
+      "name": "SettlementValue",
+      "raw": "SETL",
+      "comment": "Settlement Value"
+    },
+    {
+      "name": "InitialTradeCouponAmount",
+      "raw": "ICPN",
+      "comment": "Initial Trade Coupon Amount"
+    },
+    {
+      "name": "AccruedCouponAmount",
+      "raw": "ACPN",
+      "comment": "Accrued Coupon Amount"
+    },
+    {
+      "name": "CouponAmount",
+      "raw": "CPN",
+      "comment": "Coupon Amount"
+    },
+    {
+      "name": "IncrementalAccruedCoupon",
+      "raw": "IACPN",
+      "comment": "Incremental Accrued Coupon"
+    },
+    {
+      "name": "CollateralizedMarkToMarket",
+      "raw": "CMTM",
+      "comment": "Collateralized Mark to Market"
+    },
+    {
+      "name": "IncrementalCollateralizedMarkToMarket",
+      "raw": "ICMTM",
+      "comment": "Incremental Collateralized Mark to market"
+    },
+    {
+      "name": "CompensationAmount",
+      "raw": "DLV",
+      "comment": "Compensation Amount"
+    },
+    {
+      "name": "TotalBankedAmount",
+      "raw": "BANK",
+      "comment": "Total Banked Amount"
+    },
+    {
+      "name": "TotalCollateralizedAmount",
+      "raw": "COLAT",
+      "comment": "Total Collateralized Amount"
+    }
+  ]
+}

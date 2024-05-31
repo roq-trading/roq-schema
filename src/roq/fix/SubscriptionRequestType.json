@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/SubscriptionRequestType",
+  "tag": 263,
+  "comment": "Subscription Request Type",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Snapshot",
+      "raw": "0",
+      "comment": "Snapshot"
+    },
+    {
+      "name": "SnapshotUpdates",
+      "raw": "1",
+      "comment": "Snapshot + Updates (Subscribe)"
+    },
+    {
+      "name": "Unsubscribe",
+      "raw": "2",
+      "comment": "Disable previous Snapshot + Update Request (Unsubscribe)"
+    }
+  ]
+}

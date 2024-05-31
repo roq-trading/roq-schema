@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/CommType",
+  "comment": "CommType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "PER_UNIT",
+      "raw": "1",
+      "comment": "per unit (implying shares, par, currency, etc)"
+    },
+    {
+      "name": "PERCENT",
+      "raw": "2",
+      "comment": "percentage"
+    },
+    {
+      "name": "ABSOLUTE",
+      "raw": "3",
+      "comment": "absolute (total monetary amount)"
+    },
+    {
+      "name": "PERCENTAGE_WAIVED_LESS_CASH_DISCOUNT",
+      "raw": "4",
+      "comment": "(for CIV buy orders) percentage waived - cash discount"
+    },
+    {
+      "name": "PERCENTAGE_WAIVED_LESS_ENHANCED_UNITS",
+      "raw": "5",
+      "comment": "(for CIV buy orders) percentage waived - enhanced units"
+    },
+    {
+      "name": "POINTS_PER_BOND_OR_CONTRACT",
+      "raw": "6",
+      "comment":
+          "points per bond or or contract [Supply ContractMultiplier <231> in the <Instrument> component block if the object security is denominated in a size other than the industry default - 1000 par for bonds.]"
+    }
+  ]
+}

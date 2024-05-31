@@ -1,0 +1,379 @@
+{
+  "name": "roq/fix/MsgType",
+  "comment": "MsgType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "HEARTBEAT",
+      "raw": "0"
+    },
+    {
+      "name": "TEST_REQUEST",
+      "raw": "1"
+    },
+    {
+      "name": "RESEND_REQUEST",
+      "raw": "2"
+    },
+    {
+      "name": "REJECT",
+      "raw": "3"
+    },
+    {
+      "name": "SEQUENCE_RESET",
+      "raw": "4"
+    },
+    {
+      "name": "LOGOUT",
+      "raw": "5"
+    },
+    {
+      "name": "IOI",
+      "raw": "6"
+    },
+    {
+      "name": "ADVERTISEMENT",
+      "raw": "7"
+    },
+    {
+      "name": "EXECUTION_REPORT",
+      "raw": "8"
+    },
+    {
+      "name": "ORDER_CANCEL_REJECT",
+      "raw": "9"
+    },
+    {
+      "name": "LOGON",
+      "raw": "A"
+    },
+    {
+      "name": "DERIVATIVE_SECURITY_LIST",
+      "raw": "AA"
+    },
+    {
+      "name": "NEW_ORDER_MULTILEG",
+      "raw": "AB"
+    },
+    {
+      "name": "MULTILEG_ORDER_CANCEL_REPLACE",
+      "raw": "AC"
+    },
+    {
+      "name": "TRADE_CAPTURE_REPORT_REQUEST",
+      "raw": "AD"
+    },
+    {
+      "name": "TRADE_CAPTURE_REPORT",
+      "raw": "AE"
+    },
+    {
+      "name": "ORDER_MASS_STATUS_REQUEST",
+      "raw": "AF"
+    },
+    {
+      "name": "QUOTE_REQUEST_REJECT",
+      "raw": "AG"
+    },
+    {
+      "name": "RFQ_REQUEST",
+      "raw": "AH"
+    },
+    {
+      "name": "QUOTE_STATUS_REPORT",
+      "raw": "AI"
+    },
+    {
+      "name": "QUOTE_RESPONSE",
+      "raw": "AJ"
+    },
+    {
+      "name": "CONFIRMATION",
+      "raw": "AK"
+    },
+    {
+      "name": "POSITION_MAINTENANCE_REQUEST",
+      "raw": "AL"
+    },
+    {
+      "name": "POSITION_MAINTENANCE_REPORT",
+      "raw": "AM"
+    },
+    {
+      "name": "REQUEST_FOR_POSITIONS",
+      "raw": "AN"
+    },
+    {
+      "name": "REQUEST_FOR_POSITIONS_ACK",
+      "raw": "AO"
+    },
+    {
+      "name": "POSITION_REPORT",
+      "raw": "AP"
+    },
+    {
+      "name": "TRADE_CAPTURE_REPORT_REQUEST_ACK",
+      "raw": "AQ"
+    },
+    {
+      "name": "TRADE_CAPTURE_REPORT_ACK",
+      "raw": "AR"
+    },
+    {
+      "name": "ALLOCATION_REPORT",
+      "raw": "AS"
+    },
+    {
+      "name": "ALLOCATION_REPORT_ACK",
+      "raw": "AT"
+    },
+    {
+      "name": "CONFIRMATION_ACK",
+      "raw": "AU"
+    },
+    {
+      "name": "SETTLEMENT_INSTRUCTION_REQUEST",
+      "raw": "AV"
+    },
+    {
+      "name": "ASSIGNMENT_REPORT",
+      "raw": "AW"
+    },
+    {
+      "name": "COLLATERAL_REQUEST",
+      "raw": "AX"
+    },
+    {
+      "name": "COLLATERAL_ASSIGNMENT",
+      "raw": "AY"
+    },
+    {
+      "name": "COLLATERAL_RESPONSE",
+      "raw": "AZ"
+    },
+    {
+      "name": "NEWS",
+      "raw": "B"
+    },
+    {
+      "name": "COLLATERAL_REPORT",
+      "raw": "BA"
+    },
+    {
+      "name": "COLLATERAL_INQUIRY",
+      "raw": "BB"
+    },
+    {
+      "name": "NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST",
+      "raw": "BC"
+    },
+    {
+      "name": "NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE",
+      "raw": "BD"
+    },
+    {
+      "name": "USER_REQUEST",
+      "raw": "BE"
+    },
+    {
+      "name": "USER_RESPONSE",
+      "raw": "BF"
+    },
+    {
+      "name": "COLLATERAL_INQUIRY_ACK",
+      "raw": "BG"
+    },
+    {
+      "name": "CONFIRMATION_REQUEST",
+      "raw": "BH"
+    },
+    {
+      "name": "EMAIL",
+      "raw": "C"
+    },
+    {
+      "name": "NEW_ORDER_SINGLE",
+      "raw": "D"
+    },
+    {
+      "name": "NEW_ORDER_LIST",
+      "raw": "E"
+    },
+    {
+      "name": "ORDER_CANCEL_REQUEST",
+      "raw": "F"
+    },
+    {
+      "name": "ORDER_CANCEL_REPLACE_REQUEST",
+      "raw": "G"
+    },
+    {
+      "name": "ORDER_STATUS_REQUEST",
+      "raw": "H"
+    },
+    {
+      "name": "ALLOCATION_INSTRUCTION",
+      "raw": "J"
+    },
+    {
+      "name": "LIST_CANCEL_REQUEST",
+      "raw": "K"
+    },
+    {
+      "name": "LIST_EXECUTE",
+      "raw": "L"
+    },
+    {
+      "name": "LIST_STATUS_REQUEST",
+      "raw": "M"
+    },
+    {
+      "name": "LIST_STATUS",
+      "raw": "N"
+    },
+    {
+      "name": "ALLOCATION_INSTRUCTION_ACK",
+      "raw": "P"
+    },
+    {
+      "name": "DONT_KNOW_TRADE_DK",
+      "raw": "Q"
+    },
+    {
+      "name": "QUOTE_REQUEST",
+      "raw": "R"
+    },
+    {
+      "name": "QUOTE",
+      "raw": "S"
+    },
+    {
+      "name": "SETTLEMENT_INSTRUCTIONS",
+      "raw": "T"
+    },
+    {
+      "name": "MARKET_DATA_REQUEST",
+      "raw": "V"
+    },
+    {
+      "name": "MARKET_DATA_SNAPSHOT_FULL_REFRESH",
+      "raw": "W"
+    },
+    {
+      "name": "MARKET_DATA_INCREMENTAL_REFRESH",
+      "raw": "X"
+    },
+    {
+      "name": "MARKET_DATA_REQUEST_REJECT",
+      "raw": "Y"
+    },
+    {
+      "name": "QUOTE_CANCEL",
+      "raw": "Z"
+    },
+    {
+      "name": "QUOTE_STATUS_REQUEST",
+      "raw": "a"
+    },
+    {
+      "name": "MASS_QUOTE_ACKNOWLEDGEMENT",
+      "raw": "b"
+    },
+    {
+      "name": "SECURITY_DEFINITION_REQUEST",
+      "raw": "c"
+    },
+    {
+      "name": "SECURITY_DEFINITION",
+      "raw": "d"
+    },
+    {
+      "name": "SECURITY_STATUS_REQUEST",
+      "raw": "e"
+    },
+    {
+      "name": "SECURITY_STATUS",
+      "raw": "f"
+    },
+    {
+      "name": "TRADING_SESSION_STATUS_REQUEST",
+      "raw": "g"
+    },
+    {
+      "name": "TRADING_SESSION_STATUS",
+      "raw": "h"
+    },
+    {
+      "name": "MASS_QUOTE",
+      "raw": "i"
+    },
+    {
+      "name": "BUSINESS_MESSAGE_REJECT",
+      "raw": "j"
+    },
+    {
+      "name": "BID_REQUEST",
+      "raw": "k"
+    },
+    {
+      "name": "BID_RESPONSE",
+      "raw": "l"
+    },
+    {
+      "name": "LIST_STRIKE_PRICE",
+      "raw": "m"
+    },
+    {
+      "name": "XML_NON_FIX",
+      "raw": "n"
+    },
+    {
+      "name": "REGISTRATION_INSTRUCTIONS",
+      "raw": "o"
+    },
+    {
+      "name": "REGISTRATION_INSTRUCTIONS_RESPONSE",
+      "raw": "p"
+    },
+    {
+      "name": "ORDER_MASS_CANCEL_REQUEST",
+      "raw": "q"
+    },
+    {
+      "name": "ORDER_MASS_CANCEL_REPORT",
+      "raw": "r"
+    },
+    {
+      "name": "NEW_ORDER_CROSS",
+      "raw": "s"
+    },
+    {
+      "name": "CROSS_ORDER_CANCEL_REPLACE_REQUEST",
+      "raw": "t"
+    },
+    {
+      "name": "CROSS_ORDER_CANCEL_REQUEST",
+      "raw": "u"
+    },
+    {
+      "name": "SECURITY_TYPE_REQUEST",
+      "raw": "v"
+    },
+    {
+      "name": "SECURITY_TYPES",
+      "raw": "w"
+    },
+    {
+      "name": "SECURITY_LIST_REQUEST",
+      "raw": "x"
+    },
+    {
+      "name": "SECURITY_LIST",
+      "raw": "y"
+    },
+    {
+      "name": "DERIVATIVE_SECURITY_LIST_REQUEST",
+      "raw": "z"
+    }
+  ]
+}

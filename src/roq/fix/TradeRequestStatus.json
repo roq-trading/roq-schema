@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/TradeRequestStatus",
+  "tag": 750,
+  "comment": "Status of Trade Request.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Accepted",
+      "raw": "0",
+      "comment": "Accepted"
+    },
+    {
+      "name": "Completed",
+      "raw": "1",
+      "comment": "Completed"
+    },
+    {
+      "name": "Rejected",
+      "raw": "2",
+      "comment": "Rejected"
+    }
+  ]
+}

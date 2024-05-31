@@ -1,0 +1,119 @@
+{
+  "name": "roq/fix/ExecType",
+  "tag": 150,
+  "comment":
+      "Describes the specific Execution Report (i.e. Pending Cancel) while OrdStatus <39> will always identify the current order status (i.e. Partially Filled)",
+  "type": "enum",
+  "values": [
+    {
+      "name": "New",
+      "raw": "0",
+      "comment": "New"
+    },
+    {
+      "name": "PartialFill",
+      "raw": "1",
+      "comment": "FIX 4.2, dropped later"
+    },
+    {
+      "name": "Fill",
+      "raw": "2",
+      "comment": "FIX 4.2, dropped later"
+    },
+    {
+      "name": "DoneForDay",
+      "raw": "3",
+      "comment": "Done for day"
+    },
+    {
+      "name": "Canceled",
+      "raw": "4",
+      "comment": "Canceled"
+    },
+    {
+      "name": "Replaced",
+      "raw": "5",
+      "comment": "Replaced"
+    },
+    {
+      "name": "PendingCancel",
+      "raw": "6",
+      "comment": "Pending Cancel (e.g. result of Order Cancel Request <F>)"
+    },
+    {
+      "name": "Stopped",
+      "raw": "7",
+      "comment": "Stopped"
+    },
+    {
+      "name": "Rejected",
+      "raw": "8",
+      "comment": "Stopped"
+    },
+    {
+      "name": "Suspended",
+      "raw": "9",
+      "comment": "Suspended"
+    },
+    {
+      "name": "PendingNew",
+      "raw": "A",
+      "comment": "Pending New"
+    },
+    {
+      "name": "Calculated",
+      "raw": "B",
+      "comment": "Calculated"
+    },
+    {
+      "name": "Expired",
+      "raw": "C",
+      "comment": "Expired"
+    },
+    {
+      "name": "Restated",
+      "raw": "D",
+      "comment": "Restated (Execution Report <8> sent unsolicited by sellside, with ExecRestatementReason <378> set)"
+    },
+    {
+      "name": "PendingReplace",
+      "raw": "E",
+      "comment": "Pending Replace (e.g. result of Order Cancel/Replace Request <G>)"
+    },
+    {
+      "name": "Trade",
+      "raw": "F",
+      "comment": "Trade (partial fill or fill)"
+    },
+    {
+      "name": "TradeCorrect",
+      "raw": "G",
+      "comment": "Trade Correct"
+    },
+    {
+      "name": "TradeCancel",
+      "raw": "H",
+      "comment": "Trade Cancel"
+    },
+    {
+      "name": "OrderStatus",
+      "raw": "I",
+      "comment": "Order Status"
+    },
+    {
+      "name": "TRADE_IN_A_CLEARING_HOLD",
+      "raw": "J",
+      "comment": "Trade in a Clearing Hold"
+    },
+    {
+      "name": "TradeHasBeenReleasedToClearing",
+      "raw": "K",
+      "comment": "Trade has been released to Clearing"
+    },
+    {
+      "name": "TriggeredOrActivatedBySystem",
+      "raw": "L",
+      "comment": "Triggered or Activated by System"
+    }
+  ]
+}

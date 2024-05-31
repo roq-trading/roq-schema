@@ -1,0 +1,100 @@
+{
+  "name": "roq/codec/fix/RequestForPositions",
+  "type": "comp",
+  "tag": "AN",
+  "comment": "This message is used to request position reports.",
+  "values": [
+    {
+      "tag": 710,
+      "name": "PosReqId",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 724,
+      "name": "PosReqType",
+      "type": "roq/fix/PosReqType",
+      "required": true,
+      "inbound": {
+        "comment": "Only :code:`POSITIONS` (:code:`0`) is supported."
+      }
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "inbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`SNAPSHOT:` (:code:`0`)",
+          "* :code:`SNAPSHOT_UPDATES:` (:code:`1`)",
+          "* :code:`UNSUBSCRIBE:` (:code:`2`)"
+        ]
+      }
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "required": true,
+      "inbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 581,
+      "name": "AccountType",
+      "type": "roq/fix/AccountType",
+      "required": true
+    },
+    {
+      "tag": 15,
+      "name": "Currency",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 715,
+      "name": "ClearingBusinessDate",
+      "type": "std/year_month_day",
+      "required": true
+    },
+    {
+      "tag": 386,
+      "name": "NoTradingSessions",
+      "type": "roq/codec/fix/TradingSession",
+      "array": "std/span"
+    },
+    {
+      "tag": 60,
+      "name": "TransactTime",
+      "type": "std/milliseconds",
+      "required": true
+    }
+  ]
+}

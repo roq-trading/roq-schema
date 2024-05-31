@@ -1,0 +1,2235 @@
+{
+  "name": "roq/fix/Field",
+  "comment": "Field",
+  "type": "enum2",
+  "values": [
+    {
+      "name": "ACCOUNT",
+      "raw": "1"
+    },
+    {
+      "name": "AVG_PX",
+      "raw": "6"
+    },
+    {
+      "name": "BEGIN_SEQ_NO",
+      "raw": "7"
+    },
+    {
+      "name": "BEGIN_STRING",
+      "raw": "8"
+    },
+    {
+      "name": "BODY_LENGTH",
+      "raw": "9"
+    },
+    {
+      "name": "CHECK_SUM",
+      "raw": "10"
+    },
+    {
+      "name": "CL_ORD_ID",
+      "raw": "11"
+    },
+    {
+      "name": "COMMISSION",
+      "raw": "12"
+    },
+    {
+      "name": "COMM_TYPE",
+      "raw": "13"
+    },
+    {
+      "name": "CUM_QTY",
+      "raw": "14"
+    },
+    {
+      "name": "CURRENCY",
+      "raw": "15"
+    },
+    {
+      "name": "END_SEQ_NO",
+      "raw": "16"
+    },
+    {
+      "name": "EXEC_ID",
+      "raw": "17"
+    },
+    {
+      "name": "EXEC_INST",
+      "raw": "18"
+    },
+    {
+      "name": "EXEC_REF_ID",
+      "raw": "19"
+    },
+    {
+      "name": "EXEC_TRANS_TYPE",
+      "raw": "20"
+    },
+    {
+      "name": "HANDL_INST",
+      "raw": "21"
+    },
+    {
+      "name": "SECURITY_ID_SOURCE",
+      "raw": "22"
+    },
+    {
+      "name": "IOI_ID",
+      "raw": "23"
+    },
+    {
+      "name": "IOI_QLTY_IND",
+      "raw": "25"
+    },
+    {
+      "name": "IOI_REF_ID",
+      "raw": "26"
+    },
+    {
+      "name": "IOI_QTY",
+      "raw": "27"
+    },
+    {
+      "name": "IOI_TRANS_TYPE",
+      "raw": "28"
+    },
+    {
+      "name": "LAST_CAPACITY",
+      "raw": "29"
+    },
+    {
+      "name": "LAST_MKT",
+      "raw": "30"
+    },
+    {
+      "name": "LAST_PX",
+      "raw": "31"
+    },
+    {
+      "name": "LAST_QTY",
+      "raw": "32"
+    },
+    {
+      "name": "NO_LINES_OF_TEXT",
+      "raw": "33"
+    },
+    {
+      "name": "MSG_SEQ_NUM",
+      "raw": "34"
+    },
+    {
+      "name": "MSG_TYPE",
+      "raw": "35"
+    },
+    {
+      "name": "NEW_SEQ_NO",
+      "raw": "36"
+    },
+    {
+      "name": "ORDER_ID",
+      "raw": "37"
+    },
+    {
+      "name": "ORDER_QTY",
+      "raw": "38"
+    },
+    {
+      "name": "ORD_STATUS",
+      "raw": "39"
+    },
+    {
+      "name": "ORD_TYPE",
+      "raw": "40"
+    },
+    {
+      "name": "ORIG_CL_ORD_ID",
+      "raw": "41"
+    },
+    {
+      "name": "ORIG_TIME",
+      "raw": "42"
+    },
+    {
+      "name": "POSS_DUP_FLAG",
+      "raw": "43"
+    },
+    {
+      "name": "PRICE",
+      "raw": "44"
+    },
+    {
+      "name": "REF_SEQ_NUM",
+      "raw": "45"
+    },
+    {
+      "name": "SECURITY_ID",
+      "raw": "48"
+    },
+    {
+      "name": "SENDER_COMP_ID",
+      "raw": "49"
+    },
+    {
+      "name": "SENDER_SUB_ID",
+      "raw": "50"
+    },
+    {
+      "name": "SENDING_TIME",
+      "raw": "52"
+    },
+    {
+      "name": "SIDE",
+      "raw": "54"
+    },
+    {
+      "name": "SYMBOL",
+      "raw": "55"
+    },
+    {
+      "name": "TARGET_COMP_ID",
+      "raw": "56"
+    },
+    {
+      "name": "TARGET_SUB_ID",
+      "raw": "57"
+    },
+    {
+      "name": "TEXT",
+      "raw": "58"
+    },
+    {
+      "name": "TIME_IN_FORCE",
+      "raw": "59"
+    },
+    {
+      "name": "TRANSACT_TIME",
+      "raw": "60"
+    },
+    {
+      "name": "URGENCY",
+      "raw": "61"
+    },
+    {
+      "name": "VALID_UNTIL_TIME",
+      "raw": "62"
+    },
+    {
+      "name": "SETTL_TYPE",
+      "raw": "63"
+    },
+    {
+      "name": "SETTL_DATE",
+      "raw": "64"
+    },
+    {
+      "name": "SYMBOL_SFX",
+      "raw": "65"
+    },
+    {
+      "name": "LIST_ID",
+      "raw": "66"
+    },
+    {
+      "name": "ALLOC_ID",
+      "raw": "70"
+    },
+    {
+      "name": "TRADE_DATE",
+      "raw": "75"
+    },
+    {
+      "name": "POSITION_EFFECT",
+      "raw": "77"
+    },
+    {
+      "name": "NO_ALLOCS",
+      "raw": "78"
+    },
+    {
+      "name": "PROCESS_CODE",
+      "raw": "81"
+    },
+    {
+      "name": "RPT_SEQ",
+      "raw": "83"
+    },
+    {
+      "name": "SIGNATURE",
+      "raw": "89"
+    },
+    {
+      "name": "SECURE_DATA_LEN",
+      "raw": "90"
+    },
+    {
+      "name": "SECURE_DATA",
+      "raw": "91"
+    },
+    {
+      "name": "SIGNATURE_LENGTH",
+      "raw": "93"
+    },
+    {
+      "name": "RAW_DATA_LENGTH",
+      "raw": "95"
+    },
+    {
+      "name": "RAW_DATA",
+      "raw": "96"
+    },
+    {
+      "name": "POSS_RESEND",
+      "raw": "97"
+    },
+    {
+      "name": "ENCRYPT_METHOD",
+      "raw": "98"
+    },
+    {
+      "name": "STOP_PX",
+      "raw": "99"
+    },
+    {
+      "name": "EX_DESTINATION",
+      "raw": "100"
+    },
+    {
+      "name": "CXL_REJ_REASON",
+      "raw": "102"
+    },
+    {
+      "name": "ORD_REJ_REASON",
+      "raw": "103"
+    },
+    {
+      "name": "ISSUER",
+      "raw": "106"
+    },
+    {
+      "name": "SECURITY_DESC",
+      "raw": "107"
+    },
+    {
+      "name": "HEART_BT_INT",
+      "raw": "108"
+    },
+    {
+      "name": "MIN_QTY",
+      "raw": "110"
+    },
+    {
+      "name": "MAX_FLOOR",
+      "raw": "111"
+    },
+    {
+      "name": "TEST_REQ_ID",
+      "raw": "112"
+    },
+    {
+      "name": "REPORT_TO_EXCH",
+      "raw": "113"
+    },
+    {
+      "name": "LOCATE_REQD",
+      "raw": "114"
+    },
+    {
+      "name": "ON_BEHALF_OF_COMP_ID",
+      "raw": "115"
+    },
+    {
+      "name": "ON_BEHALF_OF_SUB_ID",
+      "raw": "116"
+    },
+    {
+      "name": "QUOTE_ID",
+      "raw": "117"
+    },
+    {
+      "name": "NET_MONEY",
+      "raw": "118"
+    },
+    {
+      "name": "SETTL_CURR_AMT",
+      "raw": "119"
+    },
+    {
+      "name": "SETTL_CURRENCY",
+      "raw": "120"
+    },
+    {
+      "name": "FOREX_REQ",
+      "raw": "121"
+    },
+    {
+      "name": "ORIG_SENDING_TIME",
+      "raw": "122"
+    },
+    {
+      "name": "GAP_FILL_FLAG",
+      "raw": "123"
+    },
+    {
+      "name": "EXPIRE_TIME",
+      "raw": "126"
+    },
+    {
+      "name": "DELIVER_TO_COMP_ID",
+      "raw": "128"
+    },
+    {
+      "name": "DELIVER_TO_SUB_ID",
+      "raw": "129"
+    },
+    {
+      "name": "IOI_NATURAL_FLAG",
+      "raw": "130"
+    },
+    {
+      "name": "NO_MISC_FEES",
+      "raw": "136"
+    },
+    {
+      "name": "MISC_FEE_AMT",
+      "raw": "137"
+    },
+    {
+      "name": "MISC_FEE_CURR",
+      "raw": "138"
+    },
+    {
+      "name": "MISC_FEE_TYPE",
+      "raw": "139"
+    },
+    {
+      "name": "PREV_CLOSE_PX",
+      "raw": "140"
+    },
+    {
+      "name": "RESET_SEQ_NUM_FLAG",
+      "raw": "141"
+    },
+    {
+      "name": "SENDER_LOCATION_ID",
+      "raw": "142"
+    },
+    {
+      "name": "TARGET_LOCATION_ID",
+      "raw": "143"
+    },
+    {
+      "name": "ON_BEHALF_OF_LOCATION_ID",
+      "raw": "144"
+    },
+    {
+      "name": "DELIVER_TO_LOCATION_ID",
+      "raw": "145"
+    },
+    {
+      "name": "NO_RELATED_SYM",
+      "raw": "146"
+    },
+    {
+      "name": "HEADLINE",
+      "raw": "148"
+    },
+    {
+      "name": "URL_LINK",
+      "raw": "149"
+    },
+    {
+      "name": "EXEC_TYPE",
+      "raw": "150"
+    },
+    {
+      "name": "LEAVES_QTY",
+      "raw": "151"
+    },
+    {
+      "name": "CASH_ORDER_QTY",
+      "raw": "152"
+    },
+    {
+      "name": "SETTL_CURR_FX_RATE",
+      "raw": "155"
+    },
+    {
+      "name": "SETTL_CURR_FX_RATE_CALC",
+      "raw": "156"
+    },
+    {
+      "name": "NUM_DAYS_INTEREST",
+      "raw": "157"
+    },
+    {
+      "name": "ACCRUED_INTEREST_RATE",
+      "raw": "158"
+    },
+    {
+      "name": "ACCRUED_INTEREST_AMT",
+      "raw": "159"
+    },
+    {
+      "name": "SECURITY_TYPE",
+      "raw": "167"
+    },
+    {
+      "name": "EFFECTIVE_TIME",
+      "raw": "168"
+    },
+    {
+      "name": "ORDER_QTY_2",
+      "raw": "192"
+    },
+    {
+      "name": "SETTL_DATE_2",
+      "raw": "193"
+    },
+    {
+      "name": "LAST_SPOT_RATE",
+      "raw": "194"
+    },
+    {
+      "name": "LAST_FORWARD_POINTS",
+      "raw": "195"
+    },
+    {
+      "name": "SECONDARY_ORDER_ID",
+      "raw": "198"
+    },
+    {
+      "name": "MATURITY_MONTH_YEAR",
+      "raw": "200"
+    },
+    {
+      "name": "PUT_OR_CALL",
+      "raw": "201"
+    },
+    {
+      "name": "STRIKE_PRICE",
+      "raw": "202"
+    },
+    {
+      "name": "COVERED_OR_UNCOVERED",
+      "raw": "203"
+    },
+    {
+      "name": "OPT_ATTRIBUTE",
+      "raw": "206"
+    },
+    {
+      "name": "SECURITY_EXCHANGE",
+      "raw": "207"
+    },
+    {
+      "name": "MAX_SHOW",
+      "raw": "210"
+    },
+    {
+      "name": "XML_DATA_LEN",
+      "raw": "212"
+    },
+    {
+      "name": "XML_DATA",
+      "raw": "213"
+    },
+    {
+      "name": "NO_ROUTING_IDS",
+      "raw": "215"
+    },
+    {
+      "name": "ROUTING_TYPE",
+      "raw": "216"
+    },
+    {
+      "name": "ROUTING_ID",
+      "raw": "217"
+    },
+    {
+      "name": "COUPON_RATE",
+      "raw": "223"
+    },
+    {
+      "name": "COUPON_PAYMENT_DATE",
+      "raw": "224"
+    },
+    {
+      "name": "ISSUE_DATE",
+      "raw": "225"
+    },
+    {
+      "name": "REPURCHASE_TERM",
+      "raw": "226"
+    },
+    {
+      "name": "REPURCHASE_RATE",
+      "raw": "227"
+    },
+    {
+      "name": "FACTOR",
+      "raw": "228"
+    },
+    {
+      "name": "TRADE_ORIGINATION_DATE",
+      "raw": "229"
+    },
+    {
+      "name": "EX_DATE",
+      "raw": "230"
+    },
+    {
+      "name": "CONTRACT_MULTIPLIER",
+      "raw": "231"
+    },
+    {
+      "name": "NO_STIPULATIONS",
+      "raw": "232"
+    },
+    {
+      "name": "STIPULATION_TYPE",
+      "raw": "233"
+    },
+    {
+      "name": "STIPULATION_VALUE",
+      "raw": "234"
+    },
+    {
+      "name": "TOTAL_TAKEDOWN",
+      "raw": "237"
+    },
+    {
+      "name": "CONCESSION",
+      "raw": "238"
+    },
+    {
+      "name": "REPO_COLLATERAL_SECURITY_TYPE",
+      "raw": "239"
+    },
+    {
+      "name": "REDEMPTION_DATE",
+      "raw": "240"
+    },
+    {
+      "name": "CREDIT_RATING",
+      "raw": "255"
+    },
+    {
+      "name": "TRADED_FLAT_SWITCH",
+      "raw": "258"
+    },
+    {
+      "name": "BASIS_FEATURE_DATE",
+      "raw": "259"
+    },
+    {
+      "name": "BASIS_FEATURE_PRICE",
+      "raw": "260"
+    },
+    {
+      "name": "MD_REQ_ID",
+      "raw": "262"
+    },
+    {
+      "name": "SUBSCRIPTION_REQUEST_TYPE",
+      "raw": "263"
+    },
+    {
+      "name": "MARKET_DEPTH",
+      "raw": "264"
+    },
+    {
+      "name": "MD_UPDATE_TYPE",
+      "raw": "265"
+    },
+    {
+      "name": "AGGREGATED_BOOK",
+      "raw": "266"
+    },
+    {
+      "name": "NO_MD_ENTRY_TYPES",
+      "raw": "267"
+    },
+    {
+      "name": "NO_MD_ENTRIES",
+      "raw": "268"
+    },
+    {
+      "name": "MD_ENTRY_TYPE",
+      "raw": "269"
+    },
+    {
+      "name": "MD_ENTRY_PX",
+      "raw": "270"
+    },
+    {
+      "name": "MD_ENTRY_SIZE",
+      "raw": "271"
+    },
+    {
+      "name": "MD_ENTRY_DATE",
+      "raw": "272"
+    },
+    {
+      "name": "MD_ENTRY_TIME",
+      "raw": "273"
+    },
+    {
+      "name": "TICK_DIRECTION",
+      "raw": "274"
+    },
+    {
+      "name": "MD_MKT",
+      "raw": "275"
+    },
+    {
+      "name": "QUOTE_CONDITION",
+      "raw": "276"
+    },
+    {
+      "name": "TRADE_CONDITION",
+      "raw": "277"
+    },
+    {
+      "name": "MD_ENTRY_ID",
+      "raw": "278"
+    },
+    {
+      "name": "MD_UPDATE_ACTION",
+      "raw": "279"
+    },
+    {
+      "name": "MD_ENTRY_REF_ID",
+      "raw": "280"
+    },
+    {
+      "name": "MD_REQ_REJ_REASON",
+      "raw": "281"
+    },
+    {
+      "name": "MD_ENTRY_ORIGINATOR",
+      "raw": "282"
+    },
+    {
+      "name": "LOCATION_ID",
+      "raw": "283"
+    },
+    {
+      "name": "DESK_ID",
+      "raw": "284"
+    },
+    {
+      "name": "DELETE_REASON",
+      "raw": "285"
+    },
+    {
+      "name": "OPEN_CLOSE_SETTL_FLAG",
+      "raw": "286"
+    },
+    {
+      "name": "SELLER_DAYS",
+      "raw": "287"
+    },
+    {
+      "name": "MD_ENTRY_BUYER",
+      "raw": "288"
+    },
+    {
+      "name": "MD_ENTRY_SELLER",
+      "raw": "289"
+    },
+    {
+      "name": "MD_ENTRY_POSITION_NO",
+      "raw": "290"
+    },
+    {
+      "name": "FINANCIAL_STATUS",
+      "raw": "291"
+    },
+    {
+      "name": "CORPORATE_ACTION",
+      "raw": "292"
+    },
+    {
+      "name": "QUOTE_ENTRY_ID",
+      "raw": "299"
+    },
+    {
+      "name": "UNDERLYING_SYMBOL",
+      "raw": "311"
+    },
+    {
+      "name": "SECURITY_REQ_ID",
+      "raw": "320"
+    },
+    {
+      "name": "SECURITY_REQUEST_TYPE",
+      "raw": "321"
+    },
+    {
+      "name": "SECURITY_RESPONSE_ID",
+      "raw": "322"
+    },
+    {
+      "name": "SECURITY_RESPONSE_TYPE",
+      "raw": "323"
+    },
+    {
+      "name": "SECURITY_STATUS_REQ_ID",
+      "raw": "324"
+    },
+    {
+      "name": "UNSOLICITED_INDICATOR",
+      "raw": "325"
+    },
+    {
+      "name": "SECURITY_TRADING_STATUS",
+      "raw": "326"
+    },
+    {
+      "name": "HALT_REASON",
+      "raw": "327"
+    },
+    {
+      "name": "IN_VIEW_OF_COMMON",
+      "raw": "328"
+    },
+    {
+      "name": "DUE_TO_RELATED",
+      "raw": "329"
+    },
+    {
+      "name": "BUY_VOLUME",
+      "raw": "330"
+    },
+    {
+      "name": "SELL_VOLUME",
+      "raw": "331"
+    },
+    {
+      "name": "HIGH_PX",
+      "raw": "332"
+    },
+    {
+      "name": "LOW_PX",
+      "raw": "333"
+    },
+    {
+      "name": "ADJUSTMENT",
+      "raw": "334"
+    },
+    {
+      "name": "TRAD_SES_REQ_ID",
+      "raw": "335"
+    },
+    {
+      "name": "TRADING_SESSION_ID",
+      "raw": "336"
+    },
+    {
+      "name": "TRAD_SES_METHOD",
+      "raw": "338"
+    },
+    {
+      "name": "TRAD_SES_MODE",
+      "raw": "339"
+    },
+    {
+      "name": "TRAD_SES_STATUS",
+      "raw": "340"
+    },
+    {
+      "name": "TRAD_SES_START_TIME",
+      "raw": "341"
+    },
+    {
+      "name": "TRAD_SES_OPEN_TIME",
+      "raw": "342"
+    },
+    {
+      "name": "TRAD_SES_PRE_CLOSE_TIME",
+      "raw": "343"
+    },
+    {
+      "name": "TRAD_SES_CLOSE_TIME",
+      "raw": "344"
+    },
+    {
+      "name": "TRAD_SES_END_TIME",
+      "raw": "345"
+    },
+    {
+      "name": "NUMBER_OF_ORDERS",
+      "raw": "346"
+    },
+    {
+      "name": "MESSAGE_ENCODING",
+      "raw": "347"
+    },
+    {
+      "name": "ENCODED_ISSUER_LEN",
+      "raw": "348"
+    },
+    {
+      "name": "ENCODED_ISSUER",
+      "raw": "349"
+    },
+    {
+      "name": "ENCODED_SECURITY_DESC_LEN",
+      "raw": "350"
+    },
+    {
+      "name": "ENCODED_SECURITY_DESC",
+      "raw": "351"
+    },
+    {
+      "name": "ENCODED_TEXT_LEN",
+      "raw": "354"
+    },
+    {
+      "name": "ENCODED_TEXT",
+      "raw": "355"
+    },
+    {
+      "name": "ENCODED_HEADLINE_LEN",
+      "raw": "358"
+    },
+    {
+      "name": "ENCODED_HEADLINE",
+      "raw": "359"
+    },
+    {
+      "name": "LAST_MSG_SEQ_NUM_PROCESSED",
+      "raw": "369"
+    },
+    {
+      "name": "REF_TAG_ID",
+      "raw": "371"
+    },
+    {
+      "name": "REF_MSG_TYPE",
+      "raw": "372"
+    },
+    {
+      "name": "SESSION_REJECT_REASON",
+      "raw": "373"
+    },
+    {
+      "name": "COMPLIANCE_ID",
+      "raw": "376"
+    },
+    {
+      "name": "SOLICITED_FLAG",
+      "raw": "377"
+    },
+    {
+      "name": "EXEC_RESTATEMENT_REASON",
+      "raw": "378"
+    },
+    {
+      "name": "BUSINESS_REJECT_REF_ID",
+      "raw": "379"
+    },
+    {
+      "name": "BUSINESS_REJECT_REASON",
+      "raw": "380"
+    },
+    {
+      "name": "GROSS_TRADE_AMT",
+      "raw": "381"
+    },
+    {
+      "name": "MAX_MESSAGE_SIZE",
+      "raw": "383"
+    },
+    {
+      "name": "NO_MSG_TYPES",
+      "raw": "384"
+    },
+    {
+      "name": "MSG_DIRECTION",
+      "raw": "385"
+    },
+    {
+      "name": "NO_TRADING_SESSIONS",
+      "raw": "386"
+    },
+    {
+      "name": "TOTAL_VOLUME_TRADED",
+      "raw": "387"
+    },
+    {
+      "name": "TOT_NO_RELATED_SYM",
+      "raw": "393"
+    },
+    {
+      "name": "PRICE_TYPE",
+      "raw": "423"
+    },
+    {
+      "name": "DAY_ORDER_QTY",
+      "raw": "424"
+    },
+    {
+      "name": "DAY_CUM_QTY",
+      "raw": "425"
+    },
+    {
+      "name": "DAY_AVG_PX",
+      "raw": "426"
+    },
+    {
+      "name": "GT_BOOKING_INST",
+      "raw": "427"
+    },
+    {
+      "name": "NET_GROSS_IND",
+      "raw": "430"
+    },
+    {
+      "name": "EXPIRE_DATE",
+      "raw": "432"
+    },
+    {
+      "name": "CXL_REJ_RESPONSE_TO",
+      "raw": "434"
+    },
+    {
+      "name": "MULTI_LEG_REPORTING_TYPE",
+      "raw": "442"
+    },
+    {
+      "name": "PARTY_ID_SOURCE",
+      "raw": "447"
+    },
+    {
+      "name": "PARTY_ID",
+      "raw": "448"
+    },
+    {
+      "name": "NET_CHG_PREV_DAY",
+      "raw": "451"
+    },
+    {
+      "name": "PARTY_ROLE",
+      "raw": "452"
+    },
+    {
+      "name": "NO_PARTY_IDS",
+      "raw": "453"
+    },
+    {
+      "name": "PRODUCT",
+      "raw": "460"
+    },
+    {
+      "name": "CFI_CODE",
+      "raw": "461"
+    },
+    {
+      "name": "TEST_MESSAGE_INDICATOR",
+      "raw": "464"
+    },
+    {
+      "name": "ROUNDING_DIRECTION",
+      "raw": "468"
+    },
+    {
+      "name": "ROUNDING_MODULUS",
+      "raw": "469"
+    },
+    {
+      "name": "COUNTRY_OF_ISSUE",
+      "raw": "470"
+    },
+    {
+      "name": "STATE_OR_PROVINCE_OF_ISSUE",
+      "raw": "471"
+    },
+    {
+      "name": "LOCALE_OF_ISSUE",
+      "raw": "472"
+    },
+    {
+      "name": "COMM_CURRENCY",
+      "raw": "479"
+    },
+    {
+      "name": "CANCELLATION_RIGHTS",
+      "raw": "480"
+    },
+    {
+      "name": "MONEY_LAUNDERING_STATUS",
+      "raw": "481"
+    },
+    {
+      "name": "TRANS_BKD_TIME",
+      "raw": "483"
+    },
+    {
+      "name": "EXEC_PRICE_TYPE",
+      "raw": "484"
+    },
+    {
+      "name": "EXEC_PRICE_ADJUSTMENT",
+      "raw": "485"
+    },
+    {
+      "name": "TRADE_REPORT_TRANS_TYPE",
+      "raw": "487"
+    },
+    {
+      "name": "DESIGNATION",
+      "raw": "494"
+    },
+    {
+      "name": "FUND_RENEW_WAIV",
+      "raw": "497"
+    },
+    {
+      "name": "REGIST_STATUS",
+      "raw": "506"
+    },
+    {
+      "name": "REGIST_ID",
+      "raw": "513"
+    },
+    {
+      "name": "EXEC_VALUATION_POINT",
+      "raw": "515"
+    },
+    {
+      "name": "ORDER_PERCENT",
+      "raw": "516"
+    },
+    {
+      "name": "SECONDARY_CL_ORD_ID",
+      "raw": "526"
+    },
+    {
+      "name": "SECONDARY_EXEC_ID",
+      "raw": "527"
+    },
+    {
+      "name": "ORDER_CAPACITY",
+      "raw": "528"
+    },
+    {
+      "name": "ORDER_RESTRICTIONS",
+      "raw": "529"
+    },
+    {
+      "name": "MASS_CANCEL_REQUEST_TYPE",
+      "raw": "530"
+    },
+    {
+      "name": "MASS_CANCEL_RESPONSE",
+      "raw": "531"
+    },
+    {
+      "name": "MASS_CANCEL_REJECT_REASON",
+      "raw": "532"
+    },
+    {
+      "name": "TOTAL_AFFECTED_ORDERS",
+      "raw": "533"
+    },
+    {
+      "name": "NO_AFFECTED_ORDERS",
+      "raw": "534"
+    },
+    {
+      "name": "AFFECTED_ORDER_ID",
+      "raw": "535"
+    },
+    {
+      "name": "AFFECTED_SECONDARY_ORDER_ID",
+      "raw": "536"
+    },
+    {
+      "name": "QUOTE_TYPE",
+      "raw": "537"
+    },
+    {
+      "name": "MATURITY_DATE",
+      "raw": "541"
+    },
+    {
+      "name": "INSTR_REGISTRY",
+      "raw": "543"
+    },
+    {
+      "name": "CASH_MARGIN",
+      "raw": "544"
+    },
+    {
+      "name": "SCOPE",
+      "raw": "546"
+    },
+    {
+      "name": "MD_IMPLICIT_DELETE",
+      "raw": "547"
+    },
+    {
+      "name": "CROSS_ID",
+      "raw": "548"
+    },
+    {
+      "name": "CROSS_TYPE",
+      "raw": "549"
+    },
+    {
+      "name": "ORIG_CROSS_ID",
+      "raw": "551"
+    },
+    {
+      "name": "NO_SIDES",
+      "raw": "552"
+    },
+    {
+      "name": "USERNAME",
+      "raw": "553"
+    },
+    {
+      "name": "PASSWORD",
+      "raw": "554"
+    },
+    {
+      "name": "NO_LEGS",
+      "raw": "555"
+    },
+    {
+      "name": "SECURITY_LIST_REQUEST_TYPE",
+      "raw": "559"
+    },
+    {
+      "name": "SECURITY_REQUEST_RESULT",
+      "raw": "560"
+    },
+    {
+      "name": "ROUND_LOT",
+      "raw": "561"
+    },
+    {
+      "name": "MIN_TRADE_VOL",
+      "raw": "562"
+    },
+    {
+      "name": "TRAD_SES_STATUS_REJ_REASON",
+      "raw": "567"
+    },
+    {
+      "name": "TRADE_REQUEST_ID",
+      "raw": "568"
+    },
+    {
+      "name": "TRADE_REQUEST_TYPE",
+      "raw": "569"
+    },
+    {
+      "name": "PREVIOUSLY_REPORTED",
+      "raw": "570"
+    },
+    {
+      "name": "TRADE_REPORT_ID",
+      "raw": "571"
+    },
+    {
+      "name": "TRADE_REPORT_REF_ID",
+      "raw": "572"
+    },
+    {
+      "name": "MATCH_STATUS",
+      "raw": "573"
+    },
+    {
+      "name": "MATCH_TYPE",
+      "raw": "574"
+    },
+    {
+      "name": "ODD_LOT",
+      "raw": "575"
+    },
+    {
+      "name": "TRADE_INPUT_SOURCE",
+      "raw": "578"
+    },
+    {
+      "name": "TRADE_INPUT_DEVICE",
+      "raw": "579"
+    },
+    {
+      "name": "ACCOUNT_TYPE",
+      "raw": "581"
+    },
+    {
+      "name": "CUST_ORDER_CAPACITY",
+      "raw": "582"
+    },
+    {
+      "name": "CL_ORD_LINK_ID",
+      "raw": "583"
+    },
+    {
+      "name": "MASS_STATUS_REQ_ID",
+      "raw": "584"
+    },
+    {
+      "name": "MASS_STATUS_REQ_TYPE",
+      "raw": "585"
+    },
+    {
+      "name": "ORIG_ORD_MOD_TIME",
+      "raw": "586"
+    },
+    {
+      "name": "DAY_BOOKING_INST",
+      "raw": "589"
+    },
+    {
+      "name": "BOOKING_UNIT",
+      "raw": "590"
+    },
+    {
+      "name": "PREALLOC_METHOD",
+      "raw": "591"
+    },
+    {
+      "name": "TRADING_SESSION_SUB_ID",
+      "raw": "625"
+    },
+    {
+      "name": "NO_HOPS",
+      "raw": "627"
+    },
+    {
+      "name": "HOP_COMP_ID",
+      "raw": "628"
+    },
+    {
+      "name": "HOP_SENDING_TIME",
+      "raw": "629"
+    },
+    {
+      "name": "HOP_REF_ID",
+      "raw": "630"
+    },
+    {
+      "name": "CLEARING_FEE_INDICATOR",
+      "raw": "635"
+    },
+    {
+      "name": "WORKING_INDICATOR",
+      "raw": "636"
+    },
+    {
+      "name": "PRIORITY_INDICATOR",
+      "raw": "638"
+    },
+    {
+      "name": "PRICE_IMPROVEMENT",
+      "raw": "639"
+    },
+    {
+      "name": "PRICE_2",
+      "raw": "640"
+    },
+    {
+      "name": "LAST_FORWARD_POINTS_2",
+      "raw": "641"
+    },
+    {
+      "name": "UNDERLYING_LAST_PX",
+      "raw": "651"
+    },
+    {
+      "name": "UNDERLYING_LAST_QTY",
+      "raw": "652"
+    },
+    {
+      "name": "ACCT_ID_SOURCE",
+      "raw": "660"
+    },
+    {
+      "name": "CONTRACT_SETTL_MONTH",
+      "raw": "667"
+    },
+    {
+      "name": "LAST_PAR_PX",
+      "raw": "669"
+    },
+    {
+      "name": "POOL",
+      "raw": "691"
+    },
+    {
+      "name": "QUOTE_RESP_ID",
+      "raw": "693"
+    },
+    {
+      "name": "NO_POSITIONS",
+      "raw": "702"
+    },
+    {
+      "name": "POS_TYPE",
+      "raw": "703"
+    },
+    {
+      "name": "LONG_QTY",
+      "raw": "704"
+    },
+    {
+      "name": "SHORT_QTY",
+      "raw": "705"
+    },
+    {
+      "name": "POS_QTY_STATUS",
+      "raw": "706"
+    },
+    {
+      "name": "POS_AMT_TYPE",
+      "raw": "707"
+    },
+    {
+      "name": "POS_AMT",
+      "raw": "708"
+    },
+    {
+      "name": "POS_REQ_ID",
+      "raw": "710"
+    },
+    {
+      "name": "NO_UNDERLYINGS",
+      "raw": "711"
+    },
+    {
+      "name": "CLEARING_BUSINESS_DATE",
+      "raw": "715"
+    },
+    {
+      "name": "SETTL_SESS_ID",
+      "raw": "716"
+    },
+    {
+      "name": "SETTL_SESS_SUB_ID",
+      "raw": "717"
+    },
+    {
+      "name": "POS_MAINT_RPT_ID",
+      "raw": "721"
+    },
+    {
+      "name": "POS_REQ_TYPE",
+      "raw": "724"
+    },
+    {
+      "name": "RESPONSE_TRANSPORT_TYPE",
+      "raw": "725"
+    },
+    {
+      "name": "RESPONSE_DESTINATION",
+      "raw": "726"
+    },
+    {
+      "name": "TOTAL_NUM_POS_REPORTS",
+      "raw": "727"
+    },
+    {
+      "name": "POS_REQ_RESULT",
+      "raw": "728"
+    },
+    {
+      "name": "POS_REQ_STATUS",
+      "raw": "729"
+    },
+    {
+      "name": "SETTL_PRICE",
+      "raw": "730"
+    },
+    {
+      "name": "SETTL_PRICE_TYPE",
+      "raw": "731"
+    },
+    {
+      "name": "PRIOR_SETTL_PRICE",
+      "raw": "734"
+    },
+    {
+      "name": "INTEREST_AT_MATURITY",
+      "raw": "738"
+    },
+    {
+      "name": "DELIVERY_DATE",
+      "raw": "743"
+    },
+    {
+      "name": "OPEN_INTEREST",
+      "raw": "746"
+    },
+    {
+      "name": "TOT_NUM_TRADE_REPORTS",
+      "raw": "748"
+    },
+    {
+      "name": "TRADE_REQUEST_RESULT",
+      "raw": "749"
+    },
+    {
+      "name": "TRADE_REQUEST_STATUS",
+      "raw": "750"
+    },
+    {
+      "name": "TRADE_REPORT_REJECT_REASON",
+      "raw": "751"
+    },
+    {
+      "name": "SIDE_MULTI_LEG_REPORTING_TYPE",
+      "raw": "752"
+    },
+    {
+      "name": "NO_POS_AMT",
+      "raw": "753"
+    },
+    {
+      "name": "SECURITY_SUB_TYPE",
+      "raw": "762"
+    },
+    {
+      "name": "BOOKING_TYPE",
+      "raw": "775"
+    },
+    {
+      "name": "LAST_UPDATE_TIME",
+      "raw": "779"
+    },
+    {
+      "name": "NEXT_EXPECTED_MSG_SEQ_NUM",
+      "raw": "789"
+    },
+    {
+      "name": "ORD_STATUS_REQ_ID",
+      "raw": "790"
+    },
+    {
+      "name": "COPY_MSG_INDICATOR",
+      "raw": "797"
+    },
+    {
+      "name": "UNDERLYING_PX",
+      "raw": "810"
+    },
+    {
+      "name": "PRICE_DELTA",
+      "raw": "811"
+    },
+    {
+      "name": "APPL_QUEUE_MAX",
+      "raw": "812"
+    },
+    {
+      "name": "APPL_QUEUE_DEPTH",
+      "raw": "813"
+    },
+    {
+      "name": "APPL_QUEUE_RESOLUTION",
+      "raw": "814"
+    },
+    {
+      "name": "APPL_QUEUE_ACTION",
+      "raw": "815"
+    },
+    {
+      "name": "SECONDARY_TRADE_REPORT_ID",
+      "raw": "818"
+    },
+    {
+      "name": "AVG_PX_INDICATOR",
+      "raw": "819"
+    },
+    {
+      "name": "TRADE_LINK_ID",
+      "raw": "820"
+    },
+    {
+      "name": "UNDERLYING_TRADING_SESSION_ID",
+      "raw": "822"
+    },
+    {
+      "name": "UNDERLYING_TRADING_SESSION_SUB_ID",
+      "raw": "823"
+    },
+    {
+      "name": "TRADE_LEG_REF_ID",
+      "raw": "824"
+    },
+    {
+      "name": "EXCHANGE_RULE",
+      "raw": "825"
+    },
+    {
+      "name": "TRADE_ALLOC_INDICATOR",
+      "raw": "826"
+    },
+    {
+      "name": "EXPIRATION_CYCLE",
+      "raw": "827"
+    },
+    {
+      "name": "TRD_TYPE",
+      "raw": "828"
+    },
+    {
+      "name": "TRD_SUB_TYPE",
+      "raw": "829"
+    },
+    {
+      "name": "TRANSFER_REASON",
+      "raw": "830"
+    },
+    {
+      "name": "PEGGED_PRICE",
+      "raw": "839"
+    },
+    {
+      "name": "DISCRETION_PRICE",
+      "raw": "845"
+    },
+    {
+      "name": "TARGET_STRATEGY",
+      "raw": "847"
+    },
+    {
+      "name": "TARGET_STRATEGY_PARAMETERS",
+      "raw": "848"
+    },
+    {
+      "name": "PARTICIPATION_RATE",
+      "raw": "849"
+    },
+    {
+      "name": "TARGET_STRATEGY_PERFORMANCE",
+      "raw": "850"
+    },
+    {
+      "name": "LAST_LIQUIDITY_IND",
+      "raw": "851"
+    },
+    {
+      "name": "PUBLISH_TRD_INDICATOR",
+      "raw": "852"
+    },
+    {
+      "name": "SHORT_SALE_REASON",
+      "raw": "853"
+    },
+    {
+      "name": "QTY_TYPE",
+      "raw": "854"
+    },
+    {
+      "name": "SECONDARY_TRD_TYPE",
+      "raw": "855"
+    },
+    {
+      "name": "TRADE_REPORT_TYPE",
+      "raw": "856"
+    },
+    {
+      "name": "DATED_DATE",
+      "raw": "873"
+    },
+    {
+      "name": "INTEREST_ACCRUAL_DATE",
+      "raw": "874"
+    },
+    {
+      "name": "CP_PROGRAM",
+      "raw": "875"
+    },
+    {
+      "name": "CP_REG_TYPE",
+      "raw": "876"
+    },
+    {
+      "name": "TRD_MATCH_ID",
+      "raw": "880"
+    },
+    {
+      "name": "SECONDARY_TRADE_REPORT_REF_ID",
+      "raw": "881"
+    },
+    {
+      "name": "UNDERLYING_PRICE",
+      "raw": "883"
+    },
+    {
+      "name": "MISC_FEE_BASIS",
+      "raw": "891"
+    },
+    {
+      "name": "LAST_FRAGMENT",
+      "raw": "893"
+    },
+    {
+      "name": "TOT_NUM_REPORTS",
+      "raw": "911"
+    },
+    {
+      "name": "LAST_RPT_REQUESTED",
+      "raw": "912"
+    },
+    {
+      "name": "START_DATE",
+      "raw": "916"
+    },
+    {
+      "name": "END_DATE",
+      "raw": "917"
+    },
+    {
+      "name": "END_ACCRUED_INTEREST_AMT",
+      "raw": "920"
+    },
+    {
+      "name": "START_CASH",
+      "raw": "921"
+    },
+    {
+      "name": "END_CASH",
+      "raw": "922"
+    },
+    {
+      "name": "USER_REQUEST_ID",
+      "raw": "923"
+    },
+    {
+      "name": "USER_REQUEST_TYPE",
+      "raw": "924"
+    },
+    {
+      "name": "NEW_PASSWORD",
+      "raw": "925"
+    },
+    {
+      "name": "USER_STATUS",
+      "raw": "926"
+    },
+    {
+      "name": "USER_STATUS_TEXT",
+      "raw": "927"
+    },
+    {
+      "name": "TRD_RPT_STATUS",
+      "raw": "939"
+    },
+    {
+      "name": "TIME_BRACKET",
+      "raw": "943"
+    },
+    {
+      "name": "STRIKE_CURRENCY",
+      "raw": "947"
+    },
+    {
+      "name": "HOST_CROSS_ID",
+      "raw": "961"
+    },
+    {
+      "name": "MD_REPORT_ID",
+      "raw": "963"
+    },
+    {
+      "name": "SECURITY_REPORT_ID",
+      "raw": "964"
+    },
+    {
+      "name": "SECURITY_STATUS",
+      "raw": "965"
+    },
+    {
+      "name": "SETTLE_ON_OPEN_FLAG",
+      "raw": "966"
+    },
+    {
+      "name": "STRIKE_MULTIPLIER",
+      "raw": "967"
+    },
+    {
+      "name": "STRIKE_VALUE",
+      "raw": "968"
+    },
+    {
+      "name": "MIN_PRICE_INCREMENT",
+      "raw": "969"
+    },
+    {
+      "name": "POSITION_LIMIT",
+      "raw": "970"
+    },
+    {
+      "name": "NT_POSITION_LIMIT",
+      "raw": "971"
+    },
+    {
+      "name": "QUANTITY_DATE",
+      "raw": "976"
+    },
+    {
+      "name": "UNDERLYING_SETTLEMENT_DATE",
+      "raw": "987"
+    },
+    {
+      "name": "RND_PX",
+      "raw": "991"
+    },
+    {
+      "name": "TIER_CODE",
+      "raw": "994"
+    },
+    {
+      "name": "UNIT_OF_MEASURE",
+      "raw": "996"
+    },
+    {
+      "name": "TIME_UNIT",
+      "raw": "997"
+    },
+    {
+      "name": "TRADE_ID",
+      "raw": "1003"
+    },
+    {
+      "name": "SIDE_FILL_STATION_CD",
+      "raw": "1006"
+    },
+    {
+      "name": "SIDE_REASON_CD",
+      "raw": "1007"
+    },
+    {
+      "name": "SIDE_TRD_SUB_TYP",
+      "raw": "1008"
+    },
+    {
+      "name": "SIDE_LAST_QTY",
+      "raw": "1009"
+    },
+    {
+      "name": "MESSAGE_EVENT_SOURCE",
+      "raw": "1011"
+    },
+    {
+      "name": "AS_OF_INDICATOR",
+      "raw": "1015"
+    },
+    {
+      "name": "TRADE_VOLUME",
+      "raw": "1020"
+    },
+    {
+      "name": "MD_BOOK_TYPE",
+      "raw": "1021"
+    },
+    {
+      "name": "MD_FEED_TYPE",
+      "raw": "1022"
+    },
+    {
+      "name": "MD_PRICE_LEVEL",
+      "raw": "1023"
+    },
+    {
+      "name": "MD_ORIGIN_TYPE",
+      "raw": "1024"
+    },
+    {
+      "name": "FIRST_PX",
+      "raw": "1025"
+    },
+    {
+      "name": "MD_ENTRY_SPOT_RATE",
+      "raw": "1026"
+    },
+    {
+      "name": "MD_ENTRY_FORWARD_POINTS",
+      "raw": "1027"
+    },
+    {
+      "name": "MANUAL_ORDER_INDICATOR",
+      "raw": "1028"
+    },
+    {
+      "name": "CUST_DIRECTED_ORDER",
+      "raw": "1029"
+    },
+    {
+      "name": "RECEIVED_DEPT_ID",
+      "raw": "1030"
+    },
+    {
+      "name": "CUST_ORDER_HANDLING_INST",
+      "raw": "1031"
+    },
+    {
+      "name": "ORDER_HANDLING_INST_SOURCE",
+      "raw": "1032"
+    },
+    {
+      "name": "SECONDARY_TRADE_ID",
+      "raw": "1040"
+    },
+    {
+      "name": "FIRM_TRADE_ID",
+      "raw": "1041"
+    },
+    {
+      "name": "SECONDARY_FIRM_TRADE_ID",
+      "raw": "1042"
+    },
+    {
+      "name": "DEALING_CAPACITY",
+      "raw": "1048"
+    },
+    {
+      "name": "INSTRMT_ASSIGNMENT_METHOD",
+      "raw": "1049"
+    },
+    {
+      "name": "CALCULATED_CCY_LAST_QTY",
+      "raw": "1056"
+    },
+    {
+      "name": "AGGRESSOR_INDICATOR",
+      "raw": "1057"
+    },
+    {
+      "name": "MD_QUOTE_TYPE",
+      "raw": "1070"
+    },
+    {
+      "name": "LAST_SWAP_POINTS",
+      "raw": "1071"
+    },
+    {
+      "name": "SIDE_GROSS_TRADE_AMT",
+      "raw": "1072"
+    },
+    {
+      "name": "MATURITY_TIME",
+      "raw": "1079"
+    },
+    {
+      "name": "REF_ORDER_ID",
+      "raw": "1080"
+    },
+    {
+      "name": "REF_ORDER_ID_SOURCE",
+      "raw": "1081"
+    },
+    {
+      "name": "MATCH_INCREMENT",
+      "raw": "1089"
+    },
+    {
+      "name": "MAX_PRICE_LEVELS",
+      "raw": "1090"
+    },
+    {
+      "name": "PRE_TRADE_ANONYMITY",
+      "raw": "1091"
+    },
+    {
+      "name": "PRICE_PROTECTION_SCOPE",
+      "raw": "1092"
+    },
+    {
+      "name": "LOT_TYPE",
+      "raw": "1093"
+    },
+    {
+      "name": "PEGGED_REF_PRICE",
+      "raw": "1095"
+    },
+    {
+      "name": "ORDER_CATEGORY",
+      "raw": "1115"
+    },
+    {
+      "name": "TRADE_HANDLING_INSTR",
+      "raw": "1123"
+    },
+    {
+      "name": "ORIG_TRADE_HANDLING_INSTR",
+      "raw": "1124"
+    },
+    {
+      "name": "ORIG_TRADE_DATE",
+      "raw": "1125"
+    },
+    {
+      "name": "ORIG_TRADE_ID",
+      "raw": "1126"
+    },
+    {
+      "name": "ORIG_SECONDARY_TRADE_ID",
+      "raw": "1127"
+    },
+    {
+      "name": "REF_APPL_VER_ID",
+      "raw": "1130"
+    },
+    {
+      "name": "REF_CSTM_APPL_VER_ID",
+      "raw": "1131"
+    },
+    {
+      "name": "TZ_TRANSACT_TIME",
+      "raw": "1132"
+    },
+    {
+      "name": "EX_DESTINATION_ID_SOURCE",
+      "raw": "1133"
+    },
+    {
+      "name": "REPORTED_PX_DIFF",
+      "raw": "1134"
+    },
+    {
+      "name": "DEFAULT_APPL_VER_ID",
+      "raw": "1137"
+    },
+    {
+      "name": "EXCHANGE_SPECIAL_INSTRUCTIONS",
+      "raw": "1139"
+    },
+    {
+      "name": "MIN_PRICE_INCREMENT_AMOUNT",
+      "raw": "1146"
+    },
+    {
+      "name": "UNIT_OF_MEASURE_QTY",
+      "raw": "1147"
+    },
+    {
+      "name": "SECURITY_GROUP",
+      "raw": "1151"
+    },
+    {
+      "name": "SIDE_CURRENCY",
+      "raw": "1154"
+    },
+    {
+      "name": "SIDE_SETTL_CURRENCY",
+      "raw": "1155"
+    },
+    {
+      "name": "MD_SUB_BOOK_TYPE",
+      "raw": "1173"
+    },
+    {
+      "name": "SECURITY_TRADING_EVENT",
+      "raw": "1174"
+    },
+    {
+      "name": "VOLATILITY",
+      "raw": "1188"
+    },
+    {
+      "name": "TIME_TO_EXPIRATION",
+      "raw": "1189"
+    },
+    {
+      "name": "RISK_FREE_RATE",
+      "raw": "1190"
+    },
+    {
+      "name": "PRICE_UNIT_OF_MEASURE",
+      "raw": "1191"
+    },
+    {
+      "name": "PRICE_UNIT_OF_MEASURE_QTY",
+      "raw": "1192"
+    },
+    {
+      "name": "SETTL_METHOD",
+      "raw": "1193"
+    },
+    {
+      "name": "EXERCISE_STYLE",
+      "raw": "1194"
+    },
+    {
+      "name": "OPT_PAYOUT_AMOUNT",
+      "raw": "1195"
+    },
+    {
+      "name": "PRICE_QUOTE_METHOD",
+      "raw": "1196"
+    },
+    {
+      "name": "VALUATION_METHOD",
+      "raw": "1197"
+    },
+    {
+      "name": "LIST_METHOD",
+      "raw": "1198"
+    },
+    {
+      "name": "CAP_PRICE",
+      "raw": "1199"
+    },
+    {
+      "name": "FLOOR_PRICE",
+      "raw": "1200"
+    },
+    {
+      "name": "PRODUCT_COMPLEX",
+      "raw": "1227"
+    },
+    {
+      "name": "FLEX_PRODUCT_ELIGIBILITY_INDICATOR",
+      "raw": "1242"
+    },
+    {
+      "name": "FLEXIBLE_INDICATOR",
+      "raw": "1244"
+    },
+    {
+      "name": "MARKET_SEGMENT_ID",
+      "raw": "1300"
+    },
+    {
+      "name": "MARKET_ID",
+      "raw": "1301"
+    },
+    {
+      "name": "REJECT_TEXT",
+      "raw": "1328"
+    },
+    {
+      "name": "FEE_MULTIPLIER",
+      "raw": "1329"
+    },
+    {
+      "name": "TOT_NO_FILLS",
+      "raw": "1361"
+    },
+    {
+      "name": "NO_FILLS",
+      "raw": "1362"
+    },
+    {
+      "name": "FILL_EXEC_ID",
+      "raw": "1363"
+    },
+    {
+      "name": "FILL_PX",
+      "raw": "1364"
+    },
+    {
+      "name": "FILL_QTY",
+      "raw": "1365"
+    },
+    {
+      "name": "MASS_ACTION_REPORT_ID",
+      "raw": "1369"
+    },
+    {
+      "name": "DIVIDEND_YIELD",
+      "raw": "1380"
+    },
+    {
+      "name": "CURRENCY_RATIO",
+      "raw": "1382"
+    },
+    {
+      "name": "TRADE_PUBLISH_INDICATOR",
+      "raw": "1390"
+    },
+    {
+      "name": "REF_APPL_EXT_ID",
+      "raw": "1406"
+    },
+    {
+      "name": "SIDE_EXEC_ID",
+      "raw": "1427"
+    },
+    {
+      "name": "ORDER_DELAY",
+      "raw": "1428"
+    },
+    {
+      "name": "ORDER_DELAY_UNIT",
+      "raw": "1429"
+    },
+    {
+      "name": "VENUE_TYPE",
+      "raw": "1430"
+    },
+    {
+      "name": "CONTRACT_MULTIPLIER_UNIT",
+      "raw": "1435"
+    },
+    {
+      "name": "FLOW_SCHEDULE_TYPE",
+      "raw": "1439"
+    },
+    {
+      "name": "FILL_LIQUIDITY_IND",
+      "raw": "1443"
+    },
+    {
+      "name": "SIDE_LIQUIDITY_IND",
+      "raw": "1444"
+    },
+    {
+      "name": "RESTRUCTURING_TYPE",
+      "raw": "1449"
+    },
+    {
+      "name": "SENIORITY",
+      "raw": "1450"
+    },
+    {
+      "name": "NOTIONAL_PERCENTAGE_OUTSTANDING",
+      "raw": "1451"
+    },
+    {
+      "name": "ORIGINAL_NOTIONAL_PERCENTAGE_OUTSTANDING",
+      "raw": "1452"
+    },
+    {
+      "name": "ATTACHMENT_POINT",
+      "raw": "1457"
+    },
+    {
+      "name": "DETACHMENT_POINT",
+      "raw": "1458"
+    },
+    {
+      "name": "STRIKE_PRICE_DETERMINATION_METHOD",
+      "raw": "1478"
+    },
+    {
+      "name": "STRIKE_PRICE_BOUNDARY_METHOD",
+      "raw": "1479"
+    },
+    {
+      "name": "STRIKE_PRICE_BOUNDARY_PRECISION",
+      "raw": "1480"
+    },
+    {
+      "name": "UNDERLYING_PRICE_DETERMINATION_METHOD",
+      "raw": "1481"
+    },
+    {
+      "name": "OPT_PAYOUT_TYPE",
+      "raw": "1482"
+    },
+    {
+      "name": "MD_STREAM_ID",
+      "raw": "1500"
+    }
+  ]
+}

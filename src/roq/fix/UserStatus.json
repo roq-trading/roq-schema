@@ -1,0 +1,48 @@
+{
+  "name": "roq/fix/UserStatus",
+  "tag": 926,
+  "comment": "Indicates the status of a user",
+  "type": "enum",
+  "values": [
+    {
+      "name": "LoggedIn",
+      "raw": "1",
+      "comment": "Logged In"
+    },
+    {
+      "name": "NotLoggedIn",
+      "raw": "2",
+      "comment": "Not Logged In"
+    },
+    {
+      "name": "UserNotRecognised",
+      "raw": "3",
+      "comment": "User Not Recognised"
+    },
+    {
+      "name": "PasswordIncorrect",
+      "raw": "4",
+      "comment": "Password <554> Incorrect"
+    },
+    {
+      "name": "PasswordChanged",
+      "raw": "5",
+      "comment": "Password <554> Changed"
+    },
+    {
+      "name": "Other",
+      "raw": "6",
+      "comment": "Other"
+    },
+    {
+      "name": "ForcedUserLogoutByExchange",
+      "raw": "7",
+      "comment": "Forced user logout by Exchange"
+    },
+    {
+      "name": "SessionShutdownWarning",
+      "raw": "8",
+      "comment": "Session shutdown warning"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "roq/fix/MassCancelRejectReason",
+  "tag": 532,
+  "comment": "Reason Order Mass Cancel Request <q> was rejected",
+  "type": "enum",
+  "values": [
+    {
+      "name": "MassCancelNotSupported",
+      "raw": "0",
+      "comment": "Mass Cancel Not Supported"
+    },
+    {
+      "name": "InvalidOrUnknownSecurity",
+      "raw": "1",
+      "comment": "Invalid or Unknown Security"
+    },
+    {
+      "name": "InvalidOrUnknownUnderlyingSecurity",
+      "raw": "2",
+      "comment": "Invalid or Unknown Underlying security"
+    },
+    {
+      "name": "InvalidOrUnknownProduct",
+      "raw": "3",
+      "comment": "Invalid or unknown Product <460>"
+    },
+    {
+      "name": "INVALID_OR_UNKNOWN_CFI_CODE",
+      "raw": "4",
+      "comment": "Invalid or unknown CFICode <461>"
+    },
+    {
+      "name": "InvalidOrUnknownSecurityType",
+      "raw": "5",
+      "comment": "Invalid or unknown SecurityType <167>"
+    },
+    {
+      "name": "InvalidOrUnknownTradingSession",
+      "raw": "6",
+      "comment": "Invalid or Unknown Trading Session"
+    },
+    {
+      "name": "InvalidOrUnknownMarket",
+      "raw": "7",
+      "comment": "Invalid or unknown Market"
+    },
+    {
+      "name": "InvalidOrUnknownMarketSegment",
+      "raw": "8",
+      "comment": "Invalid or unknown Market Segment"
+    },
+    {
+      "name": "InvalidOrUnknownSecurityGroup",
+      "raw": "9",
+      "comment": "Invalid or unknown Security Group"
+    },
+    {
+      "name": "InvalidOrUnknownSecurityIssuer",
+      "raw": "10",
+      "comment": "Invalid or unknown Security Issuer"
+    },
+    {
+      "name": "InvalidOrUnknownIssuerOfUnderlyingSecurity",
+      "raw": "11",
+      "comment": "Invalid or unknown Issuer of Underlying Security"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/PosReqStatus",
+  "tag": 729,
+  "comment": "Status of Request For Positions <AN>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Completed",
+      "raw": "0",
+      "comment": "Completed"
+    },
+    {
+      "name": "CompletedWithWarnings",
+      "raw": "1",
+      "comment": "Completed With Warnings"
+    },
+    {
+      "name": "Rejected",
+      "raw": "2",
+      "comment": "Rejected"
+    }
+  ]
+}

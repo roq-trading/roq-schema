@@ -1,0 +1,43 @@
+{
+  "name": "roq/fix/PosReqType",
+  "tag": 724,
+  "comment": "Unique identifier for the position maintenance request as assigned by the submitter",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Positions",
+      "raw": "0",
+      "comment": "Positions"
+    },
+    {
+      "name": "Trades",
+      "raw": "1",
+      "comment": "Trades"
+    },
+    {
+      "name": "Exercises",
+      "raw": "2",
+      "comment": "Exercises"
+    },
+    {
+      "name": "Assignments",
+      "raw": "3",
+      "comment": "Assignment"
+    },
+    {
+      "name": "SettlementActivity",
+      "raw": "4",
+      "comment": "Settlement Activity"
+    },
+    {
+      "name": "BackoutMessage",
+      "raw": "5",
+      "comment": "Backout Message"
+    },
+    {
+      "name": "DeltaPositions",
+      "raw": "6",
+      "comment": "Delta Positions"
+    }
+  ]
+}

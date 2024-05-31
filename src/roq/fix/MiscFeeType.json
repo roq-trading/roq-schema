@@ -1,0 +1,78 @@
+{
+  "name": "roq/fix/MiscFeeType",
+  "tag": 139,
+  "comment": "Indicates type of miscellaneous fee.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Regulatory",
+      "raw": "1",
+      "comment": "Regulatory (e.g. SEC)"
+    },
+    {
+      "name": "Tax",
+      "raw": "2",
+      "comment": "Tax"
+    },
+    {
+      "name": "LocalCommission",
+      "raw": "3",
+      "comment": "Local Commission"
+    },
+    {
+      "name": "ExchangeFees",
+      "raw": "4",
+      "comment": "Exchange Fees"
+    },
+    {
+      "name": "Stamp",
+      "raw": "5",
+      "comment": "Stamp"
+    },
+    {
+      "name": "Levy",
+      "raw": "6",
+      "comment": "Levy"
+    },
+    {
+      "name": "Other",
+      "raw": "7",
+      "comment": "Other"
+    },
+    {
+      "name": "Markup",
+      "raw": "8",
+      "comment": "Markup"
+    },
+    {
+      "name": "ConsumptionTax",
+      "raw": "9",
+      "comment": "Consumption Tax"
+    },
+    {
+      "name": "PerTransaction",
+      "raw": "10",
+      "comment": "Per transaction"
+    },
+    {
+      "name": "Conversion",
+      "raw": "11",
+      "comment": "Conversion"
+    },
+    {
+      "name": "Agent",
+      "raw": "12",
+      "comment": "Agent"
+    },
+    {
+      "name": "TransferFee",
+      "raw": "13",
+      "comment": "Transfer Fee"
+    },
+    {
+      "name": "SecurityLending",
+      "raw": "14",
+      "comment": "Security Lending"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "name": "roq/fix/SessionRejectReason",
+  "tag": 373,
+  "comment": "Code to identify reason for a session-level Reject <3> message",
+  "type": "enum",
+  "values": [
+    {
+      "name": "InvalidTagNumber",
+      "raw": "0",
+      "comment": "Invalid Tag Number"
+    },
+    {
+      "name": "RequiredTagMissing",
+      "raw": "1",
+      "comment": "Required Tag Missing"
+    },
+    {
+      "name": "TagNotDefinedForThisMessage",
+      "raw": "2",
+      "comment": "Tag not defined for this message type"
+    },
+    {
+      "name": "UndefinedTag",
+      "raw": "3",
+      "comment": "Undefined tag"
+    },
+    {
+      "name": "TAG_SPECIFIED_WITHOUT_A_VALUE",
+      "raw": "4",
+      "comment": "Tag specified without a value"
+    },
+    {
+      "name": "ValueIsIncorrectForThisTag",
+      "raw": "5",
+      "comment": "Value is incorrect (out of range) for this tag"
+    },
+    {
+      "name": "IncorrectDataFormatForValue",
+      "raw": "6",
+      "comment": "Incorrect data format for value"
+    },
+    {
+      "name": "DecryptionProblem",
+      "raw": "7",
+      "comment": "Decryption problem"
+    },
+    {
+      "name": "SignatureProblem",
+      "raw": "8",
+      "comment": "Signature <89> problem"
+    },
+    {
+      "name": "CompIdProblem",
+      "raw": "9",
+      "comment": "CompID problem"
+    },
+    {
+      "name": "SendingTimeAccuracyProblem",
+      "raw": "10",
+      "comment": "SendingTime <52> accuracy problem"
+    },
+    {
+      "name": "InvalidMsgType",
+      "raw": "11",
+      "comment": "Invalid MsgType <35>"
+    },
+    {
+      "name": "XML_VALIDATION_ERROR",
+      "raw": "12",
+      "comment": "XML Validation Error"
+    },
+    {
+      "name": "TagAppearsMoreThanOnce",
+      "raw": "13",
+      "comment": "Tag appears more than once"
+    },
+    {
+      "name": "TagSpecifiedOutOfRequiredOrder",
+      "raw": "14",
+      "comment": "Tag specified out of required order"
+    },
+    {
+      "name": "RepeatingGroupFieldsOutOfOrder",
+      "raw": "15",
+      "comment": "Repeating group fields out of order"
+    },
+    {
+      "name": "IncorrectNumInGroupCountForRepeatingGroup",
+      "raw": "16",
+      "comment": "Incorrect NumInGroup count for repeating group"
+    },
+    {
+      "name": "NonDataValueIncludesFieldDelimiter",
+      "raw": "17",
+      "comment": "Non 'Data' value includes field delimiter (<SOH> character)"
+    },
+    {
+      "name": "InvalidOrUnsupportedApplicationVersion",
+      "raw": "18",
+      "comment": "Invalid/Unsupported Application Version"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

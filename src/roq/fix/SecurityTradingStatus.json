@@ -1,0 +1,139 @@
+{
+  "name": "roq/fix/SecurityTradingStatus",
+  "tag": 326,
+  "comment": "Identifies the trading status applicable to the transaction",
+  "type": "enum",
+  "values": [
+    {
+      "name": "OpeningDelay",
+      "raw": "1",
+      "comment": "Opening delay"
+    },
+    {
+      "name": "TradingHalt",
+      "raw": "2",
+      "comment": "Trading halt"
+    },
+    {
+      "name": "Resume",
+      "raw": "3",
+      "comment": "Resume"
+    },
+    {
+      "name": "NoOpenNoResume",
+      "raw": "4",
+      "comment": "No Open / No Resume"
+    },
+    {
+      "name": "PriceIndication",
+      "raw": "5",
+      "comment": "Price indication"
+    },
+    {
+      "name": "TradingRangeIndication",
+      "raw": "6",
+      "comment": "Trading Range Indication"
+    },
+    {
+      "name": "MarketImbalanceBuy",
+      "raw": "7",
+      "comment": "Market Imbalance Buy"
+    },
+    {
+      "name": "MarketImbalanceSell",
+      "raw": "8",
+      "comment": "Market Imbalance Sell"
+    },
+    {
+      "name": "MarketOnCloseImbalanceBuy",
+      "raw": "9",
+      "comment": "Market on Close Imbalance Buy"
+    },
+    {
+      "name": "MarketOnCloseImbalanceSell",
+      "raw": "10",
+      "comment": "Market on Close Imbalance Sell"
+    },
+    {
+      "name": "NotAssigned",
+      "raw": "11",
+      "comment": "(not assigned)"
+    },
+    {
+      "name": "NoMarketImbalance",
+      "raw": "12",
+      "comment": "No Market Imbalance"
+    },
+    {
+      "name": "NoMarketOnCloseImbalance",
+      "raw": "13",
+      "comment": "No Market on Close Imbalance"
+    },
+    {
+      "name": "ITS_PRE_OPENING",
+      "raw": "14",
+      "comment": "ITS Pre-opening"
+    },
+    {
+      "name": "NewPriceIndication",
+      "raw": "15",
+      "comment": "New Price Indication"
+    },
+    {
+      "name": "TradeDisseminationTime",
+      "raw": "16",
+      "comment": "Trade Dissemination Time"
+    },
+    {
+      "name": "ReadyToTrade",
+      "raw": "17",
+      "comment": "Ready to trade (start of session)"
+    },
+    {
+      "name": "NotAvailableForTrading",
+      "raw": "18",
+      "comment": "Not available for trading (end of session)"
+    },
+    {
+      "name": "NotTradedOnThisMarket",
+      "raw": "19",
+      "comment": "Not traded on this market"
+    },
+    {
+      "name": "UnknownOrInvalid",
+      "raw": "20",
+      "comment": "Unknown or Invalid"
+    },
+    {
+      "name": "PreOpen",
+      "raw": "21",
+      "comment": "Pre-open"
+    },
+    {
+      "name": "OpeningRotation",
+      "raw": "22",
+      "comment": "Opening Rotation"
+    },
+    {
+      "name": "FastMarket",
+      "raw": "23",
+      "comment": "Fast Market"
+    },
+    {
+      "name": "PreCross",
+      "raw": "24",
+      "comment": "Pre-Cross - system is in a pre-cross state allowing market to respond to either side of cross"
+    },
+    {
+      "name": "Cross",
+      "raw": "25",
+      "comment":
+          "Cross - system has crossed a percentage of the orders and allows market to respond prior to crossing remaining portion"
+    },
+    {
+      "name": "PostClose",
+      "raw": "26",
+      "comment": "Post-close"
+    }
+  ]
+}

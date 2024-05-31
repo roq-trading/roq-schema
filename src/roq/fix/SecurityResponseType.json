@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/SecurityResponseType",
+  "tag": 323,
+  "comment": "Type of Security Definition <d> message response",
+  "type": "enum",
+  "values": [
+    {
+      "name": "AcceptSecurityProposalAsIs",
+      "raw": "1",
+      "comment": "Accept security proposal as-is"
+    },
+    {
+      "name": "AcceptSecurityProposalWithRevisions",
+      "raw": "2",
+      "comment": "Accept security proposal with revisions as indicated in the message"
+    },
+    {
+      "name": "ListOfSecurityTypesReturnedPerRequest",
+      "raw": "3",
+      "comment": "List of security types returned per request (Deprecated in FIX 5.0 SP1 )"
+    },
+    {
+      "name": "ListOfSecuritiesReturnedPerRequest",
+      "raw": "4",
+      "comment": "List of securities returned per request"
+    },
+    {
+      "name": "RejectSecurityProposal",
+      "raw": "5",
+      "comment": "Reject security proposal"
+    },
+    {
+      "name": "CanNotMatchSelectionCriteria",
+      "raw": "6",
+      "comment": "Cannot match selection criteria"
+    }
+  ]
+}

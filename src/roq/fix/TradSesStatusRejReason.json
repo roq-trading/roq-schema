@@ -1,0 +1,18 @@
+{
+  "name": "roq/fix/TradSesStatusRejReason",
+  "tag": 567,
+  "comment": "Indicates the reason a Trading Session Status Request <g> was rejected",
+  "type": "enum",
+  "values": [
+    {
+      "name": "InvalidTradingSessionId",
+      "raw": "1",
+      "comment": "Unknown or invalid TradingSessionID <336>"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

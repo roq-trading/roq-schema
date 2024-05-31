@@ -1,0 +1,145 @@
+{
+  "name": "roq/codec/fix/PositionReport",
+  "type": "comp",
+  "tag": "AP",
+  "comment": "This message is used to report position updates.",
+  "values": [
+    {
+      "tag": 721,
+      "name": "PosMaintRptID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 710,
+      "name": "PosReqID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 724,
+      "name": "PosReqType",
+      "type": "roq/fix/PosReqType",
+      "outbound": {
+        "comment": "Always :code:`POSITIONS` (:code:`0`)."
+      }
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "outbound": {}
+    },
+    {
+      "tag": 727,
+      "name": "TotalNumPosReports",
+      "type": "std/uint32",
+      "outbound": {}
+    },
+    {
+      "tag": 325,
+      "name": "UnsolicitedIndicator",
+      "type": "std/bool"
+    },
+    {
+      "tag": 728,
+      "name": "PosReqResult",
+      "type": "roq/fix/PosReqResult",
+      "required": true,
+      "outbound": {
+        "comment": "Always :code:`VALID` (:code:`0`)."
+      }
+    },
+    {
+      "tag": 715,
+      "name": "ClearingBusinessDate",
+      "type": "std/year_month_day",
+      "required": true
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "outbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 581,
+      "name": "AccountType",
+      "type": "roq/fix/AccountType",
+      "required": true
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 15,
+      "name": "Currency",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 730,
+      "name": "SettlPrice",
+      "type": "roq/Decimal",
+      "required": true
+    },
+    {
+      "tag": 731,
+      "name": "SettlPriceType",
+      "type": "roq/fix/SettlPriceType",
+      "required": true
+    },
+    {
+      "tag": 734,
+      "name": "PriorSettlPrice",
+      "type": "roq/Decimal",
+      "required": true
+    },
+    {
+      "tag": 702,
+      "name": "NoPositions",
+      "type": "roq/codec/fix/PositionQty",
+      "array": "std/span",
+      "required": false,
+      "comment": "required for fix 4.4 but optional for fix 5...",
+      "outbound": {}
+    },
+    {
+      "tag": 753,
+      "name": "NoPosAmt",
+      "type": "roq/codec/fix/PositionAmountData",
+      "array": "std/span",
+      "required": false,
+      "comment": "required for fix 4.4 but optional for fix 5...",
+      "outbound": {}
+    },
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "std/string_view",
+      "outbound": {}
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/QtyType",
+  "tag": 854,
+  "comment": "QtyType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Units",
+      "raw": "0",
+      "comment": "Units (shares, par, currency)"
+    },
+    {
+      "name": "Contracts",
+      "raw": "1",
+      "comment": "Contracts (if used - must specify ContractMultiplier <231>)"
+    },
+    {
+      "name": "UnitsOfMeasurePerTimeUnit",
+      "raw": "2",
+      "comment": "Units of Measure per Time Unit (if used - must specify UnitofMeasure <996> and TimeUnit <997>)"
+    }
+  ]
+}

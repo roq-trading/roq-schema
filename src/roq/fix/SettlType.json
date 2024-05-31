@@ -1,0 +1,69 @@
+{
+  "name": "roq/fix/SettlType",
+  "tag": 63,
+  "comment":
+      "Indicates order settlement period. If present, SettlDate <64> overrides this field. If both SettlType <63> and SettlDate <64> are omitted, the default for SettlType <63> is '0' (Regular)",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Regular",
+      "raw": "0",
+      "comment": "Regular / FX Spot settlement (T+1 or T+2 depending on currency)"
+    },
+    {
+      "name": "Cash",
+      "raw": "1",
+      "comment": "Cash (TOD / T+0)"
+    },
+    {
+      "name": "NextDay",
+      "raw": "2",
+      "comment": "Next Day (TOM / T+1)"
+    },
+    {
+      "name": "T_2",
+      "raw": "3",
+      "comment": "T+2"
+    },
+    {
+      "name": "T_3",
+      "raw": "4",
+      "comment": "T+3"
+    },
+    {
+      "name": "T_4",
+      "raw": "5",
+      "comment": "T+4"
+    },
+    {
+      "name": "Future",
+      "raw": "6",
+      "comment": "Future"
+    },
+    {
+      "name": "WhenAndIfIssued",
+      "raw": "7",
+      "comment": "When And If Issued"
+    },
+    {
+      "name": "SellersOption",
+      "raw": "8",
+      "comment": "Sellers Option"
+    },
+    {
+      "name": "T_5",
+      "raw": "9",
+      "comment": "T+5"
+    },
+    {
+      "name": "FX_SPOT_NEXT_SETTLEMENT",
+      "raw": "C",
+      "comment": "FX Spot Next settlement (Spot+1, aka next day)"
+    },
+    {
+      "name": "BrokenDate",
+      "raw": "B",
+      "comment": "Broken date - for FX expressing non-standard tenor, SettlDate <64> must be specified"
+    }
+  ]
+}

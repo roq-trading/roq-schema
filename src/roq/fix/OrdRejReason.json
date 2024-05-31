@@ -1,0 +1,103 @@
+{
+  "name": "roq/fix/OrdRejReason",
+  "tag": 103,
+  "comment": "Code to identify reason for order rejection",
+  "type": "enum",
+  "values": [
+    {
+      "name": "BrokerExchangeOption",
+      "raw": "0",
+      "comment": "Broker / Exchange option"
+    },
+    {
+      "name": "UnknownSymbol",
+      "raw": "1",
+      "comment": "Unknown symbol"
+    },
+    {
+      "name": "ExchangeClosed",
+      "raw": "2",
+      "comment": "Exchange closed"
+    },
+    {
+      "name": "OrderExceedsLimit",
+      "raw": "3",
+      "comment": "Order exceeds limit"
+    },
+    {
+      "name": "TooLateToEnter",
+      "raw": "4",
+      "comment": "Too late to enter"
+    },
+    {
+      "name": "UnknownOrder",
+      "raw": "5",
+      "comment": "Unknown order"
+    },
+    {
+      "name": "DuplicateOrder",
+      "raw": "6",
+      "comment": "Duplicate Order (e.g. dupe ClOrdID <11>)"
+    },
+    {
+      "name": "DUPLICATE_OF_A_VERBALLY_COMMUNICATED_ORDER",
+      "raw": "7",
+      "comment": "Duplicate of a verbally communicated order"
+    },
+    {
+      "name": "StaleOrder",
+      "raw": "8",
+      "comment": "Stale order"
+    },
+    {
+      "name": "TraderAlongRequired",
+      "raw": "9",
+      "comment": "Trade along required"
+    },
+    {
+      "name": "InvalidInvestorId",
+      "raw": "10",
+      "comment": "Invalid Investor ID"
+    },
+    {
+      "name": "UnsupportedOrderCharacteristic",
+      "raw": "11",
+      "comment": "Unsupported order characteristic"
+    },
+    {
+      "name": "SurveillenceOption",
+      "raw": "12",
+      "comment": "Surveillence Option"
+    },
+    {
+      "name": "IncorrectQuantity",
+      "raw": "13",
+      "comment": "Incorrect quantity"
+    },
+    {
+      "name": "IncorrectAllocatedQuantity",
+      "raw": "14",
+      "comment": "Incorrect allocated quantity"
+    },
+    {
+      "name": "UnknownAccount",
+      "raw": "15",
+      "comment": "Unknown account(s)"
+    },
+    {
+      "name": "PriceExceedsCurrentPriceBand",
+      "raw": "16",
+      "comment": "Price exceeds current price band"
+    },
+    {
+      "name": "InvalidPriceIncrement",
+      "raw": "18",
+      "comment": "Invalid price increment"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

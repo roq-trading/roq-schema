@@ -1,0 +1,39 @@
+{
+  "name": "roq/fix/PositionEffect",
+  "tag": 77,
+  "comment":
+      "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Close",
+      "raw": "C",
+      "comment": "Close"
+    },
+    {
+      "name": "Default",
+      "raw": "D",
+      "comment": "Default"
+    },
+    {
+      "name": "FIFO",
+      "raw": "F",
+      "comment": "FIFO"
+    },
+    {
+      "name": "CloseButNotifyOnOpen",
+      "raw": "N",
+      "comment": "Close but notify on open"
+    },
+    {
+      "name": "Open",
+      "raw": "O",
+      "comment": "Open"
+    },
+    {
+      "name": "Rolled",
+      "raw": "R",
+      "comment": "Rolled"
+    }
+  ]
+}

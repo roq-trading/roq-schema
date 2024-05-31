@@ -1,0 +1,83 @@
+{
+  "name": "roq/fix/OrdStatus",
+  "tag": 39,
+  "comment": "Identifies current status of order",
+  "type": "enum",
+  "values": [
+    {
+      "name": "New",
+      "raw": "0",
+      "comment": "New"
+    },
+    {
+      "name": "PartiallyFilled",
+      "raw": "1",
+      "comment": "Partially filled"
+    },
+    {
+      "name": "Filled",
+      "raw": "2",
+      "comment": "Filled"
+    },
+    {
+      "name": "DoneForDay",
+      "raw": "3",
+      "comment": "Done for day"
+    },
+    {
+      "name": "Canceled",
+      "raw": "4",
+      "comment": "Canceled"
+    },
+    {
+      "name": "Replaced",
+      "raw": "5",
+      "comment": "(No longer used)(Deprecated in FIX.4.3)"
+    },
+    {
+      "name": "PendingCancel",
+      "raw": "6",
+      "comment": "Pending Cancel (i.e. result of Order Cancel Request <F>)"
+    },
+    {
+      "name": "Stopped",
+      "raw": "7",
+      "comment": "Stopped"
+    },
+    {
+      "name": "Rejected",
+      "raw": "8",
+      "comment": "Rejected"
+    },
+    {
+      "name": "Suspended",
+      "raw": "9",
+      "comment": "Suspended"
+    },
+    {
+      "name": "PendingNew",
+      "raw": "A",
+      "comment": "Pending New"
+    },
+    {
+      "name": "Calculated",
+      "raw": "B",
+      "comment": "Calculated"
+    },
+    {
+      "name": "Expired",
+      "raw": "C",
+      "comment": "Expired"
+    },
+    {
+      "name": "AcceptedForBidding",
+      "raw": "D",
+      "comment": "Accepted for Bidding"
+    },
+    {
+      "name": "PendingReplace",
+      "raw": "E",
+      "comment": "Pending Replace (i.e. result of Order Cancel/Replace Request <G>)"
+    }
+  ]
+}

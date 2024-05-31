@@ -1,0 +1,59 @@
+{
+  "name": "roq/fix/SecurityRequestType",
+  "tag": 321,
+  "comment": "Type of Security Definition Request <c>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "RequestSecurityIdentityAndSpecifications",
+      "raw": "0",
+      "comment": "Request Security identity and specifications"
+    },
+    {
+      "name": "RequestSecurityIdentityForTheSpecificationProvided",
+      "raw": "1",
+      "comment": "Request Security identity for the specifications provided (name of the security is not supplied)"
+    },
+    {
+      "name": "RequestListSecurityTypes",
+      "raw": "2",
+      "comment": "Request List Security Types ( Deprecated in FIX 5.0 SP1 )"
+    },
+    {
+      "name": "RequestListSecurities",
+      "raw": "3",
+      "comment":
+          "Request List Securities (can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. If provided then only list Securities for the specific type.) ( Deprecated in FIX 5.0 SP1 )"
+    },
+    {
+      "name": "Symbol",
+      "raw": "4",
+      "comment": "Symbol <55>"
+    },
+    {
+      "name": "SECURITY_TYPE_OR_CFI_CODE",
+      "raw": "5",
+      "comment": "SecurityType <167> and or CFICode <461>"
+    },
+    {
+      "name": "Product",
+      "raw": "6",
+      "comment": "Product <460>"
+    },
+    {
+      "name": "TradingSessionId",
+      "raw": "7",
+      "comment": "TradingSessionID <336>"
+    },
+    {
+      "name": "AllSecurities",
+      "raw": "8",
+      "comment": "All Securities"
+    },
+    {
+      "name": "MarketId",
+      "raw": "9",
+      "comment": "MarketID <1301> or (MarketID + MarketSegmentID <1300>)"
+    }
+  ]
+}

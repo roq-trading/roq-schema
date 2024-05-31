@@ -1,0 +1,53 @@
+{
+  "name": "roq/codec/fix/TrdCapRptSide",
+  "type": "item2",
+  "values": [
+    {
+      "tag": 54,
+      "name": "Side",
+      "type": "roq/fix/Side",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 11,
+      "name": "ClOrdID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "outbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 581,
+      "name": "AccountType",
+      "type": "roq/fix/AccountType"
+    },
+    {
+      "tag": 77,
+      "name": "PositionEffect",
+      "type": "roq/fix/PositionEffect",
+      "outbound": {}
+    }
+  ]
+}

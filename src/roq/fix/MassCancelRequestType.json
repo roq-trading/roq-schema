@@ -1,0 +1,68 @@
+{
+  "name": "roq/fix/MassCancelRequestType",
+  "tag": 530,
+  "comment": "Specifies scope of Order Mass Cancel Request <q>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "CancelOrdersForSecurity",
+      "raw": "1",
+      "comment": "Cancel orders for a security"
+    },
+    {
+      "name": "CancelOrdersForUnderlyingSecurity",
+      "raw": "2",
+      "comment": "Cancel orders for an underlying security"
+    },
+    {
+      "name": "CancelOrdersForProduct",
+      "raw": "3",
+      "comment": "Cancel orders for a Product <460>"
+    },
+    {
+      "name": "CANCEL_ORDERS_FOR_CFI_CODE",
+      "raw": "4",
+      "comment": "Cancel orders for a CFICode <461>"
+    },
+    {
+      "name": "CancelOrdersForSecurityType",
+      "raw": "5",
+      "comment": "Cancel orders for a SecurityType <167>"
+    },
+    {
+      "name": "CancelOrdersForTradingSession",
+      "raw": "6",
+      "comment": "Cancel orders for a trading session"
+    },
+    {
+      "name": "CancelAllOrders",
+      "raw": "7",
+      "comment": "Cancel all orders"
+    },
+    {
+      "name": "CancelForMarket",
+      "raw": "8",
+      "comment": "Cancel orders for a market"
+    },
+    {
+      "name": "CancelForMarketSegment",
+      "raw": "9",
+      "comment": "Cancel orders for a market segment"
+    },
+    {
+      "name": "CancelForSecurityGroup",
+      "raw": "A",
+      "comment": "Cancel orders for a security group"
+    },
+    {
+      "name": "CancelForSecurityIssuer",
+      "raw": "B",
+      "comment": "Cancel for Security Issuer"
+    },
+    {
+      "name": "CancelForUnderlyingSecurity",
+      "raw": "C",
+      "comment": "Cancel for Issuer of Underlying Security"
+    }
+  ]
+}

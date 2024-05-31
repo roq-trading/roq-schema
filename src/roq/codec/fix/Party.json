@@ -1,0 +1,39 @@
+{
+  "name": "roq/codec/fix/Party",
+  "type": "item",
+  "values": [
+    {
+      "tag": 448,
+      "name": "PartyID",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "Strategy ID."
+      },
+      "outbound": {
+        "comment": "Strategy ID."
+      }
+    },
+    {
+      "tag": 447,
+      "name": "PartyIDSource",
+      "type": "roq/fix/PartyIDSource",
+      "inbound": {
+        "comment": "Only :code:`PROPRIETARY_CUSTOM_CODE` (:code:`D`) is supported."
+      },
+      "outbound": {
+        "comment": "Only :code:`PROPRIETARY_CUSTOM_CODE` (:code:`D`) is supported."
+      }
+    },
+    {
+      "tag": 452,
+      "name": "PartyRole",
+      "type": "roq/fix/PartyRole",
+      "inbound": {
+        "comment": "Only :code:`CLIENT_ID` (:code:`3`) is supported."
+      },
+      "outbound": {
+        "comment": "Only :code:`CLIENT_ID` (:code:`3`) is supported."
+      }
+    }
+  ]
+}

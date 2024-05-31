@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/HandlInst",
+  "tag": 21,
+  "comment": "Instructions for order handling on Broker trading floor",
+  "type": "enum",
+  "values": [
+    {
+      "name": "AutomatedExecutionOrderPrivate",
+      "raw": "1",
+      "comment": "Automated execution order, private, no Broker intervention"
+    },
+    {
+      "name": "AutomatedExecutionOrderPublic",
+      "raw": "2",
+      "comment": "Automated execution order, public, Broker intervention OK"
+    },
+    {
+      "name": "ManualOrderBestExecution",
+      "raw": "3",
+      "comment": "Manual order, best execution"
+    }
+  ]
+}

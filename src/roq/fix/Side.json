@@ -1,0 +1,88 @@
+{
+  "name": "roq/fix/Side",
+  "tag": 54,
+  "comment": "Side of order",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Buy",
+      "raw": "1",
+      "comment": "Buy"
+    },
+    {
+      "name": "Sell",
+      "raw": "2",
+      "comment": "Sell"
+    },
+    {
+      "name": "BuyMinus",
+      "raw": "3",
+      "comment": "Buy minus"
+    },
+    {
+      "name": "SellPlus",
+      "raw": "4",
+      "comment": "Sell plus"
+    },
+    {
+      "name": "SellShort",
+      "raw": "5",
+      "comment": "Sell short"
+    },
+    {
+      "name": "SellShortExempt",
+      "raw": "6",
+      "comment": "Sell short exempt"
+    },
+    {
+      "name": "Undisclosed",
+      "raw": "7",
+      "comment": "Undisclosed (valid for IOI and List Order messages only)"
+    },
+    {
+      "name": "Cross",
+      "raw": "8",
+      "comment": "Cross (orders where counterparty is an exchange, valid for all messages except IOIs)"
+    },
+    {
+      "name": "CrossShort",
+      "raw": "9",
+      "comment": "Cross short"
+    },
+    {
+      "name": "CrossShortExempt",
+      "raw": "A",
+      "comment": "Cross short exempt"
+    },
+    {
+      "name": "AsDefined",
+      "raw": "B",
+      "comment": "'As Defined' (for use with multileg instruments)"
+    },
+    {
+      "name": "Opposite",
+      "raw": "C",
+      "comment": "'Opposite' (for use with multileg instruments)"
+    },
+    {
+      "name": "Subscribe",
+      "raw": "D",
+      "comment": "Subscribe (e.g. CIV)"
+    },
+    {
+      "name": "Redeem",
+      "raw": "E",
+      "comment": "Redeem (e.g. CIV)"
+    },
+    {
+      "name": "Lend",
+      "raw": "F",
+      "comment": "Lend (FINANCING - identifies direction of collateral)"
+    },
+    {
+      "name": "Borrow",
+      "raw": "G",
+      "comment": "Borrow (FINANCING - identifies direction of collateral)"
+    }
+  ]
+}

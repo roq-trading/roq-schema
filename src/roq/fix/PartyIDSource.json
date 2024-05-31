@@ -1,0 +1,99 @@
+{
+  "name": "roq/fix/PartyIDSource",
+  "tag": 447,
+  "comment":
+      "Identifies class or source of the PartyID <448> value. Required if PartyID is specified. Note: applicable values depend upon PartyRole <452> specified.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "BIC_CODE",
+      "raw": "B",
+      "comment": "BIC (Bank Identification Code—Swift managed) code (ISO 9362 – See Appendix 6-B)"
+    },
+    {
+      "name": "GenerallyAcceptedMarketParticipantIdentifier",
+      "raw": "C",
+      "comment": "Generally accepted market participant identifier (e.g. NASD mnemonic)"
+    },
+    {
+      "name": "ProprietaryCustomCode",
+      "raw": "D",
+      "comment": "Proprietary/Custom code"
+    },
+    {
+      "name": "ISO_COUNTRY",
+      "raw": "E",
+      "comment": "ISO Country <421> Code"
+    },
+    {
+      "name": "SettlementEntityLocation",
+      "raw": "F",
+      "comment": "Settlement Entity Location (note if Local Market Settlement use 'E = ISO Country Code')"
+    },
+    {
+      "name": "MIC_CODE",
+      "raw": "G",
+      "comment": "MIC (ISO 10383 - Market Identifier Code)"
+    },
+    {
+      "name": "CSD_PARTICIPANT_MEMBER_CODE",
+      "raw": "H",
+      "comment": "CSD participant/member code (e.g. Euroclear, DTC, CREST or Kassenverein number)"
+    },
+    {
+      "name": "KoreanInvestor",
+      "raw": "1",
+      "comment": "Korean Investor ID"
+    },
+    {
+      "name": "TaiwaneseQualifiedForeignInvestor",
+      "raw": "2",
+      "comment": "Taiwanese Qualified Foreign Investor ID QFII / FID"
+    },
+    {
+      "name": "TaiwaneseTradingAccount",
+      "raw": "3",
+      "comment": "Taiwanese Trading Account"
+    },
+    {
+      "name": "MalaysianCentralDepository",
+      "raw": "4",
+      "comment": "Malaysian Central Depository (MCD) number"
+    },
+    {
+      "name": "ChineseInvestor",
+      "raw": "5",
+      "comment": "Chinese Investor ID"
+    },
+    {
+      "name": "UK_NATIONAL_INSURANCE_OR_PENSION_NUMBER",
+      "raw": "6",
+      "comment": "UK National Insurance or Pension Number"
+    },
+    {
+      "name": "US_SOCIAL_SECURITY_NUMBER",
+      "raw": "7",
+      "comment": "US Social Security Number"
+    },
+    {
+      "name": "US_EMPLOYER_IDENTIFICATION_NUMBER",
+      "raw": "8",
+      "comment": "US Employer Identification Number"
+    },
+    {
+      "name": "AustralianBusinessNumber",
+      "raw": "9",
+      "comment": "Australian Business Number"
+    },
+    {
+      "name": "AustralianTaxFileNumber",
+      "raw": "A",
+      "comment": "Australian Tax File Number"
+    },
+    {
+      "name": "DirectedBrokerThreeCharacterAcronym",
+      "raw": "I",
+      "comment": "Directed broker three character acronym as defined in ISITC 'ETC Best Practice' guidelines document"
+    }
+  ]
+}

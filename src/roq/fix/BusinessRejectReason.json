@@ -1,0 +1,48 @@
+{
+  "name": "roq/fix/BusinessRejectReason",
+  "tag": 380,
+  "comment": "Code to identify reason for a Business Message Reject <j> message",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Other",
+      "raw": "0",
+      "comment": "Other"
+    },
+    {
+      "name": "UnknownId",
+      "raw": "1",
+      "comment": "Unkown ID"
+    },
+    {
+      "name": "UnknownSecurity",
+      "raw": "2",
+      "comment": "Unknown Security"
+    },
+    {
+      "name": "UnsupportedMessageType",
+      "raw": "3",
+      "comment": "Unsupported Message Type"
+    },
+    {
+      "name": "ApplicationNotAvailable",
+      "raw": "4",
+      "comment": "Application not available"
+    },
+    {
+      "name": "ConditionallyRequiredFieldMissing",
+      "raw": "5",
+      "comment": "Conditionally Required Field Missing"
+    },
+    {
+      "name": "NotAuthorized",
+      "raw": "6",
+      "comment": "Not authorized"
+    },
+    {
+      "name": "DeliverToFirmNotAvailableAtThisTime",
+      "raw": "7",
+      "comment": "DeliverTo firm not available at this time"
+    }
+  ]
+}

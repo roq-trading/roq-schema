@@ -1,0 +1,23 @@
+{
+  "name": "roq/fix/IOITransType",
+  "tag": 28,
+  "comment": "IOITransType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Cancel",
+      "raw": "C",
+      "comment": "Cancel"
+    },
+    {
+      "name": "New",
+      "raw": "N",
+      "comment": "New"
+    },
+    {
+      "name": "Replace",
+      "raw": "R",
+      "comment": "Replace"
+    }
+  ]
+}

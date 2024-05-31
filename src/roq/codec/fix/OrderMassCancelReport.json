@@ -1,0 +1,83 @@
+{
+  "name": "roq/codec/fix/OrderMassCancelReport",
+  "type": "comp",
+  "tag": "r",
+  "comment": "This message is used to acknowledge a request to cancel orders.",
+  "values": [
+    {
+      "tag": 11,
+      "name": "ClOrdID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 530,
+      "name": "MassCancelRequestType",
+      "type": "roq/fix/MassCancelRequestType",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 531,
+      "name": "MassCancelResponse",
+      "type": "roq/fix/MassCancelResponse",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 532,
+      "name": "MassCancelRejectReason",
+      "type": "roq/fix/MassCancelRejectReason",
+      "outbound": {}
+    },
+    {
+      "tag": 533,
+      "name": "TotalAffectedOrders",
+      "type": "std/uint32"
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 54,
+      "name": "Side",
+      "type": "roq/fix/Side",
+      "outbound": {}
+    },
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "std/string_view",
+      "outbound": {
+        "comment": "Reason for reject."
+      }
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "outbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    }
+  ]
+}

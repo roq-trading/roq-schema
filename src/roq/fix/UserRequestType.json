@@ -1,0 +1,28 @@
+{
+  "name": "roq/fix/UserRequestType",
+  "tag": 924,
+  "comment": "Indicates the action required by a User Request <BE> Message",
+  "type": "enum",
+  "values": [
+    {
+      "name": "LogOnUser",
+      "raw": "1",
+      "comment": "Log On User"
+    },
+    {
+      "name": "LogOffUser",
+      "raw": "2",
+      "comment": "Log Off User"
+    },
+    {
+      "name": "ChangePasswordForUser",
+      "raw": "3",
+      "comment": "Change Password For User"
+    },
+    {
+      "name": "RequestIndividualUserStatus",
+      "raw": "4",
+      "comment": "Request Individual User Status"
+    }
+  ]
+}

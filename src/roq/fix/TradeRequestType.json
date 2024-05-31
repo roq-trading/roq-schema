@@ -1,0 +1,34 @@
+{
+  "name": "roq/fix/TradeRequestType",
+  "tag": 569,
+  "comment": "Type of Trade Capture Report <AE>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "AllTrades",
+      "raw": "0",
+      "comment": "All Trades"
+    },
+    {
+      "name": "MatchedTradesMatchingCriteria",
+      "raw": "1",
+      "comment":
+          "Matched trades matching criteria provided on request (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)"
+    },
+    {
+      "name": "UnmatchedTradesMatchingCriteria",
+      "raw": "2",
+      "comment": "Unmatched trades that match criteria"
+    },
+    {
+      "name": "UnreportedTradesMatchingCriteria",
+      "raw": "3",
+      "comment": "Unreported trades that match criteria"
+    },
+    {
+      "name": "AdvisoriesMatchingCriteria",
+      "raw": "4",
+      "comment": "Advisories that match criteria"
+    }
+  ]
+}

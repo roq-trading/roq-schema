@@ -1,0 +1,188 @@
+{
+  "name": "roq/fix/MDEntryType",
+  "tag": 269,
+  "comment": "Type Market Data entry",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Bid",
+      "raw": "0",
+      "comment": "Bid"
+    },
+    {
+      "name": "Offer",
+      "raw": "1",
+      "comment": "Offer"
+    },
+    {
+      "name": "Trade",
+      "raw": "2",
+      "comment": "Trade"
+    },
+    {
+      "name": "IndexValue",
+      "raw": "3",
+      "comment": "Index Value"
+    },
+    {
+      "name": "OpeningPrice",
+      "raw": "4",
+      "comment": "Opening Price"
+    },
+    {
+      "name": "ClosingPrice",
+      "raw": "5",
+      "comment": "Closing Price"
+    },
+    {
+      "name": "SettlementPrice",
+      "raw": "6",
+      "comment": "Settlement Price"
+    },
+    {
+      "name": "TradingSessionHighPrice",
+      "raw": "7",
+      "comment": "Trading Session High Price"
+    },
+    {
+      "name": "TradingSessionLowPrice",
+      "raw": "8",
+      "comment": "Trading Session Low Price"
+    },
+    {
+      "name": "TRADING_SESSION_VWAP_PRICE",
+      "raw": "9",
+      "comment": "Trading Session VWAP Price"
+    },
+    {
+      "name": "Imbalance",
+      "raw": "A",
+      "comment": "Imbalance"
+    },
+    {
+      "name": "TradeVolume",
+      "raw": "B",
+      "comment": "Trade Volume"
+    },
+    {
+      "name": "OpenInterest",
+      "raw": "C",
+      "comment": "Open Interest"
+    },
+    {
+      "name": "CompositeUnderlyingPrice",
+      "raw": "D",
+      "comment": "Composite Underlying Price"
+    },
+    {
+      "name": "SimulatedSellPrice",
+      "raw": "E",
+      "comment": "Simulated Sell Price"
+    },
+    {
+      "name": "SimulatedBuyPrice",
+      "raw": "F",
+      "comment": "Simulated Buy Price"
+    },
+    {
+      "name": "MarginRate",
+      "raw": "G",
+      "comment": "Margin Rate"
+    },
+    {
+      "name": "MidPrice",
+      "raw": "H",
+      "comment": "Mid Price"
+    },
+    {
+      "name": "EmptyBook",
+      "raw": "J",
+      "comment": "Empty Book"
+    },
+    {
+      "name": "SettleHighPrice",
+      "raw": "K",
+      "comment": "Settle High Price"
+    },
+    {
+      "name": "SettleLowPrice",
+      "raw": "L",
+      "comment": "Settle Low Price"
+    },
+    {
+      "name": "PriorSettlePrice",
+      "raw": "M",
+      "comment": "Prior Settle Price"
+    },
+    {
+      "name": "SessionHighBid",
+      "raw": "N",
+      "comment": "Session High Bid"
+    },
+    {
+      "name": "SessionLowOffer",
+      "raw": "O",
+      "comment": "Session Low Offer"
+    },
+    {
+      "name": "SessionEarlyPrices",
+      "raw": "P",
+      "comment": "Early Prices"
+    },
+    {
+      "name": "AuctionClearingPrice",
+      "raw": "Q",
+      "comment": "Auction Clearing Price"
+    },
+    {
+      "name": "DailyValueAdjustmentForLongPositions",
+      "raw": "R",
+      "comment": "Daily value adjustment for long positions"
+    },
+    {
+      "name": "SwapValueFactor",
+      "raw": "S",
+      "comment": "Swap Value Factor (SVP) for swaps cleared through a central counterparty (CCP)"
+    },
+    {
+      "name": "CumulativeValueAdjustmentForLongPositions",
+      "raw": "T",
+      "comment": "Cumulative Value Adjustment for long positions"
+    },
+    {
+      "name": "DailyValueAdjustmentForShortPositions",
+      "raw": "U",
+      "comment": "Daily Value Adjustment for Short Positions"
+    },
+    {
+      "name": "CumulativeValueAdjustmentForShortPositions",
+      "raw": "V",
+      "comment": "Cumulative Value Adjustment for Short Positions"
+    },
+    {
+      "name": "FixingPrice",
+      "raw": "W",
+      "comment": "Fixing Price"
+    },
+    {
+      "name": "CashRate",
+      "raw": "X",
+      "comment": "Cash Rate"
+    },
+    {
+      "name": "RecoveryRate",
+      "raw": "Y",
+      "comment": "Recovery Rate"
+    },
+    {
+      "name": "RecoveryRateForLong",
+      "raw": "Z",
+      "comment": "Recovery Rate for Long"
+    },
+    {
+      "name": "RecoveryRateForShort",
+      "raw": "a",
+      "comment": "Recovery Rate for Short"
+    }
+  ]
+}

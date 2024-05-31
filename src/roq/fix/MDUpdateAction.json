@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/MDUpdateAction",
+  "tag": 279,
+  "comment": "Type of Market Data update action",
+  "type": "enum",
+  "values": [
+    {
+      "name": "New",
+      "raw": "0",
+      "comment": "New"
+    },
+    {
+      "name": "Change",
+      "raw": "1",
+      "comment": "Change"
+    },
+    {
+      "name": "Delete",
+      "raw": "2",
+      "comment": "Delete"
+    },
+    {
+      "name": "DeleteThru",
+      "raw": "3",
+      "comment": "Delete Thru"
+    },
+    {
+      "name": "DeleteFrom",
+      "raw": "4",
+      "comment": "Delete From"
+    },
+    {
+      "name": "Overlay",
+      "raw": "5",
+      "comment": "Overlay"
+    }
+  ]
+}

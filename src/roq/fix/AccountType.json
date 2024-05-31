@@ -1,0 +1,43 @@
+{
+  "name": "roq/fix/AccountType",
+  "tag": 581,
+  "comment": "Type of Account <1> associated with an order",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Customer",
+      "raw": "1",
+      "comment": "Account is carried on customer Side of Books"
+    },
+    {
+      "name": "NonCustomer",
+      "raw": "2",
+      "comment": "Account is carried on non-customer Side of books"
+    },
+    {
+      "name": "HouseTrader",
+      "raw": "3",
+      "comment": "House Trader"
+    },
+    {
+      "name": "FloorTrader",
+      "raw": "4",
+      "comment": "Floor Trader"
+    },
+    {
+      "name": "NonCustomerCrossMargin",
+      "raw": "6",
+      "comment": "Account is carried on non-customer side of books and is cross margined"
+    },
+    {
+      "name": "HouseTraderCrossMargin",
+      "raw": "7",
+      "comment": "Account is house trader and is cross margined"
+    },
+    {
+      "name": "JointBackoffice",
+      "raw": "8",
+      "comment": "Joint Backoffice Account (JBO)"
+    }
+  ]
+}

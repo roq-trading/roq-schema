@@ -1,0 +1,429 @@
+{
+  "name": "roq/fix/PartyRole",
+  "tag": 452,
+  "comment": "PartyRole",
+  "type": "enum",
+  "values": [
+    {
+      "name": "ExecutingFirm",
+      "raw": "1",
+      "comment": "Executing Firm (formerly FIX 4.2 ExecBroker)"
+    },
+    {
+      "name": "BrokerOfCredit",
+      "raw": "2",
+      "comment": "Broker of Credit (formerly FIX 4.2 BrokerOfCredit)"
+    },
+    {
+      "name": "ClientId",
+      "raw": "3",
+      "comment": "Client ID (formerly FIX 4.2 ClientID)"
+    },
+    {
+      "name": "ClearingFirm",
+      "raw": "4",
+      "comment": "Clearing Firm (formerly FIX 4.2 ClearingFirm)"
+    },
+    {
+      "name": "InvestorId",
+      "raw": "5",
+      "comment": "Investor ID"
+    },
+    {
+      "name": "IntroductionFirm",
+      "raw": "6",
+      "comment": "Introducing Firm"
+    },
+    {
+      "name": "EnteringFirm",
+      "raw": "7",
+      "comment": "Entering Firm"
+    },
+    {
+      "name": "LocateLendingFirm",
+      "raw": "8",
+      "comment": "Locate / Lending Firm (for short-sales)"
+    },
+    {
+      "name": "FundManagerClientId",
+      "raw": "9",
+      "comment": "Fund Manager Client ID (for CIV)"
+    },
+    {
+      "name": "SettlementLocation",
+      "raw": "10",
+      "comment": "Settlement Location (formerly FIX 4.2 SettlLocation)"
+    },
+    {
+      "name": "OrderOriginationTrader",
+      "raw": "11",
+      "comment":
+          "Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)"
+    },
+    {
+      "name": "ExecutingTrader",
+      "raw": "12",
+      "comment": "Executing Trader (associated with Executing Firm - actually executes)"
+    },
+    {
+      "name": "OrderOriginationFirm",
+      "raw": "13",
+      "comment": "Order Origination Firm (e.g. buy-side firm)"
+    },
+    {
+      "name": "GiveupClearingFirm",
+      "raw": "14",
+      "comment": "Giveup Clearing Firm (firm to which trade is given up)"
+    },
+    {
+      "name": "CorrespondentClearingFirm",
+      "raw": "15",
+      "comment": "Correspondent Clearing Firm"
+    },
+    {
+      "name": "ExecutingSystem",
+      "raw": "16",
+      "comment": "Executing System"
+    },
+    {
+      "name": "ContraFirm",
+      "raw": "17",
+      "comment": "Contra Firm"
+    },
+    {
+      "name": "ContraClearingFirm",
+      "raw": "18",
+      "comment": "Contra Clearing Firm"
+    },
+    {
+      "name": "SponsoringFirm",
+      "raw": "19",
+      "comment": "Sponsoring Firm"
+    },
+    {
+      "name": "UnderlyingContraFirm",
+      "raw": "20",
+      "comment": "Underlying Contra Firm"
+    },
+    {
+      "name": "ClearingOrganization",
+      "raw": "21",
+      "comment": "Clearing Organization"
+    },
+    {
+      "name": "Exchange",
+      "raw": "22",
+      "comment": "Exchange"
+    },
+    {
+      "name": "CustomerAccount",
+      "raw": "24",
+      "comment": "Customer Account"
+    },
+    {
+      "name": "CorrespondentClearingOrganization",
+      "raw": "25",
+      "comment": "Correspondent Clearing Organization"
+    },
+    {
+      "name": "CorrespondentBroker",
+      "raw": "26",
+      "comment": "Correspondent Broker"
+    },
+    {
+      "name": "BuyerSeller",
+      "raw": "27",
+      "comment": "Buyer/Seller (Receiver/Deliverer)"
+    },
+    {
+      "name": "Custodian",
+      "raw": "28",
+      "comment": "Custodian"
+    },
+    {
+      "name": "Intermediary",
+      "raw": "29",
+      "comment": "Intermediary"
+    },
+    {
+      "name": "Agent",
+      "raw": "30",
+      "comment": "Agent"
+    },
+    {
+      "name": "SubCustodian",
+      "raw": "31",
+      "comment": "Sub-custodian"
+    },
+    {
+      "name": "Beneficiary",
+      "raw": "32",
+      "comment": "Beneficiary"
+    },
+    {
+      "name": "InterestedParty",
+      "raw": "33",
+      "comment": "Interested party"
+    },
+    {
+      "name": "RegulatoryBody",
+      "raw": "34",
+      "comment": "Regulatory body"
+    },
+    {
+      "name": "LiquidityProvider",
+      "raw": "35",
+      "comment": "Liquidity provider"
+    },
+    {
+      "name": "EnteringTrader",
+      "raw": "36",
+      "comment": "Entering Trader"
+    },
+    {
+      "name": "ContraTrader",
+      "raw": "37",
+      "comment": "Contra Trader"
+    },
+    {
+      "name": "PositionAccount",
+      "raw": "38",
+      "comment": "Position account"
+    },
+    {
+      "name": "ContraInvestorId",
+      "raw": "39",
+      "comment": "Contra Investor ID"
+    },
+    {
+      "name": "TransferToFirm",
+      "raw": "40",
+      "comment": "Transfer to Firm"
+    },
+    {
+      "name": "ContraPositionAccount",
+      "raw": "41",
+      "comment": "Contra Position Account"
+    },
+    {
+      "name": "ContraExchange",
+      "raw": "42",
+      "comment": "Contra Exchange"
+    },
+    {
+      "name": "InternalCarryAccount",
+      "raw": "43",
+      "comment": "Internal Carry Account"
+    },
+    {
+      "name": "OrderEntryOperatorId",
+      "raw": "44",
+      "comment": "Order Entry Operator ID"
+    },
+    {
+      "name": "SecondaryAccountNumber",
+      "raw": "45",
+      "comment": "Secondary Account Number"
+    },
+    {
+      "name": "ForeignFirm",
+      "raw": "46",
+      "comment": "Foreign Firm"
+    },
+    {
+      "name": "ThirdPartyAllocationFirm",
+      "raw": "47",
+      "comment": "Third Party Allocation Firm"
+    },
+    {
+      "name": "ClaimingAccount",
+      "raw": "48",
+      "comment": "Claiming Account"
+    },
+    {
+      "name": "AssetManager",
+      "raw": "49",
+      "comment": "Asset Manager"
+    },
+    {
+      "name": "PledgorAccount",
+      "raw": "50",
+      "comment": "Pledgor Account"
+    },
+    {
+      "name": "PledgeeAccount",
+      "raw": "51",
+      "comment": "Pledgee Account"
+    },
+    {
+      "name": "LargeTraderReportableAccount",
+      "raw": "52",
+      "comment": "Large Trader Reportable Account"
+    },
+    {
+      "name": "TraderMnemonic",
+      "raw": "53",
+      "comment": "Trader mnemonic"
+    },
+    {
+      "name": "SenderLocation",
+      "raw": "54",
+      "comment": "Sender Location"
+    },
+    {
+      "name": "SessionId",
+      "raw": "55",
+      "comment": "Session ID"
+    },
+    {
+      "name": "AcceptableCounterparty",
+      "raw": "56",
+      "comment": "Acceptable Counterparty"
+    },
+    {
+      "name": "UnacceptableCounterparty",
+      "raw": "57",
+      "comment": "Unacceptable Counterparty"
+    },
+    {
+      "name": "EnteringUnit",
+      "raw": "58",
+      "comment": "Entering Unit"
+    },
+    {
+      "name": "ExecutingUnit",
+      "raw": "59",
+      "comment": "Executing Unit"
+    },
+    {
+      "name": "IntroducingBroker",
+      "raw": "60",
+      "comment": "Introducing Broker"
+    },
+    {
+      "name": "QuoteOriginator",
+      "raw": "61",
+      "comment": "Quote originator"
+    },
+    {
+      "name": "ReportOriginator",
+      "raw": "62",
+      "comment": "Report originator"
+    },
+    {
+      "name": "SystematicInternaliser",
+      "raw": "63",
+      "comment": "Systematic internaliser (SI)"
+    },
+    {
+      "name": "MultilateralTradingFacility",
+      "raw": "64",
+      "comment": "Multilateral Trading Facility (MTF)"
+    },
+    {
+      "name": "RegulatedMarket",
+      "raw": "65",
+      "comment": "Regulated Market (RM)"
+    },
+    {
+      "name": "MarketMaker",
+      "raw": "66",
+      "comment": "Market Maker"
+    },
+    {
+      "name": "InvestmentFirm",
+      "raw": "67",
+      "comment": "Investment Firm"
+    },
+    {
+      "name": "HostCompetentAuthority",
+      "raw": "68",
+      "comment": "Host Competent Authority (Host CA)"
+    },
+    {
+      "name": "HomeCompetentAuthority",
+      "raw": "69",
+      "comment": "Home Competent Authority (Home CA)"
+    },
+    {
+      "name": "CAL",
+      "raw": "70",
+      "comment": "Competent Authority of the most relevant market in terms of liquidity (CAL)"
+    },
+    {
+      "name": "CATV",
+      "raw": "71",
+      "comment": "Competent Authority of the Transaction (Execution) Venue (CATV)"
+    },
+    {
+      "name": "ReportingIntermediary",
+      "raw": "72",
+      "comment": "Reporting intermediary (medium/vendor via which report has been published)"
+    },
+    {
+      "name": "ExecutionVenue",
+      "raw": "73",
+      "comment": "Execution Venue"
+    },
+    {
+      "name": "MarketDataEntryOriginator",
+      "raw": "74",
+      "comment": "Market data entry originator"
+    },
+    {
+      "name": "LocationId",
+      "raw": "75",
+      "comment": "Location ID"
+    },
+    {
+      "name": "DeskId",
+      "raw": "76",
+      "comment": "Desk ID"
+    },
+    {
+      "name": "MarketDataMarket",
+      "raw": "77",
+      "comment": "Market data market"
+    },
+    {
+      "name": "AllocationEntity",
+      "raw": "78",
+      "comment": "Allocation Entity"
+    },
+    {
+      "name": "PrimeBrokerProvidingGeneralTradeServices",
+      "raw": "79",
+      "comment": "Prime Broker providing General Trade Services"
+    },
+    {
+      "name": "StepOutFirm",
+      "raw": "80",
+      "comment": "Step-Out Firm (Prime Broker)"
+    },
+    {
+      "name": "BrokerClearingID",
+      "raw": "81",
+      "comment": "BrokerClearingID"
+    },
+    {
+      "name": "CentralRegistrationDepository",
+      "raw": "82",
+      "comment": "Central Registration Depository (CRD)"
+    },
+    {
+      "name": "ClearingAccount",
+      "raw": "83",
+      "comment": "Clearing Account"
+    },
+    {
+      "name": "AcceptableSettlingCounterparty",
+      "raw": "84",
+      "comment": "Acceptable Settling Counterparty"
+    },
+    {
+      "name": "UnacceptableSettlingCounterparty",
+      "raw": "85",
+      "comment": "Unacceptable Settling Counterparty"
+    }
+  ]
+}

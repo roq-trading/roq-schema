@@ -1,0 +1,14 @@
+{
+  "name": "roq/codec/fix/TradingSession",
+  "type": "item",
+  "values": [
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {},
+      "outbound": {}
+    }
+  ]
+}

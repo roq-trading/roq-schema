@@ -1,6 +1,9 @@
-set(TARGET_NAME ${PROJECT_NAME}-schema-roq)
+add_subdirectory(fix)
+add_subdirectory(codec/fix)
 
-set(TARGET_DIR ${CMAKE_INSTALL_DATADIR}/roq/schema/roq)
+set(TARGET_NAME ${PROJECT_NAME}-roq)
+
+set(TARGET_DIR ${SCHEMA_DIR}/roq)
 
 set(SOURCES
     AddRoutes.json
@@ -61,7 +64,7 @@ set(SOURCES
     Protocol.json
     QualityOfService.json
     RateLimit.json
-    RateLimitsUpdates.json
+    RateLimitsUpdate.json
     RateLimitTrigger.json
     RateLimitType.json
     Ready.json

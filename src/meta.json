@@ -1,0 +1,225 @@
+{
+  "string_like_types": [
+    "roq/UUID",
+    "roq/String",
+    "roq/Source",
+    "roq/User",
+    "roq/Account",
+    "roq/Exchange",
+    "roq/Symbol",
+    "roq/Currency",
+    "roq/OrderTemplate",
+    "roq/ExternalAccount",
+    "roq/ExternalOrderId",
+    "roq/ExternalTradeId",
+    "roq/MBOOrderId",
+    "roq/RoutingId",
+    "roq/ClOrdId",
+    "roq/RequestId",
+    "roq/Label",
+    "roq/MeasurementKey",
+    "roq/MatrixKey",
+    "roq/Description",
+    "roq/TimeZone",
+    "roq/ParameterKey",
+    "roq/ParameterValue"
+  ],
+  "cpp": {
+    "std/string_view": {
+      "type": "std::string_view",
+      "includes": [
+        "<string_view>"
+      ]
+    },
+    "std/string": {
+      "type": "std::string",
+      "includes": [
+        "<string>"
+      ]
+    },
+    "std/nanoseconds": {
+      "type": "std::chrono::nanoseconds",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/microseconds": {
+      "type": "std::chrono::microseconds",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/milliseconds": {
+      "type": "std::chrono::milliseconds",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/seconds": {
+      "type": "std::chrono::seconds",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/days": {
+      "type": "std::chrono::days",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/year_month_day": {
+      "type": "std::chrono::year_month_day",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/hh_mm_ss": {
+      "type": "std::chrono::hh_mm_ss<std::chrono::milliseconds>",
+      "includes": [
+        "<chrono>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
+    "std/bool": {
+      "type": "bool",
+      "default": "false",
+      "class": [
+        "integral"
+      ]
+    },
+    "std/char": {
+      "type": "char",
+      "default": "'\\0'",
+      "class": [
+        "integral"
+      ]
+    },
+    "std/int8": {
+      "type": "int8_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "signed"
+      ]
+    },
+    "std/uint8": {
+      "type": "uint8_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "unsigned"
+      ]
+    },
+    "std/int16": {
+      "type": "int16_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "signed"
+      ]
+    },
+    "std/uint16": {
+      "type": "uint16_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "unsigned"
+      ]
+    },
+    "std/int32": {
+      "type": "int32_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "signed"
+      ]
+    },
+    "std/uint32": {
+      "type": "uint32_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "unsigned"
+      ]
+    },
+    "std/int64": {
+      "type": "int64_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "signed"
+      ]
+    },
+    "std/uint64": {
+      "type": "uint64_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "unsigned"
+      ]
+    },
+    "std/ssize_t": {
+      "type": "ssize_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "signed"
+      ]
+    },
+    "std/size_t": {
+      "type": "size_t",
+      "default": "{}",
+      "class": [
+        "integral",
+        "unsigned"
+      ]
+    },
+    "std/float": {
+      "type": "float",
+      "default": "NaN"
+    },
+    "std/double": {
+      "type": "double",
+      "default": "NaN"
+    },
+    "std/span": {
+      "type": "std::span",
+      "includes": [
+        "<span>"
+      ]
+    },
+    "std/vector": {
+      "type": "std::vector",
+      "includes": [
+        "<vector>"
+      ]
+    }
+  }
+}

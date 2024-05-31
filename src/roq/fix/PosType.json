@@ -1,0 +1,143 @@
+{
+  "name": "roq/fix/PosType",
+  "tag": 703,
+  "comment": "PosType",
+  "type": "enum",
+  "values": [
+    {
+      "name": "AllocationTradeQty",
+      "raw": "ALC",
+      "comment": "Allocation Trade Qty"
+    },
+    {
+      "name": "OptionAssignment",
+      "raw": "AS",
+      "comment": "Option Assignment"
+    },
+    {
+      "name": "AsOfTradeQty",
+      "raw": "ASF",
+      "comment": "As-of Trade Qty"
+    },
+    {
+      "name": "DeliveryQty",
+      "raw": "DLV",
+      "comment": "Delivery Qty"
+    },
+    {
+      "name": "ElectronicTradeTty",
+      "raw": "ETR",
+      "comment": "Electronic Trade Qty"
+    },
+    {
+      "name": "OptionExerciseQty",
+      "raw": "EX",
+      "comment": "Option Exercise Qty"
+    },
+    {
+      "name": "EndOfDayQty",
+      "raw": "FIN",
+      "comment": "End-of-Day Qty"
+    },
+    {
+      "name": "IntraSpreadQty",
+      "raw": "IAS",
+      "comment": "Intra-spread Qty"
+    },
+    {
+      "name": "InterSpreadQty",
+      "raw": "IES",
+      "comment": "Inter-spread Qty"
+    },
+    {
+      "name": "AdjustmentQty",
+      "raw": "PA",
+      "comment": "Adjustment Qty"
+    },
+    {
+      "name": "PitTradeQty",
+      "raw": "PIT",
+      "comment": "Pit Trade Qty"
+    },
+    {
+      "name": "StartOfDayQty",
+      "raw": "SOD",
+      "comment": "Start-of-Day Qty"
+    },
+    {
+      "name": "IntegralSplit",
+      "raw": "SPL",
+      "comment": "Integral Split"
+    },
+    {
+      "name": "TransactionFromAssignment",
+      "raw": "TA",
+      "comment": "Transaction from Assignment"
+    },
+    {
+      "name": "TotalTransactionQty",
+      "raw": "TOT",
+      "comment": "Total Transaction Qty"
+    },
+    {
+      "name": "TransactionQuantity",
+      "raw": "TQ",
+      "comment": "Transaction Quantity"
+    },
+    {
+      "name": "TransferTradeQty",
+      "raw": "TRF",
+      "comment": "Transfer Trade Qty"
+    },
+    {
+      "name": "TransactionFromExercise",
+      "raw": "TX",
+      "comment": "Transaction from Exercise"
+    },
+    {
+      "name": "CrossMarginQty",
+      "raw": "XM",
+      "comment": "Cross Margin Qty"
+    },
+    {
+      "name": "ReceiveQuantity",
+      "raw": "RCV",
+      "comment": "Receive Quantity"
+    },
+    {
+      "name": "CorporateActionAdjustment",
+      "raw": "CAA",
+      "comment": "Corporate Action Adjustment"
+    },
+    {
+      "name": "DeliveryNoticeQty",
+      "raw": "DN",
+      "comment": "Delivery Notice Qty"
+    },
+    {
+      "name": "ExchangeForPhysicalQty",
+      "raw": "EP",
+      "comment": "Exchange for Physical Qty"
+    },
+    {
+      "name": "PrivatelyNegotiatedTradeQty",
+      "raw": "PNTN",
+      "comment": "Privately negotiated Trade Qty (Non-regulated)"
+    },
+    {
+      "name": "NetDeltaQty",
+      "raw": "DLT",
+      "comment": "Net Delta Qty"
+    },
+    {
+      "name": "CreditEventAdjustment",
+      "raw": "CEA",
+      "comment": "Credit Event Adjustment"
+    },
+    {
+      "name": "SuccessionEventAdjustment",
+      "raw": "SEA",
+      "comment": "Succession Event Adjustment"
+    }
+  ]
+}

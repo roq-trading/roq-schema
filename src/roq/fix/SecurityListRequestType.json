@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/SecurityListRequestType",
+  "tag": 559,
+  "comment": "Identifies the type/criteria of Security List Request <x>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Symbol",
+      "raw": "0",
+      "comment": "Symbol <55>"
+    },
+    {
+      "name": "SecurityType",
+      "raw": "1",
+      "comment": "SecurityType <167> and/or CFICode <461>"
+    },
+    {
+      "name": "Product",
+      "raw": "2",
+      "comment": "Product <460>"
+    },
+    {
+      "name": "TradingSessionId",
+      "raw": "3",
+      "comment": "TradingSessionID <336>"
+    },
+    {
+      "name": "AllSecurities",
+      "raw": "4",
+      "comment": "All Securities"
+    },
+    {
+      "name": "MarketId",
+      "raw": "5",
+      "comment": "MarketID <1301> or (MarketID + MarketSegmentID <1300>)"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "roq/codec/fix/SecurityDefinition",
+  "type": "comp",
+  "tag": "d",
+  "comment": "This message is a reponse to :code:`SecurityDefinitionRequest` (:code:`c`)",
+  "values": [
+    {
+      "tag": 320,
+      "name": "SecurityReqId",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 322,
+      "name": "SecurityResponseID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 323,
+      "name": "SecurityResponseType",
+      "type": "roq/fix/SecurityResponseType",
+      "required": true,
+      "outbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`ACCEPT_SECURITY_PROPOSAL_AS_IS` (:code:`0`)",
+          "* :code:`REJECT_SECURITY_PROPOSAL` (:code:`5`)"
+        ]
+      }
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 231,
+      "name": "ContractMultiplier",
+      "type": "roq/Decimal",
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 562,
+      "name": "MinTradeVol",
+      "type": "roq/Decimal",
+      "outbound": {}
+    },
+    {
+      "tag": 969,
+      "name": "MinPriceIncrement",
+      "type": "roq/Decimal",
+      "outbound": {}
+    }
+  ]
+}

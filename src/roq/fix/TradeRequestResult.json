@@ -1,0 +1,53 @@
+{
+  "name": "roq/fix/TradeRequestResult",
+  "tag": 749,
+  "comment": "Result of Trade Request",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Successful",
+      "raw": "0",
+      "comment": "Successful (default)"
+    },
+    {
+      "name": "InvalidOrUnknownInstrument",
+      "raw": "1",
+      "comment": "Invalid or unknown instrument"
+    },
+    {
+      "name": "InvalidTypeOfTrade",
+      "raw": "2",
+      "comment": "Invalid type of trade requested"
+    },
+    {
+      "name": "InvalidParties",
+      "raw": "3",
+      "comment": "Invalid parties"
+    },
+    {
+      "name": "InvalidTransportType",
+      "raw": "4",
+      "comment": "Invalid transport type requested"
+    },
+    {
+      "name": "InvalidDestination",
+      "raw": "5",
+      "comment": "Invalid destination requested"
+    },
+    {
+      "name": "NotSupported",
+      "raw": "8",
+      "comment": "TradeRequestType <569> not supported"
+    },
+    {
+      "name": "Unauthorized",
+      "raw": "9",
+      "comment": "Not authorized"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

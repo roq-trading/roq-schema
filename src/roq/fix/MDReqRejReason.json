@@ -1,0 +1,78 @@
+{
+  "name": "roq/fix/MDReqRejReason",
+  "tag": 281,
+  "comment": "Reason for the rejection of a MarketDataRequest <V>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "UnknownSymbol",
+      "raw": "0",
+      "comment": "Unknown symbol"
+    },
+    {
+      "name": "DUPLICATE_MD_REQ_ID",
+      "raw": "1",
+      "comment": "Duplicate MDReqID <262>"
+    },
+    {
+      "name": "InsufficientBandwidth",
+      "raw": "2",
+      "comment": "Insufficient Bandwidth"
+    },
+    {
+      "name": "InsufficientPermissions",
+      "raw": "3",
+      "comment": "Insufficient Permissions"
+    },
+    {
+      "name": "UnsupportedSubscriptionRequestType",
+      "raw": "4",
+      "comment": "Unsupported SubscriptionRequestType <263>"
+    },
+    {
+      "name": "UnsupportedMarketDepth",
+      "raw": "5",
+      "comment": "Unsupported MarketDepth <264>"
+    },
+    {
+      "name": "UNSUPPORTED_MD_UPDATE_TYPE",
+      "raw": "6",
+      "comment": "Unsupported MDUpdateType <265>"
+    },
+    {
+      "name": "UnsupportedAggregatedBook",
+      "raw": "7",
+      "comment": "Unsupported AggregatedBook <266>"
+    },
+    {
+      "name": "UNSUPPORTED_MD_ENTRY_TYPE",
+      "raw": "8",
+      "comment": "Unsupported MDEntryType <269>"
+    },
+    {
+      "name": "UnsupportedTradingSessionId",
+      "raw": "9",
+      "comment": "Unsupported TradingSessionID <336>"
+    },
+    {
+      "name": "UnsupportedScope",
+      "raw": "A",
+      "comment": "Unsupported Scope <546>"
+    },
+    {
+      "name": "UnsupportedOpenCloseSettleFlag",
+      "raw": "B",
+      "comment": "Unsupported OpenCloseSettlFlag <286>"
+    },
+    {
+      "name": "UNSUPPORTED_MD_IMPLICIT_DELETE",
+      "raw": "C",
+      "comment": "Unsupported MDImplicitDelete <547>"
+    },
+    {
+      "name": "InsufficientCredit",
+      "raw": "D",
+      "comment": "Insufficient credit"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "roq/fix/FillLiquidityInd",
+  "tag": 1443,
+  "comment":
+      "Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity taker taking the liquidity. Applicable only for OrdStatus <39> of 'Partial' or 'Filled'.",
+  "type": "enum",
+  "values": [
+    {
+      "name": "AddedLiquidity",
+      "raw": "1",
+      "comment": "Added Liquidity"
+    },
+    {
+      "name": "RemovedLiquidity",
+      "raw": "2",
+      "comment": "Removed Liquidity"
+    },
+    {
+      "name": "LiquidityRoutedOut",
+      "raw": "3",
+      "comment": "Liquidity Routed Out"
+    },
+    {
+      "name": "Auction",
+      "raw": "4",
+      "comment": "Auction"
+    }
+  ]
+}

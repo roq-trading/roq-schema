@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/PosReqResult",
+  "tag": 728,
+  "comment": "Result of Request For Positions <AN>",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Valid",
+      "raw": "0",
+      "comment": "Valid request"
+    },
+    {
+      "name": "InvalidOrUnsupported",
+      "raw": "1",
+      "comment": "Invalid or unsupported request"
+    },
+    {
+      "name": "NoPositionsFound",
+      "raw": "2",
+      "comment": "No positions found that match criteria"
+    },
+    {
+      "name": "NotAuthorized",
+      "raw": "3",
+      "comment": "Not authorized to request positions"
+    },
+    {
+      "name": "NotSupported",
+      "raw": "4",
+      "comment": "Request for position not supported"
+    },
+    {
+      "name": "Other",
+      "raw": "9",
+      "comment": "Other (use Text <58> in conjunction with this code for an explanation)"
+    }
+  ]
+}

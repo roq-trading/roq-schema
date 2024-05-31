@@ -1,0 +1,31 @@
+{
+  "name": "roq/codec/fix/UserResponse",
+  "type": "simple",
+  "tag": "BF",
+  "comment":
+      "This message is used to respond to a User Request <BE> message, it reports the status of the user after the completion of any action requested in the User Request <BE> message.",
+  "values": [
+    {
+      "tag": 923,
+      "name": "UserRequestID",
+      "type": "std/string_view",
+      "required": true
+    },
+    {
+      "tag": 553,
+      "name": "Username",
+      "type": "std/string_view",
+      "required": true
+    },
+    {
+      "tag": 926,
+      "name": "UserStatus",
+      "type": "roq/fix/UserStatus"
+    },
+    {
+      "tag": 927,
+      "name": "UserStatusText",
+      "type": "std/string_view"
+    }
+  ]
+}

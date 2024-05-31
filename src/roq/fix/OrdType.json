@@ -1,0 +1,129 @@
+{
+  "name": "roq/fix/OrdType",
+  "tag": 40,
+  "comment": "Order type",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Market",
+      "raw": "1",
+      "comment": "Market"
+    },
+    {
+      "name": "Limit",
+      "raw": "2",
+      "comment": "Limit"
+    },
+    {
+      "name": "StopStopLoss",
+      "raw": "3",
+      "comment": "Stop / Stop Loss"
+    },
+    {
+      "name": "StopLimit",
+      "raw": "4",
+      "comment": "Stop Limit"
+    },
+    {
+      "name": "MarketOnClose",
+      "raw": "5",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "WithOrWithout",
+      "raw": "6",
+      "comment": "With Or Without"
+    },
+    {
+      "name": "LimitOrBetter",
+      "raw": "7",
+      "comment": "Limit Or Better (Deprecated in FIX 4.4)"
+    },
+    {
+      "name": "LimitWithOrWithout",
+      "raw": "8",
+      "comment": "Limit With Or Without"
+    },
+    {
+      "name": "OnBasis",
+      "raw": "9",
+      "comment": "On Basis"
+    },
+    {
+      "name": "OnClose",
+      "raw": "A",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "LimitOnClose",
+      "raw": "B",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "ForexMarket",
+      "raw": "C",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "PreviouslyQuoted",
+      "raw": "D",
+      "comment": "Previously Quoted"
+    },
+    {
+      "name": "PreviouslyIndicated",
+      "raw": "E",
+      "comment": "Previously Indicated"
+    },
+    {
+      "name": "ForexLimit",
+      "raw": "F",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "ForexSwap",
+      "raw": "G",
+      "comment": "Forex Swap"
+    },
+    {
+      "name": "ForexPreviouslyQuoted",
+      "raw": "H",
+      "comment": "(No longer used) (Deprecated in FIX 4.3)"
+    },
+    {
+      "name": "Funari",
+      "raw": "I",
+      "comment": "Funari (Limit day order with unexecuted portion handles as Market On Close. E.g. Japan)"
+    },
+    {
+      "name": "MarketIfTouched",
+      "raw": "J",
+      "comment": "Market If Touched (MIT)"
+    },
+    {
+      "name": "MarketWithLeftOverAsLimit",
+      "raw": "K",
+      "comment":
+          "Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)"
+    },
+    {
+      "name": "PreviousFundValuationPoint",
+      "raw": "L",
+      "comment": "Previous Fund Valuation Point (Historic pricing; for CIV)"
+    },
+    {
+      "name": "NextFundValuationPoint",
+      "raw": "M",
+      "comment": "Next Fund Valuation Point (Forward pricing; for CIV)"
+    },
+    {
+      "name": "Pegged",
+      "raw": "P",
+      "comment": "Pegged"
+    },
+    {
+      "name": "CounterOrderSelection",
+      "raw": "Q",
+      "comment": "Counter-Order Selection"
+    }
+  ]
+}

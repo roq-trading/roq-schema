@@ -1,0 +1,58 @@
+{
+  "name": "roq/fix/MassStatusReqType",
+  "tag": 585,
+  "comment": "Mass Status Request <AF> Type",
+  "type": "enum",
+  "values": [
+    {
+      "name": "OrdersForSecurity",
+      "raw": "1",
+      "comment": "Status for orders for a security"
+    },
+    {
+      "name": "OrdersForUnderlyingSecurity",
+      "raw": "2",
+      "comment": "Status for orders for an Underlying security"
+    },
+    {
+      "name": "OrdersForProduct",
+      "raw": "3",
+      "comment": "Status for orders for a Product <460>"
+    },
+    {
+      "name": "ORDERS_FOR_CFI_CODE",
+      "raw": "4",
+      "comment": "Status for orders for a CFICode <461>"
+    },
+    {
+      "name": "OrdersForSecurityType",
+      "raw": "5",
+      "comment": "Status for orders for a SecurityType <167>"
+    },
+    {
+      "name": "OrdersForTradingSession",
+      "raw": "6",
+      "comment": "Status for orders for a trading session"
+    },
+    {
+      "name": "Orders",
+      "raw": "7",
+      "comment": "Status for all orders"
+    },
+    {
+      "name": "OrdersForPartyId",
+      "raw": "8",
+      "comment": "Status for orders for a PartyID <448>"
+    },
+    {
+      "name": "SecurityIssuer",
+      "raw": "9",
+      "comment": "Status for Security Issuer"
+    },
+    {
+      "name": "IssuerOfUnderlyingSecurity",
+      "raw": "10",
+      "comment": "Status for Issuer of Underlying Security"
+    }
+  ]
+}
