@@ -1,5 +1,7 @@
 {
   "string_like_types": [
+    "std/string",
+    "std/string_view",
     "roq/UUID",
     "roq/String",
     "roq/Source",
@@ -203,11 +205,17 @@
     },
     "std/float": {
       "type": "float",
-      "default": "NaN"
+      "includes": [
+        "<limits>"
+      ],
+      "default": "std::numeric_limits<float>::quiet_NaN()"
     },
     "std/double": {
       "type": "double",
-      "default": "NaN"
+      "includes": [
+        "<limits>"
+      ],
+      "default": "std::numeric_limits<double>::quiet_NaN()"
     },
     "std/span": {
       "type": "std::span",
