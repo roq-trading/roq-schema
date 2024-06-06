@@ -17,7 +17,6 @@
     {
       "name": "implied_quantity",
       "type": "std/double",
-      "default": " = NaN",
       "comment": "Total implied quantity at price (optional)"
     },
     {

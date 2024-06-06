@@ -11,7 +11,6 @@
     {
       "name": "value",
       "type": "std/double",
-      "default": " = NaN",
       "comment": "Value"
     }
   ]
