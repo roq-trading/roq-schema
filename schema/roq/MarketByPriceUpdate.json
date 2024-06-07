@@ -4,7 +4,7 @@
   "comment": "Update relating to market by price",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -28,34 +28,34 @@
       "comment": "List of asks"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
     {
-      "name": "exchange_time_utc",
+      "name": "exchangeTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "exchange_sequence",
+      "name": "exchangeSequence",
       "type": "std/uint64"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "price_precision",
+      "name": "pricePrecision",
       "type": "roq/Precision",
       "comment": "Precision (decimal digits) required to represent prices (dynamic)"
     },
     {
-      "name": "quantity_precision",
+      "name": "quantityPrecision",
       "type": "roq/Precision",
       "comment": "Precision (decimal digits) required to represent quantities (dynamic)"
     },
     {
-      "name": "max_depth",
+      "name": "maxDepth",
       "type": "std/uint16",
       "comment": "Maximum depth (zero means unlimited)"
     },

@@ -2,8 +2,7 @@
   "name": "roq/codec/fix/MarketDataRequestReject",
   "type": "comp",
   "tag": "Y",
-  "comment":
-      "This message is the response to :code:`MarketDataRequest` (:code:`V`) when the request can not be honored.",
+  "comment": "This message is the response to :code:`MarketDataRequest` (:code:`V`) when the request can not be honored.",
   "values": [
     {
       "tag": 262,

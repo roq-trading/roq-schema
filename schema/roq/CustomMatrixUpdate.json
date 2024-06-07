@@ -39,7 +39,7 @@
       "comment": "matrix"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
@@ -49,7 +49,7 @@
       "comment": "Version number (does not have to be sequential)"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     },
     {

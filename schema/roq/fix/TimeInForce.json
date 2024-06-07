@@ -1,8 +1,7 @@
 {
   "name": "roq/fix/TimeInForce",
   "tag": 59,
-  "comment":
-      "Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders",
+  "comment": "Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders",
   "type": "enum",
   "values": [
     {

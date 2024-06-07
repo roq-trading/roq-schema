@@ -4,7 +4,7 @@
   "comment": "Update relating to current trading status of a symbol",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -16,20 +16,20 @@
       "type": "std/string_view"
     },
     {
-      "name": "trading_status",
+      "name": "tradingStatus",
       "type": "roq/TradingStatus",
       "comment": "Trading status"
     },
     {
-      "name": "exchange_time_utc",
+      "name": "exchangeTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "exchange_sequence",
+      "name": "exchangeSequence",
       "type": "std/uint64"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     }
   ]

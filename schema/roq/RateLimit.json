@@ -14,7 +14,7 @@
       "comment": "Monitor period"
     },
     {
-      "name": "end_time_utc",
+      "name": "endTimeUtc",
       "type": "std/seconds",
       "comment": "End of current period"
     },

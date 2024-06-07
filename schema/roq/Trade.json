@@ -19,16 +19,16 @@
       "comment": "Quantity"
     },
     {
-      "name": "trade_id",
+      "name": "tradeId",
       "type": "roq/ExternalTradeId"
     },
     {
-      "name": "taker_order_id",
+      "name": "takerOrderId",
       "type": "roq/ExternalOrderId",
       "comment": "External order identifier (taker)"
     },
     {
-      "name": "maker_order_id",
+      "name": "makerOrderId",
       "type": "roq/ExternalOrderId",
       "comment": "External order identifier (maker)"
     }

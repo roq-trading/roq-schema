@@ -20,7 +20,7 @@
       "comment": "Queue priority (optional)"
     },
     {
-      "name": "order_id",
+      "name": "orderId",
       "type": "roq/MBOOrderId",
       "comment": "Order identifier (optional when deleting)"
     },

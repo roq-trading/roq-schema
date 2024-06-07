@@ -9,7 +9,7 @@
       "comment": "User (optional)"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     },
     {
@@ -23,16 +23,16 @@
       "comment": "Position updates"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
     {
-      "name": "exchange_time_utc",
+      "name": "exchangeTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "session_id",
+      "name": "sessionId",
       "type": "roq/UUID",
       "comment": "Reference (UUID)"
     },

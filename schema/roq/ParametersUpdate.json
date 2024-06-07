@@ -10,7 +10,7 @@
       "comment": "List of parameters"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },

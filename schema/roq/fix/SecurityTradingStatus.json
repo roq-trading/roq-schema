@@ -127,8 +127,7 @@
     {
       "name": "Cross",
       "raw": "25",
-      "comment":
-          "Cross - system has crossed a percentage of the orders and allows market to respond prior to crossing remaining portion"
+      "comment": "Cross - system has crossed a percentage of the orders and allows market to respond prior to crossing remaining portion"
     },
     {
       "name": "PostClose",

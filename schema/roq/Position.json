@@ -12,13 +12,13 @@
       "type": "roq/Symbol"
     },
     {
-      "name": "long_position",
+      "name": "longPosition",
       "type": "std/double",
       "default": " = 0.0",
       "comment": "Position (long)"
     },
     {
-      "name": "short_position",
+      "name": "shortPosition",
       "type": "std/double",
       "default": " = 0.0",
       "comment": "Position (short)"

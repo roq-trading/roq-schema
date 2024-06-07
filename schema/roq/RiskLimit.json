@@ -12,39 +12,39 @@
       "type": "roq/Symbol"
     },
     {
-      "name": "long_position",
+      "name": "longPosition",
       "type": "std/double",
       "default": " = 0.0",
       "comment": "Position (long)"
     },
     {
-      "name": "short_position",
+      "name": "shortPosition",
       "type": "std/double",
       "default": " = 0.0",
       "comment": "Position (short)"
     },
     {
-      "name": "long_position_limit",
+      "name": "longPositionLimit",
       "type": "std/double",
       "comment": "Position limit (long)"
     },
     {
-      "name": "short_position_limit",
+      "name": "shortPositionLimit",
       "type": "std/double",
       "comment": "Position limit (short)"
     },
     {
-      "name": "long_risk_exposure_limit",
+      "name": "longRiskExposureLimit",
       "type": "std/double",
       "comment": "Risk exposure limit (long)"
     },
     {
-      "name": "short_risk_exposure_limit",
+      "name": "shortRiskExposureLimit",
       "type": "std/double",
       "comment": "Risk exposure limit (short)"
     },
     {
-      "name": "allow_netting",
+      "name": "allowNetting",
       "type": "std/bool",
       "comment": "Allow netting?"
     }

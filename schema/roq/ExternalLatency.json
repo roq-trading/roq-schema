@@ -4,7 +4,7 @@
   "comment": "Update relating to external latency",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {

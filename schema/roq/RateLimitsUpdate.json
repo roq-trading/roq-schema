@@ -4,7 +4,7 @@
   "comment": "Rate-limits update",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -17,7 +17,7 @@
       "comment": "Origin"
     },
     {
-      "name": "rate_limits",
+      "name": "rateLimits",
       "type": "roq/RateLimit",
       "array": "std/span",
       "comment": "Rate-limits updates"

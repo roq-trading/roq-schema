@@ -39,7 +39,7 @@
       "comment": "matrix"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },

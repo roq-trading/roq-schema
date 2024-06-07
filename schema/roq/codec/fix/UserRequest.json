@@ -2,8 +2,7 @@
   "name": "roq/codec/fix/UserRequest",
   "type": "simple",
   "tag": "BE",
-  "comment":
-      "This message is used to initiate a user action, logon, logout or password change. It can also be used to request a report on a user's status.",
+  "comment": "This message is used to initiate a user action, logon, logout or password change. It can also be used to request a report on a user's status.",
   "values": [
     {
       "tag": 923,

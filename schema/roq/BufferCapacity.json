@@ -4,19 +4,19 @@
   "comment": "Buffer capacity",
   "values": [
     {
-      "name": "Empty",
+      "name": "empty",
       "comment": "Buffer is empty"
     },
     {
-      "name": "LowWaterMark",
+      "name": "lowWaterMark",
       "comment": "Buffer has reached the low water mark (from above)"
     },
     {
-      "name": "HighWaterMark",
+      "name": "highWaterMark",
       "comment": "Buffer has reached the high water mark (from below)"
     },
     {
-      "name": "Full",
+      "name": "full",
       "comment": "Buffer is full"
     }
   ]

@@ -8,15 +8,15 @@
       "type": "std/string_view"
     },
     {
-      "name": "order_id",
+      "name": "orderId",
       "type": "std/uint64"
     },
     {
-      "name": "request_template",
+      "name": "requestTemplate",
       "type": "std/string_view"
     },
     {
-      "name": "routing_id",
+      "name": "routingId",
       "type": "std/string_view"
     },
     {
@@ -24,7 +24,7 @@
       "type": "std/uint32"
     },
     {
-      "name": "conditional_on_version",
+      "name": "conditionalOnVersion",
       "type": "std/uint32"
     }
   ]

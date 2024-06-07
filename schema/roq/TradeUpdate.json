@@ -4,7 +4,7 @@
   "comment": "Update relating to order being partially or fully filled",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -12,7 +12,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "order_id",
+      "name": "orderId",
       "type": "std/uint64"
     },
     {
@@ -29,31 +29,31 @@
       "comment": "Side"
     },
     {
-      "name": "position_effect",
+      "name": "positionEffect",
       "type": "roq/PositionEffect"
     },
     {
-      "name": "margin_mode",
+      "name": "marginMode",
       "type": "roq/MarginMode"
     },
     {
-      "name": "create_time_utc",
+      "name": "createTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "update_time_utc",
+      "name": "updateTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "external_account",
+      "name": "externalAccount",
       "type": "std/string_view"
     },
     {
-      "name": "external_order_id",
+      "name": "externalOrderId",
       "type": "std/string_view"
     },
     {
-      "name": "client_order_id",
+      "name": "clientOrderId",
       "type": "std/string_view"
     },
     {
@@ -63,16 +63,16 @@
       "comment": "List of fills"
     },
     {
-      "name": "routing_id",
+      "name": "routingId",
       "type": "std/string_view"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     },
     {
@@ -81,7 +81,7 @@
       "comment": "User name (optional, only relevant for drop-copy)"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     }
   ]

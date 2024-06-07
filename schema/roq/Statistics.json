@@ -14,12 +14,12 @@
       "comment": "Value"
     },
     {
-      "name": "begin_time_utc",
+      "name": "beginTimeUtc",
       "type": "std/seconds",
       "comment": "Sample period begin time"
     },
     {
-      "name": "end_time_utc",
+      "name": "endTimeUtc",
       "type": "std/seconds",
       "comment": "Sample period end time"
     }

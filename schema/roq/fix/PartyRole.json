@@ -57,8 +57,7 @@
     {
       "name": "OrderOriginationTrader",
       "raw": "11",
-      "comment":
-          "Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)"
+      "comment": "Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order)"
     },
     {
       "name": "ExecutingTrader",

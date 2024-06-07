@@ -9,7 +9,7 @@
       "comment": "User name (optional)"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     },
     {
@@ -24,7 +24,7 @@
       "comment": "Risk limits per {exchange, symbol}"
     },
     {
-      "name": "session_id",
+      "name": "sessionId",
       "type": "roq/UUID",
       "comment": "Reference (UUID)"
     },

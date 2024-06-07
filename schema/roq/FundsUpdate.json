@@ -4,7 +4,7 @@
   "comment": "Update relating to available funds",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -16,7 +16,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "margin_mode",
+      "name": "marginMode",
       "type": "roq/MarginMode"
     },
     {
@@ -30,20 +30,20 @@
       "comment": "Funds on hold"
     },
     {
-      "name": "external_account",
+      "name": "externalAccount",
       "type": "std/string_view"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
     {
-      "name": "exchange_time_utc",
+      "name": "exchangeTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     }
   ]

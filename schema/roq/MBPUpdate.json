@@ -15,23 +15,23 @@
       "comment": "Total quantity available at price (zero means remove price level)"
     },
     {
-      "name": "implied_quantity",
+      "name": "impliedQuantity",
       "type": "std/double",
       "comment": "Total implied quantity at price (optional)"
     },
     {
-      "name": "number_of_orders",
+      "name": "numberOfOrders",
       "type": "std/uint16",
       "default": " = {}",
       "comment": "Number of orders at price (optional)"
     },
     {
-      "name": "update_action",
+      "name": "updateAction",
       "type": "roq/UpdateAction",
       "comment": "Type of update action"
     },
     {
-      "name": "price_level",
+      "name": "priceLevel",
       "type": "std/uint32",
       "default": " = {}",
       "comment": "Price level (0-based indexing)"

@@ -8,7 +8,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "max_order_id",
+      "name": "maxOrderId",
       "type": "std/uint64",
       "comment": "Highest previous order identifier (as seen by gateway)"
     }

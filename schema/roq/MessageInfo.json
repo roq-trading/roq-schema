@@ -9,52 +9,52 @@
       "comment": "Source identifier (index into the list of connections)"
     },
     {
-      "name": "source_name",
+      "name": "sourceName",
       "type": "std/string_view",
       "comment": "Source name"
     },
     {
-      "name": "source_session_id",
+      "name": "sourceSessionId",
       "type": "roq/UUID",
       "comment": "Session identifier (UUID)"
     },
     {
-      "name": "source_seqno",
+      "name": "sourceSeqno",
       "type": "std/uint64",
       "comment": "Sequence number (strictly increasing)"
     },
     {
-      "name": "receive_time_utc",
+      "name": "receiveTimeUtc",
       "type": "std/nanoseconds",
       "comment": "Client receive time (realtime clock)"
     },
     {
-      "name": "receive_time",
+      "name": "receiveTime",
       "type": "std/nanoseconds",
       "comment": "Client receive time (monotonic clock)"
     },
     {
-      "name": "source_send_time",
+      "name": "sourceSendTime",
       "type": "std/nanoseconds",
       "comment": "Source send time (monotonic clock)"
     },
     {
-      "name": "source_receive_time",
+      "name": "sourceReceiveTime",
       "type": "std/nanoseconds",
       "comment": "Source receive time (monotonic clock)"
     },
     {
-      "name": "origin_create_time",
+      "name": "originCreateTime",
       "type": "std/nanoseconds",
       "comment": "Origin create time (monotonic clock)"
     },
     {
-      "name": "origin_create_time_utc",
+      "name": "originCreateTimeUtc",
       "type": "std/nanoseconds",
       "comment": "Origin create time (realtime clock)"
     },
     {
-      "name": "is_last",
+      "name": "isLast",
       "type": "std/bool",
       "comment": "Is last in batch?"
     },

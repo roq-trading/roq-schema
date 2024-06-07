@@ -4,23 +4,23 @@
   "comment": "Represents aggregate order book bid/ask information at a given depth",
   "values": [
     {
-      "name": "bid_price",
+      "name": "bidPrice",
       "type": "std/double",
       "comment": "Bid price level"
     },
     {
-      "name": "bid_quantity",
+      "name": "bidQuantity",
       "type": "std/double",
       "default": " = {}",
       "comment": "Total quantity available at bid"
     },
     {
-      "name": "ask_price",
+      "name": "askPrice",
       "type": "std/double",
       "comment": "Ask price level"
     },
     {
-      "name": "ask_quantity",
+      "name": "askQuantity",
       "type": "std/double",
       "default": " = {}",
       "comment": "Total quantity available at ask"

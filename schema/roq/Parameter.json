@@ -9,7 +9,7 @@
       "comment": "Label"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     },
     {

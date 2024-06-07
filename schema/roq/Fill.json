@@ -4,11 +4,11 @@
   "comment": "Represents a single fill (match) when an order is being partially or fully filled",
   "values": [
     {
-      "name": "exchange_time_utc",
+      "name": "exchangeTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "external_trade_id",
+      "name": "externalTradeId",
       "type": "roq/ExternalTradeId"
     },
     {
@@ -27,17 +27,17 @@
       "comment": "Liquidity indicator"
     },
     {
-      "name": "quote_quantity",
+      "name": "quoteQuantity",
       "type": "std/double",
       "comment": "Quantity (quote currency, optional)"
     },
     {
-      "name": "commission_quantity",
+      "name": "commissionQuantity",
       "type": "std/double",
       "comment": "Quantity (commission currency, optional)"
     },
     {
-      "name": "commission_currency",
+      "name": "commissionCurrency",
       "type": "roq/Currency",
       "comment": "Commission currency"
     }

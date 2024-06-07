@@ -31,22 +31,22 @@
       "comment": "Sorted list of accounts being affected (empty list means: all)"
     },
     {
-      "name": "ban_expires",
+      "name": "banExpires",
       "type": "std/nanoseconds",
       "comment": "System time when ban expires (zero means: ban is no longer effective)"
     },
     {
-      "name": "triggered_by",
+      "name": "triggeredBy",
       "type": "std/string_view",
       "comment": "Trigger activated by this user"
     },
     {
-      "name": "buffer_capacity",
+      "name": "bufferCapacity",
       "type": "roq/BufferCapacity",
       "comment": "Buffer capacity (indicator for how full or empty the buffer is)"
     },
     {
-      "name": "remaining_requests",
+      "name": "remainingRequests",
       "type": "std/uint32",
       "comment": "The buffer becomes full if this many requests are sent instantly"
     }

@@ -8,7 +8,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "order_id",
+      "name": "orderId",
       "type": "std/uint64"
     },
     {
@@ -25,33 +25,33 @@
       "comment": "Order side"
     },
     {
-      "name": "position_effect",
+      "name": "positionEffect",
       "type": "roq/PositionEffect"
     },
     {
-      "name": "margin_mode",
+      "name": "marginMode",
       "type": "roq/MarginMode"
     },
     {
-      "name": "max_show_quantity",
+      "name": "maxShowQuantity",
       "type": "std/double",
       "comment": "Quantity visible to market (requires exchange support)"
     },
     {
-      "name": "order_type",
+      "name": "orderType",
       "type": "roq/OrderType"
     },
     {
-      "name": "time_in_force",
+      "name": "timeInForce",
       "type": "roq/TimeInForce"
     },
     {
-      "name": "execution_instructions",
+      "name": "executionInstructions",
       "type": "roq/ExecutionInstruction",
       "array": "roq/Mask"
     },
     {
-      "name": "request_template",
+      "name": "requestTemplate",
       "type": "std/string_view"
     },
     {
@@ -65,16 +65,16 @@
       "comment": "Limit price (depends on order_type)"
     },
     {
-      "name": "stop_price",
+      "name": "stopPrice",
       "type": "std/double",
       "comment": "Stop price (depends on order_type and time_in_force)"
     },
     {
-      "name": "routing_id",
+      "name": "routingId",
       "type": "std/string_view"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     }
   ]

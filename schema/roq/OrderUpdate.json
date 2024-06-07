@@ -4,7 +4,7 @@
   "comment": "Update relating to current status of an order",
   "values": [
     {
-      "name": "stream_id",
+      "name": "streamId",
       "type": "std/uint16"
     },
     {
@@ -12,7 +12,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "order_id",
+      "name": "orderId",
       "type": "std/uint64"
     },
     {
@@ -29,53 +29,53 @@
       "comment": "Side"
     },
     {
-      "name": "position_effect",
+      "name": "positionEffect",
       "type": "roq/PositionEffect"
     },
     {
-      "name": "margin_mode",
+      "name": "marginMode",
       "type": "roq/MarginMode"
     },
     {
-      "name": "max_show_quantity",
+      "name": "maxShowQuantity",
       "type": "std/double",
       "comment": "Quantity visible to market (base currency, requires exchange support)"
     },
     {
-      "name": "order_type",
+      "name": "orderType",
       "type": "roq/OrderType"
     },
     {
-      "name": "time_in_force",
+      "name": "timeInForce",
       "type": "roq/TimeInForce"
     },
     {
-      "name": "execution_instructions",
+      "name": "executionInstructions",
       "type": "roq/ExecutionInstruction",
       "array": "roq/Mask"
     },
     {
-      "name": "create_time_utc",
+      "name": "createTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "update_time_utc",
+      "name": "updateTimeUtc",
       "type": "std/nanoseconds"
     },
     {
-      "name": "external_account",
+      "name": "externalAccount",
       "type": "std/string_view"
     },
     {
-      "name": "external_order_id",
+      "name": "externalOrderId",
       "type": "std/string_view"
     },
     {
-      "name": "client_order_id",
+      "name": "clientOrderId",
       "type": "std/string_view"
     },
     {
-      "name": "order_status",
+      "name": "orderStatus",
       "type": "roq/OrderStatus",
       "comment": "Order status"
     },
@@ -90,76 +90,76 @@
       "comment": "Price"
     },
     {
-      "name": "stop_price",
+      "name": "stopPrice",
       "type": "std/double",
       "comment": "Stop price (depends on order_type and time_in_force)"
     },
     {
-      "name": "risk_exposure",
+      "name": "riskExposure",
       "type": "std/double",
       "comment": "Risk exposure"
     },
     {
-      "name": "risk_exposure_change",
+      "name": "riskExposureChange",
       "type": "std/double",
       "comment": "Risk exposure change"
     },
     {
-      "name": "remaining_quantity",
+      "name": "remainingQuantity",
       "type": "std/double",
       "comment": "Quantity (base currency, remaining)"
     },
     {
-      "name": "traded_quantity",
+      "name": "tradedQuantity",
       "type": "std/double",
       "comment": "Quantity (base currency, total traded)"
     },
     {
-      "name": "average_traded_price",
+      "name": "averageTradedPrice",
       "type": "std/double",
       "comment": "Average price (total traded)"
     },
     {
-      "name": "last_traded_quantity",
+      "name": "lastTradedQuantity",
       "type": "std/double",
       "comment": "Traded quantity (base currency, last trade)"
     },
     {
-      "name": "last_traded_price",
+      "name": "lastTradedPrice",
       "type": "std/double",
       "comment": "Traded price (last trade)"
     },
     {
-      "name": "last_liquidity",
+      "name": "lastLiquidity",
       "type": "roq/Liquidity",
       "comment": "Liquidity indicator (last trade)"
     },
     {
-      "name": "routing_id",
+      "name": "routingId",
       "type": "std/string_view"
     },
     {
-      "name": "max_request_version",
+      "name": "maxRequestVersion",
       "type": "std/uint32",
       "comment": "Last request version"
     },
     {
-      "name": "max_response_version",
+      "name": "maxResponseVersion",
       "type": "std/uint32",
       "comment": "Last response version"
     },
     {
-      "name": "max_accepted_version",
+      "name": "maxAcceptedVersion",
       "type": "std/uint32",
       "comment": "Last accepted version"
     },
     {
-      "name": "update_type",
+      "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
     },
     {
-      "name": "sending_time_utc",
+      "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     },
     {
@@ -168,7 +168,7 @@
       "comment": "User name (optional, only relevant for drop-copy)"
     },
     {
-      "name": "strategy_id",
+      "name": "strategyId",
       "type": "std/uint32"
     }
   ]

@@ -4,7 +4,7 @@
   "comment": "Remove route(s)",
   "values": [
     {
-      "name": "strategy_ids",
+      "name": "strategyIds",
       "type": "std/uint32",
       "array": "std/span",
       "comment": "List of strategy_id's to remove"

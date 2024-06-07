@@ -102,8 +102,7 @@
     {
       "name": "MarketWithLeftOverAsLimit",
       "raw": "K",
-      "comment":
-          "Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)"
+      "comment": "Market With Left Over as Limit (market order with unexecuted quantity becoming limit order at last price)"
     },
     {
       "name": "PreviousFundValuationPoint",

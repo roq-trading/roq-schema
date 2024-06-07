@@ -12,8 +12,7 @@
     {
       "name": "MatchedTradesMatchingCriteria",
       "raw": "1",
-      "comment":
-          "Matched trades matching criteria provided on request (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)"
+      "comment": "Matched trades matching criteria provided on request (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)"
     },
     {
       "name": "UnmatchedTradesMatchingCriteria",

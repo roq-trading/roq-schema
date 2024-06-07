@@ -9,12 +9,12 @@
       "comment": "source"
     },
     {
-      "name": "is_last",
+      "name": "isLast",
       "type": "std/bool",
       "comment": "is last?"
     },
     {
-      "name": "quality_of_service",
+      "name": "qualityOfService",
       "type": "roq/QualityOfService",
       "comment": "quality of service"
     }
