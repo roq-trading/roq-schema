@@ -11,7 +11,7 @@
     {
       "name": "quantity",
       "type": "std/double",
-      "default": " = {}",
+      "default": "{}",
       "comment": "Order quantity (remaining unless update action is fill)"
     },
     {

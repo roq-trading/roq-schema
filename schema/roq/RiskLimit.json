@@ -14,13 +14,13 @@
     {
       "name": "longPosition",
       "type": "std/double",
-      "default": " = 0.0",
+      "default": "0.0",
       "comment": "Position (long)"
     },
     {
       "name": "shortPosition",
       "type": "std/double",
-      "default": " = 0.0",
+      "default": "0.0",
       "comment": "Position (short)"
     },
     {

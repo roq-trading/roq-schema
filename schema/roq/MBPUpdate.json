@@ -11,7 +11,7 @@
     {
       "name": "quantity",
       "type": "std/double",
-      "default": " = {}",
+      "default": "{}",
       "comment": "Total quantity available at price (zero means remove price level)"
     },
     {
@@ -22,7 +22,7 @@
     {
       "name": "numberOfOrders",
       "type": "std/uint16",
-      "default": " = {}",
+      "default": "{}",
       "comment": "Number of orders at price (optional)"
     },
     {
@@ -33,7 +33,7 @@
     {
       "name": "priceLevel",
       "type": "std/uint32",
-      "default": " = {}",
+      "default": "{}",
       "comment": "Price level (0-based indexing)"
     }
   ]

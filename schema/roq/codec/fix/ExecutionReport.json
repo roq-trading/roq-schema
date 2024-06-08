@@ -1,5 +1,5 @@
 {
-  "name": "roq/codec/fix/roq/codec/fix/ExecutionReport",
+  "name": "roq/codec/fix/ExecutionReport",
   "type": "comp",
   "tag": "8",
   "comment": "This message is used to report current status of an order.",
