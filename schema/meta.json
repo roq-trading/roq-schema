@@ -273,5 +273,85 @@
         "<vector>"
       ]
     }
+  },
+  "java": {
+    "std/string_view": {
+      "type": "String"
+    },
+    "std/string": {
+      "type": "String"
+    },
+    "std/nanoseconds": {
+      "type": "long"
+    },
+    "std/microseconds": {
+      "type": "long"
+    },
+    "std/milliseconds": {
+      "type": "long"
+    },
+    "std/seconds": {
+      "type": "long"
+    },
+    "std/days": {
+      "type": "long"
+    },
+    "std/year_month_day": {
+      "type": "long"
+    },
+    "std/hh_mm_ss": {
+      "type": "long"
+    },
+    "std/bool": {
+      "type": "boolean"
+    },
+    "std/char": {
+      "type": "int"
+    },
+    "std/int8": {
+      "type": "int"
+    },
+    "std/uint8": {
+      "type": "int"
+    },
+    "std/int16": {
+      "type": "int"
+    },
+    "std/uint16": {
+      "type": "int"
+    },
+    "std/int32": {
+      "type": "int"
+    },
+    "std/uint32": {
+      "type": "long"
+    },
+    "std/int64": {
+      "type": "long"
+    },
+    "std/uint64": {
+      "type": "long"
+    },
+    "std/ssize_t": {
+      "type": "long"
+    },
+    "std/size_t": {
+      "type": "long"
+    },
+    "std/float": {
+      "type": "float"
+    },
+    "std/double": {
+      "type": "double"
+    },
+    "std/span": {
+      "type": "[]"
+    },
+    "std/vector": {
+      "type": "[]"
+    },
+    "roq/UUID": {
+      "type": "java.util.UUID"
+    }
   }
 }
