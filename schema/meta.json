@@ -257,9 +257,9 @@
     "std/double": {
       "type": "double",
       "includes": [
-        "<limits>"
+        "roq/limits.hpp"
       ],
-      "default": "std::numeric_limits<double>::quiet_NaN()"
+      "default": "roq::NaN"
     },
     "std/span": {
       "type": "std::span",
