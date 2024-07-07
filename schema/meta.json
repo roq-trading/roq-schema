@@ -119,6 +119,17 @@
         "chrono"
       ]
     },
+    "std/minutes": {
+      "type": "std::chrono::minutes",
+      "includes": [
+        "<chrono>",
+        "<fmt/chrono.h>"
+      ],
+      "default": "{}",
+      "class": [
+        "chrono"
+      ]
+    },
     "std/days": {
       "type": "std::chrono::days",
       "includes": [

@@ -1,0 +1,37 @@
+{
+  "name": "roq/Bar",
+  "type": "struct",
+  "comment": "Represents a single bar of a time-series",
+  "values": [
+    {
+      "name": "TimeUtc",
+      "type": "std/nanoseconds",
+      "comment": "End-period time-stamp (UTC)"
+    },
+    {
+      "name": "open",
+      "type": "std/double",
+      "comment": "Opening price"
+    },
+    {
+      "name": "high",
+      "type": "std/double",
+      "comment": "Highest price"
+    },
+    {
+      "name": "low",
+      "type": "std/double",
+      "comment": "Lowest price"
+    },
+    {
+      "name": "close",
+      "type": "std/double",
+      "comment": "Closing price"
+    },
+    {
+      "name": "total_volume",
+      "type": "std/double",
+      "comment": "Total volume"
+    }
+  ]
+}

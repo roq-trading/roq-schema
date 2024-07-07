@@ -7,6 +7,7 @@ set(TARGET_DIR ${SCHEMA_DIR}/roq)
 
 set(SOURCES
     AddRoutes.json
+    Bar.json
     BatchBegin.json
     BatchEnd.json
     BufferCapacity.json
@@ -91,6 +92,7 @@ set(SOURCES
     SupportType.json
     TimeInForce.json
     Timer.json
+    TimeSeriesUpdate.json
     TopOfBook.json
     Trade.json
     TradeSummary.json

@@ -1,0 +1,45 @@
+{
+  "name": "roq/TimeSeriesUpdate",
+  "type": "message",
+  "comment": "Update relating to time-series",
+  "values": [
+    {
+      "name": "streamId",
+      "type": "std/uint16"
+    },
+    {
+      "name": "exchange",
+      "type": "std/string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std/string_view"
+    },
+    {
+      "name": "Frequency",
+      "type": "std/minutes",
+      "comment": "Frequency"
+    },
+    {
+      "name": "bars",
+      "type": "roq/Bar",
+      "array": "std/span",
+      "comment": "List of updated bars"
+    },
+    {
+      "name": "updateType",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    },
+    {
+      "name": "pricePrecision",
+      "type": "roq/Precision",
+      "comment": "Precision (decimal digits) required to represent prices (dynamic)"
+    },
+    {
+      "name": "quantityPrecision",
+      "type": "roq/Precision",
+      "comment": "Precision (decimal digits) required to represent quantities (dynamic)"
+    }
+  ]
+}
