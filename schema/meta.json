@@ -275,7 +275,8 @@
     "std/span": {
       "type": "std::span",
       "includes": [
-        "<span>"
+        "<span>",
+        "<fmt/ranges.h>"
       ]
     },
     "std/vector": {
