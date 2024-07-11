@@ -282,7 +282,8 @@
     "std/vector": {
       "type": "std::vector",
       "includes": [
-        "<vector>"
+        "<vector>",
+        "<fmt/ranges.h>"
       ]
     }
   },
