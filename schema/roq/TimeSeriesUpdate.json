@@ -16,9 +16,9 @@
       "type": "std/string_view"
     },
     {
-      "name": "Frequency",
-      "type": "std/minutes",
-      "comment": "Frequency"
+      "name": "type",
+      "type": "roq/TimeSeriesType",
+      "comment": "Time-series type"
     },
     {
       "name": "bars",

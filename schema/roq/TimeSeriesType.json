@@ -1,0 +1,11 @@
+{
+  "name": "roq/TimeSeriesType",
+  "type": "enum",
+  "comment": "Enumeration of time-series types",
+  "values": [
+    {
+      "name": "Trades",
+      "comment": "Trade summary"
+    }
+  ]
+}

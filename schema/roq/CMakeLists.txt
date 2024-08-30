@@ -92,6 +92,7 @@ set(SOURCES
     SupportType.json
     TimeInForce.json
     Timer.json
+    TimeSeriesType.json
     TimeSeriesUpdate.json
     TopOfBook.json
     Trade.json
