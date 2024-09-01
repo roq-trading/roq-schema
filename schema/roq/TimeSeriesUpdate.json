@@ -21,6 +21,11 @@
       "comment": "Time-series type"
     },
     {
+      "name": "frequency",
+      "type": "std/minutes",
+      "comment": "Frequency"
+    },
+    {
       "name": "bars",
       "type": "roq/Bar",
       "array": "std/span",
@@ -32,14 +37,14 @@
       "comment": "Update type"
     },
     {
-      "name": "pricePrecision",
+      "name": "valuePrecision",
       "type": "roq/Precision",
-      "comment": "Precision (decimal digits) required to represent prices (dynamic)"
+      "comment": "Precision (decimal digits) required to represent values (dynamic)"
     },
     {
-      "name": "quantityPrecision",
+      "name": "volumePrecision",
       "type": "roq/Precision",
-      "comment": "Precision (decimal digits) required to represent quantities (dynamic)"
+      "comment": "Precision (decimal digits) required to represent volume (dynamic)"
     }
   ]
 }

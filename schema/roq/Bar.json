@@ -4,34 +4,34 @@
   "comment": "Represents a single bar of a time-series",
   "values": [
     {
-      "name": "TimeUtc",
+      "name": "timeUtc",
       "type": "std/nanoseconds",
       "comment": "End-period time-stamp (UTC)"
     },
     {
       "name": "open",
       "type": "std/double",
-      "comment": "Opening price"
+      "comment": "Open"
     },
     {
       "name": "high",
       "type": "std/double",
-      "comment": "Highest price"
+      "comment": "High"
     },
     {
       "name": "low",
       "type": "std/double",
-      "comment": "Lowest price"
+      "comment": "Low"
     },
     {
       "name": "close",
       "type": "std/double",
-      "comment": "Closing price"
+      "comment": "Close"
     },
     {
-      "name": "total_volume",
+      "name": "volume",
       "type": "std/double",
-      "comment": "Total volume"
+      "comment": "Volume"
     }
   ]
 }
