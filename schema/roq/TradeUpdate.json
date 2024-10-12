@@ -37,6 +37,11 @@
       "type": "roq/MarginMode"
     },
     {
+      "name": "quantityType",
+      "type": "roq/QuantityType",
+      "comment": "Type of quantity (requires ecxhange support)"
+    },
+    {
       "name": "createTimeUtc",
       "type": "std/nanoseconds"
     },

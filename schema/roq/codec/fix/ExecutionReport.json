@@ -130,6 +130,13 @@
       "outbound": {}
     },
     {
+      "tag": 854,
+      "name": "QtyType",
+      "type": "roq/fix/QtyType",
+      "required": false,
+      "inbound": {}
+    },
+    {
       "tag": 40,
       "name": "OrdType",
       "type": "roq/fix/OrdType",

@@ -64,6 +64,7 @@ set(SOURCES
     Priority.json
     Protocol.json
     QualityOfService.json
+    QuantityType.json
     RateLimit.json
     RateLimitsUpdate.json
     RateLimitTrigger.json

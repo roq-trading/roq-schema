@@ -37,6 +37,11 @@
       "type": "roq/MarginMode"
     },
     {
+      "name": "quantityType",
+      "type": "roq/QuantityType",
+      "comment": "Type of quantity (requires ecxhange support)"
+    },
+    {
       "name": "maxShowQuantity",
       "type": "std/double",
       "comment": "Quantity visible to market (base currency, requires exchange support)"

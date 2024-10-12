@@ -13,7 +13,8 @@
       "name": "Option"
     },
     {
-      "name": "Swap"
+      "name": "Swap",
+      "comment": "Perpetuals (like a futures contract but without an expiration date)"
     }
   ]
 }

@@ -80,6 +80,13 @@
       "inbound": {}
     },
     {
+      "tag": 854,
+      "name": "QtyType",
+      "type": "roq/fix/QtyType",
+      "required": false,
+      "inbound": {}
+    },
+    {
       "tag": 38,
       "name": "OrderQty",
       "type": "roq/Decimal",

@@ -37,6 +37,11 @@
       "type": "roq/MarginMode"
     },
     {
+      "name": "quantityType",
+      "type": "roq/QuantityType",
+      "comment": "Type of quantity (requires ecxhange support)"
+    },
+    {
       "name": "requestType",
       "type": "roq/RequestType",
       "comment": "Request type"

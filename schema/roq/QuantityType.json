@@ -1,0 +1,13 @@
+{
+  "name": "roq/QuantityType",
+  "type": "enum",
+  "comment": "Enumeration of the type of quantity",
+  "values": [
+    {
+      "name": "Units"
+    },
+    {
+      "name": "Contracts"
+    }
+  ]
+}

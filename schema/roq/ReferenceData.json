@@ -36,6 +36,11 @@
       "comment": "Quote currency"
     },
     {
+      "name": "settlementCurrency",
+      "type": "std/string_view",
+      "comment": "Settlement currency"
+    },
+    {
       "name": "marginCurrency",
       "type": "std/string_view",
       "comment": "Margin currency"
