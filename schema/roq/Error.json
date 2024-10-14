@@ -125,6 +125,12 @@
     {
       "name": "InvalidFilter",
       "comment": "Invalid filter"
+    },
+    {
+      "name": "InvalidMarginMode"
+    },
+    {
+      "name": "InvalidQuantityType"
     }
   ]
 }
