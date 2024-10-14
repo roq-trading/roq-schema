@@ -26,6 +26,11 @@
       "comment": "Security type"
     },
     {
+      "name": "cfiCode",
+      "type": "std/string_view",
+      "comment": "CFI code"
+    },
+    {
       "name": "baseCurrency",
       "type": "std/string_view",
       "comment": "Base currency"
