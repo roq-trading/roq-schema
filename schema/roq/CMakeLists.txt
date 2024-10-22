@@ -103,6 +103,7 @@ set(SOURCES
     Transport.json
     UpdateAction.json
     UpdateReason.json
-    UpdateType.json)
+    UpdateType.json
+    VariantType.json)
 
 install(FILES ${SOURCES} DESTINATION ${TARGET_DIR})

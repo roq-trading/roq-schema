@@ -1,0 +1,63 @@
+{
+  "name": "roq/VariantType",
+  "type": "enum",
+  "comment": "Enumeration of variant types",
+  "values": [
+    {
+      "name": "String",
+      "comment": "ASCII string"
+    },
+    {
+      "name": "Bool",
+      "comment": "Boolean"
+    },
+    {
+      "name": "Int8",
+      "comment": "Signed 8 bit integer"
+    },
+    {
+      "name": "Uint8",
+      "comment": "Unsigned 8 bit integer"
+    },
+    {
+      "name": "Int16",
+      "comment": "Signed 16 bit integer"
+    },
+    {
+      "name": "Uint16",
+      "comment": "Unsigned 16 bit integer"
+    },
+    {
+      "name": "Int32",
+      "comment": "Signed 32 bit integer"
+    },
+    {
+      "name": "Uint32",
+      "comment": "Unsigned 32 bit integer"
+    },
+    {
+      "name": "Int64",
+      "comment": "Signed 64 bit integer"
+    },
+    {
+      "name": "Uint64",
+      "comment": "Unsigned 64 bit integer"
+    },
+    {
+      "name": "Float",
+      "comment": "32 bit floating point"
+    },
+    {
+      "name": "Double",
+      "comment": "64 bit floating point"
+    },
+    {
+      "name": "Enum",
+      "comment": "Enumeration"
+    },
+    {
+      "name": "Datetime",
+      "comment": "Nanoseconds relative to Unix epoch"
+    }
+  ]
+}
