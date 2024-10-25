@@ -15,7 +15,7 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - clangdev
+    - clang-format
     - cmake
     - doxygen
     - make
