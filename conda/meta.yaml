@@ -8,9 +8,6 @@ source:
 build:
   noarch: generic
   number: {{ ROQ_BUILD_NUMBER if ROQ_BUILD_NUMBER is defined else GIT_DESCRIBE_NUMBER }}
-  script_env:
-    - ROQ_BUILD_NUMBER
-    - ROQ_BUILD_TYPE
 
 requirements:
   build:
