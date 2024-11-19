@@ -91,6 +91,7 @@ set(SOURCES
     Stop.json
     StreamStatus.json
     SupportType.json
+    TickSizeStep.json
     TimeInForce.json
     Timer.json
     TimeSeriesType.json

@@ -61,6 +61,12 @@
       "comment": "Minimum price increment"
     },
     {
+      "name": "tick_size_steps",
+      "type": "roq/TickSizeStep",
+      "array": "std/span",
+      "comment": "List of tick size steps"
+    },
+    {
       "name": "multiplier",
       "type": "std/double",
       "comment": "Multiplier (notional)"

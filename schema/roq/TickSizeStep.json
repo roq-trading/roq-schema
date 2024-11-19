@@ -1,0 +1,17 @@
+{
+  "name": "roq/TickSizeStep",
+  "type": "struct",
+  "comment": "Represents tick size for a range starting from a minimum price",
+  "values": [
+    {
+      "name": "min_price",
+      "type": "std/double",
+      "comment": "Minimum price (of range)"
+    },
+    {
+      "name": "tick_size",
+      "type": "std/double",
+      "comment": "Tick size"
+    }
+  ]
+}
