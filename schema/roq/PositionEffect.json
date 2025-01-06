@@ -5,11 +5,11 @@
   "values": [
     {
       "name": "Open",
-      "name": "Open position"
+      "comment": "Open position"
     },
     {
       "name": "Close",
-      "name": "Close position"
+      "comment": "Close position"
     }
   ]
 }
