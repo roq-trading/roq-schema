@@ -4,13 +4,16 @@
   "comment": "Enumeration of security/instrument types",
   "values": [
     {
-      "name": "Spot"
+      "name": "Spot",
+      "comment": "Spot"
     },
     {
-      "name": "Futures"
+      "name": "Futures",
+      "comment": "Futures"
     },
     {
-      "name": "Option"
+      "name": "Option",
+      "comment": "Option"
     },
     {
       "name": "Swap",

@@ -11,61 +11,80 @@
       "comment": "Request type not supported"
     },
     {
-      "name": "InvalidAccount"
+      "name": "InvalidAccount",
+      "comment": "Invalid account"
     },
     {
-      "name": "InvalidOrderId"
+      "name": "InvalidOrderId",
+      "comment": "Invalid order ID"
     },
     {
-      "name": "InvalidExchange"
+      "name": "InvalidExchange",
+      "comment": "Invalid exchange"
     },
     {
-      "name": "InvalidSymbol"
+      "name": "InvalidSymbol",
+      "comment": "Invalid symbol"
     },
     {
-      "name": "InvalidSide"
+      "name": "InvalidSide",
+      "comment": "Invalid side"
     },
     {
-      "name": "InvalidPositionEffect"
+      "name": "InvalidPositionEffect",
+      "comment": "Invalid position effect"
     },
     {
-      "name": "InvalidQuantity"
+      "name": "InvalidQuantity",
+      "comment": "Invalid quantity"
     },
     {
-      "name": "InvalidMaxShowQuantity"
+      "name": "InvalidMaxShowQuantity",
+      "comment": "Invalid max show quantity"
     },
     {
-      "name": "InvalidOrderType"
+      "name": "InvalidOrderType",
+      "comment": "Invalid order type"
     },
     {
-      "name": "InvalidTimeInForce"
+      "name": "InvalidTimeInForce",
+      "comment": "Invalid time in force"
     },
     {
-      "name": "InvalidExecutionInstruction"
+      "name": "InvalidExecutionInstruction",
+      "comment": "Invalid execution instruction"
     },
     {
-      "name": "InvalidRequestTemplate"
+      "name": "InvalidRequestTemplate",
+      "comment": "Invalid request template"
     },
     {
-      "name": "InvalidPrice"
+      "name": "InvalidPrice",
+      "comment": "Invalid price"
     },
     {
-      "name": "InvalidStopPrice"
+      "name": "InvalidStopPrice",
+      "comment": "Invalid stop price"
     },
     {
-      "name": "InvalidRoutingId"
+      "name": "InvalidRoutingId",
+      "comment": "Invalid routing ID"
     },
     {
-      "name": "InvalidRequestVersion"
+      "name": "InvalidRequestVersion",
+      "comment": "Invalid request version"
     },
     {
-      "name": "InvalidRequestId"
+      "name": "InvalidRequestId",
+      "comment": "Invalid request ID"
     },
     {
-      "name": "InvalidRequestType"
+      "name": "InvalidRequestType",
+      "comment": "Invalid request type"
     },
     {
-      "name": "InvalidRequestStatus"
+      "name": "InvalidRequestStatus",
+      "comment": "Invalid request status"
     },
     {
       "name": "InvalidRequestArgs",
@@ -112,7 +131,8 @@
       "comment": "Happens when gateway detects chain failure"
     },
     {
-      "name": "UnknownOrderId"
+      "name": "UnknownOrderId",
+      "comment": "Unknown order ID"
     },
     {
       "name": "InsufficientFunds",
@@ -127,10 +147,12 @@
       "comment": "Invalid filter"
     },
     {
-      "name": "InvalidMarginMode"
+      "name": "InvalidMarginMode",
+      "comment": "Invalid margin mode"
     },
     {
-      "name": "InvalidQuantityType"
+      "name": "InvalidQuantityType",
+      "comment": "Invalid quantity type"
     }
   ]
 }

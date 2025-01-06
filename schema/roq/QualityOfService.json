@@ -4,10 +4,12 @@
   "comment": "Enumeration of quality of service",
   "values": [
     {
-      "name": "Immediate"
+      "name": "Immediate",
+      "comment": "Immediate"
     },
     {
-      "name": "Critical"
+      "name": "Critical",
+      "comment": "Critical"
     }
   ]
 }

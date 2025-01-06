@@ -4,19 +4,24 @@
   "comment": "Enumeration of request status types",
   "values": [
     {
-      "name": "Forwarded"
+      "name": "Forwarded",
+      "comment": "Forwarded to broker/exchange"
     },
     {
-      "name": "Accepted"
+      "name": "Accepted",
+      "comment": "Accepted"
     },
     {
-      "name": "Rejected"
+      "name": "Rejected",
+      "comment": "Rejected"
     },
     {
-      "name": "Disconnected"
+      "name": "Disconnected",
+      "comment": "Disconnected"
     },
     {
-      "name": "Timeout"
+      "name": "Timeout",
+      "comment": "Timed out"
     },
     {
       "name": "Failed",

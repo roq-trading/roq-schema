@@ -4,22 +4,28 @@
   "comment": "Enumeration of exchange connectivity status as seen from a gateway",
   "values": [
     {
-      "name": "Disconnected"
+      "name": "Disconnected",
+      "comment": "Disconnected"
     },
     {
-      "name": "Connecting"
+      "name": "Connecting",
+      "comment": "Connecting"
     },
     {
-      "name": "LoginSent"
+      "name": "LoginSent",
+      "comment": "Login sent"
     },
     {
-      "name": "Downloading"
+      "name": "Downloading",
+      "comment": "Downloading"
     },
     {
-      "name": "Ready"
+      "name": "Ready",
+      "comment": "Ready"
     },
     {
-      "name": "LoggedOut"
+      "name": "LoggedOut",
+      "comment": "Logged out"
     }
   ]
 }

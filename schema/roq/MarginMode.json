@@ -4,13 +4,16 @@
   "comment": "Enumeration of margin modes",
   "values": [
     {
-      "name": "Isolated"
+      "name": "Isolated",
+      "comment": "Isolated"
     },
     {
-      "name": "Cross"
+      "name": "Cross",
+      "comment": "Cross"
     },
     {
-      "name": "Portfolio"
+      "name": "Portfolio",
+      "comment": "Portfolio"
     }
   ]
 }

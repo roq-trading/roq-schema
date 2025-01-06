@@ -4,10 +4,12 @@
   "comment": "Enumeration of the type of quantity",
   "values": [
     {
-      "name": "Units"
+      "name": "Units",
+      "comment": "Units"
     },
     {
-      "name": "Contracts"
+      "name": "Contracts",
+      "comment": "Contracts"
     }
   ]
 }

@@ -4,16 +4,20 @@
   "comment": "Request identifier",
   "values": [
     {
-      "name": "Base64"
+      "name": "Base64",
+      "comment": "Base64 encoded"
     },
     {
-      "name": "Base32"
+      "name": "Base32",
+      "comment": "Base32 encoded"
     },
     {
-      "name": "Simple"
+      "name": "Simple",
+      "comment": "Simple encoded"
     },
     {
-      "name": "UUID"
+      "name": "UUID",
+      "comment": "UUID encoded"
     }
   ]
 }

@@ -4,10 +4,12 @@
   "comment": "Enumeration of the side of a trade",
   "values": [
     {
-      "name": "Buy"
+      "name": "Buy",
+      "comment": "Buy"
     },
     {
-      "name": "Sell"
+      "name": "Sell",
+      "comment": "Sell"
     }
   ]
 }

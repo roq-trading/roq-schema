@@ -4,16 +4,20 @@
   "comment": "Enumeration of origin types",
   "values": [
     {
-      "name": "Client"
+      "name": "Client",
+      "comment": "Client"
     },
     {
-      "name": "Gateway"
+      "name": "Gateway",
+      "comment": "Gateway"
     },
     {
-      "name": "Broker"
+      "name": "Broker",
+      "comment": "Broker"
     },
     {
-      "name": "Exchange"
+      "name": "Exchange",
+      "comment": "Exchange"
     }
   ]
 }

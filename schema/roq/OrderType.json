@@ -4,10 +4,12 @@
   "comment": "Enumeration of order types",
   "values": [
     {
-      "name": "Market"
+      "name": "Market",
+      "comment": "Market order"
     },
     {
-      "name": "Limit"
+      "name": "Limit",
+      "comment": "Limit order"
     }
   ]
 }

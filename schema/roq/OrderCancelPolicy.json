@@ -4,13 +4,16 @@
   "comment": "Enumeration of order cancel policies",
   "values": [
     {
-      "name": "ManagedOrders"
+      "name": "ManagedOrders",
+      "comment": "Cancel managed orders"
     },
     {
-      "name": "ByAccount"
+      "name": "ByAccount",
+      "comment": "Cancel by account"
     },
     {
-      "name": "ByStrategy"
+      "name": "ByStrategy",
+      "comment": "Cancel by strategy"
     }
   ]
 }

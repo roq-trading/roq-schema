@@ -4,52 +4,68 @@
   "comment": "Enumeration of a statistics type",
   "values": [
     {
-      "name": "OpenPrice"
+      "name": "OpenPrice",
+      "comment": "Open price"
     },
     {
-      "name": "SettlementPrice"
+      "name": "SettlementPrice",
+      "comment": "Settlement price"
     },
     {
-      "name": "ClosePrice"
+      "name": "ClosePrice",
+      "comment": "Close price"
     },
     {
-      "name": "OpenInterest"
+      "name": "OpenInterest",
+      "comment": "Open interest"
     },
     {
-      "name": "PreOpenInterest"
+      "name": "PreOpenInterest",
+      "comment": "Pre-open interest"
     },
     {
-      "name": "PreSettlementPrice"
+      "name": "PreSettlementPrice",
+      "comment": "Pre-settlement price"
     },
     {
-      "name": "PreClosePrice"
+      "name": "PreClosePrice",
+      "comment": "Pre-close price"
     },
     {
-      "name": "HighestTradedPrice"
+      "name": "HighestTradedPrice",
+      "comment": "Highest traded price"
     },
     {
-      "name": "LowestTradedPrice"
+      "name": "LowestTradedPrice",
+      "comment": "Lowest traded price"
     },
     {
-      "name": "UpperLimitPrice"
+      "name": "UpperLimitPrice",
+      "comment": "Upper limit price"
     },
     {
-      "name": "LowerLimitPrice"
+      "name": "LowerLimitPrice",
+      "comment": "Lower limit price"
     },
     {
-      "name": "IndexValue"
+      "name": "IndexValue",
+      "comment": "Index value"
     },
     {
-      "name": "MarginRate"
+      "name": "MarginRate",
+      "comment": "Margin rate"
     },
     {
-      "name": "FundingRate"
+      "name": "FundingRate",
+      "comment": "Funding rate"
     },
     {
-      "name": "FundingRatePrediction"
+      "name": "FundingRatePrediction",
+      "comment": "Funding rate prediction"
     },
     {
-      "name": "TradeVolume"
+      "name": "TradeVolume",
+      "comment": "Trade volume"
     }
   ]
 }

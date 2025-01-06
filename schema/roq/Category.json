@@ -4,10 +4,12 @@
   "comment": "Category (of data)",
   "values": [
     {
-      "name": "Public"
+      "name": "Public",
+      "comment": "Public data"
     },
     {
-      "name": "Private"
+      "name": "Private",
+      "comment": "Private data"
     }
   ]
 }

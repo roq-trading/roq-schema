@@ -4,13 +4,16 @@
   "comment": "Enumeration of request types",
   "values": [
     {
-      "name": "CreateOrder"
+      "name": "CreateOrder",
+      "comment": "Create order"
     },
     {
-      "name": "ModifyOrder"
+      "name": "ModifyOrder",
+      "comment": "Modify order"
     },
     {
-      "name": "CancelOrder"
+      "name": "CancelOrder",
+      "comment": "Cancel order"
     }
   ]
 }

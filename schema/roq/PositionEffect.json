@@ -4,10 +4,12 @@
   "comment": "Enumeration of position effect types",
   "values": [
     {
-      "name": "Open"
+      "name": "Open",
+      "name": "Open position"
     },
     {
-      "name": "Close"
+      "name": "Close",
+      "name": "Close position"
     }
   ]
 }

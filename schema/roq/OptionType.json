@@ -4,10 +4,12 @@
   "comment": "Enumeration of option types",
   "values": [
     {
-      "name": "Call"
+      "name": "Call",
+      "comment": "Call"
     },
     {
-      "name": "Put"
+      "name": "Put",
+      "comment": "Put"
     }
   ]
 }
