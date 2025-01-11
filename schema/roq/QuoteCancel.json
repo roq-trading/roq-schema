@@ -1,0 +1,16 @@
+{
+  "name": "roq/QuoteCancel",
+  "type": "message",
+  "comment": "Cancel quotes",
+  "values": [
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "quoteSetId",
+      "type": "std/uint16",
+      "comment": "Quote Request ID"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "roq/Quote",
+  "type": "message",
+  "comment": "Quote",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "roq/Exchange"
+    },
+    {
+      "name": "symbol",
+      "type": "roq/Symbol"
+    },
+    {
+      "name": "layer",
+      "type": "roq/Layer",
+      "comment": "Layer"
+    },
+    {
+      "name": "quote_set_id",
+      "type": "std/uint16",
+      "comment": "Quote Set ID (can be used to cancel quotes)"
+    },
+    {
+      "name": "quote_entry_id",
+      "type": "std/uint32",
+      "comment": "Quote ID (when supported by exchange)"
+    }
+  ]
+}

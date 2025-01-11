@@ -1,0 +1,22 @@
+{
+  "name": "roq/MassQuote",
+  "type": "message",
+  "comment": "Quotes",
+  "values": [
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "quoteReqId",
+      "type": "std/uint64",
+      "comment": "Quote Request ID"
+    },
+    {
+      "name": "quotes",
+      "type": "roq/Quote",
+      "array": "std/span",
+      "comment": "Quotes"
+    }
+  ]
+}

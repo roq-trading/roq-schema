@@ -40,6 +40,7 @@ set(SOURCES
     MarketByOrderUpdate.json
     MarketByPriceUpdate.json
     MarketStatus.json
+    MassQuote.json
     MBOUpdate.json
     MBPUpdate.json
     Measurement.json
@@ -65,6 +66,8 @@ set(SOURCES
     Protocol.json
     QualityOfService.json
     QuantityType.json
+    Quote.json
+    QuoteCancel.json
     RateLimit.json
     RateLimitsUpdate.json
     RateLimitTrigger.json
