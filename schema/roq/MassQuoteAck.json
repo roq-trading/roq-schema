@@ -1,0 +1,48 @@
+{
+  "name": "roq/MassQuoteAck",
+  "type": "message",
+  "comment": "Acknowledgement that a mass quote request has been seen by gateway/exchange",
+  "values": [
+    {
+      "name": "streamId",
+      "type": "std/uint16"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view"
+    },
+    {
+      "name": "quoteReqId",
+      "type": "std/uint64",
+      "comment": "Quote Request ID"
+    },
+    {
+      "name": "origin",
+      "type": "roq/Origin",
+      "comment": "Origin of ack"
+    },
+    {
+      "name": "requestStatus",
+      "type": "roq/RequestStatus",
+      "comment": "Request status"
+    },
+    {
+      "name": "error",
+      "type": "roq/Error",
+      "comment": "Error code"
+    },
+    {
+      "name": "text",
+      "type": "std/string_view",
+      "comment": "Descriptive text"
+    },
+    {
+      "name": "requestId",
+      "type": "std/string_view"
+    },
+    {
+      "name": "externalAccount",
+      "type": "std/string_view"
+    }
+  ]
+}

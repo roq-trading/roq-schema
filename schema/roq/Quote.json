@@ -12,9 +12,26 @@
       "type": "roq/Symbol"
     },
     {
-      "name": "layer",
-      "type": "roq/Layer",
-      "comment": "Layer"
+      "name": "bidPrice",
+      "type": "std/double",
+      "comment": "Bid price level"
+    },
+    {
+      "name": "bidQuantity",
+      "type": "std/double",
+      "default": "{}",
+      "comment": "Total quantity available at bid"
+    },
+    {
+      "name": "askPrice",
+      "type": "std/double",
+      "comment": "Ask price level"
+    },
+    {
+      "name": "askQuantity",
+      "type": "std/double",
+      "default": "{}",
+      "comment": "Total quantity available at ask"
     },
     {
       "name": "quote_set_id",

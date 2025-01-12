@@ -14,6 +14,8 @@ set(SOURCES
     CancelAllOrdersAck.json
     CancelAllOrders.json
     CancelOrder.json
+    CancelQuotesAck.json
+    CancelQuotes.json
     Category.json
     Connected.json
     ConnectionStatus.json
@@ -40,6 +42,7 @@ set(SOURCES
     MarketByOrderUpdate.json
     MarketByPriceUpdate.json
     MarketStatus.json
+    MassQuoteAck.json
     MassQuote.json
     MBOUpdate.json
     MBPUpdate.json
@@ -67,7 +70,6 @@ set(SOURCES
     QualityOfService.json
     QuantityType.json
     Quote.json
-    QuoteCancel.json
     RateLimit.json
     RateLimitsUpdate.json
     RateLimitTrigger.json

@@ -1,5 +1,5 @@
 {
-  "name": "roq/QuoteCancel",
+  "name": "roq/CancelQuotes",
   "type": "message",
   "comment": "Cancel quotes",
   "values": [
