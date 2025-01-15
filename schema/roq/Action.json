@@ -1,0 +1,15 @@
+{
+  "name": "roq/Action",
+  "type": "enum",
+  "comment": "Enumeration of control action",
+  "values": [
+    {
+      "name": "Enable",
+      "comment": "Enable"
+    },
+    {
+      "name": "Disable",
+      "comment": "Disable"
+    }
+  ]
+}

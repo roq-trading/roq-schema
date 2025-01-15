@@ -6,6 +6,7 @@ set(TARGET_NAME ${PROJECT_NAME}-roq)
 set(TARGET_DIR ${SCHEMA_DIR}/roq)
 
 set(SOURCES
+    Action.json
     AddRoutes.json
     Bar.json
     BatchBegin.json
@@ -19,6 +20,7 @@ set(SOURCES
     Category.json
     Connected.json
     ConnectionStatus.json
+    Control.json
     CreateOrder.json
     CustomMatrix.json
     CustomMatrixUpdate.json
@@ -90,6 +92,7 @@ set(SOURCES
     SecurityType.json
     Side.json
     Start.json
+    State.json
     Statistics.json
     StatisticsType.json
     StatisticsUpdate.json

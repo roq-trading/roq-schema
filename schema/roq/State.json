@@ -1,0 +1,15 @@
+{
+  "name": "roq/State",
+  "type": "enum",
+  "comment": "Enumeration of target state",
+  "values": [
+    {
+      "name": "Enabled",
+      "comment": "Enabled"
+    },
+    {
+      "name": "Disabled",
+      "comment": "Disabled"
+    }
+  ]
+}

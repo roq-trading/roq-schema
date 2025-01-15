@@ -1,0 +1,12 @@
+{
+  "name": "roq/Control",
+  "type": "message",
+  "comment": "Control service state",
+  "values": [
+    {
+      "name": "action",
+      "type": "roq/Action",
+      "comment": "Action"
+    }
+  ]
+}
