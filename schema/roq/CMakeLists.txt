@@ -96,6 +96,7 @@ set(SOURCES
     Statistics.json
     StatisticsType.json
     StatisticsUpdate.json
+    StatusUpdate.json
     Stop.json
     StreamStatus.json
     SupportType.json

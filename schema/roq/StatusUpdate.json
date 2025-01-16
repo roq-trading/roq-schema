@@ -1,12 +1,11 @@
 {
-  "name": "roq/Control",
+  "name": "roq/StatusUpdate",
   "type": "message",
-  "comment": "Control service state",
+  "comment": "Status update relating to a service",
   "values": [
     {
-      "name": "action",
-      "type": "roq/Action",
-      "comment": "Action"
+      "name": "state",
+      "type": "roq/State"
     },
     {
       "name": "user",
