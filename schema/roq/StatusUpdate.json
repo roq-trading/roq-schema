@@ -1,16 +1,22 @@
 {
   "name": "roq/StatusUpdate",
   "type": "message",
-  "comment": "Status update relating to a service",
+  "comment": "Service status update",
   "values": [
     {
+      "name": "connectionStatus",
+      "type": "roq/ConnectionStatus",
+      "comment": "Service connection status"
+    },
+    {
       "name": "state",
-      "type": "roq/State"
+      "type": "roq/State",
+      "comment": "Service state"
     },
     {
       "name": "user",
       "type": "std/string_view",
-      "comment": "User name (optional)"
+      "comment": "User name of a connected service (optional, empty means self)"
     }
   ]
 }
