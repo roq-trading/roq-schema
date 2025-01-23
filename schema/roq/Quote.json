@@ -4,6 +4,11 @@
   "comment": "Quote",
   "values": [
     {
+      "name": "quote_entry_id",
+      "type": "std/uint32",
+      "comment": "Quote Entry ID"
+    },
+    {
       "name": "exchange",
       "type": "roq/Exchange"
     },
@@ -36,12 +41,12 @@
     {
       "name": "quote_set_id",
       "type": "std/uint16",
-      "comment": "Quote Set ID (can be used to cancel quotes)"
+      "comment": "Quote Set ID (can be used to group and cancel quotes)"
     },
     {
-      "name": "quote_entry_id",
-      "type": "std/uint32",
-      "comment": "Quote ID (when supported by exchange)"
+      "name": "executionInstructions",
+      "type": "roq/ExecutionInstruction",
+      "array": "roq/Mask"
     }
   ]
 }

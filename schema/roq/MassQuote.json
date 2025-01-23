@@ -8,15 +8,30 @@
       "type": "std/string_view"
     },
     {
-      "name": "quoteReqId",
-      "type": "std/uint64",
-      "comment": "Quote Request ID"
+      "name": "quoteId",
+      "type": "std/uint32",
+      "comment": "Quote ID"
     },
     {
       "name": "quotes",
       "type": "roq/Quote",
       "array": "std/span",
       "comment": "Quotes"
+    },
+    {
+      "name": "mmpReset",
+      "type": "std/bool",
+      "comment": "Market Maker Protection reset? (when supported by exchange)"
+    },
+    {
+      "name": "mmpGroup",
+      "type": "std/string_view",
+      "comment": "Market Maker Protection group name (when supported by exchange)"
+    },
+    {
+      "name": "validUntil",
+      "type": "std/nanoseconds",
+      "comment": "Quote valid until UTC timestamp (when supported by exchange)"
     }
   ]
 }

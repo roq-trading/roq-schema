@@ -12,9 +12,9 @@
       "type": "std/string_view"
     },
     {
-      "name": "quoteReqId",
-      "type": "std/uint64",
-      "comment": "Quote Request ID"
+      "name": "quoteId",
+      "type": "std/uint32",
+      "comment": "Quote ID"
     },
     {
       "name": "origin",
