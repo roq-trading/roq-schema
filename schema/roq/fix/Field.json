@@ -388,6 +388,26 @@
       "raw": "130"
     },
     {
+      "name": "QUOTE_REQ_ID",
+      "raw": "131"
+    },
+    {
+      "name": "BID_PX",
+      "raw": "132"
+    },
+    {
+      "name": "OFFER_PX",
+      "raw": "133"
+    },
+    {
+      "name": "BID_SIZE",
+      "raw": "134"
+    },
+    {
+      "name": "OFFER_SIZE",
+      "raw": "135"
+    },
+    {
       "name": "NO_MISC_FEES",
       "raw": "136"
     },
@@ -478,6 +498,22 @@
     {
       "name": "EFFECTIVE_TIME",
       "raw": "168"
+    },
+    {
+      "name": "BID_SPOT_RATE",
+      "raw": "188"
+    },
+    {
+      "name": "BID_FORWARD_POINTS",
+      "raw": "189"
+    },
+    {
+      "name": "OFFER_SPOT_RATE",
+      "raw": "190"
+    },
+    {
+      "name": "OFFER_FORWARD_POINTS",
+      "raw": "191"
     },
     {
       "name": "ORDER_QTY_2",
@@ -752,8 +788,48 @@
       "raw": "292"
     },
     {
+      "name": "DEF_BID_SIZE",
+      "raw": "293"
+    },
+    {
+      "name": "DEF_OFFER_SIZE",
+      "raw": "294"
+    },
+    {
+      "name": "NO_QUOTE_ENTRIES",
+      "raw": "295"
+    },
+    {
+      "name": "NO_QUOTE_SETS",
+      "raw": "296"
+    },
+    {
+      "name": "QUOTE_STATUS",
+      "raw": "297"
+    },
+    {
+      "name": "QUOTE_CANCEL_TYPE",
+      "raw": "298"
+    },
+    {
       "name": "QUOTE_ENTRY_ID",
       "raw": "299"
+    },
+    {
+      "name": "QUOTE_REJECT_REASON",
+      "raw": "300"
+    },
+    {
+      "name": "QUOTE_RESPONSE_LEVEL",
+      "raw": "301"
+    },
+    {
+      "name": "QUOTE_SET_ID",
+      "raw": "302"
+    },
+    {
+      "name": "TOT_NO_QUOTE_ENTRIES",
+      "raw": "304"
     },
     {
       "name": "UNDERLYING_SYMBOL",
@@ -898,6 +974,10 @@
     {
       "name": "ENCODED_HEADLINE",
       "raw": "359"
+    },
+    {
+      "name": "QUOTE_SET_VALID_UNTIL_TIME",
+      "raw": "367"
     },
     {
       "name": "LAST_MSG_SEQ_NUM_PROCESSED",
@@ -1316,6 +1396,22 @@
       "raw": "630"
     },
     {
+      "name": "MID_PX",
+      "raw": "631"
+    },
+    {
+      "name": "BID_YIELD",
+      "raw": "632"
+    },
+    {
+      "name": "MID_YIELD",
+      "raw": "633"
+    },
+    {
+      "name": "OFFER_YIELD",
+      "raw": "634"
+    },
+    {
       "name": "CLEARING_FEE_INDICATOR",
       "raw": "635"
     },
@@ -1338,6 +1434,18 @@
     {
       "name": "LAST_FORWARD_POINTS_2",
       "raw": "641"
+    },
+    {
+      "name": "BID_FORWARD_POINTS_2",
+      "raw": "642"
+    },
+    {
+      "name": "OFFER_FORWARD_POINTS_2",
+      "raw": "643"
+    },
+    {
+      "name": "QUOTE_STATUS_REQ_ID",
+      "raw": "649"
     },
     {
       "name": "UNDERLYING_LAST_PX",

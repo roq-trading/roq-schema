@@ -1,0 +1,28 @@
+{
+  "name": "roq/fix/QuoteType",
+  "tag": 537,
+  "comment": "Identifies the type of quote",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Indicative",
+      "raw": "0",
+      "comment": "Indicative"
+    },
+    {
+      "name": "Tradeable",
+      "raw": "1",
+      "comment": "Tradeable"
+    },
+    {
+      "name": "RestrictedTradeable",
+      "raw": "2",
+      "comment": "Restricted Tradeable"
+    },
+    {
+      "name": "Counter",
+      "raw": "3",
+      "comment": "Counter"
+    }
+  ]
+}

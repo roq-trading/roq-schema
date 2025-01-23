@@ -1,0 +1,29 @@
+{
+  "name": "roq/codec/fix/QuoteSet",
+  "type": "item2",
+  "values": [
+    {
+      "tag": 302,
+      "name": "QuoteSetID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 304,
+      "name": "TotNoQuoteEntries",
+      "type": "std/uint32",
+      "required": true,
+      "inbound": {},
+      "outbound": {}
+    },
+    {
+      "tag": 295,
+      "name": "NoQuoteEntries",
+      "type": "roq/codec/fix/QuoteEntry",
+      "array": "std/span",
+      "required": true,
+      "outbound": {}
+    }
+  ]
+}

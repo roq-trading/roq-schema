@@ -1,0 +1,28 @@
+{
+  "name": "roq/fix/QuoteCancelType",
+  "tag": 298,
+  "comment": "Identifies the type of quote cancel",
+  "type": "enum",
+  "values": [
+    {
+      "name": "CancelForSymbol",
+      "raw": "1",
+      "comment": "Cancel for symbol"
+    },
+    {
+      "name": "CancelForSecurity",
+      "raw": "2",
+      "comment": "Cancel for security"
+    },
+    {
+      "name": "CancelForUnderlyingSymbol",
+      "raw": "3",
+      "comment": "Cancel for underlying symbol"
+    },
+    {
+      "name": "CancelAllQuotes",
+      "raw": "4",
+      "comment": "Cancel for symbol"
+    }
+  ]
+}

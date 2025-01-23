@@ -1,0 +1,58 @@
+{
+  "name": "roq/fix/QuoteRejectReason",
+  "tag": 300,
+  "comment": "Reason Quote was rejected",
+  "type": "enum",
+  "values": [
+    {
+      "name": "UnknownSymbol",
+      "raw": "1",
+      "comment": "Unknown symbol (Security)"
+    },
+    {
+      "name": "ExchangeOrSecurityClosed",
+      "raw": "2",
+      "comment": "Exchange(Security) closed"
+    },
+    {
+      "name": "QuoteRequestExceedsLimit",
+      "raw": "3",
+      "comment": "Quote Request exceeds limit"
+    },
+    {
+      "name": "TooLateToEnter",
+      "raw": "4",
+      "comment": "Too late to enter"
+    },
+    {
+      "name": "UnknownQuote",
+      "raw": "5",
+      "comment": "Unknown Quote"
+    },
+    {
+      "name": "DuplicateQuote",
+      "raw": "6",
+      "comment": "Duplicate Quote"
+    },
+    {
+      "name": "InvalidBidAskSpread",
+      "raw": "7",
+      "comment": "Invalid bid/ask spread"
+    },
+    {
+      "name": "InvalidPrice",
+      "raw": "8",
+      "comment": "Invalid price"
+    },
+    {
+      "name": "NotAuthorized",
+      "raw": "9",
+      "comment": "Not authorized to quote security"
+    },
+    {
+      "name": "Other",
+      "raw": "99",
+      "comment": "Other"
+    }
+  ]
+}

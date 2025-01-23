@@ -39,6 +39,11 @@ set(SOURCES
     PosType.json
     PutOrCall.json
     QtyType.json
+    QuoteCancelType.json
+    QuoteRejectReason.json
+    QuoteResponseLevel.json
+    QuoteStatus.json
+    QuoteType.json
     SecurityListRequestType.json
     SecurityRequestResult.json
     SecurityRequestType.json

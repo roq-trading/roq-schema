@@ -1,0 +1,88 @@
+{
+  "name": "roq/fix/QuoteStatus",
+  "tag": 297,
+  "comment": "Identifies the status of the quote acknowledgement",
+  "type": "enum",
+  "values": [
+    {
+      "name": "Accepted",
+      "raw": "0",
+      "comment": "Accepted"
+    },
+    {
+      "name": "CanceledForSymbol",
+      "raw": "1",
+      "comment": "Canceled for symbol"
+    },
+    {
+      "name": "CanceledForSecurityType",
+      "raw": "2",
+      "comment": "Canceled for security type"
+    },
+    {
+      "name": "CanceledForUnderlyingSymbol",
+      "raw": "3",
+      "comment": "Canceled for underlying symbol"
+    },
+    {
+      "name": "CanceledAll",
+      "raw": "4",
+      "comment": "Canceled all"
+    },
+    {
+      "name": "Rejected",
+      "raw": "5",
+      "comment": "Rejected"
+    },
+    {
+      "name": "RemovedFromMarket",
+      "raw": "6",
+      "comment": "Removed from market"
+    },
+    {
+      "name": "Expired",
+      "raw": "7",
+      "comment": "Expired"
+    },
+    {
+      "name": "Query",
+      "raw": "8",
+      "comment": "Query"
+    },
+    {
+      "name": "QuoteNotFound",
+      "raw": "9",
+      "comment": "Quote not found"
+    },
+    {
+      "name": "Pending",
+      "raw": "10",
+      "comment": "Pending"
+    },
+    {
+      "name": "Pass",
+      "raw": "11",
+      "comment": "Pass"
+    },
+    {
+      "name": "LockedMarketWarning",
+      "raw": "12",
+      "comment": "Locked market warning"
+    },
+    {
+      "name": "CrossMarketWarning",
+      "raw": "13",
+      "comment": "CrossMarketWarning"
+    },
+    {
+      "name": "CanceledDueToLockMarket",
+      "raw": "14",
+      "comment": "Canceled due to lock market"
+    },
+    {
+      "name": "CanceledDueToCrossMarket",
+      "raw": "15",
+      "comment": "Canceled due to cross market"
+    }
+  ]
+}

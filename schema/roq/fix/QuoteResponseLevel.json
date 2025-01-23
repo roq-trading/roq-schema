@@ -1,0 +1,28 @@
+{
+  "name": "roq/fix/QuoteResponseLevel",
+  "tag": 537,
+  "comment": "Level of Response requested from receiver of Quote messages",
+  "type": "enum",
+  "values": [
+    {
+      "name": "NoAck",
+      "raw": "0",
+      "comment": "No Acknowledgement"
+    },
+    {
+      "name": "AckNegativeOrErroneusQuotes",
+      "raw": "1",
+      "comment": "Acknowledge only negative or erroneus quotes"
+    },
+    {
+      "name": "AckEachQuotes",
+      "raw": "2",
+      "comment": "Acknowledge each quote message"
+    },
+    {
+      "name": "Counter",
+      "raw": "3",
+      "comment": "Counter"
+    }
+  ]
+}

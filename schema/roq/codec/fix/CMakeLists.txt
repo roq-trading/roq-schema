@@ -13,6 +13,8 @@ set(SOURCES
     MarketDataRequest.json
     MarketDataRequestReject.json
     MarketDataSnapshotFullRefresh.json
+    MassQuoteAck.json
+    MassQuote.json
     MDFull.json
     MDInc.json
     MDReq.json
@@ -28,6 +30,10 @@ set(SOURCES
     PositionAmountData.json
     PositionQty.json
     PositionReport.json
+    QuoteCancel.json
+    QuoteEntry.json
+    QuoteSet.json
+    QuoteStatusReport.json
     Reject.json
     RequestForPositionsAck.json
     RequestForPositions.json
