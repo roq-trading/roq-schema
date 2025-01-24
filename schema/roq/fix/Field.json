@@ -2132,6 +2132,10 @@
       "raw": "1155"
     },
     {
+      "name": "QUOTE_MSG_ID",
+      "raw": "1166"
+    },
+    {
       "name": "MD_SUB_BOOK_TYPE",
       "raw": "1173"
     },
