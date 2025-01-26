@@ -12,6 +12,31 @@
       "name": "user",
       "type": "std/string_view",
       "comment": "User name (optional)"
+    },
+    {
+      "name": "strategyId",
+      "type": "std/uint32",
+      "comment": "Strategy ID (optional)"
+    },
+    {
+      "name": "leg",
+      "type": "std/uint8",
+      "comment": "Leg index (optional)"
+    },
+    {
+      "name": "account",
+      "type": "std/string_view",
+      "comment": "Account (optional)"
+    },
+    {
+      "name": "exchange",
+      "type": "std/string_view",
+      "comment": "Exchange (optional)"
+    },
+    {
+      "name": "symbol",
+      "type": "std/string_view",
+      "comment": "Symbol (optional)"
     }
   ]
 }
