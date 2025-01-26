@@ -1,0 +1,38 @@
+{
+  "name": "roq/StrategyUpdate",
+  "type": "message",
+  "comment": "Strategy update",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "Service name"
+    },
+    {
+      "name": "strategyId",
+      "type": "std/uint32",
+      "comment": "Strategy ID"
+    },
+    {
+      "name": "description",
+      "type": "std/string_view",
+      "comment": "Strategy description"
+    },
+    {
+      "name": "state",
+      "type": "roq/State",
+      "comment": "Strategy state"
+    },
+    {
+      "name": "legs",
+      "type": "roq/Leg",
+      "array": "std/span",
+      "comment": "List of leg updates"
+    },
+    {
+      "name": "updateType",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    }
+  ]
+}

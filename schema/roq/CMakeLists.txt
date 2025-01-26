@@ -39,6 +39,7 @@ set(SOURCES
     GatewaySettings.json
     GatewayStatus.json
     Layer.json
+    Leg.json
     Liquidity.json
     MarginMode.json
     MarketByOrderUpdate.json
@@ -90,14 +91,15 @@ set(SOURCES
     RouteRequestStatus.json
     Routing.json
     SecurityType.json
+    ServiceUpdate.json
     Side.json
     Start.json
     State.json
     Statistics.json
     StatisticsType.json
     StatisticsUpdate.json
-    StatusUpdate.json
     Stop.json
+    StrategyUpdate.json
     StreamStatus.json
     SupportType.json
     TickSizeStep.json

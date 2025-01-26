@@ -1,0 +1,32 @@
+{
+  "name": "roq/ServiceUpdate",
+  "type": "message",
+  "comment": "Service update",
+  "values": [
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "Service name (optional)"
+    },
+    {
+      "name": "description",
+      "type": "std/string_view",
+      "comment": "Service description"
+    },
+    {
+      "name": "connectionStatus",
+      "type": "roq/ConnectionStatus",
+      "comment": "Service connection status"
+    },
+    {
+      "name": "state",
+      "type": "roq/State",
+      "comment": "Service state"
+    },
+    {
+      "name": "updateType",
+      "type": "roq/UpdateType",
+      "comment": "Update type"
+    }
+  ]
+}

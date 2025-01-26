@@ -1,7 +1,7 @@
 {
   "name": "roq/Control",
   "type": "message",
-  "comment": "Control service state",
+  "comment": "Service control",
   "values": [
     {
       "name": "action",
@@ -11,32 +11,32 @@
     {
       "name": "user",
       "type": "std/string_view",
-      "comment": "User name (optional)"
+      "comment": "User name (client routing, optional)"
     },
     {
       "name": "strategyId",
       "type": "std/uint32",
-      "comment": "Strategy ID (optional)"
+      "comment": "Strategy filter (optional)"
     },
     {
       "name": "leg",
       "type": "std/uint8",
-      "comment": "Leg index (optional)"
+      "comment": "Leg index filter (optional)"
     },
     {
       "name": "account",
       "type": "std/string_view",
-      "comment": "Account (optional)"
+      "comment": "Account filter (optional)"
     },
     {
       "name": "exchange",
       "type": "std/string_view",
-      "comment": "Exchange (optional)"
+      "comment": "Exchange filter (optional)"
     },
     {
       "name": "symbol",
       "type": "std/string_view",
-      "comment": "Symbol (optional)"
+      "comment": "Symbol filter (optional)"
     }
   ]
 }

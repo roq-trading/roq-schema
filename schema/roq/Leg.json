@@ -1,0 +1,32 @@
+{
+  "name": "roq/Leg",
+  "type": "struct",
+  "comment": "Represents current state of a strategy leg",
+  "values": [
+    {
+      "name": "index",
+      "type": "std/uint8",
+      "comment": "Index"
+    },
+    {
+      "name": "account",
+      "type": "roq/Account",
+      "comment": "Account (optional)"
+    },
+    {
+      "name": "exchange",
+      "type": "roq/Exchange",
+      "comment": "Exchange (optional)"
+    },
+    {
+      "name": "symbol",
+      "type": "roq/Symbol",
+      "comment": "Symbol (optional)"
+    },
+    {
+      "name": "state",
+      "type": "roq/State",
+      "comment": "Strategy state"
+    }
+  ]
+}
