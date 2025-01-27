@@ -19,8 +19,8 @@
       "comment": "Strategy filter (optional)"
     },
     {
-      "name": "leg",
-      "type": "std/uint8",
+      "name": "legId",
+      "type": "std/uint16",
       "comment": "Leg index filter (optional)"
     },
     {

@@ -4,8 +4,8 @@
   "comment": "Represents current state of a strategy leg",
   "values": [
     {
-      "name": "index",
-      "type": "std/uint8",
+      "name": "legId",
+      "type": "std/uint16",
       "comment": "Index"
     },
     {
