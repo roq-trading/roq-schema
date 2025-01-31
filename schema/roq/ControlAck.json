@@ -1,0 +1,36 @@
+{
+  "name": "roq/ControlAck",
+  "type": "message",
+  "comment": "Control ack",
+  "values": [
+    {
+      "name": "requestId",
+      "type": "std/string_view"
+    },
+    {
+      "name": "user",
+      "type": "std/string_view",
+      "comment": "User name (client routing, optional)"
+    },
+    {
+      "name": "origin",
+      "type": "roq/Origin",
+      "comment": "Origin of ack"
+    },
+    {
+      "name": "requestStatus",
+      "type": "roq/RequestStatus",
+      "comment": "Request status"
+    },
+    {
+      "name": "error",
+      "type": "roq/Error",
+      "comment": "Error code"
+    },
+    {
+      "name": "text",
+      "type": "std/string_view",
+      "comment": "Descriptive text"
+    }
+  ]
+}

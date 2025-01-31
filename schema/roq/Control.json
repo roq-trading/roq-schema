@@ -4,14 +4,18 @@
   "comment": "Service control",
   "values": [
     {
-      "name": "action",
-      "type": "roq/Action",
-      "comment": "Action"
+      "name": "requestId",
+      "type": "std/string_view"
     },
     {
       "name": "user",
       "type": "std/string_view",
       "comment": "User name (client routing, optional)"
+    },
+    {
+      "name": "action",
+      "type": "roq/Action",
+      "comment": "Action"
     },
     {
       "name": "strategyId",

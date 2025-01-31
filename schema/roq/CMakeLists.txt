@@ -21,6 +21,7 @@ set(SOURCES
     Connected.json
     ConnectionStatus.json
     Control.json
+    ControlAck.json
     CreateOrder.json
     CustomMatrix.json
     CustomMatrixUpdate.json
@@ -40,6 +41,7 @@ set(SOURCES
     GatewayStatus.json
     Layer.json
     Leg.json
+    LegsUpdate.json
     Liquidity.json
     MarginMode.json
     MarketByOrderUpdate.json

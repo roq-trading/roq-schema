@@ -1,7 +1,7 @@
 {
-  "name": "roq/StrategyUpdate",
+  "name": "roq/LegsUpdate",
   "type": "message",
-  "comment": "Strategy update",
+  "comment": "Legs update",
   "values": [
     {
       "name": "user",
@@ -14,14 +14,10 @@
       "comment": "Strategy ID"
     },
     {
-      "name": "description",
-      "type": "std/string_view",
-      "comment": "Strategy description"
-    },
-    {
-      "name": "state",
-      "type": "roq/State",
-      "comment": "Strategy state"
+      "name": "legs",
+      "type": "roq/Leg",
+      "array": "std/span",
+      "comment": "List of leg updates"
     },
     {
       "name": "updateType",
