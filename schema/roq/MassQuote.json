@@ -29,7 +29,7 @@
       "comment": "Market Maker Protection group name (when supported by exchange)"
     },
     {
-      "name": "validUntil",
+      "name": "validUntilUtc",
       "type": "std/nanoseconds",
       "comment": "Quote valid until UTC timestamp (when supported by exchange)"
     }
