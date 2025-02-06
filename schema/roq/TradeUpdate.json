@@ -77,6 +77,14 @@
       "comment": "Update type"
     },
     {
+      "name": "exchangeTimeUtc",
+      "type": "std/nanoseconds"
+    },
+    {
+      "name": "exchangeSequence",
+      "type": "std/uint64"
+    },
+    {
       "name": "sendingTimeUtc",
       "type": "std/nanoseconds"
     },
