@@ -1,0 +1,13 @@
+namespace roq.fbs;
+
+enum RequestStatus:uint8 {
+  Undefined,
+  Forwarded,
+  Accepted,
+  Rejected,
+  Disconnected,
+  Timeout,
+  Failed,
+  Error
+}
+

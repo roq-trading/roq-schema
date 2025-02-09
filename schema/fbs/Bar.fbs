@@ -1,0 +1,10 @@
+namespace roq.fbs;
+
+table Bar {
+  time_utc:int64;
+  open:double = 0.0;
+  high:double = 0.0;
+  low:double = 0.0;
+  close:double = 0.0;
+  volume:double = 0.0;
+}

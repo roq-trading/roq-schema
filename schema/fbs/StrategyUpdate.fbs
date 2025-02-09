@@ -1,0 +1,12 @@
+include "State.fbs";
+include "UpdateType.fbs";
+
+namespace roq.fbs;
+
+table StrategyUpdate {
+  user:string;
+  strategy_id:uint32;
+  description:string;
+  state:State;
+  update_type:UpdateType;
+}

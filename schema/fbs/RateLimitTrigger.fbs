@@ -1,0 +1,17 @@
+include "BufferCapacity.fbs";
+include "Origin.fbs";
+include "RateLimitType.fbs";
+
+namespace roq.fbs;
+
+table RateLimitTrigger {
+  name:string;
+  origin:Origin;
+  type:RateLimitType;
+  users:[string];
+  accounts:[string];
+  ban_expires:int64;
+  triggered_by:string;
+  buffer_capacity:BufferCapacity;
+  remaining_requests:uint32;
+}

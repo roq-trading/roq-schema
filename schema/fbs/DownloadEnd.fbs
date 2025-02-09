@@ -1,0 +1,7 @@
+namespace roq.fbs;
+
+table DownloadEnd {
+  account:string;
+  zzz_max_order_id:uint32 (deprecated);
+  max_order_id:uint64;
+}

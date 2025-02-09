@@ -1,0 +1,8 @@
+namespace roq.fbs;
+
+enum MarginMode:uint8 {
+  Undefined,
+  Isolated,
+  Cross,
+  Portfolio
+}

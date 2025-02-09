@@ -1,0 +1,6 @@
+namespace roq.fbs;
+
+table TickSizeStep {
+  min_price:double = nan;
+  tick_size:double = nan;
+}

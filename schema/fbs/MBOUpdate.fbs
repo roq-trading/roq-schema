@@ -1,0 +1,13 @@
+include "UpdateAction.fbs";
+
+namespace roq.fbs;
+
+table MBOUpdate {
+  price:double = nan;
+  quantity:double = 0.0;
+  priority:uint64 = 0;
+  order_id:string;
+  side:Side;
+  action:UpdateAction;
+  reason:UpdateReason;
+}

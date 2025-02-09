@@ -1,0 +1,9 @@
+namespace roq.fbs;
+
+enum RateLimitType:uint8 {
+  Undefined,
+  OrderAction,
+  CreateOrder,
+  Request,
+  RequestWeight
+}

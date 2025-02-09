@@ -1,0 +1,15 @@
+include "Layer.fbs";
+
+namespace roq.fbs;
+
+table Quote {
+  quote_entry_id:uint32;
+  exchange:string;
+  symbol:string;
+  bid_price:double = nan;
+  bid_quantity:double = 0.0;
+  ask_price:double = nan;
+  ask_quantity:double = 0.0;
+  quote_set_id:uint16;
+  execution_instructions:uint32;
+}

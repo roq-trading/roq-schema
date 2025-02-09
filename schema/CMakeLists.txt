@@ -1,4 +1,6 @@
+add_subdirectory(fbs)
 add_subdirectory(roq)
+add_subdirectory(sbe)
 
 set(TARGET_NAME ${PROJECT_NAME})
 

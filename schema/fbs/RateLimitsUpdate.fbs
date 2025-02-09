@@ -1,0 +1,11 @@
+include "Origin.fbs";
+include "RateLimit.fbs";
+
+namespace roq.fbs;
+
+table RateLimitsUpdate {
+  stream_id:uint16;
+  account:string;
+  origin:Origin;
+  rate_limits:[RateLimit];
+}

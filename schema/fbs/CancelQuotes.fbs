@@ -1,0 +1,6 @@
+namespace roq.fbs;
+
+table CancelQuotes {
+  account:string;
+  quote_set_id:uint16;
+}

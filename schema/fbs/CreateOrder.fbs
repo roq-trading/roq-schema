@@ -1,0 +1,31 @@
+include "ExecutionInstruction.fbs";
+include "MarginMode.fbs";
+include "OrderType.fbs";
+include "PositionEffect.fbs";
+include "Side.fbs";
+include "TimeInForce.fbs";
+
+namespace roq.fbs;
+
+table CreateOrder {
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  side:Side;
+  position_effect:PositionEffect;
+  max_show_quantity:double = nan;
+  order_type:OrderType;
+  time_in_force:TimeInForce;
+  zzz_execution_instructions:uint8 (deprecated);
+  request_template:string;
+  quantity:double = nan;
+  price:double = nan;
+  stop_price:double = nan;
+  routing_id:string;
+  execution_instructions:uint32;
+  strategy_id:uint32;
+  order_id:uint64;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+}

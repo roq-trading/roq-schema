@@ -1,0 +1,14 @@
+include "Action.fbs";
+
+namespace roq.fbs;
+
+table Control {
+  request_id:string;
+  user:string;
+  action:Action;
+  strategy_id:uint32;
+  leg_id:uint16;
+  account:string;
+  exchange:string;
+  symbol:string;
+}

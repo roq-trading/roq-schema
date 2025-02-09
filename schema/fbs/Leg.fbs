@@ -1,0 +1,11 @@
+include "State.fbs";
+
+namespace roq.fbs;
+
+table Leg {
+  leg_id:uint16 = 0;
+  account:string;
+  exchange:string;
+  symbol:string;
+  state:State;
+}

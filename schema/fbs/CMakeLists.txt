@@ -1,0 +1,8 @@
+set(TARGET_NAME ${PROJECT_NAME}-fbs)
+
+install(
+  DIRECTORY ${CMAKE_SOURCE_DIR}/schema/fbs/
+  DESTINATION ${SCHEMA_DIR}/fbs
+  FILES_MATCHING
+  PATTERN "*.fbs"
+  PATTERN "CMakeFiles" EXCLUDE)

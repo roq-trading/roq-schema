@@ -1,0 +1,12 @@
+include "Side.fbs";
+
+namespace roq.fbs;
+
+table CancelAllOrders {
+  account:string;
+  strategy_id:uint32;
+  exchange:string;
+  symbol:string;
+  side:Side;
+  order_id:uint64;
+}

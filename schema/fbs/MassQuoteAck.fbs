@@ -1,0 +1,17 @@
+include "Error.fbs";
+include "Origin.fbs";
+include "RequestStatus.fbs";
+
+namespace roq.fbs;
+
+table MassQuoteAck {
+  stream_id:uint16;
+  account:string;
+  quote_id:uint32;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+}

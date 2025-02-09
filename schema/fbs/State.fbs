@@ -1,0 +1,7 @@
+namespace roq.fbs;
+
+enum State:uint8 {
+  Undefined,
+  Enabled,
+  Disabled
+}

@@ -1,0 +1,14 @@
+include "Error.fbs";
+include "Origin.fbs";
+include "RequestStatus.fbs";
+
+namespace roq.fbs;
+
+table ControlAck {
+  request_id:string;
+  user:string;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+}

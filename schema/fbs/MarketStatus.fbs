@@ -1,0 +1,13 @@
+include "TradingStatus.fbs";
+
+namespace roq.fbs;
+
+table MarketStatus {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  trading_status:TradingStatus;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+}

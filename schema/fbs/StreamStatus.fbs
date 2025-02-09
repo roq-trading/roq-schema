@@ -1,0 +1,22 @@
+include "ConnectionStatus.fbs";
+include "Encoding.fbs";
+include "Priority.fbs";
+include "Protocol.fbs";
+include "Transport.fbs";
+
+namespace roq.fbs;
+
+table StreamStatus {
+  stream_id:uint16;
+  account:string;
+  supports:uint64;
+  connection_status:ConnectionStatus;
+  protocol:Protocol;
+  priority:Priority;
+  transport:Transport;
+  encoding:uint32;
+  interface:string;
+  authority:string;
+  path:string;
+  proxy:string;
+}

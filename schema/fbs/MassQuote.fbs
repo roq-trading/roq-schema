@@ -1,0 +1,12 @@
+include "Quote.fbs";
+
+namespace roq.fbs;
+
+table MassQuote {
+  account:string;
+  quote_id:uint32;
+  quotes:[Quote];
+  mmp_reset:bool;
+  mmp_group:string;
+  valid_until_utc:int64;
+}

@@ -1,0 +1,11 @@
+include "RateLimitType.fbs";
+
+namespace roq.fbs;
+
+table RateLimit {
+  type:RateLimitType;
+  period:int64;
+  end_time_utc:int64;
+  limit:uint32;
+  value:uint32;
+}

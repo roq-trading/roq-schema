@@ -1,0 +1,10 @@
+include "StatisticsType.fbs";
+
+namespace roq.fbs;
+
+table Statistics {
+  type:StatisticsType;
+  value:double = nan;
+  begin_time_utc:int64;
+  end_time_utc:int64;
+}

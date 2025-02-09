@@ -1,0 +1,7 @@
+namespace roq.fbs;
+
+enum QuantityType:uint8 {
+  Undefined,
+  Units,
+  Contracts
+}

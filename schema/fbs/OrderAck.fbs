@@ -1,0 +1,42 @@
+include "Error.fbs";
+include "MarginMode.fbs";
+include "Origin.fbs";
+include "PositionEffect.fbs";
+include "RequestStatus.fbs";
+include "RequestType.fbs";
+include "Side.fbs";
+
+namespace roq.fbs;
+
+table OrderAck {
+  stream_id:uint16;
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  request_type:RequestType;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+  external_order_id:string;
+  routing_id:string;
+  version:uint32;
+  side:Side;
+  round_trip_latency:int64;
+  traded_quantity:double = nan;
+  risk_exposure:double = nan;
+  risk_exposure_change:double = nan;
+  user:string;
+  strategy_id:uint32;
+  order_id:uint64;
+  client_order_id:string;
+  quantity:double = nan;
+  price:double = nan;
+  stop_price:double = nan;
+  position_effect:PositionEffect;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+}

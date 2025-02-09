@@ -1,0 +1,18 @@
+include "MBOUpdate.fbs";
+
+namespace roq.fbs;
+
+table MarketByOrderUpdate {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  orders:[MBOUpdate];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  price_precision:Precision;
+  quantity_precision:Precision;
+  max_depth:uint16;
+  checksum:uint32;
+  sending_time_utc:int64;
+}

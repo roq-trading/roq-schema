@@ -1,0 +1,13 @@
+include "ConnectionStatus.fbs";
+include "State.fbs";
+include "UpdateType.fbs";
+
+namespace roq.fbs;
+
+table ServiceUpdate {
+  connection_status:ConnectionStatus;
+  state:State;
+  user:string;
+  description:string;
+  update_type:UpdateType;
+}

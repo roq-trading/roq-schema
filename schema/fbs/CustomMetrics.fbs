@@ -1,0 +1,12 @@
+include "Measurement.fbs";
+
+namespace roq.fbs;
+
+table CustomMetrics {
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  measurements:[Measurement];
+  update_type:UpdateType;
+}

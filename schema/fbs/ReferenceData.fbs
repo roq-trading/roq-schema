@@ -1,0 +1,39 @@
+include "SecurityType.fbs";
+include "TickSizeStep.fbs";
+include "OptionType.fbs";
+
+namespace roq.fbs;
+
+table ReferenceData {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  description:string;
+  security_type:SecurityType;
+  quote_currency:string;
+  base_currency:string;
+  commission_currency:string;
+  tick_size:double = nan;
+  multiplier:double = nan;
+  min_trade_vol:double = nan;
+  option_type:OptionType;
+  strike_currency:string;
+  strike_price:double = nan;
+  underlying:string;
+  time_zone:string;
+  issue_date:int32;
+  settlement_date:int32;
+  expiry_datetime:int64;
+  expiry_datetime_utc:int64;
+  max_trade_vol:double = nan;
+  trade_vol_step_size:double = nan;
+  margin_currency:string;
+  discard:bool;
+  min_notional:double = nan;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+  settlement_currency:string;
+  cfi_code:string;
+  tick_size_steps:[TickSizeStep];
+}

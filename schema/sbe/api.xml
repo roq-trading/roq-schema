@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<messageSchema package="com.roq-trading" id="1" version="1" byteOrder="littleEndian">
+  <types>
+    <type name="Account" primitiveType="char" length="32"/>
+    <type name="CFICode" primitiveType="char" length="6"/>
+    <type name="ClientOrderID" primitiveType="char" length="36"/>
+    <type name="Currency" primitiveType="char" length="32"/>
+    <type name="DateTime" primitiveType="int64" description="nanoseconds since epoch"/>
+    <type name="Days" primitiveType="int32" description="days since epoch"/>
+    <type name="Description" primitiveType="char" length="128"/>
+    <type name="Exchange" primitiveType="char" length="32"/>
+    <type name="ExternalAccount" primitiveType="char" length="64"/>
+    <type name="ExternalOrderId" primitiveType="char" length="64"/>
+    <type name="ExternalOrderID" primitiveType="char" length="64"/>
+    <type name="ExternalTradeId" primitiveType="char" length="40"/>
+    <type name="MBOOrderId" primitiveType="char" length="36"/>
+    <type name="RequestID" primitiveType="char" length="36"/>
+    <type name="RoutingID" primitiveType="char" length="64"/>
+    <type name="Seconds" primitiveType="int32" description="seconds since epoch"/>
+    <type name="Source" primitiveType="char" length="16"/>
+    <type name="Symbol" primitiveType="char" length="48"/>
+    <type name="Text" primitiveType="char" length="64"/>
+    <type name="Time" primitiveType="int64" description="nanoseconds"/>
+    <type name="TimeZone" primitiveType="char" length="32"/>
+    <type name="User" primitiveType="char" length="16"/>
+    <type name="UUID" primitiveType="uint8" length="16" description="nanoseconds since epoch"/>
+    <composite name="Layer">
+      <type name="bidPrice" primitiveType="double"/>
+      <type name="bidQuantity" primitiveType="double"/>
+      <type name="askPrice" primitiveType="double"/>
+      <type name="askQuantity" primitiveType="double"/>
+    </composite>
+    <composite name="groupSize">
+      <type name="blockLength" primitiveType="uint16"/>
+      <type name="numInGroup" primitiveType="uint16"/>
+    </composite>
+    <composite name="messageHeader">
+      <type name="blockLength" primitiveType="uint16"/>
+      <type name="templateId" primitiveType="uint16"/>
+      <type name="schemaId" primitiveType="uint16"/>
+      <type name="version" primitiveType="uint16"/>
+    </composite>
+    <enum name="Boolean" encodingType="uint8">
+      <validValue name="False">0</validValue>
+      <validValue name="True">1</validValue>
+    </enum>
+    <enum name="Precision" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="_0" description="0">1</validValue>
+      <validValue name="_1" description="1">2</validValue>
+      <validValue name="_2" description="2">3</validValue>
+      <validValue name="_3" description="3">4</validValue>
+      <validValue name="_4" description="4">5</validValue>
+      <validValue name="_5" description="5">6</validValue>
+      <validValue name="_6" description="6">7</validValue>
+      <validValue name="_7" description="7">8</validValue>
+      <validValue name="_8" description="8">9</validValue>
+      <validValue name="_9" description="9">10</validValue>
+      <validValue name="_10" description="10">11</validValue>
+      <validValue name="_11" description="11">12</validValue>
+      <validValue name="_12" description="12">13</validValue>
+      <validValue name="_13" description="13">14</validValue>
+      <validValue name="_14" description="14">15</validValue>
+      <validValue name="_15" description="15">16</validValue>
+    </enum>
+    <enum name="Liquidity" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Maker" description="Maker">1</validValue>
+      <validValue name="Taker" description="Taker">2</validValue>
+    </enum>
+    <enum name="OrderStatus" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Sent" description="Sent">1</validValue>
+      <validValue name="Accepted" description="Accepted">2</validValue>
+      <validValue name="Suspended" description="Suspended">3</validValue>
+      <validValue name="Working" description="Working">4</validValue>
+      <validValue name="Stopped" description="Stopped">5</validValue>
+      <validValue name="Completed" description="Completed">6</validValue>
+      <validValue name="Expired" description="Expired">7</validValue>
+      <validValue name="Canceled" description="Canceled">8</validValue>
+      <validValue name="Rejected" description="Rejected">9</validValue>
+    </enum>
+    <enum name="OrderType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Market" description="Market">1</validValue>
+      <validValue name="Limit" description="Limit">2</validValue>
+    </enum>
+    <enum name="OptionType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Call" description="Call">1</validValue>
+      <validValue name="Put" description="Put">2</validValue>
+    </enum>
+    <enum name="Origin" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Client" description="Client">1</validValue>
+      <validValue name="Gateway" description="Gateway">2</validValue>
+      <validValue name="Broker" description="Broker">3</validValue>
+      <validValue name="Exchange" description="Exchange">4</validValue>
+    </enum>
+    <enum name="PositionEffect" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Open" description="Open">1</validValue>
+      <validValue name="Close" description="Close">2</validValue>
+    </enum>
+    <enum name="RequestStatus" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Forwarded" description="Forwarded">1</validValue>
+      <validValue name="Accepted" description="Accepted">2</validValue>
+      <validValue name="Rejected" description="Rejected">3</validValue>
+      <validValue name="Disconnected" description="Disconnected">4</validValue>
+      <validValue name="Timeout" description="Timeout">5</validValue>
+      <validValue name="Failed" description="Failed">6</validValue>
+      <validValue name="Error" description="Error">7</validValue>
+    </enum>
+    <enum name="RequestType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="CreateOrder" description="CreateOrder">1</validValue>
+      <validValue name="ModifyOrder" description="ModifyOrder">2</validValue>
+      <validValue name="CancelOrder" description="CancelOrder">3</validValue>
+    </enum>
+    <enum name="SecurityType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Spot" description="Spot">1</validValue>
+      <validValue name="Futures" description="Futures">2</validValue>
+      <validValue name="Option" description="Option">3</validValue>
+      <validValue name="Swap" description="Swap">4</validValue>
+    </enum>
+    <enum name="Side" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Buy" description="Buy">1</validValue>
+      <validValue name="Sell" description="Sell">2</validValue>
+    </enum>
+    <enum name="StatisticsType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="OpenPrice" description="OpenPrice">1</validValue>
+      <validValue name="SettlementPrice" description="SettlementPrice">2</validValue>
+      <validValue name="ClosePrice" description="ClosePrice">3</validValue>
+      <validValue name="OpenInterest" description="OpenInterest">4</validValue>
+      <validValue name="PreOpenInterest" description="PreOpenInterest">5</validValue>
+      <validValue name="PreSettlementPrice" description="PreSettlementPrice">6</validValue>
+      <validValue name="PreClosePrice" description="PreClosePrice">7</validValue>
+      <validValue name="HighestTradedPrice" description="HighestTradedPrice">8</validValue>
+      <validValue name="LowestTradedPrice" description="LowestTradedPrice">9</validValue>
+      <validValue name="UpperLimitPrice" description="UpperLimitPrice">10</validValue>
+      <validValue name="LowerLimitPrice" description="LowerLimitPrice">11</validValue>
+      <validValue name="IndexValue" description="IndexValue">12</validValue>
+      <validValue name="MarginRate" description="MarginRate">13</validValue>
+      <validValue name="FundingRate" description="FundingRate">14</validValue>
+      <validValue name="FundingRatePrediction" description="FundingRatePrediction">15</validValue>
+      <validValue name="TradeVolume" description="TradeVolume">16</validValue>
+    </enum>
+    <enum name="TimeInForce" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="GFD" description="GFD">1</validValue>
+      <validValue name="GTC" description="GTC">2</validValue>
+      <validValue name="OPG" description="OPG">3</validValue>
+      <validValue name="IOC" description="IOC">4</validValue>
+      <validValue name="FOK" description="FOK">5</validValue>
+      <validValue name="GTX" description="GTX">6</validValue>
+      <validValue name="GTD" description="GTD">7</validValue>
+      <validValue name="AtTheClose" description="AtTheClose">8</validValue>
+      <validValue name="GoodThroughCrossing" description="GoodThroughCrossing">9</validValue>
+      <validValue name="AtCrossing" description="AtCrossing">10</validValue>
+      <validValue name="GoodForTime" description="GoodForTime">11</validValue>
+      <validValue name="GFA" description="GFA">12</validValue>
+      <validValue name="GFM" description="GFM">13</validValue>
+    </enum>
+    <enum name="TradingStatus" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="StartOfDay" description="StartOfDay">1</validValue>
+      <validValue name="PreOpen" description="PreOpen">2</validValue>
+      <validValue name="PreOpenNoCancel" description="PreOpenNoCancel">3</validValue>
+      <validValue name="PreOpenFreeze" description="PreOpenFreeze">4</validValue>
+      <validValue name="Open" description="Open">5</validValue>
+      <validValue name="FastMarket" description="FastMarket">6</validValue>
+      <validValue name="Halt" description="Halt">7</validValue>
+      <validValue name="CloseNotFinal" description="CloseNotFinal">8</validValue>
+      <validValue name="PreClose" description="PreClose">9</validValue>
+      <validValue name="PreCloseNoCancel" description="PreCloseNoCancel">10</validValue>
+      <validValue name="PreCloseFreeze" description="PreCloseFreeze">11</validValue>
+      <validValue name="Close" description="Close">12</validValue>
+      <validValue name="PostClose" description="PostClose">13</validValue>
+      <validValue name="EndOfDay" description="EndOfDay">14</validValue>
+    </enum>
+    <enum name="UpdateAction" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="New" description="New">1</validValue>
+      <validValue name="Change" description="Change">2</validValue>
+      <validValue name="Delete" description="Delete">3</validValue>
+      <validValue name="Trade" description="Trade">4</validValue>
+    </enum>
+    <enum name="UpdateReason" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Created" description="Created">1</validValue>
+      <validValue name="Modified" description="Modified">2</validValue>
+      <validValue name="Canceled" description="Canceled">3</validValue>
+      <validValue name="Filled" description="Filled">4</validValue>
+    </enum>
+    <enum name="UpdateType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Snapshot" description="Snapshot">1</validValue>
+      <validValue name="Incremental" description="Incremental">2</validValue>
+      <validValue name="Stale" description="Stale">3</validValue>
+    </enum>
+  </types>
+  <message id="10" name="ReferenceData">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="description" type="Description"/>
+    <field id="203" name="securityType" type="SecurityType"/>
+    <field id="204" name="cfiCode" type="CFICode"/>
+    <field id="205" name="baseCurrency" type="Currency"/>
+    <field id="206" name="quoteCurrency" type="Currency"/>
+    <field id="207" name="settlementCurrency" type="Currency"/>
+    <field id="208" name="marginCurrency" type="Currency"/>
+    <field id="209" name="commissionCurrency" type="Currency"/>
+    <field id="210" name="tickSize" type="double"/>
+    <field id="211" name="multiplier" type="double"/>
+    <field id="212" name="minNotional" type="double"/>
+    <field id="213" name="minTradeVol" type="double"/>
+    <field id="214" name="maxTradeVol" type="double"/>
+    <field id="215" name="tradeVolStepSize" type="double"/>
+    <field id="216" name="optionType" type="OptionType"/>
+    <field id="217" name="strikeCurrency" type="Currency"/>
+    <field id="218" name="strikePrice" type="double"/>
+    <field id="219" name="underlying" type="Symbol"/>
+    <field id="220" name="timeZone" type="TimeZone"/>
+    <field id="221" name="issueDate" type="Days"/>
+    <field id="222" name="settlementDate" type="Days"/>
+    <field id="223" name="expiryDateTime" type="Seconds"/>
+    <field id="224" name="expiryDateTimeUTC" type="Seconds"/>
+    <field id="225" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="226" name="exchangeSequence" type="uint64"/>
+    <field id="227" name="sendingTimeUTC" type="DateTime"/>
+    <group id="300" name="tick_size_steps" blockLength="16" dimensionType="groupSize">
+      <field id="301" name="min_price" type="double"/>
+      <field id="302" name="tick_size" type="double"/>
+    </group>
+  </message>
+  <message id="11" name="MarketStatus">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="tradingStatus" type="TradingStatus"/>
+    <field id="203" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeSequence" type="uint64"/>
+    <field id="205" name="sendingTimeUTC" type="DateTime"/>
+  </message>
+  <message id="12" name="TopOfBook">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="layer" type="Layer"/>
+    <field id="203" name="updateType" type="UpdateType"/>
+    <field id="204" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="205" name="exchangeSequence" type="uint64"/>
+    <field id="206" name="sendingTimeUTC" type="DateTime"/>
+  </message>
+  <message id="13" name="MarketByPriceUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="updateType" type="UpdateType"/>
+    <field id="203" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeSequence" type="uint64"/>
+    <field id="205" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="pricePrecision" type="Precision"/>
+    <field id="207" name="quantityPrecision" type="Precision"/>
+    <field id="208" name="maxDepth" type="uint16"/>
+    <field id="209" name="checksum" type="uint32"/>
+    <group id="300" name="bids" blockLength="32" dimensionType="groupSize">
+      <field id="301" name="price" type="double"/>
+      <field id="302" name="quantity" type="double"/>
+      <field id="303" name="impliedQuantity" type="double"/>
+      <field id="304" name="numberOfOrders" type="uint16"/>
+      <field id="305" name="updateAction" type="UpdateAction"/>
+      <field id="306" name="priceLevel" type="uint32"/>
+    </group>
+    <group id="400" name="asks" blockLength="32" dimensionType="groupSize">
+      <field id="401" name="price" type="double"/>
+      <field id="402" name="quantity" type="double"/>
+      <field id="403" name="impliedQuantity" type="double"/>
+      <field id="404" name="numberOfOrders" type="uint16"/>
+      <field id="405" name="updateAction" type="UpdateAction"/>
+      <field id="406" name="priceLevel" type="uint32"/>
+    </group>
+  </message>
+  <message id="14" name="MarketByOrderUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="updateType" type="UpdateType"/>
+    <field id="203" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeSequence" type="uint64"/>
+    <field id="205" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="pricePrecision" type="Precision"/>
+    <field id="207" name="quantityPrecision" type="Precision"/>
+    <field id="208" name="maxDepth" type="uint16"/>
+    <field id="209" name="checksum" type="uint32"/>
+    <group id="300" name="orders" blockLength="64" dimensionType="groupSize">
+      <field id="301" name="price" type="double"/>
+      <field id="302" name="quantity" type="double"/>
+      <field id="303" name="priority" type="uint64"/>
+      <field id="304" name="orderId" type="MBOOrderId"/>
+      <field id="305" name="side" type="Side"/>
+      <field id="306" name="updateAction" type="UpdateAction"/>
+      <field id="307" name="updateReason" type="UpdateReason"/>
+    </group>
+  </message>
+  <message id="15" name="TradeSummary">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="203" name="exchangeSequence" type="uint64"/>
+    <field id="204" name="sendingTimeUTC" type="DateTime"/>
+    <group id="300" name="trades" blockLength="186" dimensionType="groupSize">
+      <field id="301" name="side" type="Side"/>
+      <field id="302" name="price" type="double"/>
+      <field id="303" name="quantity" type="double"/>
+      <!-- XXX TODO following are very wide; perhaps drop? -->
+      <field id="304" name="tradeId" type="ExternalTradeId"/>
+      <field id="305" name="takerOrderId" type="ExternalOrderId"/>
+      <field id="306" name="makerOrderId" type="ExternalOrderId"/>
+    </group>
+  </message>
+  <message id="16" name="StatisticsUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="200" name="exchange" type="Exchange"/>
+    <field id="201" name="symbol" type="Symbol"/>
+    <field id="202" name="updateType" type="UpdateType"/>
+    <field id="203" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeSequence" type="uint64"/>
+    <field id="205" name="sendingTimeUTC" type="DateTime"/>
+    <group id="300" name="statistics" blockLength="26" dimensionType="groupSize">
+      <field id="301" name="type" type="StatisticsType"/>
+      <field id="302" name="value" type="double"/>
+      <field id="303" name="beginTimeUTC" type="Seconds"/>
+      <field id="304" name="endTimeUTC" type="Seconds"/>
+    </group>
+  </message>
+</messageSchema>

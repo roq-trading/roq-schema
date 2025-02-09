@@ -1,0 +1,7 @@
+namespace roq.fbs;
+
+enum Action:uint8 {
+  Undefined,
+  Enable,
+  Disable
+}

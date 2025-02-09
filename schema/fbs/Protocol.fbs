@@ -1,0 +1,10 @@
+namespace roq.fbs;
+
+enum Protocol:uint8 {
+  Undefined,
+  FIX,
+  WS,
+  HTTP,
+  SBE,
+  ROQ
+}
