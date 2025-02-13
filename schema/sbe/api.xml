@@ -681,8 +681,8 @@
       <field id="303" name="priority" type="uint64"/>
       <field id="304" name="orderId" type="MBOOrderId"/>
       <field id="305" name="side" type="Side"/>
-      <field id="306" name="updateAction" type="UpdateAction"/>
-      <field id="307" name="updateReason" type="UpdateReason"/>
+      <field id="306" name="action" type="UpdateAction"/>
+      <field id="307" name="reason" type="UpdateReason"/>
     </group>
   </message>
   <message id="1305" name="TradeSummary">
