@@ -5,7 +5,7 @@
     {
       "tag": 448,
       "name": "PartyID",
-      "type": "std/string_view",
+      "type": "roq/fix/PartyID",
       "inbound": {
         "comment": "Strategy ID."
       },

@@ -35,13 +35,13 @@
     {
       "tag": 55,
       "name": "Symbol",
-      "type": "std/string_view",
+      "type": "roq/Symbol",
       "outbound": {}
     },
     {
       "tag": 207,
       "name": "SecurityExchange",
-      "type": "std/string_view",
+      "type": "roq/Exchange",
       "outbound": {}
     },
     {
@@ -72,18 +72,18 @@
     {
       "tag": 336,
       "name": "TradingSessionID",
-      "type": "std/string_view",
+      "type": "roq/fix/TradingSessionID",
       "outbound": {}
     },
     {
       "tag": 126,
       "name": "ExpireTime",
-      "type": "std/string_view"
+      "type": "roq/fix/ExpireTime"
     },
     {
       "tag": 37,
       "name": "OrderID",
-      "type": "std/string_view"
+      "type": "roq/fix/OrderID"
     },
     {
       "tag": 346,
@@ -100,7 +100,7 @@
     {
       "tag": 58,
       "name": "Text",
-      "type": "std/string_view"
+      "type": "roq/fix/Text"
     }
   ]
 }

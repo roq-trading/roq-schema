@@ -24,7 +24,15 @@
     "roq/String",
     "roq/Symbol",
     "roq/TimeZone",
-    "roq/User"
+    "roq/User",
+    "roq/fix/ClOrdID",
+    "roq/fix/ExpireTime",
+    "roq/fix/OrderID",
+    "roq/fix/PartyID",
+    "roq/fix/QuoteEntryID",
+    "roq/fix/QuoteSetID",
+    "roq/fix/Text",
+    "roq/fix/TradingSessionID"
   ],
   "default_comments": {
     "account": "Account name",

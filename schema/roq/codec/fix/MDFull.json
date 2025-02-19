@@ -45,18 +45,18 @@
     {
       "tag": 336,
       "name": "TradingSessionID",
-      "type": "std/string_view",
+      "type": "roq/fix/TradingSessionID",
       "outbound": {}
     },
     {
       "tag": 126,
       "name": "ExpireTime",
-      "type": "std/string_view"
+      "type": "roq/fix/ExpireTime"
     },
     {
       "tag": 37,
       "name": "OrderID",
-      "type": "std/string_view"
+      "type": "roq/fix/OrderID"
     },
     {
       "tag": 346,

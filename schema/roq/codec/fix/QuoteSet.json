@@ -5,7 +5,7 @@
     {
       "tag": 302,
       "name": "QuoteSetID",
-      "type": "std/string_view",
+      "type": "roq/fix/QuoteSetID",
       "required": true,
       "outbound": {}
     },

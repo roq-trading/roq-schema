@@ -5,7 +5,7 @@
     {
       "tag": 55,
       "name": "Symbol",
-      "type": "std/string_view",
+      "type": "roq/Symbol",
       "required": true,
       "inbound": {}
     },
@@ -18,7 +18,7 @@
     {
       "tag": 207,
       "name": "SecurityExchange",
-      "type": "std/string_view",
+      "type": "roq/Exchange",
       "required": true,
       "inbound": {}
     },
@@ -31,7 +31,7 @@
     {
       "tag": 336,
       "name": "TradingSessionID",
-      "type": "std/string_view",
+      "type": "roq/fix/TradingSessionID",
       "inbound": {}
     },
     {

@@ -12,14 +12,14 @@
     {
       "tag": 37,
       "name": "OrderID",
-      "type": "std/string_view",
+      "type": "roq/fix/OrderID",
       "required": true,
       "outbound": {}
     },
     {
       "tag": 11,
       "name": "ClOrdID",
-      "type": "std/string_view",
+      "type": "roq/fix/ClOrdID",
       "outbound": {}
     },
     {
@@ -35,7 +35,7 @@
     {
       "tag": 1,
       "name": "Account",
-      "type": "std/string_view",
+      "type": "roq/Account",
       "outbound": {}
     },
     {
