@@ -1,6 +1,6 @@
 {
   "name": "roq/Fill",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents a single fill (match) when an order is being partially or fully filled",
   "values": [
     {

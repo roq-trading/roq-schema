@@ -1,6 +1,6 @@
 {
   "name": "roq/Layer",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents aggregate order book bid/ask information at a given depth",
   "values": [
     {

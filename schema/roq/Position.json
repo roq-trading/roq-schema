@@ -1,6 +1,6 @@
 {
   "name": "roq/Position",
-  "type": "message",
+  "type": "item",
   "comment": "Position",
   "values": [
     {

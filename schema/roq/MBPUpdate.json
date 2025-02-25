@@ -1,6 +1,6 @@
 {
   "name": "roq/MBPUpdate",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents the update status of a single aggregate price level in the order book",
   "values": [
     {

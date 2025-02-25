@@ -1,6 +1,6 @@
 {
   "name": "roq/MBOUpdate",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents an update to be applied to an order book",
   "values": [
     {

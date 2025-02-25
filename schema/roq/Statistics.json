@@ -1,6 +1,6 @@
 {
   "name": "roq/Statistics",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents a single statistic",
   "values": [
     {

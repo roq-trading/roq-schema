@@ -1,6 +1,6 @@
 {
   "name": "roq/Leg",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents current state of a strategy leg",
   "values": [
     {

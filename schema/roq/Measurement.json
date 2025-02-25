@@ -1,6 +1,6 @@
 {
   "name": "roq/Measurement",
-  "type": "struct",
+  "type": "item",
   "comment": "A single measurement point",
   "values": [
     {

@@ -1,6 +1,6 @@
 {
   "name": "roq/RateLimit",
-  "type": "message",
+  "type": "item",
   "comment": "Rate-limit",
   "values": [
     {

@@ -1,6 +1,6 @@
 {
   "name": "roq/Route",
-  "type": "message",
+  "type": "item",
   "comment": "Route",
   "values": [
     {

@@ -1,6 +1,6 @@
 {
   "name": "roq/RiskLimit",
-  "type": "struct",
+  "type": "item",
   "comment": "Risk limit for {exchange, symbol}",
   "values": [
     {

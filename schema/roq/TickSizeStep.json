@@ -1,6 +1,6 @@
 {
   "name": "roq/TickSizeStep",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents tick size for a range starting from a minimum price",
   "values": [
     {

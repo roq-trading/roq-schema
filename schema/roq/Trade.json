@@ -1,6 +1,6 @@
 {
   "name": "roq/Trade",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents a single trade (a match) as part of trade reporting by the exchange",
   "values": [
     {

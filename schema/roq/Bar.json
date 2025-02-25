@@ -1,6 +1,6 @@
 {
   "name": "roq/Bar",
-  "type": "struct",
+  "type": "item",
   "comment": "Represents a single bar of a time-series",
   "values": [
     {
