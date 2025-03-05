@@ -1,0 +1,106 @@
+{
+  "name": "roq/fix/codec/MDInc",
+  "type": "item",
+  "values": [
+    {
+      "tag": 279,
+      "name": "MDUpdateAction",
+      "type": "roq/fix/MDUpdateAction",
+      "required": true,
+      "outbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`NEW` (:code:`0`)",
+          "* :code:`CHANGE` (:code:`1`)",
+          "* :code:`DELETE` (:code:`2`)"
+        ]
+      }
+    },
+    {
+      "tag": 269,
+      "name": "MDEntryType",
+      "type": "roq/fix/MDEntryType",
+      "required": true,
+      "outbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`BID` (:code:`0`)",
+          "* :code:`OFFER` (:code:`1`)",
+          "* :code:`TRADE` (:code:`2`)"
+        ]
+      }
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "roq/Symbol",
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "roq/Exchange",
+      "outbound": {}
+    },
+    {
+      "tag": 270,
+      "name": "MDEntryPx",
+      "type": "roq/Decimal",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 271,
+      "name": "MDEntrySize",
+      "type": "roq/Decimal",
+      "outbound": {}
+    },
+    {
+      "tag": 272,
+      "name": "MDEntryDate",
+      "type": "std/year_month_day",
+      "outbound": {}
+    },
+    {
+      "tag": 273,
+      "name": "MDEntryTime",
+      "type": "std/hh_mm_ss",
+      "outbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "roq/fix/TradingSessionID",
+      "outbound": {}
+    },
+    {
+      "tag": 126,
+      "name": "ExpireTime",
+      "type": "roq/fix/ExpireTime"
+    },
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "roq/fix/OrderID"
+    },
+    {
+      "tag": 346,
+      "name": "NumberOfOrders",
+      "type": "std/uint32",
+      "outbound": {}
+    },
+    {
+      "tag": 290,
+      "name": "MDEntryPositionNo",
+      "type": "std/uint32",
+      "outbound": {}
+    },
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "roq/fix/Text"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "roq/fix/codec/TradingSessionStatusRequest",
+  "type": "simple",
+  "tag": "g",
+  "inbound": "This message is used the request market status.",
+  "values": [
+    {
+      "tag": 335,
+      "name": "TradSesReqID",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "required": true,
+      "inbound": {
+        "comment": "Only :code:`SNAPSHOT` (:code:`0`) is supported."
+      }
+    }
+  ]
+}

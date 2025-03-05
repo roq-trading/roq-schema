@@ -1,0 +1,19 @@
+{
+  "name": "roq/fix/codec/Heartbeat",
+  "type": "simple",
+  "tag": "0",
+  "comment": "Either side must send this message as a response to a received :code:`TestRequest` (:code:`1`) message.",
+  "values": [
+    {
+      "tag": 112,
+      "name": "TestReqId",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "Value must be copied from a received :code:`TestRequest` (:code:`1`) message."
+      },
+      "outbound": {
+        "comment": "Value is copied from a received :code:`TestRequest` (:code:`1`) message."
+      }
+    }
+  ]
+}

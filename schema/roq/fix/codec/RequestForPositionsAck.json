@@ -1,0 +1,67 @@
+{
+  "name": "roq/fix/codec/RequestForPositionsAck",
+  "type": "comp",
+  "tag": "AO",
+  "comment":
+      "The Request for Positions Ack message is returned by the holder of the position in response to a Request For Positions <AN> message. The purpose of the message is to acknowledge that a request has been received and is being processed.",
+  "values": [
+    {
+      "tag": 721,
+      "name": "PosMaintRptID",
+      "type": "std/string_view",
+      "required": true
+    },
+    {
+      "tag": 710,
+      "name": "PosReqId",
+      "type": "std/string_view"
+    },
+    {
+      "tag": 727,
+      "name": "TotalNumPosReports",
+      "type": "std/uint32",
+      "write": true
+    },
+    {
+      "tag": 325,
+      "name": "UnsolicitedIndicator",
+      "type": "std/bool"
+    },
+    {
+      "tag": 728,
+      "name": "PosReqResult",
+      "type": "roq/fix/PosReqResult",
+      "required": true
+    },
+    {
+      "tag": 729,
+      "name": "PosReqStatus",
+      "type": "roq/fix/PosReqStatus",
+      "required": true
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/fix/codec/Party",
+      "array": "std/span",
+      "required": true
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "required": true
+    },
+    {
+      "tag": 581,
+      "name": "AccountType",
+      "type": "roq/fix/AccountType",
+      "required": true
+    },
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "std/string_view"
+    }
+  ]
+}

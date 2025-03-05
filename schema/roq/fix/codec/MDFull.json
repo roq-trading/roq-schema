@@ -1,0 +1,74 @@
+{
+  "name": "roq/fix/codec/MDFull",
+  "type": "item",
+  "values": [
+    {
+      "tag": 269,
+      "name": "MDEntryType",
+      "type": "roq/fix/MDEntryType",
+      "required": true,
+      "outbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`BID` (:code:`0`)",
+          "* :code:`OFFER` (:code:`1`)"
+        ]
+      }
+    },
+    {
+      "tag": 270,
+      "name": "MDEntryPx",
+      "type": "roq/Decimal",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 271,
+      "name": "MDEntrySize",
+      "type": "roq/Decimal",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 272,
+      "name": "MDEntryDate",
+      "type": "std/year_month_day",
+      "outbound": {}
+    },
+    {
+      "tag": 273,
+      "name": "MDEntryTime",
+      "type": "std/hh_mm_ss",
+      "outbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "roq/fix/TradingSessionID",
+      "outbound": {}
+    },
+    {
+      "tag": 126,
+      "name": "ExpireTime",
+      "type": "roq/fix/ExpireTime"
+    },
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "roq/fix/OrderID"
+    },
+    {
+      "tag": 346,
+      "name": "NumberOfOrders",
+      "type": "std/uint32",
+      "outbound": {}
+    },
+    {
+      "tag": 290,
+      "name": "MDEntryPositionNo",
+      "type": "std/uint32",
+      "outbound": {}
+    }
+  ]
+}

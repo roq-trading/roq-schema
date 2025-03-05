@@ -1,0 +1,44 @@
+{
+  "name": "roq/fix/codec/SecurityList",
+  "type": "comp",
+  "tag": "y",
+  "comment": "This message is a response to :code:`SecurityListRequest` (:code:`x`)",
+  "values": [
+    {
+      "tag": 320,
+      "name": "SecurityReqId",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 322,
+      "name": "SecurityResponseID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 560,
+      "name": "SecurityRequestResult",
+      "type": "roq/fix/SecurityRequestResult",
+      "required": true,
+      "outbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`VALID` (:code:`0`)",
+          "* :code:`INVALID_OR_UNSUPPORTED` (:code:`1`)"
+        ]
+      }
+    },
+    {
+      "tag": 146,
+      "name": "NoRelatedSym",
+      "type": "roq/fix/codec/SecListGrp",
+      "array": "std/span",
+      "required": true,
+      "outbound": {}
+    }
+  ]
+}
