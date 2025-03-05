@@ -1,0 +1,19 @@
+{
+  "name": "roq/fix/Version",
+  "comment": "FIX Protocol Version",
+  "type": "enum",
+  "values": [
+    {
+      "name": "FIX_42",
+      "comment": "4.2"
+    },
+    {
+      "name": "FIX_44",
+      "comment": "4.4"
+    },
+    {
+      "name": "FIX_50",
+      "comment": "5.0"
+    }
+  ]
+}

@@ -3,6 +3,8 @@ set(TARGET_NAME ${PROJECT_NAME}-roq-fix)
 set(TARGET_DIR ${SCHEMA_DIR}/roq/fix)
 
 set(SOURCES
+    Version.json
+    Header.json
     AccountType.json
     BusinessRejectReason.json
     CommType.json

@@ -1,0 +1,38 @@
+{
+  "name": "roq/fix/Header",
+  "type": "struct",
+  "comment": "FIX Header.",
+  "values": [
+    {
+      "tag": 8,
+      "name": "Version",
+      "type": "roq/fix/Version",
+      "required": true
+    },
+    {
+      "tag": 35,
+      "name": "MsgType",
+      "type": "roq/fix/MsgType"
+    },
+    {
+      "tag": 49,
+      "name": "SenderCompId",
+      "type": "std/string_view"
+    },
+    {
+      "tag": 56,
+      "name": "TargetCompId",
+      "type": "std/string_view"
+    },
+    {
+      "tag": 34,
+      "name": "MsgSeqNum",
+      "type": "std/uint64"
+    },
+    {
+      "tag": 52,
+      "name": "SendingTime",
+      "type": "std/chrono/nanoseconds"
+    }
+  ]
+}
