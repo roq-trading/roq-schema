@@ -1,5 +1,4 @@
 add_subdirectory(fix)
-add_subdirectory(codec/fix)
 
 set(TARGET_NAME ${PROJECT_NAME}-roq)
 
