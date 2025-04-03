@@ -25,7 +25,7 @@
       "comment": "Delivery Qty"
     },
     {
-      "name": "ElectronicTradeTty",
+      "name": "ElectronicTradeQty",
       "raw": "ETR",
       "comment": "Electronic Trade Qty"
     },
