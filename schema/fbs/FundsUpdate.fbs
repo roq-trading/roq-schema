@@ -12,4 +12,5 @@ table FundsUpdate {
   sending_time_utc:int64;
   margin_mode:MarginMode;
   exchange_sequence:uint64;
+  borrowed:double = nan;
 }

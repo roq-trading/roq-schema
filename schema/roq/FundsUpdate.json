@@ -22,12 +22,17 @@
     {
       "name": "balance",
       "type": "std/double",
-      "comment": "Current funds"
+      "comment": "Total funds"
     },
     {
       "name": "hold",
       "type": "std/double",
-      "comment": "Funds on hold"
+      "comment": "Funds on hold (aka locked)"
+    },
+    {
+      "name": "borrowed",
+      "type": "std/double",
+      "comment": "Borrowed funds (margin trading)"
     },
     {
       "name": "externalAccount",
