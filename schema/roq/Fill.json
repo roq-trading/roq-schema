@@ -14,7 +14,7 @@
     {
       "name": "quantity",
       "type": "std/double",
-      "comment": "Quantity (base currency)"
+      "comment": "Quantity"
     },
     {
       "name": "price",
@@ -27,19 +27,29 @@
       "comment": "Liquidity indicator"
     },
     {
-      "name": "quoteQuantity",
+      "name": "baseAmount",
       "type": "std/double",
-      "comment": "Quantity (quote currency, optional)"
+      "comment": "Funds (base currency, optional)"
     },
     {
-      "name": "commissionQuantity",
+      "name": "quoteAmount",
       "type": "std/double",
-      "comment": "Quantity (commission currency, optional)"
+      "comment": "Funds (quote currency, optional)"
+    },
+    {
+      "name": "commissionAmount",
+      "type": "std/double",
+      "comment": "Funds (commission currency, optional)"
     },
     {
       "name": "commissionCurrency",
       "type": "roq/Currency",
       "comment": "Commission currency"
+    },
+    {
+      "name": "profitLossAmount",
+      "type": "std/double",
+      "comment": "P&L cost (settlement currency, internal)"
     }
   ]
 }

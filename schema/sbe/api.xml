@@ -926,15 +926,17 @@
     <field id="218" name="sendingTimeUtc" type="DateTime"/>
     <field id="219" name="user" type="User"/>
     <field id="220" name="strategyId" type="uint32"/>
-    <group id="300" name="fills" blockLength="128" dimensionType="groupSize">
+    <group id="300" name="fills" blockLength="192" dimensionType="groupSize">
       <field id="301" name="ExchangeTimeUtc" type="DateTime"/>
       <field id="302" name="ExternalTradeId" type="ExternalTradeId"/>
       <field id="303" name="quantity" type="double"/>
       <field id="304" name="price" type="double"/>
       <field id="305" name="liquidity" type="Liquidity"/>
-      <field id="306" name="quoteQuantity" type="double"/>
-      <field id="307" name="commissionQuantity" type="double"/>
-      <field id="308" name="commissionCurrency" type="Currency"/>
+      <field id="306" name="baseAmount" type="double"/>
+      <field id="307" name="quoteAmount" type="double"/>
+      <field id="308" name="commissionAmount" type="double"/>
+      <field id="309" name="commissionCurrency" type="Currency"/>
+      <field id="310" name="profitLossAmount" type="double"/>
     </group>
   </message>
   <message id="1500" name="PositionUpdate">

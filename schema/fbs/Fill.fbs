@@ -6,7 +6,9 @@ table Fill {
   price:double;
   liquidity:Liquidity;
   exchange_time_utc:int64;
-  quote_quantity:double;
-  commission_quantity:double;
+  quote_amount:double;
+  commission_amount:double;
   commission_currency:string;
+  base_amount:double;
+  profit_loss_amount:double;
 }
