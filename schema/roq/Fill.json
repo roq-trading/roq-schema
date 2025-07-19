@@ -47,7 +47,7 @@
       "comment": "Commission currency"
     },
     {
-      "name": "profitLossAmount",
+      "name": "profitLossCostAmount",
       "type": "std/double",
       "comment": "P&L cost (settlement currency, internal)"
     }

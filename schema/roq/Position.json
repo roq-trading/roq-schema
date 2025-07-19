@@ -12,16 +12,21 @@
       "type": "roq/Symbol"
     },
     {
-      "name": "longPosition",
+      "name": "position",
       "type": "std/double",
       "default": "0.0",
-      "comment": "Position (long)"
+      "comment": "Position (quantity)"
     },
     {
-      "name": "shortPosition",
+      "name": "profitLossCostAmount",
       "type": "std/double",
       "default": "0.0",
-      "comment": "Position (short)"
+      "comment": "P&L cost (internal)"
+    },
+    {
+      "name": "profitLossCurrency",
+      "type": "roq/Currency",
+      "comment": "P&L currency"
     }
   ]
 }
