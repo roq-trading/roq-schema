@@ -932,10 +932,10 @@
       <field id="303" name="quantity" type="double"/>
       <field id="304" name="price" type="double"/>
       <field id="305" name="liquidity" type="Liquidity"/>
-      <field id="306" name="baseAmount" type="double"/>
-      <field id="307" name="quoteAmount" type="double"/>
-      <field id="308" name="commissionAmount" type="double"/>
-      <field id="309" name="commissionCurrency" type="Currency"/>
+      <field id="306" name="commissionAmount" type="double"/>
+      <field id="307" name="commissionCurrency" type="Currency"/>
+      <field id="308" name="baseAmount" type="double"/>
+      <field id="309" name="quoteAmount" type="double"/>
       <field id="310" name="profitLossAmount" type="double"/>
     </group>
   </message>

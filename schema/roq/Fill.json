@@ -27,16 +27,6 @@
       "comment": "Liquidity indicator"
     },
     {
-      "name": "baseAmount",
-      "type": "std/double",
-      "comment": "Funds (base currency, optional)"
-    },
-    {
-      "name": "quoteAmount",
-      "type": "std/double",
-      "comment": "Funds (quote currency, optional)"
-    },
-    {
       "name": "commissionAmount",
       "type": "std/double",
       "comment": "Funds (commission currency, optional)"
@@ -45,6 +35,16 @@
       "name": "commissionCurrency",
       "type": "roq/Currency",
       "comment": "Commission currency"
+    },
+    {
+      "name": "baseAmount",
+      "type": "std/double",
+      "comment": "Funds (base currency, internal)"
+    },
+    {
+      "name": "quoteAmount",
+      "type": "std/double",
+      "comment": "Funds (quote currency, internal)"
     },
     {
       "name": "profitLossAmount",
