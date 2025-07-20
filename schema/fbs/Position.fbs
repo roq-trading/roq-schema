@@ -4,6 +4,6 @@ table Position {
   exchange:string;
   symbol:string;
   position:double;
-  profit_loss_cost_amount:double;
+  profit_loss_amount:double;
   profit_loss_currency:string;
 }

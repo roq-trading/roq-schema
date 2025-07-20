@@ -10,5 +10,5 @@ table Fill {
   commission_amount:double;
   commission_currency:string;
   base_amount:double;
-  profit_loss_cost_amount:double;
+  profit_loss_amount:double;
 }

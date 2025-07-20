@@ -18,10 +18,10 @@
       "comment": "Position (quantity)"
     },
     {
-      "name": "profitLossCostAmount",
+      "name": "profitLossAmount",
       "type": "std/double",
       "default": "0.0",
-      "comment": "P&L cost (internal)"
+      "comment": "P&L (internal)"
     },
     {
       "name": "profitLossCurrency",

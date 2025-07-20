@@ -936,7 +936,7 @@
       <field id="307" name="quoteAmount" type="double"/>
       <field id="308" name="commissionAmount" type="double"/>
       <field id="309" name="commissionCurrency" type="Currency"/>
-      <field id="310" name="profitLossCostAmount" type="double"/>
+      <field id="310" name="profitLossAmount" type="double"/>
     </group>
   </message>
   <message id="1500" name="PositionUpdate">
@@ -1089,7 +1089,7 @@
       <field id="301" name="exchange" type="Exchange"/>
       <field id="302" name="symbol" type="Symbol"/>
       <field id="303" name="position" type="double"/>
-      <field id="304" name="profitLossCostAmount" type="double"/>
+      <field id="304" name="profitLossAmount" type="double"/>
       <field id="305" name="profitLossCurrency" type="Currency"/>
     </group>
   </message>
