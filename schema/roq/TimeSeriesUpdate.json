@@ -16,6 +16,11 @@
       "type": "std/string_view"
     },
     {
+      "name": "origin",
+      "type": "roq/Origin",
+      "comment": "Origin of ack"
+    },
+    {
       "name": "type",
       "type": "roq/TimeSeriesType",
       "comment": "Time-series type"
@@ -35,16 +40,6 @@
       "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
-    },
-    {
-      "name": "valuePrecision",
-      "type": "roq/Precision",
-      "comment": "Precision (decimal digits) required to represent values (dynamic)"
-    },
-    {
-      "name": "volumePrecision",
-      "type": "roq/Precision",
-      "comment": "Precision (decimal digits) required to represent volume (dynamic)"
     }
   ]
 }

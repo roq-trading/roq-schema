@@ -352,6 +352,7 @@
       <choice name="MarketByOrder" description="MarketByOrder">4</choice>
       <choice name="TradeSummary" description="TradeSummary">5</choice>
       <choice name="Statistics" description="Statistics">6</choice>
+      <choice name="TimeSeries" description="TimeSeries">7</choice>
       <choice name="CreateOrder" description="CreateOrder">32</choice>
       <choice name="ModifyOrder" description="ModifyOrder">33</choice>
       <choice name="CancelOrder" description="CancelOrder">34</choice>

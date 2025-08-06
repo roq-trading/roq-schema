@@ -39,6 +39,11 @@
       "comment": "Statistics"
     },
     {
+      "name": "TimeSeries",
+      "position": 7,
+      "comment": "Time-series"
+    },
+    {
       "name": "CreateOrder",
       "position": 16,
       "comment": "Create order"

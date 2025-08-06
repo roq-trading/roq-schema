@@ -4,9 +4,9 @@
   "comment": "Represents a single bar of a time-series",
   "values": [
     {
-      "name": "timeUtc",
+      "name": "endTimeUtc",
       "type": "std/nanoseconds",
-      "comment": "End-period time-stamp (UTC)"
+      "comment": "End-of-period time-stamp (UTC)"
     },
     {
       "name": "open",

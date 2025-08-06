@@ -9,6 +9,7 @@ enum SupportType:uint32 {
   MarketByOrder = 16,
   TradeSummary = 32,
   Statistics = 64,
+  TimeSeries = 128,
   CreateOrder = 65536,
   ModifyOrder = 131072,
   CancelOrder = 262144,

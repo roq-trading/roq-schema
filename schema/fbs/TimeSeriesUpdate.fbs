@@ -1,4 +1,5 @@
 include "MBOUpdate.fbs";
+include "Origin.fbs";
 include "TimeSeriesType.fbs";
 
 namespace roq.fbs;
@@ -7,10 +8,9 @@ table TimeSeriesUpdate {
   stream_id:uint16;
   exchange:string;
   symbol:string;
+  origin:Origin;
   type:TimeSeriesType;
-  frequency:int32;
+  frequency:uint8;
   bars:[Bar];
   update_type:UpdateType;
-  value_precision:Precision;
-  volume_precision:Precision;
 }
