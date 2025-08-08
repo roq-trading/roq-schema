@@ -31,7 +31,17 @@
     {
       "name": "volume",
       "type": "std/double",
-      "comment": "Volume"
+      "comment": "Volume, e.g. number of contracts or quote currency"
+    },
+    {
+      "name": "turnover",
+      "type": "std/double",
+      "comment": "Turnover, e.g. notional amount or base currency"
+    },
+    {
+      "name": "count",
+      "type": "std/uint32",
+      "comment": "Count, e.g. number of trades"
     }
   ]
 }

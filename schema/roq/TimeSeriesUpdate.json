@@ -16,19 +16,19 @@
       "type": "std/string_view"
     },
     {
-      "name": "origin",
-      "type": "roq/Origin",
-      "comment": "Origin of ack"
-    },
-    {
-      "name": "type",
-      "type": "roq/TimeSeriesType",
-      "comment": "Time-series type"
+      "name": "source",
+      "type": "roq/TimeSeriesSource",
+      "comment": "Underlying data source"
     },
     {
       "name": "frequency",
       "type": "std/minutes",
       "comment": "Frequency"
+    },
+    {
+      "name": "origin",
+      "type": "roq/Origin",
+      "comment": "Origin of time-series"
     },
     {
       "name": "bars",
@@ -40,6 +40,10 @@
       "name": "updateType",
       "type": "roq/UpdateType",
       "comment": "Update type"
+    },
+    {
+      "name": "exchangeTimeUtc",
+      "type": "std/nanoseconds"
     }
   ]
 }

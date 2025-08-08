@@ -106,7 +106,7 @@ set(SOURCES
     TickSizeStep.json
     TimeInForce.json
     Timer.json
-    TimeSeriesType.json
+    TimeSeriesSource.json
     TimeSeriesUpdate.json
     TopOfBook.json
     Trade.json
