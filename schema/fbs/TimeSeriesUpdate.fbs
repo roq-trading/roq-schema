@@ -1,6 +1,7 @@
 include "Bar.fbs";
+include "DataSource.fbs";
+include "Interval.fbs";
 include "Origin.fbs";
-include "TimeSeriesSource.fbs";
 include "UpdateType.fbs";
 
 namespace roq.fbs;
@@ -9,8 +10,8 @@ table TimeSeriesUpdate {
   stream_id:uint16;
   exchange:string;
   symbol:string;
-  source:TimeSeriesSource;
-  frequency:uint8;
+  data_source:DataSource;
+  interval:Interval;
   origin:Origin;
   bars:[Bar];
   update_type:UpdateType;

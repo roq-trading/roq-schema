@@ -1,0 +1,6 @@
+namespace roq.fbs;
+
+enum DataSource:uint8 {
+  Undefined,
+  TradeSummary
+}

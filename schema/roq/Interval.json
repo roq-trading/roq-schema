@@ -1,0 +1,47 @@
+{
+  "name": "roq/Interval",
+  "type": "enum",
+  "comment": "Enumeration of time-series update frequencies",
+  "values": [
+    {
+      "name": "_1",
+      "comment": "1 second"
+    },
+    {
+      "name": "_5",
+      "comment": "5 seconds"
+    },
+    {
+      "name": "_10",
+      "comment": "10 seconds"
+    },
+    {
+      "name": "_15",
+      "comment": "15 seconds"
+    },
+    {
+      "name": "_30",
+      "comment": "30 seconds"
+    },
+    {
+      "name": "_60",
+      "comment": "1 minute"
+    },
+    {
+      "name": "_300",
+      "comment": "5 minutes"
+    },
+    {
+      "name": "_600",
+      "comment": "10 minutes"
+    },
+    {
+      "name": "_900",
+      "comment": "15 minutes"
+    },
+    {
+      "name": "_1800",
+      "comment": "30 minutes"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+namespace roq.fbs;
+
+enum Interval:uint8 {
+  Undefined,
+  _1,
+  _5,
+  _10,
+  _15,
+  _30,
+  _60,
+  _300,
+  _600,
+  _900,
+  _1800
+}

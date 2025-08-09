@@ -4,44 +4,54 @@
   "comment": "Represents a single bar of a time-series",
   "values": [
     {
-      "name": "endTimeUtc",
+      "name": "beginTimeUtc",
       "type": "std/nanoseconds",
-      "comment": "End-of-period time-stamp (UTC)"
+      "comment": "Begin-of-period time-stamp (UTC)"
     },
     {
-      "name": "open",
+      "name": "openPrice",
       "type": "std/double",
-      "comment": "Open"
+      "comment": "Open price"
     },
     {
-      "name": "high",
+      "name": "highPrice",
       "type": "std/double",
-      "comment": "High"
+      "comment": "High price"
     },
     {
-      "name": "low",
+      "name": "lowPrice",
       "type": "std/double",
-      "comment": "Low"
+      "comment": "Low price"
     },
     {
-      "name": "close",
+      "name": "closePrice",
       "type": "std/double",
-      "comment": "Close"
+      "comment": "Close price"
     },
     {
-      "name": "volume",
+      "name": "quantity",
       "type": "std/double",
-      "comment": "Volume, e.g. number of contracts or quote currency"
+      "comment": "Total quantity (contracts or base currency)"
     },
     {
-      "name": "turnover",
+      "name": "base_amount",
       "type": "std/double",
-      "comment": "Turnover, e.g. notional amount or base currency"
+      "comment": "Total amount (base currency)"
     },
     {
-      "name": "count",
+      "name": "quote_amount",
+      "type": "std/double",
+      "comment": "Total amount (quote currency)"
+    },
+    {
+      "name": "number_of_trades",
       "type": "std/uint32",
-      "comment": "Count, e.g. number of trades"
+      "comment": "Number of trades (count)"
+    },
+    {
+      "name": "VWAP",
+      "type": "std/double",
+      "comment": "VWAP"
     }
   ]
 }

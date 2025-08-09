@@ -1,6 +1,0 @@
-namespace roq.fbs;
-
-enum TimeSeriesSource:uint8 {
-  Undefined,
-  Trades
-}

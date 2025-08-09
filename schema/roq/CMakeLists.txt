@@ -19,13 +19,14 @@ set(SOURCES
     Category.json
     Connected.json
     ConnectionStatus.json
-    Control.json
     ControlAck.json
+    Control.json
     CreateOrder.json
     CustomMatrix.json
     CustomMatrixUpdate.json
     CustomMetrics.json
     CustomMetricsUpdate.json
+    DataSource.json
     Disconnected.json
     DownloadBegin.json
     DownloadEnd.json
@@ -38,6 +39,7 @@ set(SOURCES
     FundsUpdate.json
     GatewaySettings.json
     GatewayStatus.json
+    Interval.json
     Layer.json
     Leg.json
     LegsUpdate.json
@@ -106,7 +108,6 @@ set(SOURCES
     TickSizeStep.json
     TimeInForce.json
     Timer.json
-    TimeSeriesSource.json
     TimeSeriesUpdate.json
     TopOfBook.json
     Trade.json

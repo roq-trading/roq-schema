@@ -1,12 +1,14 @@
 namespace roq.fbs;
 
 table Bar {
-  end_time_utc:int64 = 0;
-  open:double = nan;
-  high:double = nan;
-  low:double = nan;
-  close:double = nan;
-  volume:double = nan;
-  turnover:double = nan;
-  count:uint32 = 0;
+  begin_time_utc:int64 = 0;
+  open_price:double = nan;
+  high_price:double = nan;
+  low_price:double = nan;
+  close_price:double = nan;
+  quantity:double = nan;
+  base_amount:double = nan;
+  quote_amount:double = nan;
+  number_of_trades:uint32 = 0;
+  vwap:double = nan;
 }

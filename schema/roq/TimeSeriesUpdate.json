@@ -16,14 +16,14 @@
       "type": "std/string_view"
     },
     {
-      "name": "source",
-      "type": "roq/TimeSeriesSource",
-      "comment": "Underlying data source"
+      "name": "data_source",
+      "type": "roq/DataSource",
+      "comment": "Data source"
     },
     {
-      "name": "frequency",
-      "type": "std/minutes",
-      "comment": "Frequency"
+      "name": "interval",
+      "type": "roq/Interval",
+      "comment": "Update frequency"
     },
     {
       "name": "origin",
