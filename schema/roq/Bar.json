@@ -5,7 +5,7 @@
   "values": [
     {
       "name": "beginTimeUtc",
-      "type": "std/nanoseconds",
+      "type": "std/seconds",
       "comment": "Begin-of-period time-stamp (UTC)"
     },
     {
