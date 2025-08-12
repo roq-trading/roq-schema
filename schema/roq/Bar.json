@@ -9,6 +9,11 @@
       "comment": "Begin-of-period time-stamp (UTC)"
     },
     {
+      "name": "confirmed",
+      "type": "std/bool",
+      "comment": "Confirmed?"
+    },
+    {
       "name": "openPrice",
       "type": "std/double",
       "comment": "Open price"

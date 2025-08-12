@@ -2,6 +2,7 @@ namespace roq.fbs;
 
 table Bar {
   begin_time_utc:int64 = 0;
+  confirmed:bool;
   open_price:double = nan;
   high_price:double = nan;
   low_price:double = nan;
