@@ -1,3 +1,5 @@
+include "Interval.fbs";
+
 namespace roq.fbs;
 
 table GatewaySettings {
@@ -13,4 +15,6 @@ table GatewaySettings {
   oms_request_id_type:RequestIdType;
   mbp_checksum:bool; // note! order not aligned with c++
   oms_cancel_all_orders:uint64;
+  ts_interval:Interval;
+  ts_max_history:uint16;
 }

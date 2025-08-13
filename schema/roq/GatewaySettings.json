@@ -59,6 +59,16 @@
       "type": "roq/Filter",
       "array": "roq/Mask",
       "comment": "Supported filters for CancelAllOrders"
+    },
+    {
+      "name": "TSInterval",
+      "type": "roq/Interval",
+      "comment": "Time-series interval"
+    },
+    {
+      "name": "TSMaxHistory",
+      "type": "std/uint16",
+      "comment": "Time-series max history (bars)"
     }
   ]
 }
