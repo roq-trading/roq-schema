@@ -6,6 +6,7 @@ set(TARGET_DIR ${SCHEMA_DIR}/roq)
 
 set(SOURCES
     Action.json
+    AddMarket.json
     AddRoutes.json
     Bar.json
     BatchBegin.json

@@ -1,0 +1,15 @@
+{
+  "name": "roq/AddMarket",
+  "type": "message",
+  "comment": "Emitted when a new market is being created by the framework",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "std/string_view"
+    },
+    {
+      "name": "symbol",
+      "type": "std/string_view"
+    }
+  ]
+}
