@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package roq;
+
+import "google/protobuf/timestamp.proto";
+
+import "trading_status.proto";
+
+message MarketStatus {
+  uint32 stream_id = 1;  // note! there's no uint16
+  string exchange = 2;
+  string symbol = 3;
+  TradingStatus trading_status = 4;
+  google.protobuf.Timestamp exchange_time_utc = 5;
+  google.protobuf.Timestamp exchange_sequence = 6;
+  google.protobuf.Timestamp sending_time_utc = 7;
+}

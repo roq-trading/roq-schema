@@ -1,0 +1,8 @@
+set(TARGET_NAME ${PROJECT_NAME}-proto)
+
+install(
+  DIRECTORY ${CMAKE_SOURCE_DIR}/schema/proto/
+  DESTINATION ${SCHEMA_DIR}/proto
+  FILES_MATCHING
+  PATTERN "*.proto"
+  PATTERN "CMakeFiles" EXCLUDE)

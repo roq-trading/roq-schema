@@ -1,4 +1,5 @@
 add_subdirectory(fbs)
+add_subdirectory(proto)
 add_subdirectory(roq)
 add_subdirectory(sbe)
 
