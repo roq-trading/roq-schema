@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message Layer {
+  double bid_price = 1;
+  double bid_quantity = 2;
+  double ask_price = 3;
+  double ask_quantity = 4;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum UpdateType {
+  UPDATE_TYPE_UNSPECIFIED = 0;
+  UPDATE_TYPE_SNAPSHOT = 1;
+  UPDATE_TYPE_INCREMENTAL = 2;
+  UPDATE_TYPE_STALE = 3;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "update_type.proto";
+
+message CustomMatrix {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated string rows = 5;
+  repeated string columns = 6;
+  repeated double data = 7;
+  UpdateType update_type = 8;
+  uint32 version = 9;
+}

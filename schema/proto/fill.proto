@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "liquidity.proto";
+
+message Fill {
+  google.protobuf.Timestamp exchange_time_utc = 1;
+  string external_trade_id = 2;
+  double quantity = 3;
+  double price = 4;
+  Liquidity liquidity = 5;
+  double commission_amount = 6;
+  string commission_currency = 7;
+  double base_amount = 8;
+  double quote_amount = 9;
+  double profit_loss_amount = 10;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum RateLimitType {
+  RATE_LIMIT_TYPE_UNSPECIFIED = 0;
+  RATE_LIMIT_TYPE_ORDER_ACTION = 1;
+  RATE_LIMIT_TYPE_CREATE_ORDER = 2;
+  RATE_LIMIT_TYPE_REQUEST = 3;
+  RATE_LIMIT_TYPE_REQUEST_WEIGHT = 4;
+}

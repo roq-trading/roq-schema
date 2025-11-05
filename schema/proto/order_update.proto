@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "side.proto";
+import "position_effect.proto";
+import "margin_mode.proto";
+import "quantity_type.proto";
+import "order_type.proto";
+import "time_in_force.proto";
+import "execution_instruction.proto";
+import "order_status.proto";
+import "liquidity.proto";
+import "update_type.proto";
+
+message OrderUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  PositionEffect position_effect = 7;
+  MarginMode margin_mode = 8;
+  QuantityType quantity_type = 9;
+  double max_show_quantity = 10;
+  OrderType order_type = 11;
+  TimeInForce time_in_force = 12;
+  repeated ExecutionInstruction execution_instructions = 13;
+  google.protobuf.Timestamp create_time_utc = 14;
+  google.protobuf.Timestamp update_time_utc = 15;
+  string external_account = 16;
+  string external_order_id = 17;
+  string client_order_id = 18;
+  OrderStatus order_status = 19;
+  double quantity = 20;
+  double price = 21;
+  double stop_price = 22;
+  double risk_exposure = 23;
+  double risk_exposure_change = 24;
+  double remaining_quantity = 25;
+  double traded_quantity = 26;
+  double average_traded_price = 27;
+  double last_traded_quantity = 28;
+  double last_traded_price = 29;
+  Liquidity last_liquidity = 30;
+  string routing_id = 31;
+  uint32 max_request_version = 32;
+  uint32 max_response_version = 33;
+  uint32 max_accepted_version = 34;
+  UpdateType update_type = 35;
+  google.protobuf.Timestamp exchange_time_utc = 36;
+  uint64 exchange_sequence = 37;
+  google.protobuf.Timestamp sending_time_utc = 38;
+  string user = 39;
+  uint32 strategy_id = 40;
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "support_type.proto";
+import "transport.proto";
+import "protocol.proto";
+import "encoding.proto";
+import "priority.proto";
+import "connection_status.proto";
+
+message StreamStatus {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  repeated SupportType supports = 3;
+  Transport transport = 4;
+  Protocol protocol = 5;
+  repeated Encoding encoding = 6;
+  Priority priority = 7;
+  ConnectionStatus connection_status = 8;
+  string interface = 9;
+  string authority = 10;
+  string path = 11;
+  string proxy = 12;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Liquidity {
+  LIQUIDITY_UNSPECIFIED = 0;
+  LIQUIDITY_MAKER = 1;
+  LIQUIDITY_TAKER = 2;
+}

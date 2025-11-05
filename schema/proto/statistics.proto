@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "statistics_type.proto";
+
+message Statistics {
+  StatisticsType type = 1;
+  double value = 2;
+  google.protobuf.Timestamp begin_time_utc = 3;
+  google.protobuf.Timestamp end_time_utc = 4;
+}

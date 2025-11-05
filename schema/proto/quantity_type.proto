@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum QuantityType {
+  QUANTITY_TYPE_UNSPECIFIED = 0;
+  QUANTITY_TYPE_UNITS = 1;
+  QUANTITY_TYPE_CONTRACTS = 2;
+}

@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "side.proto";
+import "position_effect.proto";
+import "margin_mode.proto";
+import "quantity_type.proto";
+import "request_type.proto";
+import "origin.proto";
+import "request_status.proto";
+import "error.proto";
+
+message OrderAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  PositionEffect position_effect = 7;
+  MarginMode margin_mode = 8;
+  QuantityType quantity_type = 9;
+  RequestType request_type = 10;
+  Origin origin = 11;
+  RequestStatus request_status = 12;
+  Error error = 13;
+  string text = 14;
+  string request_id = 15;
+  string external_account = 16;
+  string external_order_id = 17;
+  string client_order_id = 18;
+  double quantity = 19;
+  double price = 20;
+  double stop_price = 21;
+  string routing_id = 22;
+  uint32 version = 23;
+  double risk_exposure = 24;
+  double risk_exposure_change = 25;
+  double traded_quantity = 26;
+  google.protobuf.Timestamp round_trip_latency = 27;
+  string user = 28;
+  uint32 strategy_id = 29;
+}

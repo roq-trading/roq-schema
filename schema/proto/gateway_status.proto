@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "support_type.proto";
+
+message GatewayStatus {
+  string account = 1;
+  repeated SupportType supported = 2;
+  repeated SupportType available = 3;
+  repeated SupportType unavailable = 4;
+}

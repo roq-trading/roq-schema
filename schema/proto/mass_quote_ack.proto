@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "origin.proto";
+import "request_status.proto";
+import "error.proto";
+
+message MassQuoteAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint32 quote_id = 3;
+  Origin origin = 4;
+  RequestStatus request_status = 5;
+  Error error = 6;
+  string text = 7;
+  string request_id = 8;
+  string external_account = 9;
+}

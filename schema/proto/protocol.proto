@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Protocol {
+  PROTOCOL_UNSPECIFIED = 0;
+  PROTOCOL_FIX = 1;
+  PROTOCOL_WS = 2;
+  PROTOCOL_HTTP = 3;
+  PROTOCOL_SBE = 4;
+  PROTOCOL_ROQ = 5;
+}

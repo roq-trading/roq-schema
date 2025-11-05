@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "rate_limit_type.proto";
+
+message RateLimit {
+  RateLimitType type = 1;
+  google.protobuf.Timestamp period = 2;
+  google.protobuf.Timestamp end_time_utc = 3;
+  uint32 limit = 4;
+  uint32 value = 5;
+}

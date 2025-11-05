@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "update_type.proto";
+
+import "measurement.proto";
+
+message CustomMetrics {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated Measurement measurements = 5;
+  UpdateType update_type = 6;
+}

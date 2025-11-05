@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "update_type.proto";
+
+import "statistics.proto";
+
+message StatisticsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated Statistics statistics = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  uint64 exchange_sequence = 7;
+  google.protobuf.Timestamp sending_time_utc = 8;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Precision {
+  PRECISION_UNSPECIFIED = 0;
+  PRECISION_1 = 1;
+  PRECISION_2 = 2;
+  PRECISION_3 = 3;
+  PRECISION_4 = 4;
+  PRECISION_5 = 5;
+  PRECISION_6 = 6;
+  PRECISION_7 = 7;
+  PRECISION_8 = 8;
+  PRECISION_9 = 9;
+  PRECISION_10 = 10;
+  PRECISION_11 = 11;
+  PRECISION_12 = 12;
+  PRECISION_13 = 13;
+  PRECISION_14 = 14;
+  PRECISION_15 = 15;
+}

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package roq;
+package roq.proto;
 
 enum TradingStatus {
-  TRADING_STATUS_UNSPECIFIED = 0;  // note! UNDEFINED
+  TRADING_STATUS_UNSPECIFIED = 0;
   TRADING_STATUS_START_OF_DAY = 1;
   TRADING_STATUS_PRE_OPEN = 2;
   TRADING_STATUS_PRE_OPEN_NO_CANCEL = 3;

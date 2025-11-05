@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum OrderCancelPolicy {
+  ORDER_CANCEL_POLICY_UNSPECIFIED = 0;
+  ORDER_CANCEL_POLICY_MANAGED_ORDERS = 1;
+  ORDER_CANCEL_POLICY_BY_ACCOUNT = 2;
+  ORDER_CANCEL_POLICY_BY_STRATEGY = 3;
+}

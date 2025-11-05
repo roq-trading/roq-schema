@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message ModifyOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string request_template = 3;
+  double quantity = 4;
+  double price = 5;
+  string routing_id = 6;
+  uint32 version = 7;
+  uint32 conditional_on_version = 8;
+}

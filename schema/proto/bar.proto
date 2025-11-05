@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+message Bar {
+  google.protobuf.Timestamp begin_time_utc = 1;
+  bool confirmed = 2;
+  double open_price = 3;
+  double high_price = 4;
+  double low_price = 5;
+  double close_price = 6;
+  double quantity = 7;
+  double base_amount = 8;
+  double quote_amount = 9;
+  uint32 number_of_trades = 10;
+  double vwap = 11;
+}

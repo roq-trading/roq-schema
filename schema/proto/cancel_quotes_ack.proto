@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "origin.proto";
+import "request_status.proto";
+import "error.proto";
+
+message CancelQuotesAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  Origin origin = 3;
+  RequestStatus request_status = 4;
+  Error error = 5;
+  string text = 6;
+  string request_id = 7;
+  string external_account = 8;
+  uint32 number_of_affected_quotes = 9;
+}

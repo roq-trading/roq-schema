@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "update_type.proto";
+
+import "position.proto";
+
+message Portfolio {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  repeated Position positions = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  string session_id = 7;
+  uint64 seqno = 8;
+}

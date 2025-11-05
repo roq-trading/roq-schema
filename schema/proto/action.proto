@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Action {
+  ACTION_UNSPECIFIED = 0;
+  ACTION_ENABLE = 1;
+  ACTION_DISABLE = 2;
+}

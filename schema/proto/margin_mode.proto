@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum MarginMode {
+  MARGIN_MODE_UNSPECIFIED = 0;
+  MARGIN_MODE_ISOLATED = 1;
+  MARGIN_MODE_CROSS = 2;
+  MARGIN_MODE_PORTFOLIO = 3;
+}

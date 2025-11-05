@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "update_action.proto";
+
+message MBPUpdate {
+  double price = 1;
+  double quantity = 2;
+  double implied_quantity = 3;
+  uint32 number_of_orders = 4;  // uint16
+  UpdateAction liquidity = 5;
+  uint32 price_level = 6;
+}

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "side.proto";
+import "position_effect.proto";
+import "margin_mode.proto";
+import "quantity_type.proto";
+import "order_type.proto";
+import "time_in_force.proto";
+import "execution_instruction.proto";
+
+message CreateOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string exchange = 3;
+  string symbol = 4;
+  Side side = 5;
+  PositionEffect position_effect = 6;
+  MarginMode margin_mode = 7;
+  QuantityType quantity_type = 8;
+  double max_show_quantity = 9;
+  OrderType order_type = 10;
+  TimeInForce time_in_force = 11;
+  repeated ExecutionInstruction execution_instructions = 12;
+  string request_template = 13;
+  double quantity = 14;
+  double price = 15;
+  double stop_price = 16;
+  string routing_id = 17;
+  uint32 strategy_id = 18;
+}

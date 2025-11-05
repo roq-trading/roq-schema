@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Priority {
+  PRIORITY_UNSPECIFIED = 0;
+  PRIORITY_PRIMARY = 1;
+  PRIORITY_SECONDARY = 2;
+}

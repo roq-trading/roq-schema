@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message CancelOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string request_template = 3;
+  string routing_id = 4;
+  uint32 version = 5;
+  uint32 conditional_on_version = 6;
+}

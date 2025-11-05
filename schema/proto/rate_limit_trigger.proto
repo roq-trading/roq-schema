@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "origin.proto";
+import "rate_limit_type.proto";
+import "buffer_capacity.proto";
+
+message RateLimitTrigger {
+  string name = 1;
+  Origin origin = 2;
+  RateLimitType type = 3;
+  repeated string users = 4;
+  repeated string accounts = 5;
+  google.protobuf.Timestamp ban_expires = 6;
+  string triggered_by = 7;
+  BufferCapacity buffer_capacity = 8;
+  uint32 remaining_requests = 9;
+}

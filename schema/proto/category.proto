@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Category {
+  CATEGORY_UNSPECIFIED = 0;
+  CATEGORY_PUBLIC = 1;
+  CATEGORY_PRIVATE = 2;
+}

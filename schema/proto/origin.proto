@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Origin {
+  ORIGIN_UNSPECIFIED = 0;
+  ORIGIN_CLIENT = 1;
+  ORIGIN_GATEWAY = 2;
+  ORIGIN_BROKER = 3;
+  ORIGIN_EXCHANGE = 4;
+}

@@ -4,13 +4,13 @@ package roq.proto;
 
 import "google/protobuf/timestamp.proto";
 
-import "trading_status.proto";
+import "trade.proto";
 
-message MarketStatus {
+message TradeSummary {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;
   string symbol = 3;
-  TradingStatus trading_status = 4;
+  repeated Trade trades = 4;
   google.protobuf.Timestamp exchange_time_utc = 5;
   uint64 exchange_sequence = 6;
   google.protobuf.Timestamp sending_time_utc = 7;

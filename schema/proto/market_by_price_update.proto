@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "update_type.proto";
+import "precision.proto";
+
+import "mbp_update.proto";
+
+message MarketByPriceUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated MBPUpdate bids = 4;
+  repeated MBPUpdate asks = 5;
+  UpdateType update_type = 6;
+  google.protobuf.Timestamp exchange_time_utc = 7;
+  uint64 exchange_sequence = 8;
+  google.protobuf.Timestamp sending_time_utc = 9;
+  Precision price_precision = 10;
+  Precision quantity_precision = 11;
+  uint32 max_depth = 12;  // uint16
+  uint32 checksum = 13;
+}

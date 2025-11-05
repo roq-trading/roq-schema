@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum State {
+  STATE_UNSPECIFIED = 0;
+  STATE_ENABLED = 1;
+  STATE_DISABLED = 2;
+}

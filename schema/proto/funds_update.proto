@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "margin_mode.proto";
+import "update_type.proto";
+
+message FundsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  string currency = 3;
+  MarginMode margin_mode = 4;
+  double balance = 5;
+  double hold = 6;
+  double borrowed = 7;
+  string external_account = 8;
+  UpdateType update_type = 9;
+  google.protobuf.Timestamp exchange_time_utc = 10;
+  uint64 exchange_sequence = 11;
+  google.protobuf.Timestamp sending_time_utc = 12;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message DownloadEnd {
+  string account = 1;
+  uint64 max_order_id = 2;
+}

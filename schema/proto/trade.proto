@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "side.proto";
+
+message Trade {
+  Side side = 1;
+  double price = 2;
+  double quantity = 3;
+  string trade_id = 4;
+  string taker_order_id = 5;
+  string maker_order_id = 6;
+}

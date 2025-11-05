@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "quote.proto";
+
+message MassQuote {
+  string account = 1;
+  uint32 quote_id = 2;
+  repeated Quote quotes = 3;
+  bool mmp_reset = 4;
+  string mmp_group = 5;
+  google.protobuf.Timestamp valid_until_utc = 6;
+}

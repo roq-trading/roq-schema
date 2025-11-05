@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message Leg {
+  uint32 leg_id = 1;  // note! protobuf has no uint16
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  string state = 5;
+}

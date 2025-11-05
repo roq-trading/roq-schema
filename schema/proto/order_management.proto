@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum OrderManagement {
+  ORDER_MANAGEMENT_UNSPECIFIED = 0;
+  ORDER_MANAGEMENT_FIX = 1;
+}

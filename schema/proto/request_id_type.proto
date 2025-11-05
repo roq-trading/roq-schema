@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum RequestIdType {
+  REQUEST_ID_TYPE_UNSPECIFIED = 0;
+  REQUEST_ID_TYPE_BASE64 = 1;
+  REQUEST_ID_TYPE_BASE32 = 2;
+  REQUEST_ID_TYPE_SIMPLE = 3;
+  REQUEST_ID_TYPE_UUID = 4;
+}

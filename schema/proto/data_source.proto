@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum DataSource {
+  DATA_SOURCE_UNSPECIFIED = 0;
+  DATA_SOURCE_TRADE_SUMMARY = 1;
+}

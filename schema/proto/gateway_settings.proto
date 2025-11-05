@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "support_type.proto";
+import "filter.proto";
+import "interval.proto";
+import "request_id_type.proto";
+
+message GatewaySettings {
+  repeated SupportType supports = 1;
+  uint32 mbp_max_depth = 2;  // uint16
+  double mbp_tick_size_multiplier = 3;
+  double mbp_min_trade_vol_multiplier = 4;
+  bool mbp_allow_remove_non_existing = 5;
+  bool mbp_allow_price_inversion = 6;
+  bool mbp_checksum = 7;
+  bool oms_download_has_state = 8;
+  bool oms_download_has_routing_id = 9;
+  RequestIdType request_id_type = 10;
+  repeated Filter oms_cancel_all_orders = 11;
+  Interval ts_interval = 12;
+  uint32 ts_max_history = 13;  // uint16
+}

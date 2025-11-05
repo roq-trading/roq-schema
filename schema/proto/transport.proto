@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Transport {
+  TRANSPORT_UNSPECIFIED = 0;
+  TRANSPORT_TCP = 1;
+  TRANSPORT_UDP = 2;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "side.proto";
+import "update_action.proto";
+import "update_reason.proto";
+
+message MBOUpdate {
+  double price = 1;
+  double quantity = 2;
+  uint64 priority = 3;
+  string order_id = 4;
+  Side side = 5;
+  UpdateAction action = 6;
+  UpdateReason reason = 7;
+}

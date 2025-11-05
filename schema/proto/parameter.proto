@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message Parameter {
+  string parameter_key = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  string exchange = 4;
+  string symbol = 5;
+  string value = 6;
+}

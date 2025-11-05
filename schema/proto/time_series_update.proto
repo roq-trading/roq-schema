@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+import "data_source.proto";
+import "interval.proto";
+import "origin.proto";
+import "update_type.proto";
+
+import "bar.proto";
+
+message TimeSeriesUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  DataSource data_source = 4;
+  Interval interval = 5;
+  Origin origin = 6;
+  repeated Bar bars = 7;
+  UpdateType update_type = 8;
+  google.protobuf.Timestamp exchange_time_utc = 9;
+}

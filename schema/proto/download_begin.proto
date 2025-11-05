@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message DownloadBegin {
+  string account = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum SecurityType {
+  SECURITY_TYPE_UNSPECIFIED = 0;
+  SECURITY_TYPE_SPOT = 1;
+  SECURITY_TYPE_FUTURES = 2;
+  SECURITY_TYPE_OPTION = 3;
+  SECURITY_TYPE_SWAP = 4;
+}

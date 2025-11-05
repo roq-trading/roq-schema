@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package roq.proto;
+
+message RiskLimit {
+  string exchange = 1;
+  string symbol = 2;
+  double long_position = 3;
+  double short_position = 4;
+  double long_position_limit = 5;
+  double short_position_limit = 6;
+  double long_risk_exposure_limit = 7;
+  double short_risk_exposure_limit = 8;
+  bool allow_netting = 9;
+}

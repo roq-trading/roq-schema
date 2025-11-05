@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum UpdateAction {
+  UPDATE_ACTION_UNSPECIFIED = 0;
+  UPDATE_ACTION_NEW = 1;
+  UPDATE_ACTION_CHANGE = 2;
+  UPDATE_ACTION_DELETE = 3;
+  UPDATE_ACTION_TRADE = 4;
+}

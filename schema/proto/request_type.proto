@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum RequestType {
+  REQUEST_TYPE_UNSPECIFIED = 0;
+  REQUEST_TYPE_CREATE_ORDER = 1;
+  REQUEST_TYPE_MODIFY_ORDER = 2;
+  REQUEST_TYPE_CANCEL_ORDER = 3;
+}

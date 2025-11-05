@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Filter {
+  FILTER_UNSPECIFIED = 0;
+  FILTER_ACCOUNT = 1;
+  FILTER_EXCHANGE = 2;
+  FILTER_SYMBOL = 4;
+  FILTER_STRATEGY_ID = 8;
+  FILTER_SIDE = 16;
+}

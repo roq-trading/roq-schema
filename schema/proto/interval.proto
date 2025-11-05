@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum Interval {
+  INTERVAL_UNSPECIFIED = 0;
+  INTERVAL_1 = 1;
+  INTERVAL_5 = 2;
+  INTERVAL_10 = 3;
+  INTERVAL_15 = 4;
+  INTERVAL_30 = 5;
+  INTERVAL_60 = 6;
+  INTERVAL_300 = 7;
+  INTERVAL_600 = 8;
+  INTERVAL_900 = 9;
+  INTERVAL_1800 = 10;
+}

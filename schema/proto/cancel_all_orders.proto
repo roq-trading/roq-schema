@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package roq.proto;
+
+import "side.proto";
+
+message CancelAllOrders {
+  string account = 1;
+  uint64 order_id = 2;
+  string exchange = 3;
+  string symbol = 4;
+  uint32 strategy_id = 5;
+  Side side = 6;
+}

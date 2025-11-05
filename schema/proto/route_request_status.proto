@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package roq.proto;
+
+enum RouteRequestStatus {
+  ROUTE_REQUEST_STATUS_UNSPECIFIED = 0;
+  ROUTE_REQUEST_STATUS_CREATED = 1;
+  ROUTE_REQUEST_STATUS_REMOVED = 2;
+  ROUTE_REQUEST_STATUS_REJECTED = 3;
+}
