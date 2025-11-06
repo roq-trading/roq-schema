@@ -17,7 +17,7 @@ message GatewaySettings {
   bool mbp_checksum = 7;
   bool oms_download_has_state = 8;
   bool oms_download_has_routing_id = 9;
-  RequestIdType request_id_type = 10;
+  RequestIdType oms_request_id_type = 10;
   repeated Filter oms_cancel_all_orders = 11;
   Interval ts_interval = 12;
   uint32 ts_max_history = 13;  // uint16

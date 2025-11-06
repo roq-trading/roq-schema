@@ -9,6 +9,6 @@ message MBPUpdate {
   double quantity = 2;
   double implied_quantity = 3;
   uint32 number_of_orders = 4;  // uint16
-  UpdateAction liquidity = 5;
+  UpdateAction update_action = 5;
   uint32 price_level = 6;
 }
