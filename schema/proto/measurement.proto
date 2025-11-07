@@ -3,6 +3,6 @@ syntax = "proto3";
 package roq.proto;
 
 message Measurement {
-  string measurement_key = 1;
+  string name = 1;
   double value = 2;
 }
