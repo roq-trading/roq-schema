@@ -1,3 +1,4 @@
+add_subdirectory(capnp)
 add_subdirectory(fbs)
 add_subdirectory(proto)
 add_subdirectory(roq)
