@@ -1,0 +1,7 @@
+message StrategyUpdate {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string description = 3;
+  State state = 4;
+  UpdateType update_type = 5;
+}

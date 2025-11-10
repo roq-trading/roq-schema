@@ -1,0 +1,7 @@
+message ServiceUpdate {
+  string user = 1;
+  string description = 2;
+  ConnectionStatus connection_status = 3;
+  State state = 4;
+  UpdateType update_type = 5;
+}

@@ -3,5 +3,5 @@ message Leg {
   string account = 2;
   string exchange = 3;
   string symbol = 4;
-  string state = 5;
+  State state = 5;
 }

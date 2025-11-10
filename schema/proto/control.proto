@@ -1,0 +1,10 @@
+message Control {
+  string request_id = 1;
+  string user = 2;
+  Action action = 3;
+  uint32 strategy_id = 4;
+  uint32 leg_id = 5;  // uint16
+  string account = 6;
+  string exchange = 7;
+  string symbol = 8;
+}

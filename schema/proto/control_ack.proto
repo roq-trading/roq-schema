@@ -1,0 +1,8 @@
+message ControlAck {
+  string request_id = 1;
+  string user = 2;
+  Origin origin = 3;
+  RequestStatus request_status = 4;
+  Error error = 5;
+  string text = 6;
+}
