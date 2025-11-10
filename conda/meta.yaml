@@ -18,6 +18,7 @@ requirements:
     - doxygen
     - git
     - make
+    - python
 
 about:
   home: https://roq-trading.com
