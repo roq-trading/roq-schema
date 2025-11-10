@@ -17,6 +17,7 @@ requirements:
     - coreutils
     - doxygen
     - git
+    - jinja2
     - make
     - python
 
