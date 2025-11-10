@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum TimeInForce {
   TIME_IN_FORCE_UNSPECIFIED = 0;
   TIME_IN_FORCE_GFD = 1;

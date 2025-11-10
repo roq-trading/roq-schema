@@ -1,7 +1,3 @@
-include "RateLimitType.fbs";
-
-namespace roq.fbs;
-
 table RateLimit {
   type:RateLimitType;
   period:int64;

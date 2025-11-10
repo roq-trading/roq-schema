@@ -1,8 +1,3 @@
-include "Leg.fbs";
-include "UpdateType.fbs";
-
-namespace roq.fbs;
-
 table LegsUpdate {
   user:string;
   strategy_id:uint32;

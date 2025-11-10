@@ -1,7 +1,3 @@
-include "Measurement.fbs";
-
-namespace roq.fbs;
-
 table CustomMetricsUpdate {
   user:string;
   label:string;

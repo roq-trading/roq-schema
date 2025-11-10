@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum Protocol {
   PROTOCOL_UNSPECIFIED = 0;
   PROTOCOL_FIX = 1;

@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum Error {
   ERROR_UNSPECIFIED = 0;
   ERROR_UNKNOWN = 1;

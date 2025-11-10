@@ -1,8 +1,12 @@
 set(TARGET_NAME ${PROJECT_NAME}-proto)
 
-install(
-  DIRECTORY ${CMAKE_SOURCE_DIR}/schema/proto/
-  DESTINATION ${SCHEMA_DIR}/proto
-  FILES_MATCHING
-  PATTERN "*.proto"
-  PATTERN "CMakeFiles" EXCLUDE)
+add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto)
+
+add_custom_command(
+  OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/api.proto
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  COMMAND ${Python3_EXECUTABLE} generate_api.py > ${CMAKE_CURRENT_SOURCE_DIR}/api.proto
+  DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto.j2
+  VERBATIM)
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.proto DESTINATION ${SCHEMA_DIR}/proto)

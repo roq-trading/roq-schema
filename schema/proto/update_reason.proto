@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum UpdateReason {
   UPDATE_REASON_UNSPECIFIED = 0;
   UPDATE_REASON_MODIFIED = 1;

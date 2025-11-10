@@ -1,9 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "update_type.proto";
-
 message CustomMatrix {
   string label = 1;
   string account = 2;

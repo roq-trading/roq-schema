@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum Encoding {
   ENCODING_UNSPECIFIED = 0;
   ENCODING_FIX = 1;

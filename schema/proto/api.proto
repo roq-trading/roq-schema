@@ -1,3 +1,7 @@
+/* Copyright (c) 2017-2025, Hans Erik Thrane */                                                                                                                
+                                                                                                                                                               
+/* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
+
 syntax = "proto3";
 
 package roq.proto;
@@ -6,64 +10,480 @@ import "google/protobuf/timestamp.proto";
 
 // enums
 
-import "action.proto";
-import "buffer_capacity.proto";
-import "category.proto";
-import "connection_status.proto";
-import "data_source.proto";
-import "encoding.proto";
-import "error.proto";
-import "execution_instruction.proto";
-import "filter.proto";
-import "interval.proto";
-import "liquidity.proto";
-import "margin_mode.proto";
-import "option_type.proto";
-import "order_cancel_policy.proto";
-import "order_management.proto";
-import "order_status.proto";
-import "order_type.proto";
-import "origin.proto";
-import "position_effect.proto";
-import "precision.proto";
-import "priority.proto";
-import "protocol.proto";
-import "quantity_type.proto";
-import "rate_limit_type.proto";
-import "request_id_type.proto";
-import "request_status.proto";
-import "request_type.proto";
-import "route_request_status.proto";
-import "security_type.proto";
-import "side.proto";
-import "state.proto";
-import "statistics_type.proto";
-import "support_type.proto";
-import "time_in_force.proto";
-import "trading_status.proto";
-import "transport.proto";
-import "update_action.proto";
-import "update_reason.proto";
-import "update_type.proto";
+enum Action {
+  ACTION_UNSPECIFIED = 0;
+  ACTION_ENABLE = 1;
+  ACTION_DISABLE = 2;
+}
+enum BufferCapacity {
+  BUFFER_CAPACITY_UNSPECIFIED = 0;
+  BUFFER_CAPACITY_EMPTY = 1;
+  BUFFER_CAPACITY_LOW_WATER_MARK = 2;
+  BUFFER_CAPACITY_HIGH_WATER_MARK = 3;
+  BUFFER_CAPACITY_FULL = 4;
+}
+enum Category {
+  CATEGORY_UNSPECIFIED = 0;
+  CATEGORY_PUBLIC = 1;
+  CATEGORY_PRIVATE = 2;
+}
+enum ConnectionStatus {
+  CONNECTION_STATUS_UNSPECIFIED = 0;
+  CONNECTION_STATUS_DISCONNECTED = 1;
+  CONNECTION_STATUS_CONNECTING = 2;
+  CONNECTION_STATUS_LOGIN_SENT = 3;
+  CONNECTION_STATUS_DOWNLOADING = 4;
+  CONNECTION_STATUS_READY = 5;
+  CONNECTION_STATUS_LOGGED_OUT = 6;
+}
+enum DataSource {
+  DATA_SOURCE_UNSPECIFIED = 0;
+  DATA_SOURCE_TRADE_SUMMARY = 1;
+}
+enum Encoding {
+  ENCODING_UNSPECIFIED = 0;
+  ENCODING_FIX = 1;
+  ENCODING_JSON = 2;
+  ENCODING_SBE = 4;
+  ENCODING_FBS = 8;
+}
+enum Error {
+  ERROR_UNSPECIFIED = 0;
+  ERROR_UNKNOWN = 1;
+  ERROR_NOT_SUPPORTED = 2;
+  ERROR_INVALID_ACCOUNT = 3;
+  ERROR_INVALID_ORDER_ID = 4;
+  ERROR_INVALID_EXCHANGE = 5;
+  ERROR_INVALID_SYMBOL = 6;
+  ERROR_INVALID_SIDE = 7;
+  ERROR_INVALID_POSITION_EFFECT = 8;
+  ERROR_INVALID_QUANTITY = 9;
+  ERROR_INVALID_MAX_SHOW_QUANTITY = 10;
+  ERROR_INVALID_ORDER_TYPE = 11;
+  ERROR_INVALID_TIME_IN_FORCE = 12;
+  ERROR_INVALID_EXECUTION_INSTRUCTION = 13;
+  ERROR_INVALID_REQUEST_TEMPLATE = 14;
+  ERROR_INVALID_PRICE = 15;
+  ERROR_INVALID_STOP_PRICE = 16;
+  ERROR_INVALID_ROUTING_ID = 17;
+  ERROR_INVALID_REQUEST_VERSION = 18;
+  ERROR_INVALID_REQUEST_ID = 19;
+  ERROR_INVALID_REQUEST_TYPE = 20;
+  ERROR_INVALID_REQUEST_STATUS = 21;
+  ERROR_INVALID_REQUEST_ARGS = 22;
+  ERROR_UNKNOWN_EXTERNAL_ORDER_ID = 23;
+  ERROR_NOT_AUTHORIZED = 24;
+  ERROR_REQUEST_RATE_LIMIT_REACHED = 25;
+  ERROR_GATEWAY_NOT_READY = 26;
+  ERROR_NETWORK_ERROR = 27;
+  ERROR_TIMEOUT = 28;
+  ERROR_PARSE_ERROR = 29;
+  ERROR_MODIFY_HAS_NO_EFFECT = 30;
+  ERROR_TOO_LATE_TO_MODIFY_OR_CANCEL = 31;
+  ERROR_CONDITIONAL_REQUEST_HAS_FAILED = 32;
+  ERROR_UNKNOWN_ORDER_ID = 33;
+  ERROR_INSUFFICIENT_FUNDS = 34;
+  ERROR_RISK_LIMIT_REACHED = 35;
+  ERROR_INVALID_FILTER = 36;
+  ERROR_INVALID_MARGIN_MODE = 37;
+  ERROR_INVALID_QUANTITY_TYPE = 38;
+}
+enum ExecutionInstruction {
+  EXECUTION_INSTRUCTION_UNSPECIFIED = 0;
+  EXECUTION_INSTRUCTION_PARTICIPATE_DO_NOT_INITIATE = 1;
+  EXECUTION_INSTRUCTION_CANCEL_IF_NOT_BEST = 2;
+  EXECUTION_INSTRUCTION_DO_NOT_INCREASE = 4;
+  EXECUTION_INSTRUCTION_DO_NOT_REDUCE = 8;
+}
+enum Filter {
+  FILTER_UNSPECIFIED = 0;
+  FILTER_ACCOUNT = 1;
+  FILTER_EXCHANGE = 2;
+  FILTER_SYMBOL = 4;
+  FILTER_STRATEGY_ID = 8;
+  FILTER_SIDE = 16;
+}
+enum Interval {
+  INTERVAL_UNSPECIFIED = 0;
+  INTERVAL_1 = 1;
+  INTERVAL_5 = 2;
+  INTERVAL_10 = 3;
+  INTERVAL_15 = 4;
+  INTERVAL_30 = 5;
+  INTERVAL_60 = 6;
+  INTERVAL_300 = 7;
+  INTERVAL_600 = 8;
+  INTERVAL_900 = 9;
+  INTERVAL_1800 = 10;
+}
+enum Liquidity {
+  LIQUIDITY_UNSPECIFIED = 0;
+  LIQUIDITY_MAKER = 1;
+  LIQUIDITY_TAKER = 2;
+}
+enum MarginMode {
+  MARGIN_MODE_UNSPECIFIED = 0;
+  MARGIN_MODE_ISOLATED = 1;
+  MARGIN_MODE_CROSS = 2;
+  MARGIN_MODE_PORTFOLIO = 3;
+}
+enum OptionType {
+  OPTION_TYPE_UNSPECIFIED = 0;
+  OPTION_TYPE_CALL = 1;
+  OPTION_TYPE_PUT = 2;
+}
+enum OrderCancelPolicy {
+  ORDER_CANCEL_POLICY_UNSPECIFIED = 0;
+  ORDER_CANCEL_POLICY_MANAGED_ORDERS = 1;
+  ORDER_CANCEL_POLICY_BY_ACCOUNT = 2;
+  ORDER_CANCEL_POLICY_BY_STRATEGY = 3;
+}
+enum OrderManagement {
+  ORDER_MANAGEMENT_UNSPECIFIED = 0;
+  ORDER_MANAGEMENT_FIX = 1;
+}
+enum OrderStatus {
+  ORDER_STATUS_UNSPECIFIED = 0;
+  ORDER_STATUS_SENT = 1;
+  ORDER_STATUS_ACCEPTED = 2;
+  ORDER_STATUS_SUSPENDED = 3;
+  ORDER_STATUS_WORKING = 4;
+  ORDER_STATUS_STOPPED = 5;
+  ORDER_STATUS_COMPLETED = 6;
+  ORDER_STATUS_EXPIRED = 7;
+  ORDER_STATUS_CANCELED = 8;
+  ORDER_STATUS_REJECTED = 9;
+}
+enum OrderType {
+  ORDER_TYPE_UNSPECIFIED = 0;
+  ORDER_TYPE_MARKET = 1;
+  ORDER_TYPE_LIMIT = 2;
+}
+enum Origin {
+  ORIGIN_UNSPECIFIED = 0;
+  ORIGIN_CLIENT = 1;
+  ORIGIN_GATEWAY = 2;
+  ORIGIN_BROKER = 3;
+  ORIGIN_EXCHANGE = 4;
+}
+enum PositionEffect {
+  POSITION_EFFECT_UNSPECIFIED = 0;
+  POSITION_EFFECT_OPEN = 1;
+  POSITION_EFFECT_CLOSE = 2;
+}
+enum Precision {
+  PRECISION_UNSPECIFIED = 0;
+  PRECISION_1 = 1;
+  PRECISION_2 = 2;
+  PRECISION_3 = 3;
+  PRECISION_4 = 4;
+  PRECISION_5 = 5;
+  PRECISION_6 = 6;
+  PRECISION_7 = 7;
+  PRECISION_8 = 8;
+  PRECISION_9 = 9;
+  PRECISION_10 = 10;
+  PRECISION_11 = 11;
+  PRECISION_12 = 12;
+  PRECISION_13 = 13;
+  PRECISION_14 = 14;
+  PRECISION_15 = 15;
+}
+enum Priority {
+  PRIORITY_UNSPECIFIED = 0;
+  PRIORITY_PRIMARY = 1;
+  PRIORITY_SECONDARY = 2;
+}
+enum Protocol {
+  PROTOCOL_UNSPECIFIED = 0;
+  PROTOCOL_FIX = 1;
+  PROTOCOL_WS = 2;
+  PROTOCOL_HTTP = 3;
+  PROTOCOL_SBE = 4;
+  PROTOCOL_ROQ = 5;
+}
+enum QuantityType {
+  QUANTITY_TYPE_UNSPECIFIED = 0;
+  QUANTITY_TYPE_UNITS = 1;
+  QUANTITY_TYPE_CONTRACTS = 2;
+}
+enum RateLimitType {
+  RATE_LIMIT_TYPE_UNSPECIFIED = 0;
+  RATE_LIMIT_TYPE_ORDER_ACTION = 1;
+  RATE_LIMIT_TYPE_CREATE_ORDER = 2;
+  RATE_LIMIT_TYPE_REQUEST = 3;
+  RATE_LIMIT_TYPE_REQUEST_WEIGHT = 4;
+}
+enum RequestIdType {
+  REQUEST_ID_TYPE_UNSPECIFIED = 0;
+  REQUEST_ID_TYPE_BASE64 = 1;
+  REQUEST_ID_TYPE_BASE32 = 2;
+  REQUEST_ID_TYPE_SIMPLE = 3;
+  REQUEST_ID_TYPE_UUID = 4;
+}
+enum RequestStatus {
+  REQUEST_STATUS_UNSPECIFIED = 0;
+  REQUEST_STATUS_FORWARDED = 1;
+  REQUEST_STATUS_ACCEPTED = 2;
+  REQUEST_STATUS_REJECTED = 3;
+  REQUEST_STATUS_DISCONNECTED = 4;
+  REQUEST_STATUS_TIMEOUT = 5;
+  REQUEST_STATUS_FAILED = 6;
+  REQUEST_STATUS_ERROR = 7;
+}
+enum RequestType {
+  REQUEST_TYPE_UNSPECIFIED = 0;
+  REQUEST_TYPE_CREATE_ORDER = 1;
+  REQUEST_TYPE_MODIFY_ORDER = 2;
+  REQUEST_TYPE_CANCEL_ORDER = 3;
+}
+enum RouteRequestStatus {
+  ROUTE_REQUEST_STATUS_UNSPECIFIED = 0;
+  ROUTE_REQUEST_STATUS_CREATED = 1;
+  ROUTE_REQUEST_STATUS_REMOVED = 2;
+  ROUTE_REQUEST_STATUS_REJECTED = 3;
+}
+enum SecurityType {
+  SECURITY_TYPE_UNSPECIFIED = 0;
+  SECURITY_TYPE_SPOT = 1;
+  SECURITY_TYPE_FUTURES = 2;
+  SECURITY_TYPE_OPTION = 3;
+  SECURITY_TYPE_SWAP = 4;
+}
+enum Side {
+  SIDE_UNSPECIFIED = 0;
+  SIDE_BUY = 1;
+  SIDE_SELL = 2;
+}
+enum State {
+  STATE_UNSPECIFIED = 0;
+  STATE_ENABLED = 1;
+  STATE_DISABLED = 2;
+}
+enum StatisticsType {
+  STATISTICS_TYPE_UNSPECIFIED = 0;
+  STATISTICS_TYPE_OPEN_PRICE = 1;
+  STATISTICS_TYPE_SETTLEMENT_PRICE = 2;
+  STATISTICS_TYPE_CLOSE_PRICE = 3;
+  STATISTICS_TYPE_OPEN_INTEREST = 4;
+  STATISTICS_TYPE_PRE_OPEN_INTEREST = 5;
+  STATISTICS_TYPE_PRE_SETTLEMENT_PRICE = 6;
+  STATISTICS_TYPE_PRE_CLOSE_PRICE = 7;
+  STATISTICS_TYPE_HIGHEST_TRADED_PRICE = 8;
+  STATISTICS_TYPE_LOWEST_TRADED_PRICE = 9;
+  STATISTICS_TYPE_UPPER_LIMIT_PRICE = 10;
+  STATISTICS_TYPE_LOWER_LIMIT_PRICE = 11;
+  STATISTICS_TYPE_INDEX_VALUE = 12;
+  STATISTICS_TYPE_MARGIN_RATE = 13;
+  STATISTICS_TYPE_FUNDING_RATE = 14;
+  STATISTICS_TYPE_FUNDING_RATE_PREDICTION = 15;
+  STATISTICS_TYPE_TRADE_VOLUME = 16;
+}
+enum SupportType {
+  SUPPORT_TYPE_UNSPECIFIED = 0;
+  SUPPORT_TYPE_REFERENCE_DATA = 0x1;
+  SUPPORT_TYPE_MARKET_STATUS = 0x2;
+  SUPPORT_TYPE_TOP_OF_BOOK = 0x4;
+  SUPPORT_TYPE_MARKET_BY_PRICE = 0x8;
+  SUPPORT_TYPE_MARKET_BY_ORDER = 0x10;
+  SUPPORT_TYPE_TRADE_SUMMARY = 0x20;
+  SUPPORT_TYPE_STATISTICS = 0x40;
+  SUPPORT_TYPE_TIME_SERIES = 0x80;
+  SUPPORT_TYPE_CREATE_ORDER = 0x10000;
+  SUPPORT_TYPE_MODIFY_ORDER = 0x20000;
+  SUPPORT_TYPE_CANCEL_ORDER = 0x40000;
+  SUPPORT_TYPE_ORDER_ACK = 0x80000;
+  SUPPORT_TYPE_ORDER = 0x100000;
+  SUPPORT_TYPE_ORDER_STATE = 0x800000;
+  SUPPORT_TYPE_TRADE = 0x200000;
+  SUPPORT_TYPE_POSITION = 0x400000;
+  SUPPORT_TYPE_FUNDS = 0x10000000;
+}
+enum TimeInForce {
+  TIME_IN_FORCE_UNSPECIFIED = 0;
+  TIME_IN_FORCE_GFD = 1;
+  TIME_IN_FORCE_GTC = 2;
+  TIME_IN_FORCE_OPG = 3;
+  TIME_IN_FORCE_IOC = 4;
+  TIME_IN_FORCE_FOK = 5;
+  TIME_IN_FORCE_GTX = 6;
+  TIME_IN_FORCE_GTD = 7;
+  TIME_IN_FORCE_AT_THE_CLOSE = 8;
+  TIME_IN_FORCE_GOOD_THROUGH_CROSSING = 9;
+  TIME_IN_FORCE_AT_CROSSING = 10;
+  TIME_IN_FORCE_GOOD_FOR_TIME = 11;
+  TIME_IN_FORCE_GFA = 12;
+  TIME_IN_FORCE_GFM = 13;
+}
+enum TradingStatus {
+  TRADING_STATUS_UNSPECIFIED = 0;
+  TRADING_STATUS_START_OF_DAY = 1;
+  TRADING_STATUS_PRE_OPEN = 2;
+  TRADING_STATUS_PRE_OPEN_NO_CANCEL = 3;
+  TRADING_STATUS_PRE_OPEN_FREEZE = 4;
+  TRADING_STATUS_OPEN = 5;
+  TRADING_STATUS_FAST_MARKET = 6;
+  TRADING_STATUS_HALT = 7;
+  TRADING_STATUS_CLOSE_NOT_FINAL = 8;
+  TRADING_STATUS_PRE_CLOSE = 9;
+  TRADING_STATUS_PRE_CLOSE_NO_CANCEL = 10;
+  TRADING_STATUS_PRE_CLOSE_FREEZE = 11;
+  TRADING_STATUS_CLOSE = 12;
+  TRADING_STATUS_POST_CLOSE = 13;
+  TRADING_STATUS_END_OF_DAY = 14;
+}
+enum Transport {
+  TRANSPORT_UNSPECIFIED = 0;
+  TRANSPORT_TCP = 1;
+  TRANSPORT_UDP = 2;
+}
+enum UpdateAction {
+  UPDATE_ACTION_UNSPECIFIED = 0;
+  UPDATE_ACTION_NEW = 1;
+  UPDATE_ACTION_CHANGE = 2;
+  UPDATE_ACTION_DELETE = 3;
+  UPDATE_ACTION_TRADE = 4;
+}
+enum UpdateReason {
+  UPDATE_REASON_UNSPECIFIED = 0;
+  UPDATE_REASON_MODIFIED = 1;
+  UPDATE_REASON_CANCELED = 2;
+  UPDATE_REASON_FILLED = 3;
+}
+enum UpdateType {
+  UPDATE_TYPE_UNSPECIFIED = 0;
+  UPDATE_TYPE_SNAPSHOT = 1;
+  UPDATE_TYPE_INCREMENTAL = 2;
+  UPDATE_TYPE_STALE = 3;
+}
 
 // helpers
 
-import "bar.proto";
-import "fill.proto";
-import "layer.proto";
-import "leg.proto";
-import "mbo_update.proto";
-import "mbp_update.proto";
-import "measurement.proto";
-import "parameter.proto";
-import "position.proto";
-import "quote.proto";
-import "rate_limit.proto";
-import "risk_limit.proto";
-import "route.proto";
-import "statistics.proto";
-import "tick_size_step.proto";
-import "trade.proto";
+message Bar {
+  google.protobuf.Timestamp begin_time_utc = 1;
+  bool confirmed = 2;
+  double open_price = 3;
+  double high_price = 4;
+  double low_price = 5;
+  double close_price = 6;
+  double quantity = 7;
+  double base_amount = 8;
+  double quote_amount = 9;
+  uint32 number_of_trades = 10;
+  double vwap = 11;
+}
+message Fill {
+  google.protobuf.Timestamp exchange_time_utc = 1;
+  string external_trade_id = 2;
+  double quantity = 3;
+  double price = 4;
+  Liquidity liquidity = 5;
+  double commission_amount = 6;
+  string commission_currency = 7;
+  double base_amount = 8;
+  double quote_amount = 9;
+  double profit_loss_amount = 10;
+}
+message Layer {
+  double bid_price = 1;
+  double bid_quantity = 2;
+  double ask_price = 3;
+  double ask_quantity = 4;
+}
+message Leg {
+  uint32 leg_id = 1;  // note! protobuf has no uint16
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  string state = 5;
+}
+message MBOUpdate {
+  double price = 1;
+  double quantity = 2;
+  uint64 priority = 3;
+  string order_id = 4;
+  Side side = 5;
+  UpdateAction action = 6;
+  UpdateReason reason = 7;
+}
+message MBPUpdate {
+  double price = 1;
+  double quantity = 2;
+  double implied_quantity = 3;
+  uint32 number_of_orders = 4;  // uint16
+  UpdateAction update_action = 5;
+  uint32 price_level = 6;
+}
+message Measurement {
+  string name = 1;
+  double value = 2;
+}
+message Parameter {
+  string label = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  string exchange = 4;
+  string symbol = 5;
+  string value = 6;
+}
+message Position {
+  string exchange = 1;
+  string symbol = 2;
+  double position = 3;
+  double profit_loss_amount = 4;
+  string profit_loss_currency = 5;
+}
+message Quote {
+  uint32 quote_entry_id = 1;
+  string exchange = 2;
+  string symbol = 3;
+  double bid_price = 4;
+  double bid_quantity = 5;
+  double ask_price = 6;
+  double ask_quantity = 7;
+  uint32 quote_set_id = 8;  // note! uint16
+  repeated ExecutionInstruction execution_instructions = 9;
+}
+message RateLimit {
+  RateLimitType type = 1;
+  google.protobuf.Timestamp period = 2;
+  google.protobuf.Timestamp end_time_utc = 3;
+  uint32 limit = 4;
+  uint32 value = 5;
+}
+message RiskLimit {
+  string exchange = 1;
+  string symbol = 2;
+  double long_position = 3;
+  double short_position = 4;
+  double long_position_limit = 5;
+  double short_position_limit = 6;
+  double long_risk_exposure_limit = 7;
+  double short_risk_exposure_limit = 8;
+  bool allow_netting = 9;
+}
+message Route {
+  uint32 strategy_id = 1;
+  RouteRequestStatus status = 2;
+}
+message Statistics {
+  StatisticsType type = 1;
+  double value = 2;
+  google.protobuf.Timestamp begin_time_utc = 3;
+  google.protobuf.Timestamp end_time_utc = 4;
+}
+message TickSizeStep {
+  double min_price = 1;
+  double tick_size = 2;
+}
+message Trade {
+  Side side = 1;
+  double price = 2;
+  double quantity = 3;
+  string trade_id = 4;
+  string taker_order_id = 5;
+  string maker_order_id = 6;
+}
 
 // messages
 
@@ -71,48 +491,489 @@ import "trade.proto";
 // add_routes ???
 // batch_begin ???
 // batch_end ???
-import "cancel_all_orders.proto";
-import "cancel_all_orders_ack.proto";
-import "cancel_order.proto";
-import "cancel_quotes.proto";
-import "cancel_quotes_ack.proto";
-import "create_order.proto";
-import "custom_matrix.proto";
-import "custom_matrix_update.proto";
-import "custom_metrics.proto";
-import "custom_metrics_update.proto";
-import "download_begin.proto";
-import "download_end.proto";
-import "external_latency.proto";
-import "funds_update.proto";
-import "gateway_settings.proto";
-import "gateway_status.proto";
-import "market_by_order_update.proto";
-import "market_by_price_update.proto";
-import "market_status.proto";
-import "mass_quote.proto";
-import "mass_quote_ack.proto";
-import "modify_order.proto";
-import "order_ack.proto";
-import "order_update.proto";
-import "parameters_update.proto";
-import "portfolio.proto";
-import "portfolio_update.proto";
-import "position_update.proto";
-import "rate_limit_trigger.proto";
-import "rate_limits_update.proto";
+message CancelAllOrders {
+  string account = 1;
+  uint64 order_id = 2;
+  string exchange = 3;
+  string symbol = 4;
+  uint32 strategy_id = 5;
+  Side side = 6;
+}
+message CancelAllOrdersAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  Origin origin = 7;
+  RequestStatus request_status = 8;
+  Error error = 9;
+  string text = 10;
+  string request_id = 11;
+  string external_account = 12;
+  uint32 number_of_affected_orders = 13;
+  google.protobuf.Timestamp round_trip_latency = 14;
+  string user = 15;
+  uint32 strategy_id = 16;
+}
+message CancelOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string request_template = 3;
+  string routing_id = 4;
+  uint32 version = 5;
+  uint32 conditional_on_version = 6;
+}
+message CancelQuotes {
+  string account = 1;
+  uint32 quote_set_id = 2;  // uint16
+}
+message CancelQuotesAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  Origin origin = 3;
+  RequestStatus request_status = 4;
+  Error error = 5;
+  string text = 6;
+  string request_id = 7;
+  string external_account = 8;
+  uint32 number_of_affected_quotes = 9;
+}
+message CreateOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string exchange = 3;
+  string symbol = 4;
+  Side side = 5;
+  PositionEffect position_effect = 6;
+  MarginMode margin_mode = 7;
+  QuantityType quantity_type = 8;
+  double max_show_quantity = 9;
+  OrderType order_type = 10;
+  TimeInForce time_in_force = 11;
+  repeated ExecutionInstruction execution_instructions = 12;
+  string request_template = 13;
+  double quantity = 14;
+  double price = 15;
+  double stop_price = 16;
+  string routing_id = 17;
+  uint32 strategy_id = 18;
+}
+message CustomMatrix {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated string rows = 5;
+  repeated string columns = 6;
+  repeated double data = 7;
+  UpdateType update_type = 8;
+  uint32 version = 9;
+}
+message CustomMatrixUpdate {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated string rows = 5;
+  repeated string columns = 6;
+  repeated double data = 7;
+  UpdateType update_type = 8;
+  uint32 version = 9;
+  google.protobuf.Timestamp sending_time_utc = 10;
+  string user = 11;
+}
+message CustomMetrics {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated Measurement measurements = 5;
+  UpdateType update_type = 6;
+}
+message CustomMetricsUpdate {
+  string label = 1;
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  repeated Measurement measurements = 5;
+  UpdateType update_type = 6;
+  google.protobuf.Timestamp sending_time_utc = 7;
+  string user = 8;
+}
+message DownloadBegin {
+  string account = 1;
+}
+message DownloadEnd {
+  string account = 1;
+  uint64 max_order_id = 2;
+}
+message ExternalLatency {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  google.protobuf.Timestamp latency = 3;
+}
+message FundsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  string currency = 3;
+  MarginMode margin_mode = 4;
+  double balance = 5;
+  double hold = 6;
+  double borrowed = 7;
+  string external_account = 8;
+  UpdateType update_type = 9;
+  google.protobuf.Timestamp exchange_time_utc = 10;
+  uint64 exchange_sequence = 11;
+  google.protobuf.Timestamp sending_time_utc = 12;
+}
+message GatewaySettings {
+  repeated SupportType supports = 1;
+  uint32 mbp_max_depth = 2;  // uint16
+  double mbp_tick_size_multiplier = 3;
+  double mbp_min_trade_vol_multiplier = 4;
+  bool mbp_allow_remove_non_existing = 5;
+  bool mbp_allow_price_inversion = 6;
+  bool mbp_checksum = 7;
+  bool oms_download_has_state = 8;
+  bool oms_download_has_routing_id = 9;
+  RequestIdType oms_request_id_type = 10;
+  repeated Filter oms_cancel_all_orders = 11;
+  Interval ts_interval = 12;
+  uint32 ts_max_history = 13;  // uint16
+}
+message GatewayStatus {
+  string account = 1;
+  repeated SupportType supported = 2;
+  repeated SupportType available = 3;
+  repeated SupportType unavailable = 4;
+}
+message MarketByOrderUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated MBOUpdate orders = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  uint64 exchange_sequence = 7;
+  google.protobuf.Timestamp sending_time_utc = 8;
+  Precision price_precision = 9;
+  Precision quantity_precision = 10;
+  uint32 max_depth = 11;  // uint16
+  uint32 checksum = 12;
+}
+message MarketByPriceUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated MBPUpdate bids = 4;
+  repeated MBPUpdate asks = 5;
+  UpdateType update_type = 6;
+  google.protobuf.Timestamp exchange_time_utc = 7;
+  uint64 exchange_sequence = 8;
+  google.protobuf.Timestamp sending_time_utc = 9;
+  Precision price_precision = 10;
+  Precision quantity_precision = 11;
+  uint32 max_depth = 12;  // uint16
+  uint32 checksum = 13;
+}
+message MarketStatus {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  TradingStatus trading_status = 4;
+  google.protobuf.Timestamp exchange_time_utc = 5;
+  uint64 exchange_sequence = 6;
+  google.protobuf.Timestamp sending_time_utc = 7;
+}
+message MassQuote {
+  string account = 1;
+  uint32 quote_id = 2;
+  repeated Quote quotes = 3;
+  bool mmp_reset = 4;
+  string mmp_group = 5;
+  google.protobuf.Timestamp valid_until_utc = 6;
+}
+message MassQuoteAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint32 quote_id = 3;
+  Origin origin = 4;
+  RequestStatus request_status = 5;
+  Error error = 6;
+  string text = 7;
+  string request_id = 8;
+  string external_account = 9;
+}
+message ModifyOrder {
+  string account = 1;
+  uint64 order_id = 2;
+  string request_template = 3;
+  double quantity = 4;
+  double price = 5;
+  string routing_id = 6;
+  uint32 version = 7;
+  uint32 conditional_on_version = 8;
+}
+message OrderAck {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  PositionEffect position_effect = 7;
+  MarginMode margin_mode = 8;
+  QuantityType quantity_type = 9;
+  RequestType request_type = 10;
+  Origin origin = 11;
+  RequestStatus request_status = 12;
+  Error error = 13;
+  string text = 14;
+  string request_id = 15;
+  string external_account = 16;
+  string external_order_id = 17;
+  string client_order_id = 18;
+  double quantity = 19;
+  double price = 20;
+  double stop_price = 21;
+  string routing_id = 22;
+  uint32 version = 23;
+  double risk_exposure = 24;
+  double risk_exposure_change = 25;
+  double traded_quantity = 26;
+  google.protobuf.Timestamp round_trip_latency = 27;
+  string user = 28;
+  uint32 strategy_id = 29;
+}
+message OrderUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  PositionEffect position_effect = 7;
+  MarginMode margin_mode = 8;
+  QuantityType quantity_type = 9;
+  double max_show_quantity = 10;
+  OrderType order_type = 11;
+  TimeInForce time_in_force = 12;
+  repeated ExecutionInstruction execution_instructions = 13;
+  google.protobuf.Timestamp create_time_utc = 14;
+  google.protobuf.Timestamp update_time_utc = 15;
+  string external_account = 16;
+  string external_order_id = 17;
+  string client_order_id = 18;
+  OrderStatus order_status = 19;
+  double quantity = 20;
+  double price = 21;
+  double stop_price = 22;
+  double risk_exposure = 23;
+  double risk_exposure_change = 24;
+  double remaining_quantity = 25;
+  double traded_quantity = 26;
+  double average_traded_price = 27;
+  double last_traded_quantity = 28;
+  double last_traded_price = 29;
+  Liquidity last_liquidity = 30;
+  string routing_id = 31;
+  uint32 max_request_version = 32;
+  uint32 max_response_version = 33;
+  uint32 max_accepted_version = 34;
+  UpdateType update_type = 35;
+  google.protobuf.Timestamp exchange_time_utc = 36;
+  uint64 exchange_sequence = 37;
+  google.protobuf.Timestamp sending_time_utc = 38;
+  string user = 39;
+  uint32 strategy_id = 40;
+}
+message ParametersUpdate {
+  repeated Parameter parameters = 1;
+  UpdateType update_type = 2;
+  string user = 3;
+}
+message Portfolio {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  repeated Position positions = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  string session_id = 7;
+  uint64 seqno = 8;
+}
+message PortfolioUpdate {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  repeated Position positions = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+}
+message PositionUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  string exchange = 3;
+  string symbol = 4;
+  MarginMode margin_mode = 5;
+  string external_account = 6;
+  double long_quantity = 7;
+  double short_quantity = 8;
+  UpdateType update_type = 9;
+  google.protobuf.Timestamp exchange_time_utc = 10;
+  uint64 exchange_sequence = 11;
+  google.protobuf.Timestamp sending_time_utc = 12;
+}
+message RateLimitTrigger {
+  string name = 1;
+  Origin origin = 2;
+  RateLimitType type = 3;
+  repeated string users = 4;
+  repeated string accounts = 5;
+  google.protobuf.Timestamp ban_expires = 6;
+  string triggered_by = 7;
+  BufferCapacity buffer_capacity = 8;
+  uint32 remaining_requests = 9;
+}
+message RateLimitsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  Origin origin = 3;
+  repeated RateLimit rate_limits = 4;
+}
 // ready ???
-import "reference_data.proto";
+message ReferenceData {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  string description = 4;
+  SecurityType security_type = 5;
+  string cfi_code = 6;
+  string base_currency = 7;
+  string quote_currency = 8;
+  string settlement_currency = 9;
+  string margin_currency = 10;
+  string commission_currency = 11;
+  double tick_size = 12;
+  repeated TickSizeStep tick_size_steps = 13;
+  double multiplier = 14;
+  double min_notional = 15;
+  double min_trade_vol = 16;
+  double max_trade_vol = 17;
+  double trade_vol_step_size = 18;
+  OptionType option_type = 19;
+  string strike_currency = 20;
+  double strike_price = 21;
+  string underlying = 22;
+  string time_zone = 23;
+  google.protobuf.Timestamp issue_date = 24;
+  google.protobuf.Timestamp settlement_date = 25;
+  google.protobuf.Timestamp expiry_datetime = 26;
+  google.protobuf.Timestamp expiry_datetime_utc = 27;
+  google.protobuf.Timestamp exchange_time_utc = 28;
+  uint64 exchange_sequence = 29;
+  google.protobuf.Timestamp sending_time_utc = 30;
+  bool discard = 31;
+}
 // remove_routes ???
-import "risk_limits.proto";
-import "risk_limits_update.proto";
+message RiskLimits {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  repeated RiskLimit limits = 4;
+  string session_id = 5;
+  uint64 seqno = 6;
+}
+message RiskLimitsUpdate {
+  string user = 1;
+  uint32 strategy_id = 2;
+  string account = 3;
+  repeated RiskLimit limits = 4;
+  UpdateType update_type = 5;
+}
 // route_ack ???
-import "statistics_update.proto";
-import "stream_status.proto";
-import "time_series_update.proto";
-import "top_of_book.proto";
-import "trade_summary.proto";
-import "trade_update.proto";
+message StatisticsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated Statistics statistics = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  uint64 exchange_sequence = 7;
+  google.protobuf.Timestamp sending_time_utc = 8;
+}
+message StreamStatus {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  repeated SupportType supports = 3;
+  Transport transport = 4;
+  Protocol protocol = 5;
+  repeated Encoding encoding = 6;
+  Priority priority = 7;
+  ConnectionStatus connection_status = 8;
+  string interface = 9;
+  string authority = 10;
+  string path = 11;
+  string proxy = 12;
+}
+message TimeSeriesUpdate {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  DataSource data_source = 4;
+  Interval interval = 5;
+  Origin origin = 6;
+  repeated Bar bars = 7;
+  UpdateType update_type = 8;
+  google.protobuf.Timestamp exchange_time_utc = 9;
+}
+message TopOfBook {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  Layer layer = 4;
+  UpdateType update_type = 5;
+  google.protobuf.Timestamp exchange_time_utc = 6;
+  uint64 exchange_sequence = 7;
+  google.protobuf.Timestamp sending_time_utc = 8;
+}
+message TradeSummary {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string symbol = 3;
+  repeated Trade trades = 4;
+  google.protobuf.Timestamp exchange_time_utc = 5;
+  uint64 exchange_sequence = 6;
+  google.protobuf.Timestamp sending_time_utc = 7;
+}
+message TradeUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  uint64 order_id = 3;
+  string exchange = 4;
+  string symbol = 5;
+  Side side = 6;
+  PositionEffect position_effect = 7;
+  MarginMode margin_mode = 8;
+  QuantityType quantity_type = 9;
+  google.protobuf.Timestamp create_time_utc = 10;
+  google.protobuf.Timestamp update_time_utc = 11;
+  string external_account = 12;
+  string external_order_id = 13;
+  string client_order_id = 14;
+  repeated Fill fills = 15;
+  string routing_id = 16;
+  UpdateType update_type = 17;
+  google.protobuf.Timestamp exchange_time_utc = 18;
+  uint64 exchange_sequence = 19;
+  google.protobuf.Timestamp sending_time_utc = 20;
+  string user = 21;
+  uint32 strategy_id = 22;
+}
+
+// event
 
 message Message {
   oneof value {

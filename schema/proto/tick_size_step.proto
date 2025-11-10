@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 message TickSizeStep {
   double min_price = 1;
   double tick_size = 2;

@@ -4,6 +4,11 @@ project(roq-schema)
 
 include(GNUInstallDirs)
 
+find_package(
+  Python3
+  COMPONENTS Interpreter Development.Module
+  REQUIRED)
+
 set(SCHEMA_DIR ${CMAKE_INSTALL_DATADIR}/roq/schema)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/schema)

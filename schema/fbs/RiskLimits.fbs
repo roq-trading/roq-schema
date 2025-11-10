@@ -1,7 +1,3 @@
-include "UUID.fbs";
-
-namespace roq.fbs;
-
 table RiskLimits {
   user:string;
   strategy_id:uint32;

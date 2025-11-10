@@ -1,4 +1,2 @@
-namespace roq.fbs;
-
 table Ready {
 }

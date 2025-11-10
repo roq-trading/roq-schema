@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum BufferCapacity {
   BUFFER_CAPACITY_UNSPECIFIED = 0;
   BUFFER_CAPACITY_EMPTY = 1;

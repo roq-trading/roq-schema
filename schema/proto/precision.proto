@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum Precision {
   PRECISION_UNSPECIFIED = 0;
   PRECISION_1 = 1;

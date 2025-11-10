@@ -1,7 +1,3 @@
-include "Interval.fbs";
-
-namespace roq.fbs;
-
 table GatewaySettings {
   supports:uint64;
   mbp_max_depth:uint32; // note! c++ changed to uint16 -- we don't need to track

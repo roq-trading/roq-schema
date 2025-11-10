@@ -1,14 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "google/protobuf/timestamp.proto";
-
-import "update_type.proto";
-import "precision.proto";
-
-import "mbp_update.proto";
-
 message MarketByPriceUpdate {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;

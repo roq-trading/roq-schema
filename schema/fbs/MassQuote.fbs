@@ -1,7 +1,3 @@
-include "Quote.fbs";
-
-namespace roq.fbs;
-
 table MassQuote {
   account:string;
   quote_id:uint32;

@@ -1,7 +1,3 @@
-include "Parameter.fbs";
-
-namespace roq.fbs;
-
 table ParametersUpdate {
   parameters:[Parameter];
   update_type:UpdateType;

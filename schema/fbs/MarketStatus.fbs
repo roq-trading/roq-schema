@@ -1,7 +1,3 @@
-include "TradingStatus.fbs";
-
-namespace roq.fbs;
-
 table MarketStatus {
   stream_id:uint16;
   exchange:string;

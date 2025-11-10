@@ -1,11 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "origin.proto";
-
-import "rate_limit.proto";
-
 message RateLimitsUpdate {
   uint32 stream_id = 1;  // uint16
   string account = 2;

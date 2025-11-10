@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum SupportType {
   SUPPORT_TYPE_UNSPECIFIED = 0;
   SUPPORT_TYPE_REFERENCE_DATA = 0x1;

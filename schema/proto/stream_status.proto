@@ -1,14 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "support_type.proto";
-import "transport.proto";
-import "protocol.proto";
-import "encoding.proto";
-import "priority.proto";
-import "connection_status.proto";
-
 message StreamStatus {
   uint32 stream_id = 1;  // uint16
   string account = 2;

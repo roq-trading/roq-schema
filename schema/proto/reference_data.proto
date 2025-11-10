@@ -1,14 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "google/protobuf/timestamp.proto";
-
-import "security_type.proto";
-import "option_type.proto";
-
-import "tick_size_step.proto";
-
 message ReferenceData {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;

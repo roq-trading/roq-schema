@@ -1,11 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "update_type.proto";
-
-import "measurement.proto";
-
 message CustomMetrics {
   string label = 1;
   string account = 2;

@@ -1,9 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "side.proto";
-
 message CancelAllOrders {
   string account = 1;
   uint64 order_id = 2;

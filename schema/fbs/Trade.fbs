@@ -1,7 +1,3 @@
-include "Side.fbs";
-
-namespace roq.fbs;
-
 table Trade {
   side:Side;
   price:double = nan;

@@ -1,7 +1,3 @@
-include "Measurement.fbs";
-
-namespace roq.fbs;
-
 table CustomMatrix {
   label:string;
   account:string;

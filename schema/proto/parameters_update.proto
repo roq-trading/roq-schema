@@ -1,13 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "google/protobuf/timestamp.proto";
-
-import "update_type.proto";
-
-import "parameter.proto";
-
 message ParametersUpdate {
   repeated Parameter parameters = 1;
   UpdateType update_type = 2;

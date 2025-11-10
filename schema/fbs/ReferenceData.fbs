@@ -1,9 +1,3 @@
-include "SecurityType.fbs";
-include "TickSizeStep.fbs";
-include "OptionType.fbs";
-
-namespace roq.fbs;
-
 table ReferenceData {
   stream_id:uint16;
   exchange:string;

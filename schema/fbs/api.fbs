@@ -1,107 +1,1012 @@
-// generated:
+/* Copyright (c) 2017-2025, Hans Erik Thrane */                                                                                                                
+                                                                                                                                                               
+/* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
+
+namespace roq.fbs;
 
 // - enums
 
-include "Action.fbs";
-include "BufferCapacity.fbs";
-include "Category.fbs";
-include "ConnectionStatus.fbs";
-include "DataSource.fbs";
-include "Encoding.fbs";
-include "Error.fbs";
-include "ExecutionInstruction.fbs";
-include "Filter.fbs";
-include "Interval.fbs";
-include "Liquidity.fbs";
-include "MarginMode.fbs";
-include "OptionType.fbs";
-include "OrderStatus.fbs";
-include "OrderType.fbs";
-include "Origin.fbs";
-include "PositionEffect.fbs";
-include "Precision.fbs";
-include "Protocol.fbs";
-include "QuantityType.fbs";
-include "RequestIdType.fbs";
-include "RequestStatus.fbs";
-include "RequestType.fbs";
-include "SecurityType.fbs";
-include "Side.fbs";
-include "State.fbs";
-include "StatisticsType.fbs";
-include "SupportType.fbs";
-include "TimeInForce.fbs";
-include "TradingStatus.fbs";
-include "Transport.fbs";
-include "UpdateAction.fbs";
-include "UpdateReason.fbs";
-include "UpdateType.fbs";
+enum Action:uint8 {
+  Undefined,
+  Enable,
+  Disable
+}
+enum BufferCapacity:uint8 {
+  Undefined,
+  Empty,
+  LowWaterMark,
+  HighWaterMark,
+  Full
+}
+enum Category:uint8 {
+  Undefined,
+  Public,
+  Private
+}
+enum ConnectionStatus:uint8 {
+  Undefined,
+  Disconnected,
+  Connecting,
+  LoginSent,
+  Downloading,
+  Ready,
+  LoggedOut
+}
+enum DataSource:uint8 {
+  Undefined,
+  TradeSummary
+}
+enum Encoding:uint32 {
+  Undefined = 0,
+  FIX = 1,
+  JSON = 2,
+  SBE = 4,
+  FBS = 8
+}
+enum Error:uint8 {
+  Undefined,
+  Unknown,
+  NotSupported,
+  InvalidAccount,
+  InvalidOrderId,
+  InvalidExchange,
+  InvalidSymbol,
+  InvalidSide,
+  InvalidPositionEffect,
+  InvalidQuantity,
+  InvalidMaxShowQuantity,
+  InvalidOrderType,
+  InvalidTimeInForce,
+  InvalidExecutionInstruction,
+  InvalidRequestTemplate,
+  InvalidPrice,
+  InvalidStopPrice,
+  InvalidRoutingId,
+  InvalidRequestVersion,
+  InvalidRequestId,
+  InvalidRequestType,
+  InvalidRequestStatus,
+  InvalidRequestArgs,
+  UnknownExternalOrderId,
+  NotAuthorized,
+  RequestRateLimitReached,
+  GatewayNotReady,
+  NetworkError,
+  Timeout,
+  ParseError,
+  ModifyHasNoEffect,
+  TooLateToModifyOrCancel,
+  ConditionalRequestHasFailed,
+  UnknownOrderId,
+  InsufficientFunds,
+  RiskLimitReached,
+  InvalidFilter,
+  InvalidMarginMode,
+  InvalidQuantityType,
+}
+enum ExecutionInstruction:uint8 {
+  Undefined = 0,
+  ParticipateDoNotInitiate = 1,
+  CancelIfNotBest = 2,
+  DoNotIncrease = 4,
+  DoNotReduce = 8
+}
+enum Filter:uint32 {
+  Undefined = 0,
+  Account = 1,
+  Exchange = 2,
+  Symbol = 4,
+  StrategyId = 8,
+  Side = 16,
+}
+enum Interval:uint8 {
+  Undefined,
+  _1,
+  _5,
+  _10,
+  _15,
+  _30,
+  _60,
+  _300,
+  _600,
+  _900,
+  _1800
+}
+enum Liquidity:uint8 {
+  Undefined,
+  Maker,
+  Taker
+}
+enum MarginMode:uint8 {
+  Undefined,
+  Isolated,
+  Cross,
+  Portfolio
+}
+enum OptionType:uint8 {
+  Undefined,
+  Call,
+  Put
+}
+enum OrderStatus:uint8 {
+  Undefined,
+  Sent,
+  Accepted,
+  Suspended,
+  Working,
+  Stopped,
+  Completed,
+  Expired,
+  Canceled,
+  Rejected
+}
+enum OrderType:uint8 {
+  Undefined,
+  Market,
+  Limit
+}
+enum Origin:uint8 {
+  Undefined,
+  Client,
+  Gateway,
+  Broker,
+  Exchange
+}
+enum PositionEffect:uint8 {
+  Undefined,
+  Open,
+  Close
+}
+enum Precision:uint8 {
+  Undefined,
+  _0,
+  _1,
+  _2,
+  _3,
+  _4,
+  _5,
+  _6,
+  _7,
+  _8,
+  _9,
+  _10,
+  _11,
+  _12,
+  _13,
+  _14,
+  _15
+}
+enum Protocol:uint8 {
+  Undefined,
+  FIX,
+  WS,
+  HTTP,
+  SBE,
+  ROQ
+}
+enum QuantityType:uint8 {
+  Undefined,
+  Units,
+  Contracts
+}
+enum Priority:uint32 {
+  Undefined,
+  Primary,
+  Secondary,
+}
+enum RateLimitType:uint8 {
+  Undefined,
+  OrderAction,
+  CreateOrder,
+  Request,
+  RequestWeight
+}
+enum RequestIdType:uint8 {
+  Undefined,
+  Base64,
+  Base32,
+  Simple,
+  UUID,
+}
+enum RequestStatus:uint8 {
+  Undefined,
+  Forwarded,
+  Accepted,
+  Rejected,
+  Disconnected,
+  Timeout,
+  Failed,
+  Error
+}
+enum RequestType:uint8 {
+  Undefined,
+  CreateOrder,
+  ModifyOrder,
+  CancelOrder
+}
+enum SecurityType:uint8 {
+  Undefined,
+  Spot,
+  Futures,
+  Option,
+  Swap,
+}
+enum Side:uint8 {
+  Undefined,
+  Buy,
+  Sell
+}
+enum State:uint8 {
+  Undefined,
+  Enabled,
+  Disabled
+}
+enum StatisticsType:uint8 {
+  Undefined,
+  OpenPrice,
+  SettlementPrice,
+  ClosePrice,
+  OpenInterest,
+  PreOpenInterest,
+  PreSettlementPrice,
+  PreClosePrice,
+  HighestTradedPrice,
+  LowestTradedPrice,
+  UpperLimitPrice,
+  LowerLimitPrice,
+  IndexValue,
+  MarginRate,
+  FundingRate,
+  FundingRatePrediction,
+  TradeVolume
+}
+enum SupportType:uint32 {
+  Undefined = 0,
+  ReferenceData = 1,
+  MarketStatus = 2,
+  TopOfBook = 4,
+  MarketByPrice = 8,
+  MarketByOrder = 16,
+  TradeSummary = 32,
+  Statistics = 64,
+  TimeSeries = 128,
+  CreateOrder = 65536,
+  ModifyOrder = 131072,
+  CancelOrder = 262144,
+  OrderAck = 524288,
+  Order = 1048576,
+  OrderState = 8388608,
+  Trade = 2097152,
+  Position = 4194304,
+  Funds = 268435456,
+}
+enum TimeInForce:uint8 {
+  Undefined,
+  GFD,
+  GTC,
+  OPG,
+  IOC,
+  FOK,
+  GTX,
+  GTD,
+  AT_THE_CLOSE,
+  GOOD_THROUGH_CROSSING,
+  AT_CROSSING,
+  GOOD_FOR_TIME,
+  GFA,
+  GFM
+}
+enum TradingStatus:uint8 {
+  Undefined,
+  StartOfDay,
+  PreOpen,
+  PreOpenNoCancel,
+  PreOpenFreeze,
+  Open,
+  FastMarket,
+  Halt,
+  CloseNotFinal,
+  PreClose,
+  PreCloseNoCancel,
+  PreCloseFreeze,
+  Close,
+  PostClose,
+  EndOfDay
+}
+enum Transport:uint8 {
+  Undefined,
+  TCP,
+  UDP
+}
+enum UpdateAction:uint8 {
+  Undefined,
+  New,
+  Change,
+  Delete,
+  Trade
+}
+enum UpdateReason:uint8 {
+  Undefined,
+  Created,
+  Modified,
+  Canceled,
+  Filled
+}
+enum UpdateType:uint8 {
+  Undefined,
+  Snapshot,
+  Incremental,
+  Stale
+}
 
 // - helpers
 
-include "Bar.fbs";
-include "Fill.fbs";
-include "Layer.fbs";
-include "Leg.fbs";
-include "MBOUpdate.fbs";
-include "MBPUpdate.fbs";
-include "Measurement.fbs";
-include "Parameter.fbs";
-include "Position.fbs";
-include "Quote.fbs";
-include "RateLimit.fbs";
-include "RiskLimit.fbs";
-include "Statistics.fbs";
-include "TickSizeStep.fbs";
-include "Trade.fbs";
+table Bar {
+  begin_time_utc:int32 = 0;
+  confirmed:bool;
+  open_price:double = nan;
+  high_price:double = nan;
+  low_price:double = nan;
+  close_price:double = nan;
+  quantity:double = nan;
+  base_amount:double = nan;
+  quote_amount:double = nan;
+  number_of_trades:uint32 = 0;
+  vwap:double = nan;
+}
+table Fill {
+  external_trade_id:string;
+  quantity:double;
+  price:double;
+  liquidity:Liquidity;
+  exchange_time_utc:int64;
+  quote_amount:double;
+  commission_amount:double;
+  commission_currency:string;
+  base_amount:double;
+  profit_loss_amount:double;
+}
+table Layer {
+  bid_price:double = nan;
+  bid_quantity:double = 0.0;
+  ask_price:double = nan;
+  ask_quantity:double = 0.0;
+}
+table Leg {
+  leg_id:uint16 = 0;
+  account:string;
+  exchange:string;
+  symbol:string;
+  state:State;
+}
+table MBOUpdate {
+  price:double = nan;
+  quantity:double = 0.0;
+  priority:uint64 = 0;
+  order_id:string;
+  side:Side;
+  action:UpdateAction;
+  reason:UpdateReason;
+}
+table MBPUpdate {
+  price:double = nan;
+  quantity:double = 0.0;
+  implied_quantity:double = 0.0;
+  price_level:uint32 = 0;
+  zzz_number_of_orders:uint32 = 0 (deprecated);
+  number_of_orders:uint16 = 0;
+  update_action:UpdateAction;
+}
+table Measurement {
+  name:string;
+  value:double = nan;
+}
+table Parameter {
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  value:string;
+  strategy_id:uint32;
+}
+table Position {
+  exchange:string;
+  symbol:string;
+  position:double;
+  profit_loss_amount:double;
+  profit_loss_currency:string;
+}
+table Quote {
+  quote_entry_id:uint32;
+  exchange:string;
+  symbol:string;
+  bid_price:double = nan;
+  bid_quantity:double = 0.0;
+  ask_price:double = nan;
+  ask_quantity:double = 0.0;
+  quote_set_id:uint16;
+  execution_instructions:uint32;
+}
+table RateLimit {
+  type:RateLimitType;
+  period:int64;
+  end_time_utc:int64;
+  limit:uint32;
+  value:uint32;
+}
+table RiskLimit{
+  exchange:string;
+  symbol:string;
+  long_position:double = 0.0;
+  short_position:double = 0.0;
+  long_position_limit:double = nan;
+  short_position_limit:double = nan;
+  long_risk_exposure_limit:double = nan;
+  short_risk_exposure_limit:double = nan;
+  allow_netting:bool;
+}
+table Statistics {
+  type:StatisticsType;
+  value:double = nan;
+  begin_time_utc:int64;
+  end_time_utc:int64;
+}
+table TickSizeStep {
+  min_price:double = nan;
+  tick_size:double = nan;
+}
+table Trade {
+  side:Side;
+  price:double = nan;
+  quantity:double = 0.0;
+  trade_id:string;
+  taker_order_id:string;
+  maker_order_id:string;
+}
+table UUID {
+  high:uint64;
+  low:uint64;
+}
 
 // - messages
 
-include "CancelAllOrdersAck.fbs";
-include "CancelAllOrders.fbs";
-include "CancelOrder.fbs";
-include "CancelQuotesAck.fbs";
-include "CancelQuotes.fbs";
-include "ControlAck.fbs";
-include "Control.fbs";
-include "CreateOrder.fbs";
-include "CustomMatrix.fbs";
-include "CustomMatrixUpdate.fbs";
-include "CustomMetrics.fbs";
-include "CustomMetricsUpdate.fbs";
-include "DownloadBegin.fbs";
-include "DownloadEnd.fbs";
-include "ExternalLatency.fbs";
-include "FundsUpdate.fbs";
-include "GatewaySettings.fbs";
-include "GatewayStatus.fbs";
-include "LegsUpdate.fbs";
-include "MarketByOrderUpdate.fbs";
-include "MarketByPriceUpdate.fbs";
-include "MarketStatus.fbs";
-include "MassQuoteAck.fbs";
-include "MassQuote.fbs";
-include "ModifyOrder.fbs";
-include "OrderAck.fbs";
-include "OrderUpdate.fbs";
-include "ParametersUpdate.fbs";
-include "Portfolio.fbs";
-include "PortfolioUpdate.fbs";
-include "PositionUpdate.fbs";
-include "RateLimitsUpdate.fbs";
-include "RateLimitTrigger.fbs";
-include "Ready.fbs";
-include "ReferenceData.fbs";
-include "RiskLimits.fbs";
-include "RiskLimitsUpdate.fbs";
-include "ServiceUpdate.fbs";
-include "StatisticsUpdate.fbs";
-include "StrategyUpdate.fbs";
-include "StreamStatus.fbs";
-include "TimeSeriesUpdate.fbs";
-include "TopOfBook.fbs";
-include "TradeSummary.fbs";
-include "TradeUpdate.fbs";
+table CancelAllOrdersAck {
+  stream_id:uint16;
+  account:string;
+  order_id:uint64;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+  round_trip_latency:int64;
+  user:string;
+  strategy_id:uint32;
+  number_of_affected_orders:uint32;
+  exchange:string;
+  symbol:string;
+  side:Side;
+}
+table CancelAllOrders {
+  account:string;
+  strategy_id:uint32;
+  exchange:string;
+  symbol:string;
+  side:Side;
+  order_id:uint64;
+}
+table CancelOrder {
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  routing_id:string;
+  version:uint32;
+  conditional_on_version:uint32;
+  request_template:string;
+  order_id:uint64;
+}
+table CancelQuotesAck {
+  stream_id:uint16;
+  account:string;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+  number_of_affected_quotes:uint32;
+}
+table CancelQuotes {
+  account:string;
+  quote_set_id:uint16;
+}
+table ControlAck {
+  request_id:string;
+  user:string;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+}
+table Control {
+  request_id:string;
+  user:string;
+  action:Action;
+  strategy_id:uint32;
+  leg_id:uint16;
+  account:string;
+  exchange:string;
+  symbol:string;
+}
+table CreateOrder {
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  side:Side;
+  position_effect:PositionEffect;
+  max_show_quantity:double = nan;
+  order_type:OrderType;
+  time_in_force:TimeInForce;
+  zzz_execution_instructions:uint8 (deprecated);
+  request_template:string;
+  quantity:double = nan;
+  price:double = nan;
+  stop_price:double = nan;
+  routing_id:string;
+  execution_instructions:uint32;
+  strategy_id:uint32;
+  order_id:uint64;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+}
+table CustomMatrix {
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  rows:[string];
+  columns:[string];
+  data:[double];
+  update_type:UpdateType;
+  version:uint32;
+}
+table CustomMatrixUpdate {
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  rows:[string];
+  columns:[string];
+  data:[double];
+  update_type:UpdateType;
+  version:uint32;
+  sending_time_utc:int64;
+  user:string;
+}
+table CustomMetrics {
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  measurements:[Measurement];
+  update_type:UpdateType;
+}
+table CustomMetricsUpdate {
+  user:string;
+  label:string;
+  account:string;
+  exchange:string;
+  symbol:string;
+  measurements:[Measurement];
+  update_type:UpdateType;
+  sending_time_utc:int64;
+}
+table DownloadBegin {
+  account:string;
+}
+table DownloadEnd {
+  account:string;
+  zzz_max_order_id:uint32 (deprecated);
+  max_order_id:uint64;
+}
+table ExternalLatency {
+  stream_id:uint16;
+  latency:int64;
+  account:string;
+}
+table FundsUpdate {
+  stream_id:uint16;
+  account:string;
+  currency:string;
+  balance:double = nan;
+  hold:double = nan;
+  external_account:string;
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  sending_time_utc:int64;
+  margin_mode:MarginMode;
+  exchange_sequence:uint64;
+  borrowed:double = nan;
+}
+table GatewaySettings {
+  supports:uint64;
+  mbp_max_depth:uint32; // note! c++ changed to uint16 -- we don't need to track
+  mbp_allow_price_inversion:bool;
+  mbp_allow_fractional_tick_size:bool (deprecated);
+  mbp_allow_remove_non_existing:bool;
+  oms_download_has_state:bool;
+  oms_download_has_routing_id:bool;
+  mbp_tick_size_multiplier:double = nan;
+  mbp_min_trade_vol_multiplier:double = nan;
+  oms_request_id_type:RequestIdType;
+  mbp_checksum:bool; // note! order not aligned with c++
+  oms_cancel_all_orders:uint64;
+  ts_interval:Interval;
+  ts_max_history:uint16;
+}
+table GatewayStatus {
+  account:string;
+  supported:uint64;
+  available:uint64;
+  unavailable:uint64;
+}
+table LegsUpdate {
+  user:string;
+  strategy_id:uint32;
+  legs:[Leg];
+  update_type:UpdateType;
+}
+table MarketByOrderUpdate {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  orders:[MBOUpdate];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  price_precision:Precision;
+  quantity_precision:Precision;
+  max_depth:uint16;
+  checksum:uint32;
+  sending_time_utc:int64;
+}
+table MarketByPriceUpdate {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  bids:[MBPUpdate];
+  asks:[MBPUpdate];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  price_precision:Precision;
+  quantity_precision:Precision;
+  max_depth:uint16;
+  zzz_checksum:uint32 (deprecated);
+  sending_time_utc:int64;
+}
+table MarketStatus {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  trading_status:TradingStatus;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+}
+table MassQuoteAck {
+  stream_id:uint16;
+  account:string;
+  quote_id:uint32;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+}
+table MassQuote {
+  account:string;
+  quote_id:uint32;
+  quotes:[Quote];
+  mmp_reset:bool;
+  mmp_group:string;
+  valid_until_utc:int64;
+}
+table ModifyOrder {
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  quantity:double = nan;
+  price:double = nan;
+  routing_id:string;
+  version:uint32;
+  conditional_on_version:uint32;
+  request_template:string;
+  order_id:uint64;
+}
+table OrderAck {
+  stream_id:uint16;
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  request_type:RequestType;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
+  request_id:string;
+  external_account:string;
+  external_order_id:string;
+  routing_id:string;
+  version:uint32;
+  side:Side;
+  round_trip_latency:int64;
+  traded_quantity:double = nan;
+  risk_exposure:double = nan;
+  risk_exposure_change:double = nan;
+  user:string;
+  strategy_id:uint32;
+  order_id:uint64;
+  client_order_id:string;
+  quantity:double = nan;
+  price:double = nan;
+  stop_price:double = nan;
+  position_effect:PositionEffect;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+}
+table OrderUpdate {
+  stream_id:uint16;
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  side:Side;
+  position_effect:PositionEffect;
+  max_show_quantity:double = nan;
+  order_type:OrderType;
+  time_in_force:TimeInForce;
+  zzz_execution_instructions:uint8 (deprecated);
+  zzz_order_template:string (deprecated);
+  create_time_utc:int64;
+  update_time_utc:int64;
+  external_account:string;
+  external_order_id:string;
+  order_status:OrderStatus;
+  quantity:double = nan;
+  price:double = nan;
+  stop_price:double = nan;
+  remaining_quantity:double = nan;
+  traded_quantity:double = nan;
+  average_traded_price:double = nan;
+  last_traded_quantity:double = nan;
+  last_traded_price:double = nan;
+  last_liquidity:Liquidity;
+  routing_id:string;
+  max_request_version:uint32;
+  max_response_version:uint32;
+  max_accepted_version:uint32;
+  update_type:UpdateType;
+  execution_instructions:uint32;
+  user:string;
+  sending_time_utc:int64;
+  client_order_id:string;
+  risk_exposure:double = nan;
+  risk_exposure_change:double = nan;
+  strategy_id:uint32;
+  order_id:uint64;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+}
+table ParametersUpdate {
+  parameters:[Parameter];
+  update_type:UpdateType;
+  user:string;
+}
+table Portfolio {
+  user:string;
+  strategy_id:uint32;
+  account:string;
+  positions:[Position];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  session_id:UUID;
+  seqno:uint64;
+}
+table PortfolioUpdate {
+  user:string;
+  strategy_id:uint32;
+  account:string;
+  positions:[Position];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+}
+table PositionUpdate {
+  stream_id:uint16;
+  account:string;
+  exchange:string;
+  symbol:string;
+  zzz_side:Side (deprecated);
+  zzz_position:double = nan (deprecated);
+  zzz_last_trade_id:uint32 (deprecated);
+  zzz_position_cost:double = nan (deprecated);
+  zzz_position_yesterday:double = nan (deprecated);
+  zzz_position_cost_yesterday:double = nan (deprecated);
+  external_account:string;
+  long_quantity:double = nan;
+  short_quantity:double = nan;
+  zzz_long_quantity_begin:double = nan (deprecated);
+  zzz_short_quantity_begin:double = nan (deprecated);
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  sending_time_utc:int64;
+  margin_mode:MarginMode;
+  exchange_sequence:uint64;
+}
+table RateLimitsUpdate {
+  stream_id:uint16;
+  account:string;
+  origin:Origin;
+  rate_limits:[RateLimit];
+}
+table RateLimitTrigger {
+  name:string;
+  origin:Origin;
+  type:RateLimitType;
+  users:[string];
+  accounts:[string];
+  ban_expires:int64;
+  triggered_by:string;
+  buffer_capacity:BufferCapacity;
+  remaining_requests:uint32;
+}
+table Ready {
+}
+table ReferenceData {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  description:string;
+  security_type:SecurityType;
+  quote_currency:string;
+  base_currency:string;
+  commission_currency:string;
+  tick_size:double = nan;
+  multiplier:double = nan;
+  min_trade_vol:double = nan;
+  option_type:OptionType;
+  strike_currency:string;
+  strike_price:double = nan;
+  underlying:string;
+  time_zone:string;
+  issue_date:int32;
+  settlement_date:int32;
+  expiry_datetime:int64;
+  expiry_datetime_utc:int64;
+  max_trade_vol:double = nan;
+  trade_vol_step_size:double = nan;
+  margin_currency:string;
+  discard:bool;
+  min_notional:double = nan;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+  settlement_currency:string;
+  cfi_code:string;
+  tick_size_steps:[TickSizeStep];
+}
+table RiskLimits {
+  user:string;
+  strategy_id:uint32;
+  account:string;
+  limits:[RiskLimit];
+  session_id:UUID;
+  seqno:uint64;
+}
+table RiskLimitsUpdate {
+  user:string;
+  strategy_id:uint32;
+  account:string;
+  limits:[RiskLimit];
+  update_type:UpdateType;
+}
+table ServiceUpdate {
+  connection_status:ConnectionStatus;
+  state:State;
+  user:string;
+  description:string;
+  update_type:UpdateType;
+}
+table StatisticsUpdate {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  statistics:[Statistics];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+}
+table StrategyUpdate {
+  user:string;
+  strategy_id:uint32;
+  description:string;
+  state:State;
+  update_type:UpdateType;
+}
+table StreamStatus {
+  stream_id:uint16;
+  account:string;
+  supports:uint64;
+  connection_status:ConnectionStatus;
+  protocol:Protocol;
+  priority:Priority;
+  transport:Transport;
+  encoding:uint32;
+  interface:string;
+  authority:string;
+  path:string;
+  proxy:string;
+}
+table TimeSeriesUpdate {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  data_source:DataSource;
+  interval:Interval;
+  origin:Origin;
+  bars:[Bar];
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+}
+table TopOfBook {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  layer:Layer;
+  update_type:UpdateType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+}
+table TradeSummary {
+  stream_id:uint16;
+  exchange:string;
+  symbol:string;
+  trades:[Trade];
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+  sending_time_utc:int64;
+}
+table TradeUpdate {
+  stream_id:uint16;
+  account:string;
+  zzz_order_id:uint32 (deprecated);
+  exchange:string;
+  symbol:string;
+  side:Side;
+  position_effect:PositionEffect;
+  create_time_utc:int64;
+  update_time_utc:int64;
+  external_account:string;
+  external_order_id:string;
+  fills:[Fill];
+  routing_id:string;
+  update_type:UpdateType;
+  user:string;
+  sending_time_utc:int64;
+  strategy_id:uint32;
+  order_id:uint64;
+  client_order_id:string;
+  margin_mode:MarginMode;
+  quantity_type:QuantityType;
+  exchange_time_utc:int64;
+  exchange_sequence:uint64;
+}
 
 // ----------------------------------------------------------------------------
 

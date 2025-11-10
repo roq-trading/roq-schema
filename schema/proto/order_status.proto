@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum OrderStatus {
   ORDER_STATUS_UNSPECIFIED = 0;
   ORDER_STATUS_SENT = 1;

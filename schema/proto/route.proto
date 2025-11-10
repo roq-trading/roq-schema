@@ -1,9 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "route_request_status.proto";
-
 message Route {
   uint32 strategy_id = 1;
   RouteRequestStatus status = 2;

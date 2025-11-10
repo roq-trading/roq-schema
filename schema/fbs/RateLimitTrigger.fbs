@@ -1,9 +1,3 @@
-include "BufferCapacity.fbs";
-include "Origin.fbs";
-include "RateLimitType.fbs";
-
-namespace roq.fbs;
-
 table RateLimitTrigger {
   name:string;
   origin:Origin;

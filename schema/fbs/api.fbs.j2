@@ -1,0 +1,221 @@
+/* Copyright (c) 2017-2025, Hans Erik Thrane */                                                                                                                
+                                                                                                                                                               
+/* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
+
+namespace roq.fbs;
+
+// - enums
+
+{% include "Action.fbs" %}
+{% include "BufferCapacity.fbs" %}
+{% include "Category.fbs" %}
+{% include "ConnectionStatus.fbs" %}
+{% include "DataSource.fbs" %}
+{% include "Encoding.fbs" %}
+{% include "Error.fbs" %}
+{% include "ExecutionInstruction.fbs" %}
+{% include "Filter.fbs" %}
+{% include "Interval.fbs" %}
+{% include "Liquidity.fbs" %}
+{% include "MarginMode.fbs" %}
+{% include "OptionType.fbs" %}
+{% include "OrderStatus.fbs" %}
+{% include "OrderType.fbs" %}
+{% include "Origin.fbs" %}
+{% include "PositionEffect.fbs" %}
+{% include "Precision.fbs" %}
+{% include "Protocol.fbs" %}
+{% include "QuantityType.fbs" %}
+{% include "Priority.fbs" %}
+{% include "RateLimitType.fbs" %}
+{% include "RequestIdType.fbs" %}
+{% include "RequestStatus.fbs" %}
+{% include "RequestType.fbs" %}
+{% include "SecurityType.fbs" %}
+{% include "Side.fbs" %}
+{% include "State.fbs" %}
+{% include "StatisticsType.fbs" %}
+{% include "SupportType.fbs" %}
+{% include "TimeInForce.fbs" %}
+{% include "TradingStatus.fbs" %}
+{% include "Transport.fbs" %}
+{% include "UpdateAction.fbs" %}
+{% include "UpdateReason.fbs" %}
+{% include "UpdateType.fbs" %}
+
+// - helpers
+
+{% include "Bar.fbs" %}
+{% include "Fill.fbs" %}
+{% include "Layer.fbs" %}
+{% include "Leg.fbs" %}
+{% include "MBOUpdate.fbs" %}
+{% include "MBPUpdate.fbs" %}
+{% include "Measurement.fbs" %}
+{% include "Parameter.fbs" %}
+{% include "Position.fbs" %}
+{% include "Quote.fbs" %}
+{% include "RateLimit.fbs" %}
+{% include "RiskLimit.fbs" %}
+{% include "Statistics.fbs" %}
+{% include "TickSizeStep.fbs" %}
+{% include "Trade.fbs" %}
+{% include "UUID.fbs" %}
+
+// - messages
+
+{% include "CancelAllOrdersAck.fbs" %}
+{% include "CancelAllOrders.fbs" %}
+{% include "CancelOrder.fbs" %}
+{% include "CancelQuotesAck.fbs" %}
+{% include "CancelQuotes.fbs" %}
+{% include "ControlAck.fbs" %}
+{% include "Control.fbs" %}
+{% include "CreateOrder.fbs" %}
+{% include "CustomMatrix.fbs" %}
+{% include "CustomMatrixUpdate.fbs" %}
+{% include "CustomMetrics.fbs" %}
+{% include "CustomMetricsUpdate.fbs" %}
+{% include "DownloadBegin.fbs" %}
+{% include "DownloadEnd.fbs" %}
+{% include "ExternalLatency.fbs" %}
+{% include "FundsUpdate.fbs" %}
+{% include "GatewaySettings.fbs" %}
+{% include "GatewayStatus.fbs" %}
+{% include "LegsUpdate.fbs" %}
+{% include "MarketByOrderUpdate.fbs" %}
+{% include "MarketByPriceUpdate.fbs" %}
+{% include "MarketStatus.fbs" %}
+{% include "MassQuoteAck.fbs" %}
+{% include "MassQuote.fbs" %}
+{% include "ModifyOrder.fbs" %}
+{% include "OrderAck.fbs" %}
+{% include "OrderUpdate.fbs" %}
+{% include "ParametersUpdate.fbs" %}
+{% include "Portfolio.fbs" %}
+{% include "PortfolioUpdate.fbs" %}
+{% include "PositionUpdate.fbs" %}
+{% include "RateLimitsUpdate.fbs" %}
+{% include "RateLimitTrigger.fbs" %}
+{% include "Ready.fbs" %}
+{% include "ReferenceData.fbs" %}
+{% include "RiskLimits.fbs" %}
+{% include "RiskLimitsUpdate.fbs" %}
+{% include "ServiceUpdate.fbs" %}
+{% include "StatisticsUpdate.fbs" %}
+{% include "StrategyUpdate.fbs" %}
+{% include "StreamStatus.fbs" %}
+{% include "TimeSeriesUpdate.fbs" %}
+{% include "TopOfBook.fbs" %}
+{% include "TradeSummary.fbs" %}
+{% include "TradeUpdate.fbs" %}
+
+// ----------------------------------------------------------------------------
+
+namespace roq.fbs;
+
+table Handshake {
+  version:uint32;
+  application:string;
+  hostname:string;
+  pid:uint32;
+  uuid:string;
+  login:string;
+  password:string;
+}
+
+table HandshakeAck {
+  version:uint32;
+  application:string;
+  hostname:string;
+  pid:uint32;
+  failure:bool;
+  failure_reason:string;
+  uuid:string;
+  name:string;
+  user_id:uint8;
+}
+
+table Subscribe {
+  // XXX accounts
+  // XXX symbols_by_exchange
+}
+
+table BatchBegin {
+}
+
+table BatchEnd {
+}
+
+// important! only append to this list
+union Message {
+  // --- initial ---
+  Handshake,
+  HandshakeAck,
+  Subscribe,
+  // --- control ---
+  BatchBegin,
+  BatchEnd,
+  // --- generated ---
+  DownloadBegin,
+  DownloadEnd,
+  GatewaySettings,
+  StreamStatus,
+  ExternalLatency,
+  RateLimitTrigger,
+  GatewayStatus,
+  ReferenceData,
+  MarketStatus,
+  TopOfBook,
+  MarketByPriceUpdate,
+  MarketByOrderUpdate,
+  TradeSummary,
+  StatisticsUpdate,
+  CreateOrder,
+  ModifyOrder,
+  CancelOrder,
+  CancelAllOrders,
+  OrderAck,
+  OrderUpdate,
+  TradeUpdate,
+  PositionUpdate,
+  FundsUpdate,
+  CustomMetrics,
+  CustomMetricsUpdate,
+  ParametersUpdate,
+  PortfolioUpdate,
+  CustomMatrix,
+  CustomMatrixUpdate,
+  RiskLimits,
+  RiskLimitsUpdate,
+  Ready,
+  // --- now just append ---
+  CancelAllOrdersAck,
+  Portfolio,
+  RateLimitsUpdate,
+  TimeSeriesUpdate,
+  MassQuote,
+  MassQuoteAck,
+  CancelQuotes,
+  CancelQuotesAck,
+  Control,
+  ControlAck,
+  ServiceUpdate,
+  StrategyUpdate,
+  LegsUpdate
+}
+
+table SourceInfo {
+  seqno:uint64;
+  send_time_utc:uint64;    // realtime clock
+  create_time_utc:uint64;  // realtime clock
+  send_time:uint64;        // monotonic clock
+  create_time:uint64;      // monotonic clock
+}
+
+table Event {
+  source_info:SourceInfo;
+  message:Message;
+}
+
+root_type Event;

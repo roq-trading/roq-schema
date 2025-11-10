@@ -1,9 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "execution_instruction.proto";
-
 message Quote {
   uint32 quote_entry_id = 1;
   string exchange = 2;

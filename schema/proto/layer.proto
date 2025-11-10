@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 message Layer {
   double bid_price = 1;
   double bid_quantity = 2;

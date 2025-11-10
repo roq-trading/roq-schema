@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum ConnectionStatus {
   CONNECTION_STATUS_UNSPECIFIED = 0;
   CONNECTION_STATUS_DISCONNECTED = 1;

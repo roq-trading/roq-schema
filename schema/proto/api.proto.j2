@@ -1,0 +1,178 @@
+/* Copyright (c) 2017-2025, Hans Erik Thrane */                                                                                                                
+                                                                                                                                                               
+/* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
+
+syntax = "proto3";
+
+package roq.proto;
+
+import "google/protobuf/timestamp.proto";
+
+// enums
+
+{% include "action.proto" %}
+{% include "buffer_capacity.proto" %}
+{% include "category.proto" %}
+{% include "connection_status.proto" %}
+{% include "data_source.proto" %}
+{% include "encoding.proto" %}
+{% include "error.proto" %}
+{% include "execution_instruction.proto" %}
+{% include "filter.proto" %}
+{% include "interval.proto" %}
+{% include "liquidity.proto" %}
+{% include "margin_mode.proto" %}
+{% include "option_type.proto" %}
+{% include "order_cancel_policy.proto" %}
+{% include "order_management.proto" %}
+{% include "order_status.proto" %}
+{% include "order_type.proto" %}
+{% include "origin.proto" %}
+{% include "position_effect.proto" %}
+{% include "precision.proto" %}
+{% include "priority.proto" %}
+{% include "protocol.proto" %}
+{% include "quantity_type.proto" %}
+{% include "rate_limit_type.proto" %}
+{% include "request_id_type.proto" %}
+{% include "request_status.proto" %}
+{% include "request_type.proto" %}
+{% include "route_request_status.proto" %}
+{% include "security_type.proto" %}
+{% include "side.proto" %}
+{% include "state.proto" %}
+{% include "statistics_type.proto" %}
+{% include "support_type.proto" %}
+{% include "time_in_force.proto" %}
+{% include "trading_status.proto" %}
+{% include "transport.proto" %}
+{% include "update_action.proto" %}
+{% include "update_reason.proto" %}
+{% include "update_type.proto" %}
+
+// helpers
+
+{% include "bar.proto" %}
+{% include "fill.proto" %}
+{% include "layer.proto" %}
+{% include "leg.proto" %}
+{% include "mbo_update.proto" %}
+{% include "mbp_update.proto" %}
+{% include "measurement.proto" %}
+{% include "parameter.proto" %}
+{% include "position.proto" %}
+{% include "quote.proto" %}
+{% include "rate_limit.proto" %}
+{% include "risk_limit.proto" %}
+{% include "route.proto" %}
+{% include "statistics.proto" %}
+{% include "tick_size_step.proto" %}
+{% include "trade.proto" %}
+
+// messages
+
+// add_market ???
+// add_routes ???
+// batch_begin ???
+// batch_end ???
+{% include "cancel_all_orders.proto" %}
+{% include "cancel_all_orders_ack.proto" %}
+{% include "cancel_order.proto" %}
+{% include "cancel_quotes.proto" %}
+{% include "cancel_quotes_ack.proto" %}
+{% include "create_order.proto" %}
+{% include "custom_matrix.proto" %}
+{% include "custom_matrix_update.proto" %}
+{% include "custom_metrics.proto" %}
+{% include "custom_metrics_update.proto" %}
+{% include "download_begin.proto" %}
+{% include "download_end.proto" %}
+{% include "external_latency.proto" %}
+{% include "funds_update.proto" %}
+{% include "gateway_settings.proto" %}
+{% include "gateway_status.proto" %}
+{% include "market_by_order_update.proto" %}
+{% include "market_by_price_update.proto" %}
+{% include "market_status.proto" %}
+{% include "mass_quote.proto" %}
+{% include "mass_quote_ack.proto" %}
+{% include "modify_order.proto" %}
+{% include "order_ack.proto" %}
+{% include "order_update.proto" %}
+{% include "parameters_update.proto" %}
+{% include "portfolio.proto" %}
+{% include "portfolio_update.proto" %}
+{% include "position_update.proto" %}
+{% include "rate_limit_trigger.proto" %}
+{% include "rate_limits_update.proto" %}
+// ready ???
+{% include "reference_data.proto" %}
+// remove_routes ???
+{% include "risk_limits.proto" %}
+{% include "risk_limits_update.proto" %}
+// route_ack ???
+{% include "statistics_update.proto" %}
+{% include "stream_status.proto" %}
+{% include "time_series_update.proto" %}
+{% include "top_of_book.proto" %}
+{% include "trade_summary.proto" %}
+{% include "trade_update.proto" %}
+
+// event
+
+message Message {
+  oneof value {
+    CancelAllOrders cancel_all_orders = 1;
+    CancelAllOrdersAck cancel_all_orders_ack = 2;
+    CancelOrder cancel_order = 3;
+    CancelQuotes cancel_quotes = 4;
+    CancelQuotesAck cancel_quotes_ack = 5;
+    CreateOrder create_order = 6;
+    CustomMatrix custom_matrix = 7;
+    CustomMatrixUpdate custom_matrix_update = 8;
+    CustomMetrics custom_metrics = 9;
+    CustomMetricsUpdate custom_metrics_update = 10;
+    DownloadBegin download_begin = 11;
+    DownloadEnd download_end = 12;
+    ExternalLatency external_latency = 13;
+    FundsUpdate funds_update = 14;
+    GatewaySettings gateway_settings = 15;
+    GatewayStatus gateway_status = 16;
+    MarketByOrderUpdate market_by_order_update = 17;
+    MarketByPriceUpdate market_by_price_update = 18;
+    MarketStatus market_status = 19;
+    MassQuote mass_quote = 20;
+    MassQuoteAck mass_quote_ack = 21;
+    ModifyOrder modify_order = 22;
+    OrderAck order_ack = 23;
+    OrderUpdate order_update = 24;
+    ParametersUpdate parameters_update = 25;
+    Portfolio portfolio = 26;
+    PortfolioUpdate portfolio_update = 27;
+    PositionUpdate position_update = 28;
+    RateLimitTrigger rate_limit_trigger = 29;
+    RateLimitsUpdate rate_limits_update = 30;
+    ReferenceData reference_data = 31;
+    RiskLimits risk_limits = 32;
+    RiskLimitsUpdate risk_limits_update = 33;
+    StatisticsUpdate statistics_update = 34;
+    StreamStatus stream_status = 35;
+    TimeSeriesUpdate time_series_update = 36;
+    TopOfBook top_of_book = 37;
+    TradeSummary trade_summary = 38;
+    TradeUpdate trade_update = 39;
+  }
+}
+
+message SourceInfo {
+  uint64 seqno = 1;
+  google.protobuf.Timestamp send_time_utc = 2;
+  google.protobuf.Timestamp create_time_utc = 3;
+  google.protobuf.Timestamp send_time = 4;
+  google.protobuf.Timestamp create_time = 5;
+}
+
+message Event {
+  SourceInfo source_info = 1;
+  Message message = 2;
+}

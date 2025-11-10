@@ -1,18 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "google/protobuf/timestamp.proto";
-
-import "side.proto";
-import "position_effect.proto";
-import "margin_mode.proto";
-import "quantity_type.proto";
-import "request_type.proto";
-import "origin.proto";
-import "request_status.proto";
-import "error.proto";
-
 message OrderAck {
   uint32 stream_id = 1;  // uint16
   string account = 2;

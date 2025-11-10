@@ -1,7 +1,3 @@
-include "Position.fbs";
-
-namespace roq.fbs;
-
 table Portfolio {
   user:string;
   strategy_id:uint32;

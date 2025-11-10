@@ -1,11 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
-import "google/protobuf/timestamp.proto";
-
-import "trading_status.proto";
-
 message MarketStatus {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;

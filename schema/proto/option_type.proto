@@ -1,7 +1,3 @@
-syntax = "proto3";
-
-package roq.proto;
-
 enum OptionType {
   OPTION_TYPE_UNSPECIFIED = 0;
   OPTION_TYPE_CALL = 1;

@@ -1,12 +1,3 @@
-include "ExecutionInstruction.fbs";
-include "MarginMode.fbs";
-include "OrderType.fbs";
-include "PositionEffect.fbs";
-include "Side.fbs";
-include "TimeInForce.fbs";
-
-namespace roq.fbs;
-
 table CreateOrder {
   account:string;
   zzz_order_id:uint32 (deprecated);
