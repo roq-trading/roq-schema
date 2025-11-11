@@ -4,10 +4,13 @@ Schema definitions for various communication protocols.
 
 * Roq's native C++
 * Simple Binary Encoding (SBE)
-* FlatBuffers
+* FlatBuffers (FBS)
 * Protocol Buffers (PROTO or PROTOBUF)
 
-Other protocols defined by this project should be considered experimental at this point.
+Other protocols, defined by this project, should be considered experimental at this point.
+
+* Cap'n Proto (CAPNP)
+* JSON
 
 
 ## Links
