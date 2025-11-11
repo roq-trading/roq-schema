@@ -1,7 +1,7 @@
 @0x84833d5ee308c03e;
 
 using Cxx = import "/capnp/c++.capnp";
-$Cxx.namespace("roq::schema::capnp");
+$Cxx.namespace("roq::schema::capn_proto");
 
 enum Side {
   undefined @0;

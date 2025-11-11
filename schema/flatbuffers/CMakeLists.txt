@@ -1,4 +1,4 @@
-set(TARGET_NAME ${PROJECT_NAME}-fbs)
+set(TARGET_NAME ${PROJECT_NAME}-flatbuffers)
 
 add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs)
 
@@ -9,4 +9,4 @@ add_custom_command(
   DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs.j2
   VERBATIM)
 
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs DESTINATION ${SCHEMA_DIR}/fbs)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs DESTINATION ${SCHEMA_DIR})

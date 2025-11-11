@@ -1,4 +1,4 @@
-set(TARGET_NAME ${PROJECT_NAME}-proto)
+set(TARGET_NAME ${PROJECT_NAME}-protocol_buffers)
 
 add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto)
 
@@ -9,4 +9,4 @@ add_custom_command(
   DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto.j2
   VERBATIM)
 
-install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.proto DESTINATION ${SCHEMA_DIR}/proto)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.proto DESTINATION ${SCHEMA_DIR})

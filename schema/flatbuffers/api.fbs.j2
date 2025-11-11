@@ -2,7 +2,9 @@
                                                                                                                                                                
 /* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
 
-namespace roq.fbs;
+// FlatBuffers (FBS)
+
+namespace roq.schema.flatbuffers;
 
 // - enums
 
@@ -112,8 +114,6 @@ namespace roq.fbs;
 
 // ----------------------------------------------------------------------------
 
-namespace roq.fbs;
-
 table Handshake {
   version:uint32;
   application:string;
@@ -215,7 +215,7 @@ table SourceInfo {
 
 table Event {
   source_info:SourceInfo;
-  message:Message;
+  value:Message;
 }
 
 root_type Event;

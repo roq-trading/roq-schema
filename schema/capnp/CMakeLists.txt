@@ -1,8 +1,0 @@
-set(TARGET_NAME ${PROJECT_NAME}-capnp)
-
-install(
-  DIRECTORY ${CMAKE_SOURCE_DIR}/schema/capnp/
-  DESTINATION ${SCHEMA_DIR}/capnp
-  FILES_MATCHING
-  PATTERN "*.capnp"
-  PATTERN "CMakeFiles" EXCLUDE)

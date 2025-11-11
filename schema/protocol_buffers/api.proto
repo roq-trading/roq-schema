@@ -4,7 +4,7 @@
 
 syntax = "proto3";
 
-package roq.proto;
+package roq.schema.protocol_buffers;
 
 import "google/protobuf/timestamp.proto";
 
@@ -1008,56 +1008,6 @@ message TradeUpdate {
 
 // event
 
-message Message {
-  oneof value {
-    Control control = 1;
-    ControlAck control_ack = 2;
-    ServiceUpdate service_update = 3;
-    StrategyUpdate strategy_update = 4;
-    LegsUpdate legs_update = 5;
-    DownloadBegin download_begin = 6;
-    DownloadEnd download_end = 7;
-    Ready ready = 8;
-    GatewaySettings gateway_settings = 9;
-    StreamStatus stream_status = 10;
-    ExternalLatency external_latency = 11;
-    RateLimitsUpdate rate_limits_update = 12;
-    RateLimitTrigger rate_limit_trigger = 13;
-    GatewayStatus gateway_status = 14;
-    ReferenceData reference_data = 15;
-    MarketStatus market_status = 16;
-    TopOfBook top_of_book = 17;
-    MarketByPriceUpdate market_by_price_update = 18;
-    MarketByOrderUpdate market_by_order_update = 19;
-    TradeSummary trade_summary = 20;
-    StatisticsUpdate statistics_update = 21;
-    TimeSeriesUpdate time_series_update = 22;
-    CreateOrder create_order = 23;
-    ModifyOrder modify_order = 24;
-    CancelOrder cancel_order = 25;
-    CancelAllOrders cancel_all_orders = 26;
-    CancelAllOrdersAck cancel_all_orders_ack = 27;
-    OrderAck order_ack = 28;
-    OrderUpdate order_update = 29;
-    TradeUpdate trade_update = 30;
-    PositionUpdate position_update = 31;
-    FundsUpdate funds_update = 32;
-    CustomMetrics custom_metrics = 33;
-    CustomMetricsUpdate custom_metrics_update = 34;
-    CustomMatrix custom_matrix = 35;
-    CustomMatrixUpdate custom_matrix_update = 36;
-    ParametersUpdate parameters_update = 37;
-    Portfolio portfolio = 38;
-    PortfolioUpdate portfolio_update = 39;
-    RiskLimits risk_limits = 40;
-    RiskLimitsUpdate risk_limits_update = 41;
-    MassQuote mass_quote = 42;
-    MassQuoteAck mass_quote_ack = 43;
-    CancelQuotes cancel_quotes = 44;
-    CancelQuotesAck cancel_quotes_ack = 45;
-  }
-}
-
 message SourceInfo {
   uint64 seqno = 1;
   google.protobuf.Timestamp send_time_utc = 2;
@@ -1068,5 +1018,51 @@ message SourceInfo {
 
 message Event {
   SourceInfo source_info = 1;
-  Message message = 2;
+  oneof value {
+    Control control = 2;
+    ControlAck control_ack = 3;
+    ServiceUpdate service_update = 4;
+    StrategyUpdate strategy_update = 5;
+    LegsUpdate legs_update = 6;
+    DownloadBegin download_begin = 7;
+    DownloadEnd download_end = 8;
+    Ready ready = 9;
+    GatewaySettings gateway_settings = 10;
+    StreamStatus stream_status = 11;
+    ExternalLatency external_latency = 12;
+    RateLimitsUpdate rate_limits_update = 13;
+    RateLimitTrigger rate_limit_trigger = 14;
+    GatewayStatus gateway_status = 15;
+    ReferenceData reference_data = 16;
+    MarketStatus market_status = 17;
+    TopOfBook top_of_book = 18;
+    MarketByPriceUpdate market_by_price_update = 19;
+    MarketByOrderUpdate market_by_order_update = 20;
+    TradeSummary trade_summary = 21;
+    StatisticsUpdate statistics_update = 22;
+    TimeSeriesUpdate time_series_update = 23;
+    CreateOrder create_order = 24;
+    ModifyOrder modify_order = 25;
+    CancelOrder cancel_order = 26;
+    CancelAllOrders cancel_all_orders = 27;
+    CancelAllOrdersAck cancel_all_orders_ack = 28;
+    OrderAck order_ack = 29;
+    OrderUpdate order_update = 30;
+    TradeUpdate trade_update = 31;
+    PositionUpdate position_update = 32;
+    FundsUpdate funds_update = 33;
+    CustomMetrics custom_metrics = 34;
+    CustomMetricsUpdate custom_metrics_update = 35;
+    CustomMatrix custom_matrix = 36;
+    CustomMatrixUpdate custom_matrix_update = 37;
+    ParametersUpdate parameters_update = 38;
+    Portfolio portfolio = 39;
+    PortfolioUpdate portfolio_update = 40;
+    RiskLimits risk_limits = 41;
+    RiskLimitsUpdate risk_limits_update = 42;
+    MassQuote mass_quote = 43;
+    MassQuoteAck mass_quote_ack = 44;
+    CancelQuotes cancel_quotes = 45;
+    CancelQuotesAck cancel_quotes_ack = 46;
+  }
 }

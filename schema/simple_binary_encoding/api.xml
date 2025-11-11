@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- FIXME TODO rename "type" due to golang -->
-<!-- FIXME TODO rename "error" due to golang -->
+<!-- Copyright (c) 2017-2025, Hans Erik Thrane -->
+<!-- Simple Binary Encoding (SBE) -->
+<!-- FIXME TODO rename "error", "type" (due to golang warning) -->
 <messageSchema package="com.roq-trading" id="1" version="1" byteOrder="littleEndian">
   <!-- types -->
   <types>

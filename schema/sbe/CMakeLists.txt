@@ -1,7 +1,0 @@
-set(TARGET_NAME ${PROJECT_NAME}-sbe)
-
-set(TARGET_DIR ${SCHEMA_DIR}/sbe)
-
-set(SOURCES api.xml)
-
-install(FILES ${SOURCES} DESTINATION ${TARGET_DIR})
