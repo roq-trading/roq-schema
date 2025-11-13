@@ -2,8 +2,6 @@
                                                                                                                                                                
 /* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
 
-// FlatBuffers (FBS)
-
 namespace roq.schema.flatbuffers;
 
 // - enums
