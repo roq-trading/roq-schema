@@ -15,6 +15,7 @@ message CreateOrder {
   double quantity = 14;
   double price = 15;
   double stop_price = 16;
-  string routing_id = 17;
-  uint32 strategy_id = 18;
+  double leverage = 17;
+  string routing_id = 18;
+  uint32 strategy_id = 19;
 }

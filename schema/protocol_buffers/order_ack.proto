@@ -20,12 +20,13 @@ message OrderAck {
   double quantity = 19;
   double price = 20;
   double stop_price = 21;
-  string routing_id = 22;
-  uint32 version = 23;
-  double risk_exposure = 24;
-  double risk_exposure_change = 25;
-  double traded_quantity = 26;
-  google.protobuf.Timestamp round_trip_latency = 27;
-  string user = 28;
-  uint32 strategy_id = 29;
+  double leverage = 22;
+  string routing_id = 23;
+  uint32 version = 24;
+  double risk_exposure = 25;
+  double risk_exposure_change = 26;
+  double traded_quantity = 27;
+  google.protobuf.Timestamp round_trip_latency = 28;
+  string user = 29;
+  uint32 strategy_id = 30;
 }

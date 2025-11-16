@@ -4,6 +4,10 @@ All notable changes will be documented in this file.
 
 ## Head
 
+### Changed
+
+* Support leverage (CreateOrder, OrderAck, OrderUpdate) (#529)
+
 ## 1.0.9 &ndash; 2025-09-26
 
 ## 1.0.8 &ndash; 2025-08-16

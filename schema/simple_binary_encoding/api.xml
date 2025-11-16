@@ -750,8 +750,9 @@
     <field id="213" name="quantity" type="double"/>
     <field id="214" name="price" type="double"/>
     <field id="215" name="stopPrice" type="double"/>
-    <field id="216" name="routingId" type="RoutingID"/>
-    <field id="217" name="strategyId" type="uint32"/>
+    <field id="216" name="leverage" type="double"/>
+    <field id="217" name="routingId" type="RoutingID"/>
+    <field id="218" name="strategyId" type="uint32"/>
   </message>
   <message id="1401" name="ModifyOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -844,14 +845,15 @@
     <field id="218" name="quantity" type="double"/>
     <field id="219" name="price" type="double"/>
     <field id="220" name="stopPrice" type="double"/>
-    <field id="221" name="routingId" type="RoutingID"/>
-    <field id="222" name="version" type="uint32"/>
-    <field id="223" name="riskExposure" type="double"/>
-    <field id="224" name="riskExposureChange" type="double"/>
-    <field id="225" name="tradedQuantity" type="double"/>
-    <field id="226" name="roundTripLatency" type="Time"/>
-    <field id="227" name="user" type="User"/>
-    <field id="228" name="strategyId" type="uint32"/>
+    <field id="221" name="leverage" type="double"/>
+    <field id="222" name="routingId" type="RoutingID"/>
+    <field id="223" name="version" type="uint32"/>
+    <field id="224" name="riskExposure" type="double"/>
+    <field id="225" name="riskExposureChange" type="double"/>
+    <field id="226" name="tradedQuantity" type="double"/>
+    <field id="227" name="roundTripLatency" type="Time"/>
+    <field id="228" name="user" type="User"/>
+    <field id="229" name="strategyId" type="uint32"/>
   </message>
   <message id="1406" name="OrderUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -881,24 +883,25 @@
     <field id="219" name="quantity" type="double"/>
     <field id="220" name="price" type="double"/>
     <field id="221" name="stopPrice" type="double"/>
-    <field id="222" name="riskExposure" type="double"/>
-    <field id="223" name="riskExposureChange" type="double"/>
-    <field id="224" name="remainingQuantity" type="double"/>
-    <field id="225" name="tradedQuantity" type="double"/>
-    <field id="226" name="averageTradedPrice" type="double"/>
-    <field id="227" name="lastTradedQuantity" type="double"/>
-    <field id="228" name="lastTradedPrice" type="double"/>
-    <field id="229" name="lastLiquidity" type="Liquidity"/>
-    <field id="230" name="routingId" type="RoutingID"/>
-    <field id="231" name="maxRequestVersion" type="uint32"/>
-    <field id="232" name="maxResponseVersion" type="uint32"/>
-    <field id="233" name="maxAcceptedVersion" type="uint32"/>
-    <field id="234" name="updateType" type="UpdateType"/>
-    <field id="235" name="exchangeTimeUtc" type="DateTime"/>
-    <field id="236" name="exchangeSequence" type="uint64"/>
-    <field id="237" name="sendingTimeUtc" type="DateTime"/>
-    <field id="238" name="user" type="User"/>
-    <field id="239" name="strategyId" type="uint32"/>
+    <field id="222" name="leverage" type="double"/>
+    <field id="223" name="riskExposure" type="double"/>
+    <field id="224" name="riskExposureChange" type="double"/>
+    <field id="225" name="remainingQuantity" type="double"/>
+    <field id="226" name="tradedQuantity" type="double"/>
+    <field id="227" name="averageTradedPrice" type="double"/>
+    <field id="228" name="lastTradedQuantity" type="double"/>
+    <field id="229" name="lastTradedPrice" type="double"/>
+    <field id="230" name="lastLiquidity" type="Liquidity"/>
+    <field id="231" name="routingId" type="RoutingID"/>
+    <field id="232" name="maxRequestVersion" type="uint32"/>
+    <field id="233" name="maxResponseVersion" type="uint32"/>
+    <field id="234" name="maxAcceptedVersion" type="uint32"/>
+    <field id="235" name="updateType" type="UpdateType"/>
+    <field id="236" name="exchangeTimeUtc" type="DateTime"/>
+    <field id="237" name="exchangeSequence" type="uint64"/>
+    <field id="238" name="sendingTimeUtc" type="DateTime"/>
+    <field id="239" name="user" type="User"/>
+    <field id="240" name="strategyId" type="uint32"/>
   </message>
   <message id="1407" name="TradeUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>

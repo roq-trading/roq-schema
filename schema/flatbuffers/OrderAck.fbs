@@ -29,4 +29,5 @@ table OrderAck {
   position_effect:PositionEffect;
   margin_mode:MarginMode;
   quantity_type:QuantityType;
+  leverage:double = nan;
 }

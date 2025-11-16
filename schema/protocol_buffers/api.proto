@@ -571,8 +571,9 @@ message CreateOrder {
   double quantity = 14;
   double price = 15;
   double stop_price = 16;
-  string routing_id = 17;
-  uint32 strategy_id = 18;
+  double leverage = 17;
+  string routing_id = 18;
+  uint32 strategy_id = 19;
 }
 message CustomMatrix {
   string label = 1;
@@ -758,14 +759,15 @@ message OrderAck {
   double quantity = 19;
   double price = 20;
   double stop_price = 21;
-  string routing_id = 22;
-  uint32 version = 23;
-  double risk_exposure = 24;
-  double risk_exposure_change = 25;
-  double traded_quantity = 26;
-  google.protobuf.Timestamp round_trip_latency = 27;
-  string user = 28;
-  uint32 strategy_id = 29;
+  double leverage = 22;
+  string routing_id = 23;
+  uint32 version = 24;
+  double risk_exposure = 25;
+  double risk_exposure_change = 26;
+  double traded_quantity = 27;
+  google.protobuf.Timestamp round_trip_latency = 28;
+  string user = 29;
+  uint32 strategy_id = 30;
 }
 message OrderUpdate {
   uint32 stream_id = 1;  // uint16
@@ -790,24 +792,25 @@ message OrderUpdate {
   double quantity = 20;
   double price = 21;
   double stop_price = 22;
-  double risk_exposure = 23;
-  double risk_exposure_change = 24;
-  double remaining_quantity = 25;
-  double traded_quantity = 26;
-  double average_traded_price = 27;
-  double last_traded_quantity = 28;
-  double last_traded_price = 29;
-  Liquidity last_liquidity = 30;
-  string routing_id = 31;
-  uint32 max_request_version = 32;
-  uint32 max_response_version = 33;
-  uint32 max_accepted_version = 34;
-  UpdateType update_type = 35;
-  google.protobuf.Timestamp exchange_time_utc = 36;
-  uint64 exchange_sequence = 37;
-  google.protobuf.Timestamp sending_time_utc = 38;
-  string user = 39;
-  uint32 strategy_id = 40;
+  double leverage = 23;
+  double risk_exposure = 24;
+  double risk_exposure_change = 25;
+  double remaining_quantity = 26;
+  double traded_quantity = 27;
+  double average_traded_price = 28;
+  double last_traded_quantity = 29;
+  double last_traded_price = 30;
+  Liquidity last_liquidity = 31;
+  string routing_id = 32;
+  uint32 max_request_version = 33;
+  uint32 max_response_version = 34;
+  uint32 max_accepted_version = 35;
+  UpdateType update_type = 36;
+  google.protobuf.Timestamp exchange_time_utc = 37;
+  uint64 exchange_sequence = 38;
+  google.protobuf.Timestamp sending_time_utc = 39;
+  string user = 40;
+  uint32 strategy_id = 41;
 }
 message ParametersUpdate {
   repeated Parameter parameters = 1;

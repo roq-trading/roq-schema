@@ -19,4 +19,5 @@ table CreateOrder {
   order_id:uint64;
   margin_mode:MarginMode;
   quantity_type:QuantityType;
+  leverage:double = nan;
 }

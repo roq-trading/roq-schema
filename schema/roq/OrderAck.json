@@ -98,6 +98,11 @@
       "comment": "Stop price (depends on order_type and time_in_force)"
     },
     {
+      "name": "leverage",
+      "type": "std/double",
+      "comment": "Leverage (requires exchange support)"
+    },
+    {
       "name": "routingId",
       "type": "std/string_view"
     },
