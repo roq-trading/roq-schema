@@ -624,6 +624,8 @@
     <field id="205" name="exchangeTimeUTC" type="DateTime"/>
     <field id="206" name="exchangeSequence" type="uint64"/>
     <field id="207" name="sendingTimeUTC" type="DateTime"/>
+    <field id="208" name="pricePrecision" type="Precision"/>
+    <field id="209" name="quantityPrecision" type="Precision"/>
   </message>
   <message id="1303" name="MarketByPriceUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -698,6 +700,8 @@
     <field id="203" name="exchangeTimeUTC" type="DateTime"/>
     <field id="204" name="exchangeSequence" type="uint64"/>
     <field id="205" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="pricePrecision" type="Precision"/>
+    <field id="207" name="quantityPrecision" type="Precision"/>
     <group id="300" name="trades" blockLength="186" dimensionType="groupSize">
       <field id="301" name="side" type="Side"/>
       <field id="302" name="price" type="double"/>

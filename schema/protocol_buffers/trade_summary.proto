@@ -6,4 +6,6 @@ message TradeSummary {
   google.protobuf.Timestamp exchange_time_utc = 5;
   uint64 exchange_sequence = 6;
   google.protobuf.Timestamp sending_time_utc = 7;
+  Precision price_precision = 8;
+  Precision quantity_precision = 9;
 }

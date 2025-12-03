@@ -7,4 +7,6 @@ message TopOfBook {
   google.protobuf.Timestamp exchange_time_utc = 6;
   uint64 exchange_sequence = 7;
   google.protobuf.Timestamp sending_time_utc = 8;
+  Precision price_precision = 9;
+  Precision quantity_precision = 10;
 }
