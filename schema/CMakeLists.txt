@@ -1,4 +1,3 @@
-add_subdirectory(capn_proto)
 add_subdirectory(flatbuffers)
 add_subdirectory(protocol_buffers)
 add_subdirectory(roq)
