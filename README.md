@@ -9,7 +9,6 @@ Schema definitions for various communication protocols.
 
 Other protocols, defined by this project, should be considered experimental at this point.
 
-* Cap'n Proto (CAPNP)
 * JSON
 
 
