@@ -954,6 +954,10 @@ message StreamStatus {
   string path = 11;
   string proxy = 12;
 }
+message Subscribe {
+  string exchange = 1;
+  repeated string symbols = 2;
+}
 message TimeSeriesUpdate {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;
@@ -1071,5 +1075,6 @@ message Event {
     MassQuoteAck mass_quote_ack = 44;
     CancelQuotes cancel_quotes = 45;
     CancelQuotesAck cancel_quotes_ack = 46;
+    Subscribe subscribe = 47;
   }
 }

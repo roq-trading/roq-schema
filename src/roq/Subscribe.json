@@ -1,0 +1,17 @@
+{
+  "name": "roq/Subscribe",
+  "type": "message",
+  "comment": "Dynamic subscription",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "std/string_view"
+    },
+    {
+      "name": "symbols",
+      "type": "roq/Symbol",
+      "array": "std/span",
+      "comment": "Symbols"
+    }
+  ]
+}

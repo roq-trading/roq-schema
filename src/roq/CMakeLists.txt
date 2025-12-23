@@ -105,6 +105,7 @@ set(SOURCES
     Stop.json
     StrategyUpdate.json
     StreamStatus.json
+    Subscribe.json
     SupportType.json
     TickSizeStep.json
     TimeInForce.json

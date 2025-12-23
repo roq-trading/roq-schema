@@ -1,0 +1,4 @@
+table Subscribe {
+  exchange:string;
+  symbols:[string];
+}

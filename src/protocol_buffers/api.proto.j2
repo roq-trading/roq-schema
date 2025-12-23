@@ -112,6 +112,7 @@ import "google/protobuf/timestamp.proto";
 {% include "statistics_update.proto" %}
 {% include "strategy_update.proto" %}
 {% include "stream_status.proto" %}
+{% include "subscribe.proto" %}
 {% include "time_series_update.proto" %}
 {% include "top_of_book.proto" %}
 {% include "trade_summary.proto" %}
@@ -175,5 +176,6 @@ message Event {
     MassQuoteAck mass_quote_ack = 44;
     CancelQuotes cancel_quotes = 45;
     CancelQuotesAck cancel_quotes_ack = 46;
+    Subscribe subscribe = 47;
   }
 }

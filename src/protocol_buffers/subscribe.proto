@@ -1,0 +1,4 @@
+message Subscribe {
+  string exchange = 1;
+  repeated string symbols = 2;
+}

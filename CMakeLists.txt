@@ -11,4 +11,4 @@ find_package(
 
 set(SCHEMA_DIR ${CMAKE_INSTALL_DATADIR}/roq/schema)
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/schema)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src)
