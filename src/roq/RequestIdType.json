@@ -18,6 +18,10 @@
     {
       "name": "UUID",
       "comment": "UUID encoded"
+    },
+    {
+      "name": "Hex",
+      "comment": "Hex encoded"
     }
   ]
 }

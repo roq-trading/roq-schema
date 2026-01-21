@@ -207,6 +207,7 @@ enum RequestIdType:uint8 {
   Base32,
   Simple,
   UUID,
+  Hex,
 }
 enum RequestStatus:uint8 {
   Undefined,
