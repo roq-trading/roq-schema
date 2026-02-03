@@ -4,5 +4,6 @@ enum RequestIdType:uint8 {
   Base32,
   Simple,
   UUID,
-  Hex,
+  Hex16,
+  Hex32,
 }

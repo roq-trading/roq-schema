@@ -20,8 +20,12 @@
       "comment": "UUID encoded"
     },
     {
-      "name": "Hex",
-      "comment": "Hex encoded"
+      "name": "Hex16",
+      "comment": "Hex encoded (len=16)"
+    },
+    {
+      "name": "Hex32",
+      "comment": "Hex encoded (len=32)"
     }
   ]
 }

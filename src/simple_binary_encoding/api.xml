@@ -213,7 +213,8 @@
       <validValue name="Base32" description="Base32">2</validValue>
       <validValue name="Simple" description="Simple">3</validValue>
       <validValue name="UUID" description="UUID">4</validValue>
-      <validValue name="Hex" description="Hex">5</validValue>
+      <validValue name="Hex16" description="Hex16">5</validValue>
+      <validValue name="Hex32" description="Hex32">6</validValue>
     </enum>
     <enum name="RequestStatus" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>
