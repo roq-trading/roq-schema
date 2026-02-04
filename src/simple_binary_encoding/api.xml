@@ -568,31 +568,32 @@
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="description" type="Description"/>
     <field id="204" name="securityType" type="SecurityType"/>
-    <field id="205" name="cfiCode" type="CFICode"/>
-    <field id="206" name="baseCurrency" type="Currency"/>
-    <field id="207" name="quoteCurrency" type="Currency"/>
-    <field id="208" name="settlementCurrency" type="Currency"/>
-    <field id="209" name="marginCurrency" type="Currency"/>
-    <field id="210" name="commissionCurrency" type="Currency"/>
-    <field id="211" name="tickSize" type="double"/>
-    <field id="212" name="multiplier" type="double"/>
-    <field id="213" name="minNotional" type="double"/>
-    <field id="214" name="minTradeVol" type="double"/>
-    <field id="215" name="maxTradeVol" type="double"/>
-    <field id="216" name="tradeVolStepSize" type="double"/>
-    <field id="217" name="optionType" type="OptionType"/>
-    <field id="218" name="strikeCurrency" type="Currency"/>
-    <field id="219" name="strikePrice" type="double"/>
-    <field id="220" name="underlying" type="Symbol"/>
-    <field id="221" name="timeZone" type="TimeZone"/>
-    <field id="222" name="issueDate" type="Days"/>
-    <field id="223" name="settlementDate" type="Days"/>
-    <field id="224" name="expiryDateTime" type="Seconds"/>
-    <field id="225" name="expiryDateTimeUTC" type="Seconds"/>
-    <field id="226" name="exchangeTimeUTC" type="DateTime"/>
-    <field id="227" name="exchangeSequence" type="uint64"/>
-    <field id="228" name="sendingTimeUTC" type="DateTime"/>
-    <field id="229" name="discard" type="Boolean"/>
+    <field id="205" name="externalSecurityId" type="int32"/>
+    <field id="206" name="cfiCode" type="CFICode"/>
+    <field id="207" name="baseCurrency" type="Currency"/>
+    <field id="208" name="quoteCurrency" type="Currency"/>
+    <field id="209" name="settlementCurrency" type="Currency"/>
+    <field id="210" name="marginCurrency" type="Currency"/>
+    <field id="211" name="commissionCurrency" type="Currency"/>
+    <field id="212" name="tickSize" type="double"/>
+    <field id="213" name="multiplier" type="double"/>
+    <field id="214" name="minNotional" type="double"/>
+    <field id="215" name="minTradeVol" type="double"/>
+    <field id="216" name="maxTradeVol" type="double"/>
+    <field id="217" name="tradeVolStepSize" type="double"/>
+    <field id="218" name="optionType" type="OptionType"/>
+    <field id="219" name="strikeCurrency" type="Currency"/>
+    <field id="220" name="strikePrice" type="double"/>
+    <field id="221" name="underlying" type="Symbol"/>
+    <field id="222" name="timeZone" type="TimeZone"/>
+    <field id="223" name="issueDate" type="Days"/>
+    <field id="224" name="settlementDate" type="Days"/>
+    <field id="225" name="expiryDateTime" type="Seconds"/>
+    <field id="226" name="expiryDateTimeUTC" type="Seconds"/>
+    <field id="227" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="228" name="exchangeSequence" type="uint64"/>
+    <field id="229" name="sendingTimeUTC" type="DateTime"/>
+    <field id="230" name="discard" type="Boolean"/>
     <group id="300" name="tickSizeSteps" blockLength="16" dimensionType="groupSize">
       <field id="301" name="minPrice" type="double"/>
       <field id="302" name="tickSize" type="double"/>

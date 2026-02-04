@@ -26,6 +26,11 @@
       "comment": "Security type"
     },
     {
+      "name": "externalSecurityId",
+      "type": "std/int32",
+      "comment": "Security ID"
+    },
+    {
       "name": "cfiCode",
       "type": "std/string_view",
       "comment": "CFI code"

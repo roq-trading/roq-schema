@@ -903,6 +903,7 @@ table ReferenceData {
   settlement_currency:string;
   cfi_code:string;
   tick_size_steps:[TickSizeStep];
+  external_security_id:int32;
 }
 table RiskLimits {
   user:string;
