@@ -952,10 +952,11 @@ message StreamStatus {
   repeated Encoding encoding = 6;
   Priority priority = 7;
   ConnectionStatus connection_status = 8;
-  string interface = 9;
-  string authority = 10;
-  string path = 11;
-  string proxy = 12;
+  string reason = 9;
+  string interface = 10;
+  string authority = 11;
+  string path = 12;
+  string proxy = 13;
 }
 message Subscribe {
   string exchange = 1;

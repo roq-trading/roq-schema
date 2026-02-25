@@ -957,6 +957,7 @@ table StreamStatus {
   authority:string;
   path:string;
   proxy:string;
+  reason:string;
 }
 table Subscribe {
   exchange:string;

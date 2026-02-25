@@ -44,6 +44,11 @@
       "comment": "Connection status (when applicable)"
     },
     {
+      "name": "reason",
+      "type": "std/string_view",
+      "comment": "Reason (last change)"
+    },
+    {
       "name": "interface",
       "type": "std/string_view",
       "comment": "Local network interface"

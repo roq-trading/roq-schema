@@ -492,11 +492,12 @@
     <field id="205" name="encoding" type="Encoding"/>
     <field id="206" name="priority" type="Priority"/>
     <field id="207" name="connectionStatus" type="ConnectionStatus"/>
+    <field id="208" name="reason" type="Text"/>
     <!-- TODO include these ???
-    <field id="208" name="interface" type="Text"/>
-    <field id="209" name="authority" type="Text"/>
-    <field id="210" name="path" type="Text"/>
-    <field id="211" name="proxy" type="Text"/>
+    <field id="209" name="interface" type="Text"/>
+    <field id="210" name="authority" type="Text"/>
+    <field id="211" name="path" type="Text"/>
+    <field id="212" name="proxy" type="Text"/>
     -->
   </message>
   <message id="1202" name="ExternalLatency">
