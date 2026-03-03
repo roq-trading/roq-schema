@@ -35,6 +35,11 @@
       "comment": "Borrowed funds (margin trading)"
     },
     {
+      "name": "unrealizedPnl",
+      "type": "std/double",
+      "comment": "Unrealized P&L"
+    },
+    {
       "name": "externalAccount",
       "type": "std/string_view"
     },

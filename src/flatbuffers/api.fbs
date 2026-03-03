@@ -631,6 +631,7 @@ table FundsUpdate {
   margin_mode:MarginMode;
   exchange_sequence:uint64;
   borrowed:double = nan;
+  unrealized_pnl:double = nan;
 }
 table GatewaySettings {
   supports:uint64;

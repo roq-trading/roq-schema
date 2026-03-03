@@ -6,9 +6,10 @@ message FundsUpdate {
   double balance = 5;
   double hold = 6;
   double borrowed = 7;
-  string external_account = 8;
-  UpdateType update_type = 9;
-  google.protobuf.Timestamp exchange_time_utc = 10;
-  uint64 exchange_sequence = 11;
-  google.protobuf.Timestamp sending_time_utc = 12;
+  double unrealized_pnl = 8;
+  string external_account = 9;
+  UpdateType update_type = 10;
+  google.protobuf.Timestamp exchange_time_utc = 11;
+  uint64 exchange_sequence = 12;
+  google.protobuf.Timestamp sending_time_utc = 13;
 }

@@ -983,11 +983,13 @@
     <field id="203" name="marginMode" type="MarginMode"/>
     <field id="204" name="balance" type="double"/>
     <field id="205" name="hold" type="double"/>
-    <field id="206" name="externalAccount" type="ExternalAccount"/>
-    <field id="207" name="updateType" type="UpdateType"/>
-    <field id="208" name="exchangeTimeUtc" type="DateTime"/>
-    <field id="209" name="exchangeSequence" type="uint64"/>
-    <field id="210" name="sendingTimeUtc" type="DateTime"/>
+    <field id="206" name="borrowed" type="double"/>
+    <field id="207" name="unrealizedPnl" type="double"/>
+    <field id="208" name="externalAccount" type="ExternalAccount"/>
+    <field id="209" name="updateType" type="UpdateType"/>
+    <field id="210" name="exchangeTimeUtc" type="DateTime"/>
+    <field id="211" name="exchangeSequence" type="uint64"/>
+    <field id="212" name="sendingTimeUtc" type="DateTime"/>
   </message>
   <message id="2000" name="CustomMetrics">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
