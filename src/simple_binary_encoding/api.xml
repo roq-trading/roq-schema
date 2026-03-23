@@ -225,6 +225,7 @@
       <validValue name="Timeout" description="Timeout">5</validValue>
       <validValue name="Failed" description="Failed">6</validValue>
       <validValue name="Error" description="Error">7</validValue>
+      <validValue name="Enqueued" description="Enqueued">8</validValue>
     </enum>
     <enum name="RequestType" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>
@@ -762,6 +763,7 @@
     <field id="216" name="leverage" type="double"/>
     <field id="217" name="routingId" type="RoutingID"/>
     <field id="218" name="strategyId" type="uint32"/>
+    <field id="219" name="releaseTimeUTC" type="DateTime"/>
   </message>
   <message id="1401" name="ModifyOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -777,6 +779,7 @@
     <field id="205" name="routingId" type="RoutingID"/>
     <field id="206" name="version" type="uint32"/>
     <field id="207" name="conditionalOnVersion" type="uint32"/>
+    <field id="208" name="releaseTimeUTC" type="DateTime"/>
   </message>
   <message id="1402" name="CancelOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -790,6 +793,7 @@
     <field id="203" name="routingId" type="RoutingID"/>
     <field id="204" name="version" type="uint32"/>
     <field id="205" name="conditionalOnVersion" type="uint32"/>
+    <field id="206" name="releaseTimeUTC" type="DateTime"/>
   </message>
   <message id="1403" name="CancelAllOrders">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>

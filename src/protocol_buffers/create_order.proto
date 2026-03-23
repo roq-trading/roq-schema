@@ -18,4 +18,5 @@ message CreateOrder {
   double leverage = 17;
   string routing_id = 18;
   uint32 strategy_id = 19;
+  google.protobuf.Timestamp release_time_utc = 20;
 }

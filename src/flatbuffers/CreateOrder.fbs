@@ -20,4 +20,5 @@ table CreateOrder {
   margin_mode:MarginMode;
   quantity_type:QuantityType;
   leverage:double = nan;
+  release_time_utc:int64;
 }

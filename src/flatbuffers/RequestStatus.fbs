@@ -6,5 +6,6 @@ enum RequestStatus:uint8 {
   Disconnected,
   Timeout,
   Failed,
-  Error
+  Error,
+  Enqueued
 }

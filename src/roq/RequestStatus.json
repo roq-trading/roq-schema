@@ -9,11 +9,11 @@
     },
     {
       "name": "Accepted",
-      "comment": "Accepted"
+      "comment": "Accepted by broker/exchange"
     },
     {
       "name": "Rejected",
-      "comment": "Rejected"
+      "comment": "Rejected by broker/exchange"
     },
     {
       "name": "Disconnected",
@@ -30,6 +30,10 @@
     {
       "name": "Error",
       "comment": "Generic error, possibly parse error"
+    },
+    {
+      "name": "Enqueued",
+      "comment": "Enqueued for later release time to broker/exchange"
     }
   ]
 }

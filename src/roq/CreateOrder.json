@@ -86,6 +86,11 @@
     {
       "name": "strategyId",
       "type": "std/uint32"
+    },
+    {
+      "name": "releaseTimeUTC",
+      "type": "std/nanoseconds",
+      "comment": "Request release time (optional)"
     }
   ]
 }

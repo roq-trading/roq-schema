@@ -218,7 +218,8 @@ enum RequestStatus:uint8 {
   Disconnected,
   Timeout,
   Failed,
-  Error
+  Error,
+  Enqueued
 }
 enum RequestType:uint8 {
   Undefined,
@@ -506,6 +507,7 @@ table CancelOrder {
   conditional_on_version:uint32;
   request_template:string;
   order_id:uint64;
+  release_time_utc:int64;
 }
 table CancelQuotesAck {
   stream_id:uint16;
@@ -562,6 +564,7 @@ table CreateOrder {
   margin_mode:MarginMode;
   quantity_type:QuantityType;
   leverage:double = nan;
+  release_time_utc:int64;
 }
 table CustomMatrix {
   label:string;
@@ -728,6 +731,7 @@ table ModifyOrder {
   conditional_on_version:uint32;
   request_template:string;
   order_id:uint64;
+  release_time_utc:int64;
 }
 table OrderAck {
   stream_id:uint16;

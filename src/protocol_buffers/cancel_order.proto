@@ -5,4 +5,5 @@ message CancelOrder {
   string routing_id = 4;
   uint32 version = 5;
   uint32 conditional_on_version = 6;
+  google.protobuf.Timestamp release_time_utc = 7;
 }

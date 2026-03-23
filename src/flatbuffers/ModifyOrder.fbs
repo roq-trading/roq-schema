@@ -8,4 +8,5 @@ table ModifyOrder {
   conditional_on_version:uint32;
   request_template:string;
   order_id:uint64;
+  release_time_utc:int64;
 }

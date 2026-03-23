@@ -232,6 +232,7 @@ enum RequestStatus {
   REQUEST_STATUS_TIMEOUT = 5;
   REQUEST_STATUS_FAILED = 6;
   REQUEST_STATUS_ERROR = 7;
+  REQUEST_STATUS_ENQUEUED = 8;
 }
 enum RequestType {
   REQUEST_TYPE_UNSPECIFIED = 0;
@@ -522,6 +523,7 @@ message CancelOrder {
   string routing_id = 4;
   uint32 version = 5;
   uint32 conditional_on_version = 6;
+  google.protobuf.Timestamp release_time_utc = 7;
 }
 message CancelQuotesAck {
   uint32 stream_id = 1;  // uint16
@@ -576,6 +578,7 @@ message CreateOrder {
   double leverage = 17;
   string routing_id = 18;
   uint32 strategy_id = 19;
+  google.protobuf.Timestamp release_time_utc = 20;
 }
 message CustomMatrix {
   string label = 1;
@@ -739,6 +742,7 @@ message ModifyOrder {
   string routing_id = 6;
   uint32 version = 7;
   uint32 conditional_on_version = 8;
+  google.protobuf.Timestamp release_time_utc = 9;
 }
 message OrderAck {
   uint32 stream_id = 1;  // uint16

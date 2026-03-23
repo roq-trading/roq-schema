@@ -7,4 +7,5 @@ message ModifyOrder {
   string routing_id = 6;
   uint32 version = 7;
   uint32 conditional_on_version = 8;
+  google.protobuf.Timestamp release_time_utc = 9;
 }
