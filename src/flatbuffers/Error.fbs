@@ -38,4 +38,5 @@ enum Error:uint8 {
   InvalidFilter,
   InvalidMarginMode,
   InvalidQuantityType,
+  InvalidReleaseTime,
 }

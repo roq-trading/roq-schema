@@ -136,6 +136,7 @@
       <validValue name="InvalidFilter" description="InvalidFilter">36</validValue>
       <validValue name="InvalidMarginMode" description="InvalidMarginMode">37</validValue>
       <validValue name="InvalidQuantityType" description="InvalidQuantityType">38</validValue>
+      <validValue name="InvalidReleaseTime" description="InvalidReleaseTime">39</validValue>
     </enum>
     <enum name="Liquidity" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>

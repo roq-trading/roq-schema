@@ -153,6 +153,10 @@
     {
       "name": "InvalidQuantityType",
       "comment": "Invalid quantity type"
+    },
+    {
+      "name": "InvalidReleaseTime",
+      "comment": "Invalid release time"
     }
   ]
 }
