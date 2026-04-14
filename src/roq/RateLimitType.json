@@ -18,6 +18,18 @@
     {
       "name": "RequestWeight",
       "comment": "Requests (weighted)"
+    },
+    {
+      "name": "CreateAndModifyOrder",
+      "comment": "Includes create and modify order requests"
+    },
+    {
+      "name": "ModifyOrder",
+      "comment": "Modify order requests"
+    },
+    {
+      "name": "CancelOrder",
+      "comment": "Cancel order requests"
     }
   ]
 }

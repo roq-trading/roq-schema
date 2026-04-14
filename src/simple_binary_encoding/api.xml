@@ -207,6 +207,9 @@
       <validValue name="CreateOrder" description="CreateOrder">2</validValue>
       <validValue name="Request" description="Request">3</validValue>
       <validValue name="RequestWeight" description="RequestWeight">4</validValue>
+      <validValue name="CreateAndModifyOrder" description="CreateAndModifyOrder">5</validValue>
+      <validValue name="ModifyOrder" description="ModifyOrder">6</validValue>
+      <validValue name="CancelOrder" description="CancelOrder">7</validValue>
     </enum>
     <enum name="RequestIdType" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>

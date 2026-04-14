@@ -3,5 +3,8 @@ enum RateLimitType:uint8 {
   OrderAction,
   CreateOrder,
   Request,
-  RequestWeight
+  RequestWeight,
+  CreateAndModifyOrder,
+  ModifyOrder,
+  CancelOrder,
 }
