@@ -876,6 +876,7 @@ message RateLimitTrigger {
   string triggered_by = 7;
   BufferCapacity buffer_capacity = 8;
   uint32 remaining_requests = 9;
+  uint32 request_limit = 10;
 }
 message Ready {
 }

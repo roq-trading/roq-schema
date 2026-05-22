@@ -8,4 +8,5 @@ table RateLimitTrigger {
   triggered_by:string;
   buffer_capacity:BufferCapacity;
   remaining_requests:uint32;
+  request_limit:uint32;
 }

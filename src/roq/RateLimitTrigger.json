@@ -49,6 +49,11 @@
       "name": "remainingRequests",
       "type": "std/uint32",
       "comment": "The buffer becomes full if this many requests are sent instantly"
+    },
+    {
+      "name": "requestLimit",
+      "type": "std/uint32",
+      "comment": "Request limit"
     }
   ]
 }
