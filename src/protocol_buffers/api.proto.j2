@@ -71,13 +71,13 @@ import "google/protobuf/timestamp.proto";
 
 // messages
 
-{% include "cancel_all_orders_ack.proto" %}
 {% include "cancel_all_orders.proto" %}
+{% include "cancel_all_orders_ack.proto" %}
 {% include "cancel_order.proto" %}
-{% include "cancel_quotes_ack.proto" %}
 {% include "cancel_quotes.proto" %}
-{% include "control_ack.proto" %}
+{% include "cancel_quotes_ack.proto" %}
 {% include "control.proto" %}
+{% include "control_ack.proto" %}
 {% include "create_order.proto" %}
 {% include "custom_matrix.proto" %}
 {% include "custom_matrix_update.proto" %}
@@ -89,12 +89,14 @@ import "google/protobuf/timestamp.proto";
 {% include "funds_update.proto" %}
 {% include "gateway_settings.proto" %}
 {% include "gateway_status.proto" %}
+{% include "handshake.proto" %}
+{% include "handshake_ack.proto" %}
 {% include "legs_update.proto" %}
 {% include "market_by_order_update.proto" %}
 {% include "market_by_price_update.proto" %}
 {% include "market_status.proto" %}
-{% include "mass_quote_ack.proto" %}
 {% include "mass_quote.proto" %}
+{% include "mass_quote_ack.proto" %}
 {% include "modify_order.proto" %}
 {% include "order_ack.proto" %}
 {% include "order_update.proto" %}
@@ -102,8 +104,8 @@ import "google/protobuf/timestamp.proto";
 {% include "portfolio.proto" %}
 {% include "portfolio_update.proto" %}
 {% include "position_update.proto" %}
-{% include "rate_limits_update.proto" %}
 {% include "rate_limit_trigger.proto" %}
+{% include "rate_limits_update.proto" %}
 {% include "ready.proto" %}
 {% include "reference_data.proto" %}
 {% include "risk_limits.proto" %}
@@ -131,51 +133,70 @@ message SourceInfo {
 message Event {
   SourceInfo source_info = 1;
   oneof value {
-    Control control = 2;
-    ControlAck control_ack = 3;
-    ServiceUpdate service_update = 4;
-    StrategyUpdate strategy_update = 5;
-    LegsUpdate legs_update = 6;
-    DownloadBegin download_begin = 7;
-    DownloadEnd download_end = 8;
-    Ready ready = 9;
-    GatewaySettings gateway_settings = 10;
-    StreamStatus stream_status = 11;
-    ExternalLatency external_latency = 12;
-    RateLimitsUpdate rate_limits_update = 13;
-    RateLimitTrigger rate_limit_trigger = 14;
-    GatewayStatus gateway_status = 15;
-    ReferenceData reference_data = 16;
-    MarketStatus market_status = 17;
-    TopOfBook top_of_book = 18;
-    MarketByPriceUpdate market_by_price_update = 19;
-    MarketByOrderUpdate market_by_order_update = 20;
-    TradeSummary trade_summary = 21;
-    StatisticsUpdate statistics_update = 22;
-    TimeSeriesUpdate time_series_update = 23;
-    CreateOrder create_order = 24;
-    ModifyOrder modify_order = 25;
-    CancelOrder cancel_order = 26;
-    CancelAllOrders cancel_all_orders = 27;
-    CancelAllOrdersAck cancel_all_orders_ack = 28;
-    OrderAck order_ack = 29;
-    OrderUpdate order_update = 30;
-    TradeUpdate trade_update = 31;
-    PositionUpdate position_update = 32;
-    FundsUpdate funds_update = 33;
-    CustomMetrics custom_metrics = 34;
-    CustomMetricsUpdate custom_metrics_update = 35;
-    CustomMatrix custom_matrix = 36;
-    CustomMatrixUpdate custom_matrix_update = 37;
-    ParametersUpdate parameters_update = 38;
-    Portfolio portfolio = 39;
-    PortfolioUpdate portfolio_update = 40;
-    RiskLimits risk_limits = 41;
-    RiskLimitsUpdate risk_limits_update = 42;
-    MassQuote mass_quote = 43;
-    MassQuoteAck mass_quote_ack = 44;
-    CancelQuotes cancel_quotes = 45;
-    CancelQuotesAck cancel_quotes_ack = 46;
-    Subscribe subscribe = 47;
+    // client => server
+    // - initial
+    Handshake handshake = 1000;
+    // - service/strategy
+    ControlAck control_ack = 2000;
+    ServiceUpdate service_update = 2001;
+    StrategyUpdate strategy_update = 2002;
+    LegsUpdate legs_update = 2003;
+    CustomMetrics custom_metrics = 2020;
+    CustomMatrix custom_matrix = 2021;
+    // - market data
+    Subscribe subscribe = 5000;
+    // - order management
+    CancelAllOrders cancel_all_orders = 6000;
+    CreateOrder create_order = 6001;
+    ModifyOrder modify_order = 6002;
+    CancelOrder cancel_order = 6003;
+    // - quote management
+    MassQuote mass_quote = 7001;
+    CancelQuotes cancel_quotes = 7002;
+
+    // server => client
+    // - initial
+    HandshakeAck handshake_ack = 1100;
+    // - service/strategy
+    Control control = 2100;
+    CustomMetricsUpdate custom_metrics_update = 2120;
+    CustomMatrixUpdate custom_matrix_update = 2121;
+    ParametersUpdate parameters_update = 2140;
+    // - sync
+    DownloadBegin download_begin = 3100;
+    DownloadEnd download_end = 3101;
+    Ready ready = 3102;
+    // - gateway state
+    GatewaySettings gateway_settings = 4100;
+    GatewayStatus gateway_status = 4101;
+    StreamStatus stream_status = 4102;
+    ExternalLatency external_latency = 4103;
+    RateLimitsUpdate rate_limits_update = 4120;
+    RateLimitTrigger rate_limit_trigger = 4140;
+    // - market data
+    ReferenceData reference_data = 5120;
+    MarketStatus market_status = 5121;
+    TopOfBook top_of_book = 5140;
+    MarketByPriceUpdate market_by_price_update = 5141;
+    MarketByOrderUpdate market_by_order_update = 5142;
+    TradeSummary trade_summary = 5160;
+    StatisticsUpdate statistics_update = 5180;
+    TimeSeriesUpdate time_series_update = 5199;
+    // - order management
+    CancelAllOrdersAck cancel_all_orders_ack = 6100;
+    OrderAck order_ack = 6101;
+    OrderUpdate order_update = 6102;
+    // - quote management
+    MassQuoteAck mass_quote_ack = 7101;
+    CancelQuotesAck cancel_quotes_ack = 7102;
+    // - trades/positions/funds
+    TradeUpdate trade_update = 8100;
+    PositionUpdate position_update = 8101;
+    FundsUpdate funds_update = 8102;
+    // - XXX
+    Portfolio portfolio = 9100;
+    PortfolioUpdate portfolio_update = 9101;
+    RiskLimits risk_limits = 9102;
+    RiskLimitsUpdate risk_limits_update = 9103;
   }
 }

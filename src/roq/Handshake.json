@@ -1,0 +1,73 @@
+{
+  "name": "roq/Handshake",
+  "type": "message",
+  "comment": "Initial handshake",
+  "values": [
+    {
+      "name": "requestTimeUtc",
+      "type": "std/nanoseconds",
+      "comment": "Request time UTC"
+    },
+    {
+      "name": "applicationName",
+      "type": "std/string_view",
+      "comment": "Application name"
+    },
+    {
+      "name": "applicationVersion",
+      "type": "std/string_view",
+      "comment": "Application version"
+    },
+    {
+      "name": "applicationBuildNumber",
+      "type": "std/string_view",
+      "comment": "Application build number"
+    },
+    {
+      "name": "hostname",
+      "type": "std/string_view",
+      "comment": "Hostname (server)"
+    },
+    {
+      "name": "username",
+      "type": "std/string_view",
+      "comment": "Username (server)"
+    },
+    {
+      "name": "processId",
+      "type": "std/uint64",
+      "comment": "Process id"
+    },
+    {
+      "name": "serviceName",
+      "type": "std/string_view",
+      "comment": "Service name"
+    },
+    {
+      "name": "login",
+      "type": "std/string_view",
+      "comment": "Login"
+    },
+    {
+      "name": "password",
+      "type": "std/string_view",
+      "comment": "Password"
+    },
+    {
+      "name": "accounts",
+      "type": "roq/Account",
+      "array": "std/span",
+      "comment": "Accounts"
+    },
+    {
+      "name": "orderCancelPolicy",
+      "type": "roq/OrderCancelPolicy",
+      "comment": "Order cancel policy"
+    },
+    {
+      "name": "orderManagement",
+      "type": "roq/OrderManagement",
+      "comment": "Order management"
+    }
+  ]
+}

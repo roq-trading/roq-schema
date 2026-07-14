@@ -12,16 +12,16 @@ set(SOURCES
     BatchBegin.json
     BatchEnd.json
     BufferCapacity.json
-    CancelAllOrdersAck.json
     CancelAllOrders.json
+    CancelAllOrdersAck.json
     CancelOrder.json
-    CancelQuotesAck.json
     CancelQuotes.json
+    CancelQuotesAck.json
     Category.json
     Connected.json
     ConnectionStatus.json
-    ControlAck.json
     Control.json
+    ControlAck.json
     CreateOrder.json
     CustomMatrix.json
     CustomMatrixUpdate.json
@@ -40,19 +40,21 @@ set(SOURCES
     FundsUpdate.json
     GatewaySettings.json
     GatewayStatus.json
+    Handshake.json
+    HandshakeAck.json
     Interval.json
     Layer.json
     Leg.json
     LegsUpdate.json
     Liquidity.json
+    MBOUpdate.json
+    MBPUpdate.json
     MarginMode.json
     MarketByOrderUpdate.json
     MarketByPriceUpdate.json
     MarketStatus.json
-    MassQuoteAck.json
     MassQuote.json
-    MBOUpdate.json
-    MBPUpdate.json
+    MassQuoteAck.json
     Measurement.json
     MessageInfo.json
     ModifyOrder.json

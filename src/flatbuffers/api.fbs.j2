@@ -19,6 +19,8 @@ namespace roq.schema.flatbuffers;
 {% include "Liquidity.fbs" %}
 {% include "MarginMode.fbs" %}
 {% include "OptionType.fbs" %}
+{% include "OrderCancelPolicy.fbs" %}
+{% include "OrderManagement.fbs" %}
 {% include "OrderStatus.fbs" %}
 {% include "OrderType.fbs" %}
 {% include "Origin.fbs" %}
@@ -64,13 +66,13 @@ namespace roq.schema.flatbuffers;
 
 // - messages
 
-{% include "CancelAllOrdersAck.fbs" %}
 {% include "CancelAllOrders.fbs" %}
+{% include "CancelAllOrdersAck.fbs" %}
 {% include "CancelOrder.fbs" %}
-{% include "CancelQuotesAck.fbs" %}
 {% include "CancelQuotes.fbs" %}
-{% include "ControlAck.fbs" %}
+{% include "CancelQuotesAck.fbs" %}
 {% include "Control.fbs" %}
+{% include "ControlAck.fbs" %}
 {% include "CreateOrder.fbs" %}
 {% include "CustomMatrix.fbs" %}
 {% include "CustomMatrixUpdate.fbs" %}
@@ -82,12 +84,14 @@ namespace roq.schema.flatbuffers;
 {% include "FundsUpdate.fbs" %}
 {% include "GatewaySettings.fbs" %}
 {% include "GatewayStatus.fbs" %}
+{% include "Handshake.fbs" %}
+{% include "HandshakeAck.fbs" %}
 {% include "LegsUpdate.fbs" %}
 {% include "MarketByOrderUpdate.fbs" %}
 {% include "MarketByPriceUpdate.fbs" %}
 {% include "MarketStatus.fbs" %}
-{% include "MassQuoteAck.fbs" %}
 {% include "MassQuote.fbs" %}
+{% include "MassQuoteAck.fbs" %}
 {% include "ModifyOrder.fbs" %}
 {% include "OrderAck.fbs" %}
 {% include "OrderUpdate.fbs" %}
@@ -95,8 +99,8 @@ namespace roq.schema.flatbuffers;
 {% include "Portfolio.fbs" %}
 {% include "PortfolioUpdate.fbs" %}
 {% include "PositionUpdate.fbs" %}
-{% include "RateLimitsUpdate.fbs" %}
 {% include "RateLimitTrigger.fbs" %}
+{% include "RateLimitsUpdate.fbs" %}
 {% include "Ready.fbs" %}
 {% include "ReferenceData.fbs" %}
 {% include "RiskLimits.fbs" %}
@@ -113,7 +117,7 @@ namespace roq.schema.flatbuffers;
 
 // ----------------------------------------------------------------------------
 
-table Handshake {
+table Handshake2 {
   version:uint32;
   application:string;
   hostname:string;
@@ -123,7 +127,7 @@ table Handshake {
   password:string;
 }
 
-table HandshakeAck {
+table HandshakeAck2 {
   version:uint32;
   application:string;
   hostname:string;
@@ -135,11 +139,6 @@ table HandshakeAck {
   user_id:uint8;
 }
 
-table Handshake2 {
-  // XXX accounts
-  // XXX symbols_by_exchange
-}
-
 table BatchBegin {
 }
 
@@ -149,9 +148,9 @@ table BatchEnd {
 // important! only append to this list
 union Message {
   // --- initial ---
-  Handshake,
-  HandshakeAck,
   Handshake2,
+  HandshakeAck2,
+  Handshake,
   // --- control ---
   BatchBegin,
   BatchEnd,
@@ -202,7 +201,8 @@ union Message {
   ServiceUpdate,
   StrategyUpdate,
   LegsUpdate,
-  Subscribe
+  Subscribe,
+  HandshakeAck
 }
 
 table SourceInfo {

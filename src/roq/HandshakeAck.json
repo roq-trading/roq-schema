@@ -1,0 +1,77 @@
+{
+  "name": "roq/HandshakeAck",
+  "type": "message",
+  "comment": "Initial handshake ack",
+  "values": [
+    {
+      "name": "requestTimeUtc",
+      "type": "std/nanoseconds",
+      "comment": "Request time UTC"
+    },
+    {
+      "name": "responseTimeUtc",
+      "type": "std/nanoseconds",
+      "comment": "Response time UTC"
+    },
+    {
+      "name": "success",
+      "type": "std/bool",
+      "comment": "Success?"
+    },
+    {
+      "name": "failureReason",
+      "type": "std/string_view",
+      "comment": "Reason for failure"
+    },
+    {
+      "name": "packageName",
+      "type": "std/string_view",
+      "comment": "Package name"
+    },
+    {
+      "name": "packageVersion",
+      "type": "std/string_view",
+      "comment": "Package version"
+    },
+    {
+      "name": "packageBuildNumber",
+      "type": "std/string_view",
+      "comment": "Package build number"
+    },
+    {
+      "name": "hostname",
+      "type": "std/string_view",
+      "comment": "Hostname (server)"
+    },
+    {
+      "name": "username",
+      "type": "std/string_view",
+      "comment": "Username (server)"
+    },
+    {
+      "name": "processId",
+      "type": "std/uint64",
+      "comment": "Process id"
+    },
+    {
+      "name": "serviceName",
+      "type": "std/string_view",
+      "comment": "Service name"
+    },
+    {
+      "name": "apiName",
+      "type": "std/string_view",
+      "comment": "API name"
+    },
+    {
+      "name": "instance",
+      "type": "std/uint8",
+      "comment": "Instance id"
+    },
+    {
+      "name": "isUAT",
+      "type": "std/bool",
+      "comment": "Is UAT?"
+    }
+  ]
+}

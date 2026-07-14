@@ -129,6 +129,16 @@ enum OptionType:uint8 {
   Call,
   Put
 }
+enum OrderCancelPolicy:uint8 {
+  Undefined,
+  ManagedOrders,
+  ByAccount,
+  ByStrategy,
+}
+enum OrderManagement:uint8 {
+  Undefined,
+  FIX,
+}
 enum OrderStatus:uint8 {
   Undefined,
   Sent,
@@ -477,6 +487,14 @@ table UUID {
 
 // - messages
 
+table CancelAllOrders {
+  account:string;
+  strategy_id:uint32;
+  exchange:string;
+  symbol:string;
+  side:Side;
+  order_id:uint64;
+}
 table CancelAllOrdersAck {
   stream_id:uint16;
   account:string;
@@ -495,14 +513,6 @@ table CancelAllOrdersAck {
   symbol:string;
   side:Side;
 }
-table CancelAllOrders {
-  account:string;
-  strategy_id:uint32;
-  exchange:string;
-  symbol:string;
-  side:Side;
-  order_id:uint64;
-}
 table CancelOrder {
   account:string;
   zzz_order_id:uint32 (deprecated);
@@ -512,6 +522,10 @@ table CancelOrder {
   request_template:string;
   order_id:uint64;
   release_time_utc:int64;
+}
+table CancelQuotes {
+  account:string;
+  quote_set_id:uint16;
 }
 table CancelQuotesAck {
   stream_id:uint16;
@@ -524,18 +538,6 @@ table CancelQuotesAck {
   external_account:string;
   number_of_affected_quotes:uint32;
 }
-table CancelQuotes {
-  account:string;
-  quote_set_id:uint16;
-}
-table ControlAck {
-  request_id:string;
-  user:string;
-  origin:Origin;
-  request_status:RequestStatus;
-  error:Error;
-  text:string;
-}
 table Control {
   request_id:string;
   user:string;
@@ -545,6 +547,14 @@ table Control {
   account:string;
   exchange:string;
   symbol:string;
+}
+table ControlAck {
+  request_id:string;
+  user:string;
+  origin:Origin;
+  request_status:RequestStatus;
+  error:Error;
+  text:string;
 }
 table CreateOrder {
   account:string;
@@ -662,6 +672,37 @@ table GatewayStatus {
   available:uint64;
   unavailable:uint64;
 }
+table Handshake {
+  request_time_utc:int64;
+  application_name:string;
+  application_version:string;
+  application_build_number:string;
+  hostname:string;
+  username:string;
+  process_id:uint64;
+  service_name:string;
+  login:string;
+  password:string;
+  accounts:[string];
+  order_cancel_policy:OrderCancelPolicy;
+  order_management:OrderManagement;
+}
+table HandshakeAck {
+  request_time_utc:int64;
+  response_time_utc:int64;
+  success:bool;
+  failure_reason:string;
+  package_name:string;
+  package_version:string;
+  package_build_number:string;
+  hostname:string;
+  username:string;
+  process_id:uint64;
+  service_name:string;
+  api_name:string;
+  instance:uint8;
+  is_uat:bool;
+}
 table LegsUpdate {
   user:string;
   strategy_id:uint32;
@@ -706,6 +747,14 @@ table MarketStatus {
   exchange_sequence:uint64;
   sending_time_utc:int64;
 }
+table MassQuote {
+  account:string;
+  quote_id:uint32;
+  quotes:[Quote];
+  mmp_reset:bool;
+  mmp_group:string;
+  valid_until_utc:int64;
+}
 table MassQuoteAck {
   stream_id:uint16;
   account:string;
@@ -716,14 +765,6 @@ table MassQuoteAck {
   text:string;
   request_id:string;
   external_account:string;
-}
-table MassQuote {
-  account:string;
-  quote_id:uint32;
-  quotes:[Quote];
-  mmp_reset:bool;
-  mmp_group:string;
-  valid_until_utc:int64;
 }
 table ModifyOrder {
   account:string;
@@ -861,12 +902,6 @@ table PositionUpdate {
   margin_mode:MarginMode;
   exchange_sequence:uint64;
 }
-table RateLimitsUpdate {
-  stream_id:uint16;
-  account:string;
-  origin:Origin;
-  rate_limits:[RateLimit];
-}
 table RateLimitTrigger {
   name:string;
   origin:Origin;
@@ -878,6 +913,12 @@ table RateLimitTrigger {
   buffer_capacity:BufferCapacity;
   remaining_requests:uint32;
   request_limit:uint32;
+}
+table RateLimitsUpdate {
+  stream_id:uint16;
+  account:string;
+  origin:Origin;
+  rate_limits:[RateLimit];
 }
 table Ready {
 }
@@ -1035,7 +1076,7 @@ table TradeUpdate {
 
 // ----------------------------------------------------------------------------
 
-table Handshake {
+table Handshake2 {
   version:uint32;
   application:string;
   hostname:string;
@@ -1045,7 +1086,7 @@ table Handshake {
   password:string;
 }
 
-table HandshakeAck {
+table HandshakeAck2 {
   version:uint32;
   application:string;
   hostname:string;
@@ -1057,11 +1098,6 @@ table HandshakeAck {
   user_id:uint8;
 }
 
-table Handshake2 {
-  // XXX accounts
-  // XXX symbols_by_exchange
-}
-
 table BatchBegin {
 }
 
@@ -1071,9 +1107,9 @@ table BatchEnd {
 // important! only append to this list
 union Message {
   // --- initial ---
-  Handshake,
-  HandshakeAck,
   Handshake2,
+  HandshakeAck2,
+  Handshake,
   // --- control ---
   BatchBegin,
   BatchEnd,
@@ -1124,7 +1160,8 @@ union Message {
   ServiceUpdate,
   StrategyUpdate,
   LegsUpdate,
-  Subscribe
+  Subscribe,
+  HandshakeAck
 }
 
 table SourceInfo {

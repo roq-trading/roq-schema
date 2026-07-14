@@ -7,7 +7,7 @@
     <!-- type -->
     <type name="Account" primitiveType="char" length="32"/>
     <type name="CFICode" primitiveType="char" length="6"/>
-    <type name="ClientOrderID" primitiveType="char" length="36"/>
+    <type name="ClientOrderId" primitiveType="char" length="36"/>
     <type name="Currency" primitiveType="char" length="32"/>
     <type name="DateTime" primitiveType="int64" description="nanoseconds since epoch"/>
     <type name="Days" primitiveType="int32" description="days since epoch"/>
@@ -15,7 +15,7 @@
     <type name="Exchange" primitiveType="char" length="32"/>
     <type name="ExternalAccount" primitiveType="char" length="64"/>
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
-    <type name="ExternalOrderID" primitiveType="char" length="64"/>
+    <type name="ExternalOrderId" primitiveType="char" length="64"/>
     <type name="ExternalTradeId" primitiveType="char" length="40"/>
     <type name="Label" primitiveType="char" length="32"/>
     <type name="MatrixKey" primitiveType="char" length="8"/>
@@ -23,9 +23,9 @@
     <type name="MeasurementKey" primitiveType="char" length="8"/>
     <type name="ParameterKey" primitiveType="char" length="32"/>
     <type name="ParameterValue" primitiveType="char" length="32"/>
-    <type name="RequestID" primitiveType="char" length="36"/>
+    <type name="RequestId" primitiveType="char" length="36"/>
     <type name="RequestTemplate" primitiveType="char" length="16"/>
-    <type name="RoutingID" primitiveType="char" length="64"/>
+    <type name="RoutingId" primitiveType="char" length="64"/>
     <type name="Seconds" primitiveType="int32" description="seconds since epoch"/>
     <type name="Source" primitiveType="char" length="16"/>
     <type name="Symbol" primitiveType="char" length="48"/>
@@ -148,6 +148,16 @@
       <validValue name="Isolated" description="Isolated">1</validValue>
       <validValue name="Cross" description="Cross">2</validValue>
       <validValue name="Portfolio" description="Portfolio">3</validValue>
+    </enum>
+    <enum name="OrderCancelPolicy" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="ManagedOrders" description="ManagedOrders">1</validValue>
+      <validValue name="ByAccount" description="ByAccount">2</validValue>
+      <validValue name="ByStrategy" description="ByStrategy">3</validValue>
+    </enum>
+    <enum name="OrderManagement" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="FIX" description="FIX">1</validValue>
     </enum>
     <enum name="OrderStatus" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>
@@ -372,39 +382,70 @@
     </set>
   </types>
   <!-- messages -->
-  <message id="1000" name="Control">
+  <!-- 10xx initial -->
+  <message id="1000" name="Handshake">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="requestId" type="RequestID"/>
-    <field id="201" name="user" type="User"/>
-    <field id="202" name="action" type="Action"/>
-    <field id="203" name="strategyId" type="uint32"/>
-    <field id="204" name="legId" type="uint16"/>
-    <field id="205" name="account" type="Account"/>
-    <field id="206" name="exchange" type="Exchange"/>
-    <field id="207" name="symbol" type="Symbol"/>
+    <field id="200" name="requestTimeUtc" type="DateTime"/>
+    <field id="201" name="applicationName" type="Text"/>
+    <field id="202" name="applicationVersion" type="Text"/>
+    <field id="203" name="applicationBuildNumber" type="Text"/>
+    <field id="204" name="hostname" type="Text"/>
+    <field id="205" name="username" type="Text"/>
+    <field id="206" name="processId" type="uint64"/>
+    <field id="207" name="serviceName" type="Text"/>
+    <field id="208" name="login" type="Text"/>
+    <field id="209" name="password" type="Text"/>
+    <field id="210" name="order_cancel_policy" type="OrderCancelPolicy"/>
+    <field id="211" name="order_management" type="OrderManagement"/>
+    <group id="300" name="accounts" blockLength="32" dimensionType="groupSize">
+      <field id="301" name="account" type="Account"/>
+    </group>
   </message>
-  <message id="1001" name="ControlAck">
+  <!-- 11xx initial -->
+  <message id="1100" name="HandshakeAck">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="requestId" type="RequestID"/>
+    <field id="200" name="requestTimeUtc" type="DateTime"/>
+    <field id="201" name="responseTimeUtc" type="DateTime"/>
+    <field id="202" name="success" type="Boolean"/>
+    <field id="203" name="failureReason" type="Text"/>
+    <field id="204" name="packageName" type="Text"/>
+    <field id="205" name="packageVersion" type="Text"/>
+    <field id="206" name="packageBuildNumber" type="Text"/>
+    <field id="207" name="hostname" type="Text"/>
+    <field id="208" name="username" type="Text"/>
+    <field id="209" name="processId" type="uint64"/>
+    <field id="210" name="serviceName" type="Text"/>
+    <field id="211" name="apiName" type="Text"/>
+    <field id="212" name="instance" type="uint8"/>
+    <field id="213" name="isUat" type="Boolean"/>
+  </message>
+  <!-- 20xx service/strategy response/update -->
+  <message id="2000" name="ControlAck">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="requestId" type="RequestId"/>
     <field id="201" name="user" type="User"/>
     <field id="202" name="origin" type="Origin"/>
     <field id="203" name="requestStatus" type="RequestStatus"/>
     <field id="204" name="error" type="Error"/>
     <field id="205" name="text" type="Text"/>
   </message>
-  <message id="1002" name="ServiceUpdate">
+  <message id="2001" name="ServiceUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="user" type="User"/>
     <field id="201" name="description" type="Description"/>
@@ -412,11 +453,11 @@
     <field id="203" name="state" type="State"/>
     <field id="204" name="updateType" type="UpdateType"/>
   </message>
-  <message id="1003" name="StrategyUpdate">
+  <message id="2002" name="StrategyUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="user" type="User"/>
     <field id="201" name="strategyId" type="uint32"/>
@@ -424,11 +465,11 @@
     <field id="203" name="state" type="State"/>
     <field id="204" name="updateType" type="UpdateType"/>
   </message>
-  <message id="1004" name="LegsUpdate">
+  <message id="2003" name="LegsUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="user" type="User"/>
     <field id="201" name="strategyId" type="uint32"/>
@@ -441,35 +482,150 @@
       <field id="305" name="state" type="State"/>
     </group>
   </message>
-  <message id="1100" name="DownloadBegin">
+  <message id="2020" name="CustomMetrics">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="label" type="Label"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="exchange" type="Exchange"/>
+    <field id="203" name="symbol" type="Symbol"/>
+    <field id="204" name="updateType" type="UpdateType"/>
+    <group id="300" name="measurements" blockLength="16" dimensionType="groupSize">
+      <field id="301" name="name" type="MeasurementKey"/>
+      <field id="302" name="value" type="double"/>
+    </group>
+  </message>
+  <message id="2021" name="CustomMatrix">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="label" type="Label"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="exchange" type="Exchange"/>
+    <field id="203" name="symbol" type="Symbol"/>
+    <field id="204" name="updateType" type="UpdateType"/>
+    <field id="205" name="version" type="uint32"/>
+    <group id="300" name="rows" blockLength="8" dimensionType="groupSize">
+      <field id="301" name="name" type="MatrixKey"/>
+    </group>
+    <group id="400" name="columns" blockLength="8" dimensionType="groupSize">
+      <field id="401" name="name" type="MatrixKey"/>
+    </group>
+    <group id="500" name="data" blockLength="8" dimensionType="groupSize">
+      <field id="501" name="value" type="double"/>
+    </group>
+  </message>
+  <!-- 21xx service/strategy -->
+  <message id="2100" name="Control">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="requestId" type="RequestId"/>
+    <field id="201" name="user" type="User"/>
+    <field id="202" name="action" type="Action"/>
+    <field id="203" name="strategyId" type="uint32"/>
+    <field id="204" name="legId" type="uint16"/>
+    <field id="205" name="account" type="Account"/>
+    <field id="206" name="exchange" type="Exchange"/>
+    <field id="207" name="symbol" type="Symbol"/>
+  </message>
+  <message id="2120" name="CustomMetricsUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="label" type="Label"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="exchange" type="Exchange"/>
+    <field id="203" name="symbol" type="Symbol"/>
+    <field id="204" name="updateType" type="UpdateType"/>
+    <field id="205" name="sendingTimeUtc" type="DateTime"/>
+    <field id="206" name="user" type="User"/>
+    <group id="300" name="measurements" blockLength="16" dimensionType="groupSize">
+      <field id="301" name="name" type="MeasurementKey"/>
+      <field id="302" name="value" type="double"/>
+    </group>
+  </message>
+  <message id="2121" name="CustomMatrixUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="label" type="Label"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="exchange" type="Exchange"/>
+    <field id="203" name="symbol" type="Symbol"/>
+    <field id="204" name="updateType" type="UpdateType"/>
+    <field id="205" name="version" type="uint32"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
+    <field id="207" name="user" type="User"/>
+    <group id="300" name="rows" blockLength="8" dimensionType="groupSize">
+      <field id="301" name="name" type="MatrixKey"/>
+    </group>
+    <group id="400" name="columns" blockLength="8" dimensionType="groupSize">
+      <field id="401" name="name" type="MatrixKey"/>
+    </group>
+    <group id="500" name="data" blockLength="8" dimensionType="groupSize">
+      <field id="501" name="value" type="double"/>
+    </group>
+  </message>
+  <message id="2140" name="ParametersUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="updateType" type="UpdateType"/>
+    <field id="201" name="user" type="User"/>
+    <group id="300" name="parameters" blockLength="192" dimensionType="groupSize">
+      <field id="301" name="label" type="ParameterKey"/>
+      <field id="302" name="strategyId" type="uint32"/>
+      <field id="303" name="account" type="Account"/>
+      <field id="304" name="exchange" type="Exchange"/>
+      <field id="305" name="symbol" type="Symbol"/>
+      <field id="306" name="value" type="ParameterValue"/>
+    </group>
+  </message>
+  <!-- 31xx synchronization -->
+  <message id="3100" name="DownloadBegin">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="account" type="Account"/>
   </message>
-  <message id="1101" name="DownloadEnd">
+  <message id="3101" name="DownloadEnd">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="account" type="Account"/>
     <field id="201" name="maxOrderId" type="uint64"/>
   </message>
-  <message id="1102" name="Ready">
+  <message id="3102" name="Ready">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
   </message>
-  <message id="1200" name="GatewaySettings">
+  <!-- 41xx gateway state -->
+  <message id="4100" name="GatewaySettings">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="supports" type="SupportType"/>
     <field id="201" name="mbpMaxDepth" type="uint16"/>
@@ -483,11 +639,22 @@
     <field id="209" name="omsRequestIdType" type="RequestIdType"/>
     <field id="210" name="omsCancelAllOrders" type="Filter"/>
   </message>
-  <message id="1201" name="StreamStatus">
+  <message id="4101" name="GatewayStatus">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="account" type="Account"/>
+    <field id="201" name="supported" type="SupportType"/>
+    <field id="202" name="available" type="SupportType"/>
+    <field id="203" name="unavailable" type="SupportType"/>
+  </message>
+  <message id="4102" name="StreamStatus">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -505,21 +672,21 @@
     <field id="212" name="proxy" type="Text"/>
     -->
   </message>
-  <message id="1202" name="ExternalLatency">
+  <message id="4103" name="ExternalLatency">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
     <field id="202" name="latency" type="Time"/>
   </message>
-  <message id="1203" name="RateLimitsUpdate">
+  <message id="4120" name="RateLimitsUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -532,11 +699,11 @@
       <field id="305" name="value" type="uint32"/>
     </group>
   </message>
-  <message id="1204" name="RateLimitTrigger">
+  <message id="4140" name="RateLimitTrigger">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="name" type="Label"/>
     <field id="201" name="origin" type="Origin"/>
@@ -553,22 +720,15 @@
       <field id="401" name="name" type="Account"/>
     </group>
   </message>
-  <message id="1205" name="GatewayStatus">
+  <!-- 50xx market data request -->
+  <!-- TODO 5000 Subscribe ??? -->
+  <!-- 51xx market data response/update-->
+  <!-- TODO 5100 SubscribeAck ??? -->
+  <message id="5120" name="ReferenceData">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="account" type="Account"/>
-    <field id="201" name="supported" type="SupportType"/>
-    <field id="202" name="available" type="SupportType"/>
-    <field id="203" name="unavailable" type="SupportType"/>
-  </message>
-  <message id="1300" name="ReferenceData">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
@@ -596,60 +756,60 @@
     <field id="223" name="issueDate" type="Days"/>
     <field id="224" name="settlementDate" type="Days"/>
     <field id="225" name="expiryDateTime" type="Seconds"/>
-    <field id="226" name="expiryDateTimeUTC" type="Seconds"/>
-    <field id="227" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="226" name="expiryDateTimeUtc" type="Seconds"/>
+    <field id="227" name="exchangeTimeUtc" type="DateTime"/>
     <field id="228" name="exchangeSequence" type="uint64"/>
-    <field id="229" name="sendingTimeUTC" type="DateTime"/>
+    <field id="229" name="sendingTimeUtc" type="DateTime"/>
     <field id="230" name="discard" type="Boolean"/>
     <group id="300" name="tickSizeSteps" blockLength="16" dimensionType="groupSize">
       <field id="301" name="minPrice" type="double"/>
       <field id="302" name="tickSize" type="double"/>
     </group>
   </message>
-  <message id="1301" name="MarketStatus">
+  <message id="5121" name="MarketStatus">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="tradingStatus" type="TradingStatus"/>
-    <field id="204" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeTimeUtc" type="DateTime"/>
     <field id="205" name="exchangeSequence" type="uint64"/>
-    <field id="206" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
   </message>
-  <message id="1302" name="TopOfBook">
+  <message id="5140" name="TopOfBook">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="layer" type="Layer"/>
     <field id="204" name="updateType" type="UpdateType"/>
-    <field id="205" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="205" name="exchangeTimeUtc" type="DateTime"/>
     <field id="206" name="exchangeSequence" type="uint64"/>
-    <field id="207" name="sendingTimeUTC" type="DateTime"/>
+    <field id="207" name="sendingTimeUtc" type="DateTime"/>
     <field id="208" name="pricePrecision" type="Precision"/>
     <field id="209" name="quantityPrecision" type="Precision"/>
   </message>
-  <message id="1303" name="MarketByPriceUpdate">
+  <message id="5141" name="MarketByPriceUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="updateType" type="UpdateType"/>
-    <field id="204" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeTimeUtc" type="DateTime"/>
     <field id="205" name="exchangeSequence" type="uint64"/>
-    <field id="206" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
     <field id="207" name="pricePrecision" type="Precision"/>
     <field id="208" name="quantityPrecision" type="Precision"/>
     <field id="209" name="maxDepth" type="uint16"/>
@@ -671,19 +831,19 @@
       <field id="406" name="priceLevel" type="uint32"/>
     </group>
   </message>
-  <message id="1304" name="MarketByOrderUpdate">
+  <message id="5142" name="MarketByOrderUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="updateType" type="UpdateType"/>
-    <field id="204" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeTimeUtc" type="DateTime"/>
     <field id="205" name="exchangeSequence" type="uint64"/>
-    <field id="206" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
     <field id="207" name="pricePrecision" type="Precision"/>
     <field id="208" name="quantityPrecision" type="Precision"/>
     <field id="209" name="maxDepth" type="uint16"/>
@@ -698,18 +858,18 @@
       <field id="307" name="reason" type="UpdateReason"/>
     </group>
   </message>
-  <message id="1305" name="TradeSummary">
+  <message id="5160" name="TradeSummary">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
-    <field id="203" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="203" name="exchangeTimeUtc" type="DateTime"/>
     <field id="204" name="exchangeSequence" type="uint64"/>
-    <field id="205" name="sendingTimeUTC" type="DateTime"/>
+    <field id="205" name="sendingTimeUtc" type="DateTime"/>
     <field id="206" name="pricePrecision" type="Precision"/>
     <field id="207" name="quantityPrecision" type="Precision"/>
     <group id="300" name="trades" blockLength="186" dimensionType="groupSize">
@@ -721,33 +881,46 @@
       <field id="306" name="makerOrderId" type="ExternalOrderId"/>
     </group>
   </message>
-  <message id="1306" name="StatisticsUpdate">
+  <message id="5180" name="StatisticsUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="updateType" type="UpdateType"/>
-    <field id="204" name="exchangeTimeUTC" type="DateTime"/>
+    <field id="204" name="exchangeTimeUtc" type="DateTime"/>
     <field id="205" name="exchangeSequence" type="uint64"/>
-    <field id="206" name="sendingTimeUTC" type="DateTime"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
     <group id="307" name="statistics" blockLength="26" dimensionType="groupSize">
       <field id="301" name="type" type="StatisticsType"/>
       <field id="302" name="value" type="double"/>
-      <field id="303" name="beginTimeUTC" type="Seconds"/>
-      <field id="304" name="endTimeUTC" type="Seconds"/>
+      <field id="303" name="beginTimeUtc" type="Seconds"/>
+      <field id="304" name="endTimeUtc" type="Seconds"/>
     </group>
   </message>
-  <!-- TODO TimeSeriesUpdate -->
-  <!-- TODO Subscribe -->
-  <message id="1400" name="CreateOrder">
+  <!-- TODO 5199 TimeSeriesUpdate -->
+  <!-- 60xx order management -->
+  <message id="6000" name="CancelAllOrders">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="account" type="Account"/>
+    <field id="201" name="orderId" type="uint64"/>
+    <field id="202" name="exchange" type="Exchange"/>
+    <field id="203" name="symbol" type="Symbol"/>
+    <field id="204" name="strategyId" type="uint32"/>
+    <field id="205" name="side" type="Side"/>
+  </message>
+  <message id="6001" name="CreateOrder">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="account" type="Account"/>
     <field id="201" name="orderId" type="uint64"/>
@@ -766,58 +939,46 @@
     <field id="214" name="price" type="double"/>
     <field id="215" name="stopPrice" type="double"/>
     <field id="216" name="leverage" type="double"/>
-    <field id="217" name="routingId" type="RoutingID"/>
+    <field id="217" name="routingId" type="RoutingId"/>
     <field id="218" name="strategyId" type="uint32"/>
-    <field id="219" name="releaseTimeUTC" type="DateTime"/>
+    <field id="219" name="releaseTimeUtc" type="DateTime"/>
   </message>
-  <message id="1401" name="ModifyOrder">
+  <message id="6002" name="ModifyOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="account" type="Account"/>
     <field id="201" name="orderId" type="uint64"/>
     <field id="202" name="requestTemplate" type="RequestTemplate"/>
     <field id="203" name="quantity" type="double"/>
     <field id="204" name="price" type="double"/>
-    <field id="205" name="routingId" type="RoutingID"/>
+    <field id="205" name="routingId" type="RoutingId"/>
     <field id="206" name="version" type="uint32"/>
     <field id="207" name="conditionalOnVersion" type="uint32"/>
-    <field id="208" name="releaseTimeUTC" type="DateTime"/>
+    <field id="208" name="releaseTimeUtc" type="DateTime"/>
   </message>
-  <message id="1402" name="CancelOrder">
+  <message id="6003" name="CancelOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="account" type="Account"/>
     <field id="201" name="orderId" type="uint64"/>
     <field id="202" name="requestTemplate" type="RequestTemplate"/>
-    <field id="203" name="routingId" type="RoutingID"/>
+    <field id="203" name="routingId" type="RoutingId"/>
     <field id="204" name="version" type="uint32"/>
     <field id="205" name="conditionalOnVersion" type="uint32"/>
-    <field id="206" name="releaseTimeUTC" type="DateTime"/>
+    <field id="206" name="releaseTimeUtc" type="DateTime"/>
   </message>
-  <message id="1403" name="CancelAllOrders">
+  <!-- 61xx order response -->
+  <message id="6100" name="CancelAllOrdersAck">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="account" type="Account"/>
-    <field id="201" name="orderId" type="uint64"/>
-    <field id="202" name="exchange" type="Exchange"/>
-    <field id="203" name="symbol" type="Symbol"/>
-    <field id="204" name="strategyId" type="uint32"/>
-    <field id="205" name="side" type="Side"/>
-  </message>
-  <message id="1404" name="CancelAllOrdersAck">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -829,18 +990,18 @@
     <field id="207" name="requestStatus" type="RequestStatus"/>
     <field id="208" name="error" type="Error"/>
     <field id="209" name="text" type="Text"/>
-    <field id="210" name="requestId" type="RequestID"/>
+    <field id="210" name="requestId" type="RequestId"/>
     <field id="211" name="externalAccount" type="ExternalAccount"/>
     <field id="212" name="numberOfAffectedOrders" type="uint32"/>
     <field id="213" name="roundTripLatency" type="Time"/>
     <field id="214" name="user" type="User"/>
     <field id="215" name="strategyId" type="uint32"/>
   </message>
-  <message id="1405" name="OrderAck">
+  <message id="6101" name="OrderAck">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -856,15 +1017,15 @@
     <field id="211" name="requestStatus" type="RequestStatus"/>
     <field id="212" name="error" type="Error"/>
     <field id="213" name="text" type="Text"/>
-    <field id="214" name="requestId" type="RequestID"/>
+    <field id="214" name="requestId" type="RequestId"/>
     <field id="215" name="externalAccount" type="ExternalAccount"/>
     <field id="216" name="externalOrderId" type="ExternalOrderId"/>
-    <field id="217" name="clientOrderId" type="ClientOrderID"/>
+    <field id="217" name="clientOrderId" type="ClientOrderId"/>
     <field id="218" name="quantity" type="double"/>
     <field id="219" name="price" type="double"/>
     <field id="220" name="stopPrice" type="double"/>
     <field id="221" name="leverage" type="double"/>
-    <field id="222" name="routingId" type="RoutingID"/>
+    <field id="222" name="routingId" type="RoutingId"/>
     <field id="223" name="version" type="uint32"/>
     <field id="224" name="riskExposure" type="double"/>
     <field id="225" name="riskExposureChange" type="double"/>
@@ -873,11 +1034,11 @@
     <field id="228" name="user" type="User"/>
     <field id="229" name="strategyId" type="uint32"/>
   </message>
-  <message id="1406" name="OrderUpdate">
+  <message id="6102" name="OrderUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -896,7 +1057,7 @@
     <field id="214" name="updateTimeUtc" type="DateTime"/>
     <field id="215" name="externalAccount" type="ExternalAccount"/>
     <field id="216" name="externalOrderId" type="ExternalOrderId"/>
-    <field id="217" name="clientOrderId" type="ClientOrderID"/>
+    <field id="217" name="clientOrderId" type="ClientOrderId"/>
     <field id="218" name="orderStatus" type="OrderStatus"/>
     <field id="219" name="quantity" type="double"/>
     <field id="220" name="price" type="double"/>
@@ -910,7 +1071,7 @@
     <field id="228" name="lastTradedQuantity" type="double"/>
     <field id="229" name="lastTradedPrice" type="double"/>
     <field id="230" name="lastLiquidity" type="Liquidity"/>
-    <field id="231" name="routingId" type="RoutingID"/>
+    <field id="231" name="routingId" type="RoutingId"/>
     <field id="232" name="maxRequestVersion" type="uint32"/>
     <field id="233" name="maxResponseVersion" type="uint32"/>
     <field id="234" name="maxAcceptedVersion" type="uint32"/>
@@ -921,11 +1082,78 @@
     <field id="239" name="user" type="User"/>
     <field id="240" name="strategyId" type="uint32"/>
   </message>
-  <message id="1407" name="TradeUpdate">
+  <!-- 70xx quote management -->
+  <message id="7001" name="MassQuote">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="account" type="Account"/>
+    <field id="201" name="quoteId" type="uint32"/>
+    <field id="202" name="mmpReset" type="Boolean"/>
+    <field id="203" name="mmpGroup" type="Text"/>
+    <field id="204" name="validUntilUtc" type="DateTime"/>
+    <group id="300" name="quotes" blockLength="128" dimensionType="groupSize">
+      <field id="301" name="quoteEntryId" type="uint32"/>
+      <field id="302" name="exchange" type="Exchange"/>
+      <field id="303" name="symbol" type="Symbol"/>
+      <field id="304" name="bidPrice" type="double"/>
+      <field id="305" name="bidQuantity" type="double"/>
+      <field id="306" name="askPrice" type="double"/>
+      <field id="307" name="askQuantity" type="double"/>
+      <field id="308" name="quoteSetId" type="uint16"/>
+      <field id="309" name="executionInstructions" type="ExecutionInstruction"/>
+    </group>
+  </message>
+  <message id="7002" name="CancelQuotes">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="account" type="Account"/>
+    <field id="201" name="quoteSetId" type="uint16"/>
+  </message>
+  <!-- 71xx quote response -->
+  <message id="7101" name="MassQuoteAck">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="streamId" type="uint16"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="quoteId" type="uint32"/>
+    <field id="203" name="origin" type="Origin"/>
+    <field id="204" name="requestStatus" type="RequestStatus"/>
+    <field id="205" name="error" type="Error"/>
+    <field id="206" name="text" type="Text"/>
+    <field id="207" name="requestId" type="RequestId"/>
+    <field id="208" name="externalAccount" type="ExternalAccount"/>
+  </message>
+  <message id="7102" name="CancelQuotesAck">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="streamId" type="uint16"/>
+    <field id="201" name="account" type="Account"/>
+    <field id="202" name="origin" type="Origin"/>
+    <field id="203" name="requestStatus" type="RequestStatus"/>
+    <field id="204" name="error" type="Error"/>
+    <field id="205" name="text" type="Text"/>
+    <field id="206" name="requestId" type="RequestId"/>
+    <field id="207" name="externalAccount" type="ExternalAccount"/>
+    <field id="208" name="numberOfAffectedQuotes" type="uint32"/>
+  </message>
+  <!-- 81xx trades/positions/funds -->
+  <message id="8100" name="TradeUpdate">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -940,8 +1168,8 @@
     <field id="210" name="updateTimeUtc" type="DateTime"/>
     <field id="211" name="externalAccount" type="ExternalAccount"/>
     <field id="212" name="externalOrderId" type="ExternalOrderId"/>
-    <field id="213" name="clientOrderId" type="ClientOrderID"/>
-    <field id="214" name="routingId" type="RoutingID"/>
+    <field id="213" name="clientOrderId" type="ClientOrderId"/>
+    <field id="214" name="routingId" type="RoutingId"/>
     <field id="215" name="updateType" type="UpdateType"/>
     <field id="216" name="exchangeTimeUtc" type="DateTime"/>
     <field id="217" name="exchangeSequence" type="uint64"/>
@@ -961,11 +1189,11 @@
       <field id="310" name="profitLossAmount" type="double"/>
     </group>
   </message>
-  <message id="1500" name="PositionUpdate">
+  <message id="8101" name="PositionUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -980,11 +1208,11 @@
     <field id="210" name="exchangeSequence" type="uint64"/>
     <field id="211" name="sendingTimeUtc" type="DateTime"/>
   </message>
-  <message id="1501" name="FundsUpdate">
+  <message id="8102" name="FundsUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="account" type="Account"/>
@@ -1000,109 +1228,13 @@
     <field id="211" name="exchangeSequence" type="uint64"/>
     <field id="212" name="sendingTimeUtc" type="DateTime"/>
   </message>
-  <message id="2000" name="CustomMetrics">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="label" type="Label"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="exchange" type="Exchange"/>
-    <field id="203" name="symbol" type="Symbol"/>
-    <field id="204" name="updateType" type="UpdateType"/>
-    <group id="300" name="measurements" blockLength="16" dimensionType="groupSize">
-      <field id="301" name="name" type="MeasurementKey"/>
-      <field id="302" name="value" type="double"/>
-    </group>
-  </message>
-  <message id="2001" name="CustomMetricsUpdate">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="label" type="Label"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="exchange" type="Exchange"/>
-    <field id="203" name="symbol" type="Symbol"/>
-    <field id="204" name="updateType" type="UpdateType"/>
-    <field id="205" name="sendingTimeUtc" type="DateTime"/>
-    <field id="206" name="user" type="User"/>
-    <group id="300" name="measurements" blockLength="16" dimensionType="groupSize">
-      <field id="301" name="name" type="MeasurementKey"/>
-      <field id="302" name="value" type="double"/>
-    </group>
-  </message>
-  <message id="2002" name="CustomMatrix">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="label" type="Label"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="exchange" type="Exchange"/>
-    <field id="203" name="symbol" type="Symbol"/>
-    <field id="204" name="updateType" type="UpdateType"/>
-    <field id="205" name="version" type="uint32"/>
-    <group id="300" name="rows" blockLength="8" dimensionType="groupSize">
-      <field id="301" name="name" type="MatrixKey"/>
-    </group>
-    <group id="400" name="columns" blockLength="8" dimensionType="groupSize">
-      <field id="401" name="name" type="MatrixKey"/>
-    </group>
-    <group id="500" name="data" blockLength="8" dimensionType="groupSize">
-      <field id="501" name="value" type="double"/>
-    </group>
-  </message>
-  <message id="2003" name="CustomMatrixUpdate">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="label" type="Label"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="exchange" type="Exchange"/>
-    <field id="203" name="symbol" type="Symbol"/>
-    <field id="204" name="updateType" type="UpdateType"/>
-    <field id="205" name="version" type="uint32"/>
-    <field id="206" name="sendingTimeUtc" type="DateTime"/>
-    <field id="207" name="user" type="User"/>
-    <group id="300" name="rows" blockLength="8" dimensionType="groupSize">
-      <field id="301" name="name" type="MatrixKey"/>
-    </group>
-    <group id="400" name="columns" blockLength="8" dimensionType="groupSize">
-      <field id="401" name="name" type="MatrixKey"/>
-    </group>
-    <group id="500" name="data" blockLength="8" dimensionType="groupSize">
-      <field id="501" name="value" type="double"/>
-    </group>
-  </message>
-  <message id="2004" name="ParametersUpdate">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="updateType" type="UpdateType"/>
-    <field id="201" name="user" type="User"/>
-    <group id="300" name="parameters" blockLength="192" dimensionType="groupSize">
-      <field id="301" name="label" type="ParameterKey"/>
-      <field id="302" name="strategyId" type="uint32"/>
-      <field id="303" name="account" type="Account"/>
-      <field id="304" name="exchange" type="Exchange"/>
-      <field id="305" name="symbol" type="Symbol"/>
-      <field id="306" name="value" type="ParameterValue"/>
-    </group>
-  </message>
+  <!-- 91xx portfolio/risk update -->
   <!-- TODO Portfolio ??? -->
-  <message id="2100" name="PortfolioUpdate">
+  <message id="9101" name="PortfolioUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="user" type="User"/>
     <field id="201" name="strategyId" type="uint32"/>
@@ -1119,68 +1251,4 @@
   </message>
   <!-- TODO RiskLimits ??? -->
   <!-- TODO RiskLimitsUpdate -->
-  <message id="1600" name="MassQuote">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="account" type="Account"/>
-    <field id="201" name="quoteId" type="uint32"/>
-    <field id="202" name="mmpReset" type="Boolean"/>
-    <field id="203" name="mmpGroup" type="Text"/>
-    <field id="204" name="validUntilUtc" type="DateTime"/>
-    <group id="300" name="quotes" blockLength="128" dimensionType="groupSize">
-      <field id="301" name="quoteEntryId" type="uint32"/>
-      <field id="302" name="exchange" type="Exchange"/>
-      <field id="303" name="symbol" type="Symbol"/>
-      <field id="304" name="bidPrice" type="double"/>
-      <field id="305" name="bidQuantity" type="double"/>
-      <field id="306" name="askPrice" type="double"/>
-      <field id="307" name="askQuantity" type="double"/>
-      <field id="308" name="quoteSetId" type="uint16"/>
-      <field id="309" name="executionInstructions" type="ExecutionInstruction"/>
-    </group>
-  </message>
-  <message id="1601" name="MassQuoteAck">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="streamId" type="uint16"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="quoteId" type="uint32"/>
-    <field id="203" name="origin" type="Origin"/>
-    <field id="204" name="requestStatus" type="RequestStatus"/>
-    <field id="205" name="error" type="Error"/>
-    <field id="206" name="text" type="Text"/>
-    <field id="207" name="requestId" type="RequestID"/>
-    <field id="208" name="externalAccount" type="ExternalAccount"/>
-  </message>
-  <message id="1602" name="CancelQuotes">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="account" type="Account"/>
-    <field id="201" name="quoteSetId" type="uint16"/>
-  </message>
-  <message id="1603" name="CancelQuotesAck">
-    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
-    <field id="101" name="sourceSessionID" type="UUID" semanticType="MessageInfo"/>
-    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
-    <field id="103" name="originCreateTimeUTC" type="DateTime" semanticType="MessageInfo"/>
-    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="streamId" type="uint16"/>
-    <field id="201" name="account" type="Account"/>
-    <field id="202" name="origin" type="Origin"/>
-    <field id="203" name="requestStatus" type="RequestStatus"/>
-    <field id="204" name="error" type="Error"/>
-    <field id="205" name="text" type="Text"/>
-    <field id="206" name="requestId" type="RequestID"/>
-    <field id="207" name="externalAccount" type="ExternalAccount"/>
-    <field id="208" name="numberOfAffectedQuotes" type="uint32"/>
-  </message>
 </messageSchema>

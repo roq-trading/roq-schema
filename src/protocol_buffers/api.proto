@@ -494,6 +494,14 @@ message Trade {
 
 // messages
 
+message CancelAllOrders {
+  string account = 1;
+  uint64 order_id = 2;
+  string exchange = 3;
+  string symbol = 4;
+  uint32 strategy_id = 5;
+  Side side = 6;
+}
 message CancelAllOrdersAck {
   uint32 stream_id = 1;  // uint16
   string account = 2;
@@ -512,14 +520,6 @@ message CancelAllOrdersAck {
   string user = 15;
   uint32 strategy_id = 16;
 }
-message CancelAllOrders {
-  string account = 1;
-  uint64 order_id = 2;
-  string exchange = 3;
-  string symbol = 4;
-  uint32 strategy_id = 5;
-  Side side = 6;
-}
 message CancelOrder {
   string account = 1;
   uint64 order_id = 2;
@@ -528,6 +528,10 @@ message CancelOrder {
   uint32 version = 5;
   uint32 conditional_on_version = 6;
   google.protobuf.Timestamp release_time_utc = 7;
+}
+message CancelQuotes {
+  string account = 1;
+  uint32 quote_set_id = 2;  // uint16
 }
 message CancelQuotesAck {
   uint32 stream_id = 1;  // uint16
@@ -540,18 +544,6 @@ message CancelQuotesAck {
   string external_account = 8;
   uint32 number_of_affected_quotes = 9;
 }
-message CancelQuotes {
-  string account = 1;
-  uint32 quote_set_id = 2;  // uint16
-}
-message ControlAck {
-  string request_id = 1;
-  string user = 2;
-  Origin origin = 3;
-  RequestStatus request_status = 4;
-  Error error = 5;
-  string text = 6;
-}
 message Control {
   string request_id = 1;
   string user = 2;
@@ -561,6 +553,14 @@ message Control {
   string account = 6;
   string exchange = 7;
   string symbol = 8;
+}
+message ControlAck {
+  string request_id = 1;
+  string user = 2;
+  Origin origin = 3;
+  RequestStatus request_status = 4;
+  Error error = 5;
+  string text = 6;
 }
 message CreateOrder {
   string account = 1;
@@ -674,6 +674,37 @@ message GatewayStatus {
   repeated SupportType available = 3;
   repeated SupportType unavailable = 4;
 }
+message Handshake {
+  google.protobuf.Timestamp request_time_utc = 1;
+  string application_name = 2;
+  string application_version = 3;
+  string application_build_number = 4;
+  string hostname = 5;
+  string username = 6;
+  uint64 process_id = 7;
+  string service_name = 8;
+  string login = 9;
+  string password = 10;
+  repeated string accounts = 11;
+  OrderCancelPolicy order_cancel_policy = 12;
+  OrderManagement order_management = 13;
+}
+message HandshakeAck {
+  google.protobuf.Timestamp request_time_utc = 1;
+  google.protobuf.Timestamp response_time_utc = 2;
+  bool success = 3;
+  string failure_reason = 4;
+  string package_name = 5;
+  string package_version = 6;
+  string package_build_number = 7;
+  string hostname = 8;
+  string username = 9;
+  uint64 process_id = 10;
+  string service_name = 11;
+  string api_name = 12;
+  uint32 instance = 13;  // uint8
+  bool is_uat = 14;
+}
 message LegsUpdate {
   string user = 1;
   uint32 strategy_id = 2;
@@ -718,6 +749,14 @@ message MarketStatus {
   uint64 exchange_sequence = 6;
   google.protobuf.Timestamp sending_time_utc = 7;
 }
+message MassQuote {
+  string account = 1;
+  uint32 quote_id = 2;
+  repeated Quote quotes = 3;
+  bool mmp_reset = 4;
+  string mmp_group = 5;
+  google.protobuf.Timestamp valid_until_utc = 6;
+}
 message MassQuoteAck {
   uint32 stream_id = 1;  // uint16
   string account = 2;
@@ -728,14 +767,6 @@ message MassQuoteAck {
   string text = 7;
   string request_id = 8;
   string external_account = 9;
-}
-message MassQuote {
-  string account = 1;
-  uint32 quote_id = 2;
-  repeated Quote quotes = 3;
-  bool mmp_reset = 4;
-  string mmp_group = 5;
-  google.protobuf.Timestamp valid_until_utc = 6;
 }
 message ModifyOrder {
   string account = 1;
@@ -860,12 +891,6 @@ message PositionUpdate {
   uint64 exchange_sequence = 11;
   google.protobuf.Timestamp sending_time_utc = 12;
 }
-message RateLimitsUpdate {
-  uint32 stream_id = 1;  // uint16
-  string account = 2;
-  Origin origin = 3;
-  repeated RateLimit rate_limits = 4;
-}
 message RateLimitTrigger {
   string name = 1;
   Origin origin = 2;
@@ -877,6 +902,12 @@ message RateLimitTrigger {
   BufferCapacity buffer_capacity = 8;
   uint32 remaining_requests = 9;
   uint32 request_limit = 10;
+}
+message RateLimitsUpdate {
+  uint32 stream_id = 1;  // uint16
+  string account = 2;
+  Origin origin = 3;
+  repeated RateLimit rate_limits = 4;
 }
 message Ready {
 }
@@ -1044,51 +1075,70 @@ message SourceInfo {
 message Event {
   SourceInfo source_info = 1;
   oneof value {
-    Control control = 2;
-    ControlAck control_ack = 3;
-    ServiceUpdate service_update = 4;
-    StrategyUpdate strategy_update = 5;
-    LegsUpdate legs_update = 6;
-    DownloadBegin download_begin = 7;
-    DownloadEnd download_end = 8;
-    Ready ready = 9;
-    GatewaySettings gateway_settings = 10;
-    StreamStatus stream_status = 11;
-    ExternalLatency external_latency = 12;
-    RateLimitsUpdate rate_limits_update = 13;
-    RateLimitTrigger rate_limit_trigger = 14;
-    GatewayStatus gateway_status = 15;
-    ReferenceData reference_data = 16;
-    MarketStatus market_status = 17;
-    TopOfBook top_of_book = 18;
-    MarketByPriceUpdate market_by_price_update = 19;
-    MarketByOrderUpdate market_by_order_update = 20;
-    TradeSummary trade_summary = 21;
-    StatisticsUpdate statistics_update = 22;
-    TimeSeriesUpdate time_series_update = 23;
-    CreateOrder create_order = 24;
-    ModifyOrder modify_order = 25;
-    CancelOrder cancel_order = 26;
-    CancelAllOrders cancel_all_orders = 27;
-    CancelAllOrdersAck cancel_all_orders_ack = 28;
-    OrderAck order_ack = 29;
-    OrderUpdate order_update = 30;
-    TradeUpdate trade_update = 31;
-    PositionUpdate position_update = 32;
-    FundsUpdate funds_update = 33;
-    CustomMetrics custom_metrics = 34;
-    CustomMetricsUpdate custom_metrics_update = 35;
-    CustomMatrix custom_matrix = 36;
-    CustomMatrixUpdate custom_matrix_update = 37;
-    ParametersUpdate parameters_update = 38;
-    Portfolio portfolio = 39;
-    PortfolioUpdate portfolio_update = 40;
-    RiskLimits risk_limits = 41;
-    RiskLimitsUpdate risk_limits_update = 42;
-    MassQuote mass_quote = 43;
-    MassQuoteAck mass_quote_ack = 44;
-    CancelQuotes cancel_quotes = 45;
-    CancelQuotesAck cancel_quotes_ack = 46;
-    Subscribe subscribe = 47;
+    // client => server
+    // - initial
+    Handshake handshake = 1000;
+    // - service/strategy
+    ControlAck control_ack = 2000;
+    ServiceUpdate service_update = 2001;
+    StrategyUpdate strategy_update = 2002;
+    LegsUpdate legs_update = 2003;
+    CustomMetrics custom_metrics = 2020;
+    CustomMatrix custom_matrix = 2021;
+    // - market data
+    Subscribe subscribe = 5000;
+    // - order management
+    CancelAllOrders cancel_all_orders = 6000;
+    CreateOrder create_order = 6001;
+    ModifyOrder modify_order = 6002;
+    CancelOrder cancel_order = 6003;
+    // - quote management
+    MassQuote mass_quote = 7001;
+    CancelQuotes cancel_quotes = 7002;
+
+    // server => client
+    // - initial
+    HandshakeAck handshake_ack = 1100;
+    // - service/strategy
+    Control control = 2100;
+    CustomMetricsUpdate custom_metrics_update = 2120;
+    CustomMatrixUpdate custom_matrix_update = 2121;
+    ParametersUpdate parameters_update = 2140;
+    // - sync
+    DownloadBegin download_begin = 3100;
+    DownloadEnd download_end = 3101;
+    Ready ready = 3102;
+    // - gateway state
+    GatewaySettings gateway_settings = 4100;
+    GatewayStatus gateway_status = 4101;
+    StreamStatus stream_status = 4102;
+    ExternalLatency external_latency = 4103;
+    RateLimitsUpdate rate_limits_update = 4120;
+    RateLimitTrigger rate_limit_trigger = 4140;
+    // - market data
+    ReferenceData reference_data = 5120;
+    MarketStatus market_status = 5121;
+    TopOfBook top_of_book = 5140;
+    MarketByPriceUpdate market_by_price_update = 5141;
+    MarketByOrderUpdate market_by_order_update = 5142;
+    TradeSummary trade_summary = 5160;
+    StatisticsUpdate statistics_update = 5180;
+    TimeSeriesUpdate time_series_update = 5199;
+    // - order management
+    CancelAllOrdersAck cancel_all_orders_ack = 6100;
+    OrderAck order_ack = 6101;
+    OrderUpdate order_update = 6102;
+    // - quote management
+    MassQuoteAck mass_quote_ack = 7101;
+    CancelQuotesAck cancel_quotes_ack = 7102;
+    // - trades/positions/funds
+    TradeUpdate trade_update = 8100;
+    PositionUpdate position_update = 8101;
+    FundsUpdate funds_update = 8102;
+    // - XXX
+    Portfolio portfolio = 9100;
+    PortfolioUpdate portfolio_update = 9101;
+    RiskLimits risk_limits = 9102;
+    RiskLimitsUpdate risk_limits_update = 9103;
   }
 }

@@ -1,0 +1,6 @@
+enum OrderCancelPolicy:uint8 {
+  Undefined,
+  ManagedOrders,
+  ByAccount,
+  ByStrategy,
+}

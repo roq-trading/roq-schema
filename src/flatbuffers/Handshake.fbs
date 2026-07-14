@@ -1,0 +1,15 @@
+table Handshake {
+  request_time_utc:int64;
+  application_name:string;
+  application_version:string;
+  application_build_number:string;
+  hostname:string;
+  username:string;
+  process_id:uint64;
+  service_name:string;
+  login:string;
+  password:string;
+  accounts:[string];
+  order_cancel_policy:OrderCancelPolicy;
+  order_management:OrderManagement;
+}

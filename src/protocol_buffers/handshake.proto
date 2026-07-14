@@ -1,0 +1,15 @@
+message Handshake {
+  google.protobuf.Timestamp request_time_utc = 1;
+  string application_name = 2;
+  string application_version = 3;
+  string application_build_number = 4;
+  string hostname = 5;
+  string username = 6;
+  uint64 process_id = 7;
+  string service_name = 8;
+  string login = 9;
+  string password = 10;
+  repeated string accounts = 11;
+  OrderCancelPolicy order_cancel_policy = 12;
+  OrderManagement order_management = 13;
+}

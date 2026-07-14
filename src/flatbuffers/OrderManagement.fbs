@@ -1,0 +1,4 @@
+enum OrderManagement:uint8 {
+  Undefined,
+  FIX,
+}

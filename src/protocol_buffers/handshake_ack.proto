@@ -1,0 +1,16 @@
+message HandshakeAck {
+  google.protobuf.Timestamp request_time_utc = 1;
+  google.protobuf.Timestamp response_time_utc = 2;
+  bool success = 3;
+  string failure_reason = 4;
+  string package_name = 5;
+  string package_version = 6;
+  string package_build_number = 7;
+  string hostname = 8;
+  string username = 9;
+  uint64 process_id = 10;
+  string service_name = 11;
+  string api_name = 12;
+  uint32 instance = 13;  // uint8
+  bool is_uat = 14;
+}
