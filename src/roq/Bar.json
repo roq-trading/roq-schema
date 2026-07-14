@@ -39,17 +39,17 @@
       "comment": "Total quantity (contracts or base currency)"
     },
     {
-      "name": "base_amount",
+      "name": "baseAmount",
       "type": "std/double",
       "comment": "Total amount (base currency)"
     },
     {
-      "name": "quote_amount",
+      "name": "quoteAmount",
       "type": "std/double",
       "comment": "Total amount (quote currency)"
     },
     {
-      "name": "number_of_trades",
+      "name": "numberOfTrades",
       "type": "std/uint32",
       "comment": "Number of trades (count)"
     },

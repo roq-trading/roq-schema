@@ -4,12 +4,12 @@
   "comment": "Represents tick size for a range starting from a minimum price",
   "values": [
     {
-      "name": "min_price",
+      "name": "minPrice",
       "type": "std/double",
       "comment": "Minimum price (of range)"
     },
     {
-      "name": "tick_size",
+      "name": "tickSize",
       "type": "std/double",
       "comment": "Tick size"
     }

@@ -16,7 +16,7 @@
       "type": "std/string_view"
     },
     {
-      "name": "data_source",
+      "name": "dataSource",
       "type": "roq/DataSource",
       "comment": "Data source"
     },

@@ -4,7 +4,7 @@
   "comment": "Quote",
   "values": [
     {
-      "name": "quote_entry_id",
+      "name": "quoteEntryId",
       "type": "std/uint32",
       "comment": "Quote Entry ID"
     },
@@ -39,7 +39,7 @@
       "comment": "Total quantity available at ask"
     },
     {
-      "name": "quote_set_id",
+      "name": "quoteSetId",
       "type": "std/uint16",
       "comment": "Quote Set ID (can be used to group and cancel quotes)"
     },
