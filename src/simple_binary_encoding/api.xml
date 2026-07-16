@@ -414,18 +414,19 @@
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
     <field id="200" name="requestTimeUtc" type="DateTime"/>
     <field id="201" name="responseTimeUtc" type="DateTime"/>
-    <field id="202" name="success" type="Boolean"/>
-    <field id="203" name="failureReason" type="Text"/>
-    <field id="204" name="packageName" type="Text"/>
-    <field id="205" name="packageVersion" type="Text"/>
-    <field id="206" name="packageBuildNumber" type="Text"/>
-    <field id="207" name="hostname" type="Text"/>
-    <field id="208" name="username" type="Text"/>
-    <field id="209" name="processId" type="uint64"/>
-    <field id="210" name="serviceName" type="Text"/>
-    <field id="211" name="apiName" type="Text"/>
-    <field id="212" name="instance" type="uint8"/>
-    <field id="213" name="isUat" type="Boolean"/>
+    <field id="202" name="sessionId" type="uint64"/>
+    <field id="203" name="success" type="Boolean"/>
+    <field id="204" name="failureReason" type="Text"/>
+    <field id="205" name="packageName" type="Text"/>
+    <field id="206" name="packageVersion" type="Text"/>
+    <field id="207" name="packageBuildNumber" type="Text"/>
+    <field id="208" name="hostname" type="Text"/>
+    <field id="209" name="username" type="Text"/>
+    <field id="210" name="processId" type="uint64"/>
+    <field id="211" name="serviceName" type="Text"/>
+    <field id="212" name="apiName" type="Text"/>
+    <field id="213" name="instance" type="uint8"/>
+    <field id="214" name="isUat" type="Boolean"/>
   </message>
   <!-- 20xx service/strategy response/update -->
   <message id="2000" name="ControlAck">
