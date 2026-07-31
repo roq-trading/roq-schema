@@ -4,6 +4,21 @@
   "comment": "Gateway settings",
   "values": [
     {
+      "name": "api",
+      "type": "std/uint8",
+      "comment": "API"
+    },
+    {
+      "name": "instance",
+      "type": "std/uint8",
+      "comment": "Instance id"
+    },
+    {
+      "name": "isUAT",
+      "type": "std/bool",
+      "comment": "Is UAT?"
+    },
+    {
       "name": "supports",
       "type": "roq/SupportType",
       "array": "roq/Mask",

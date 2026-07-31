@@ -665,6 +665,10 @@ table GatewaySettings {
   oms_cancel_all_orders:uint64;
   ts_interval:Interval;
   ts_max_history:uint16;
+  //
+  api:uint8;
+  instance:uint8;
+  is_uat:bool;
 }
 table GatewayStatus {
   account:string;
@@ -701,6 +705,7 @@ table HandshakeAck {
   process_id:uint64;
   service_name:string;
   api_name:string;
+  api:uint8;
   instance:uint8;
   is_uat:bool;
 }

@@ -425,8 +425,9 @@
     <field id="210" name="processId" type="uint64"/>
     <field id="211" name="serviceName" type="Text"/>
     <field id="212" name="apiName" type="Text"/>
-    <field id="213" name="instance" type="uint8"/>
-    <field id="214" name="isUat" type="Boolean"/>
+    <field id="213" name="api" type="uint8"/>
+    <field id="214" name="instance" type="uint8"/>
+    <field id="215" name="isUat" type="Boolean"/>
   </message>
   <!-- 20xx service/strategy response/update -->
   <message id="2000" name="ControlAck">
@@ -628,17 +629,20 @@
     <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
     <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
     <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
-    <field id="200" name="supports" type="SupportType"/>
-    <field id="201" name="mbpMaxDepth" type="uint16"/>
-    <field id="202" name="mbpTickSizeMultiplier" type="double"/>
-    <field id="203" name="mbpMinTradeVolMultiplier" type="double"/>
-    <field id="204" name="mbpAllowRemoveNonExisting" type="Boolean"/>
-    <field id="205" name="mbpAllowPriceInversion" type="Boolean"/>
-    <field id="206" name="mbpChecksum" type="Boolean"/>
-    <field id="207" name="omsDownloadHasState" type="Boolean"/>
-    <field id="208" name="omsDownloadHasRoutingId" type="Boolean"/>
-    <field id="209" name="omsRequestIdType" type="RequestIdType"/>
-    <field id="210" name="omsCancelAllOrders" type="Filter"/>
+    <field id="200" name="api" type="uint8"/>
+    <field id="201" name="instance" type="uint8"/>
+    <field id="202" name="isUat" type="Boolean"/>
+    <field id="203" name="supports" type="SupportType"/>
+    <field id="204" name="mbpMaxDepth" type="uint16"/>
+    <field id="205" name="mbpTickSizeMultiplier" type="double"/>
+    <field id="206" name="mbpMinTradeVolMultiplier" type="double"/>
+    <field id="207" name="mbpAllowRemoveNonExisting" type="Boolean"/>
+    <field id="208" name="mbpAllowPriceInversion" type="Boolean"/>
+    <field id="209" name="mbpChecksum" type="Boolean"/>
+    <field id="210" name="omsDownloadHasState" type="Boolean"/>
+    <field id="211" name="omsDownloadHasRoutingId" type="Boolean"/>
+    <field id="212" name="omsRequestIdType" type="RequestIdType"/>
+    <field id="213" name="omsCancelAllOrders" type="Filter"/>
   </message>
   <message id="4101" name="GatewayStatus">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>

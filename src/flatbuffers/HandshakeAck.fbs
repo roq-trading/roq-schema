@@ -12,6 +12,7 @@ table HandshakeAck {
   process_id:uint64;
   service_name:string;
   api_name:string;
+  api:uint8;
   instance:uint8;
   is_uat:bool;
 }

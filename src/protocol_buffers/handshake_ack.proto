@@ -12,6 +12,7 @@ message HandshakeAck {
   uint64 process_id = 11;
   string service_name = 12;
   string api_name = 13;
-  uint32 instance = 14;  // uint8
-  bool is_uat = 15;
+  uint32 api = 14;       // uint8
+  uint32 instance = 15;  // uint8
+  bool is_uat = 16;
 }

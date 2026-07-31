@@ -69,6 +69,11 @@
       "comment": "API name"
     },
     {
+      "name": "api",
+      "type": "std/uint8",
+      "comment": "API"
+    },
+    {
       "name": "instance",
       "type": "std/uint8",
       "comment": "Instance id"

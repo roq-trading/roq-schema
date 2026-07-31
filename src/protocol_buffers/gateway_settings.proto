@@ -1,15 +1,18 @@
 message GatewaySettings {
-  repeated SupportType supports = 1;
-  uint32 mbp_max_depth = 2;  // uint16
-  double mbp_tick_size_multiplier = 3;
-  double mbp_min_trade_vol_multiplier = 4;
-  bool mbp_allow_remove_non_existing = 5;
-  bool mbp_allow_price_inversion = 6;
-  bool mbp_checksum = 7;
-  bool oms_download_has_state = 8;
-  bool oms_download_has_routing_id = 9;
-  RequestIdType oms_request_id_type = 10;
-  repeated Filter oms_cancel_all_orders = 11;
-  Interval ts_interval = 12;
-  uint32 ts_max_history = 13;  // uint16
+  uint32 api = 1;       // uint8
+  uint32 instance = 2;  // uint8
+  bool is_uat = 3;
+  repeated SupportType supports = 4;
+  uint32 mbp_max_depth = 5;  // uint16
+  double mbp_tick_size_multiplier = 6;
+  double mbp_min_trade_vol_multiplier = 7;
+  bool mbp_allow_remove_non_existing = 8;
+  bool mbp_allow_price_inversion = 9;
+  bool mbp_checksum = 10;
+  bool oms_download_has_state = 11;
+  bool oms_download_has_routing_id = 12;
+  RequestIdType oms_request_id_type = 13;
+  repeated Filter oms_cancel_all_orders = 14;
+  Interval ts_interval = 15;
+  uint32 ts_max_history = 16;  // uint16
 }
