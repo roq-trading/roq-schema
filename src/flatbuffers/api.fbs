@@ -371,6 +371,10 @@ table Bar {
   number_of_trades:uint32 = 0;
   vwap:double = nan;
 }
+table ExchangeSymbol {
+  exchange:string;
+  symbol:string;
+}
 table Fill {
   external_trade_id:string;
   quantity:double;
@@ -688,6 +692,7 @@ table Handshake {
   login:string;
   password:string;
   accounts:[string];
+  symbols:[ExchangeSymbol];
   order_cancel_policy:OrderCancelPolicy;
   order_management:OrderManagement;
 }
@@ -695,8 +700,6 @@ table HandshakeAck {
   request_time_utc:int64;
   response_time_utc:int64;
   session_id:uint64;
-  success:bool;
-  failure_reason:string;
   package_name:string;
   package_version:string;
   package_build_number:string;

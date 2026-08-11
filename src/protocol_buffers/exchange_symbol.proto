@@ -1,0 +1,4 @@
+message ExchangeSymbol {
+  string exchange = 1;
+  string symbol = 2;
+}

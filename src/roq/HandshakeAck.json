@@ -19,16 +19,6 @@
       "comment": "Session ID"
     },
     {
-      "name": "success",
-      "type": "std/bool",
-      "comment": "Success?"
-    },
-    {
-      "name": "failureReason",
-      "type": "std/string_view",
-      "comment": "Reason for failure"
-    },
-    {
       "name": "packageName",
       "type": "std/string_view",
       "comment": "Package name"

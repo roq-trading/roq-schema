@@ -33,6 +33,7 @@ set(SOURCES
     DownloadEnd.json
     Encoding.json
     Error.json
+    ExchangeSymbol.json
     ExecutionInstruction.json
     ExternalLatency.json
     Fill.json

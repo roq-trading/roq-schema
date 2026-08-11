@@ -10,6 +10,7 @@ table Handshake {
   login:string;
   password:string;
   accounts:[string];
+  symbols:[ExchangeSymbol];
   order_cancel_policy:OrderCancelPolicy;
   order_management:OrderManagement;
 }

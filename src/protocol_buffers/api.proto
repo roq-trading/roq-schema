@@ -379,6 +379,10 @@ message Bar {
   uint32 number_of_trades = 10;
   double vwap = 11;
 }
+message ExchangeSymbol {
+  string exchange = 1;
+  string symbol = 2;
+}
 message Fill {
   google.protobuf.Timestamp exchange_time_utc = 1;
   string external_trade_id = 2;
@@ -689,26 +693,25 @@ message Handshake {
   string login = 9;
   string password = 10;
   repeated string accounts = 11;
-  OrderCancelPolicy order_cancel_policy = 12;
-  OrderManagement order_management = 13;
+  repeated ExchangeSymbol symbols = 12;
+  OrderCancelPolicy order_cancel_policy = 13;
+  OrderManagement order_management = 14;
 }
 message HandshakeAck {
   google.protobuf.Timestamp request_time_utc = 1;
   google.protobuf.Timestamp response_time_utc = 2;
   uint64 session_id = 3;
-  bool success = 4;
-  string failure_reason = 5;
-  string package_name = 6;
-  string package_version = 7;
-  string package_build_number = 8;
-  string hostname = 9;
-  string username = 10;
-  uint64 process_id = 11;
-  string service_name = 12;
-  string api_name = 13;
-  uint32 api = 14;       // uint8
-  uint32 instance = 15;  // uint8
-  bool is_uat = 16;
+  string package_name = 4;
+  string package_version = 5;
+  string package_build_number = 6;
+  string hostname = 7;
+  string username = 8;
+  uint64 process_id = 9;
+  string service_name = 10;
+  string api_name = 11;
+  uint32 api = 12;       // uint8
+  uint32 instance = 13;  // uint8
+  bool is_uat = 14;
 }
 message LegsUpdate {
   string user = 1;

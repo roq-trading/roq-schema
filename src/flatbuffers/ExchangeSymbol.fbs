@@ -1,0 +1,4 @@
+table ExchangeSymbol {
+  exchange:string;
+  symbol:string;
+}

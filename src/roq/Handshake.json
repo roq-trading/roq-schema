@@ -60,6 +60,12 @@
       "comment": "Accounts"
     },
     {
+      "name": "symbols",
+      "type": "roq/ExchangeSymbol",
+      "array": "std/span",
+      "comment": "Symbols"
+    },
+    {
       "name": "orderCancelPolicy",
       "type": "roq/OrderCancelPolicy",
       "comment": "Order cancel policy"

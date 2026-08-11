@@ -10,6 +10,7 @@ message Handshake {
   string login = 9;
   string password = 10;
   repeated string accounts = 11;
-  OrderCancelPolicy order_cancel_policy = 12;
-  OrderManagement order_management = 13;
+  repeated ExchangeSymbol symbols = 12;
+  OrderCancelPolicy order_cancel_policy = 13;
+  OrderManagement order_management = 14;
 }

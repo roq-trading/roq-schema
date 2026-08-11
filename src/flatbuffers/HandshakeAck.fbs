@@ -2,8 +2,6 @@ table HandshakeAck {
   request_time_utc:int64;
   response_time_utc:int64;
   session_id:uint64;
-  success:bool;
-  failure_reason:string;
   package_name:string;
   package_version:string;
   package_build_number:string;

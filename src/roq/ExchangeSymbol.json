@@ -1,0 +1,15 @@
+{
+  "name": "roq/ExchangeSymbol",
+  "type": "message",
+  "comment": "Exchange and symbol",
+  "values": [
+    {
+      "name": "exchange",
+      "type": "roq/Exchange"
+    },
+    {
+      "name": "symbol",
+      "type": "roq/Symbol"
+    }
+  ]
+}
