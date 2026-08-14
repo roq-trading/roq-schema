@@ -3,7 +3,7 @@ message MarketStatus {
   string exchange = 2;
   string symbol = 3;
   TradingStatus trading_status = 4;
-  google.protobuf.Timestamp exchange_time_utc = 5;
-  uint64 exchange_sequence = 6;
-  google.protobuf.Timestamp sending_time_utc = 7;
+  optional google.protobuf.Timestamp exchange_time_utc = 5;
+  optional uint64 exchange_sequence = 6;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
 }

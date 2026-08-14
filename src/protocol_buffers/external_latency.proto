@@ -1,5 +1,5 @@
 message ExternalLatency {
   uint32 stream_id = 1;  // uint16
-  string account = 2;
+  optional string account = 2;
   google.protobuf.Timestamp latency = 3;
 }

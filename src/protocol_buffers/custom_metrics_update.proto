@@ -5,6 +5,6 @@ message CustomMetricsUpdate {
   string symbol = 4;
   repeated Measurement measurements = 5;
   UpdateType update_type = 6;
-  google.protobuf.Timestamp sending_time_utc = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
   string user = 8;
 }

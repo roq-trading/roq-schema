@@ -8,6 +8,6 @@ message CustomMatrixUpdate {
   repeated double data = 7;
   UpdateType update_type = 8;
   uint32 version = 9;
-  google.protobuf.Timestamp sending_time_utc = 10;
+  optional google.protobuf.Timestamp sending_time_utc = 10;
   string user = 11;
 }

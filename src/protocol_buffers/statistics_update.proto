@@ -4,7 +4,7 @@ message StatisticsUpdate {
   string symbol = 3;
   repeated Statistics statistics = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
-  uint64 exchange_sequence = 7;
-  google.protobuf.Timestamp sending_time_utc = 8;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
+  optional uint64 exchange_sequence = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 8;
 }

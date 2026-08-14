@@ -3,9 +3,9 @@ message CancelQuotesAck {
   string account = 2;
   Origin origin = 3;
   RequestStatus request_status = 4;
-  Error error = 5;
-  string text = 6;
+  optional Error error = 5;
+  optional string text = 6;
   string request_id = 7;
-  string external_account = 8;
-  uint32 number_of_affected_quotes = 9;
+  optional string external_account = 8;
+  optional uint32 number_of_affected_quotes = 9;
 }

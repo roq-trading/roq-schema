@@ -2,6 +2,6 @@ message Position {
   string exchange = 1;
   string symbol = 2;
   double position = 3;
-  double profit_loss_amount = 4;
-  string profit_loss_currency = 5;
+  optional double profit_loss_amount = 4;
+  optional string profit_loss_currency = 5;
 }

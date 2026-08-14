@@ -1,7 +1,7 @@
 message RateLimit {
-  RateLimitType type = 1;
-  google.protobuf.Timestamp period = 2;
-  google.protobuf.Timestamp end_time_utc = 3;
+  optional RateLimitType type = 1;
+  optional google.protobuf.Timestamp period = 2;
+  optional google.protobuf.Timestamp end_time_utc = 3;
   uint32 limit = 4;
   uint32 value = 5;
 }

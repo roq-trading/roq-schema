@@ -2,10 +2,10 @@ message Quote {
   uint32 quote_entry_id = 1;
   string exchange = 2;
   string symbol = 3;
-  double bid_price = 4;
-  double bid_quantity = 5;
-  double ask_price = 6;
-  double ask_quantity = 7;
+  optional double bid_price = 4;
+  optional double bid_quantity = 5;
+  optional double ask_price = 6;
+  optional double ask_quantity = 7;
   uint32 quote_set_id = 8;  // note! uint16
   repeated ExecutionInstruction execution_instructions = 9;
 }

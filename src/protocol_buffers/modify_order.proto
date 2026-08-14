@@ -1,11 +1,11 @@
 message ModifyOrder {
   string account = 1;
   uint64 order_id = 2;
-  string request_template = 3;
-  double quantity = 4;
-  double price = 5;
-  string routing_id = 6;
-  uint32 version = 7;
-  uint32 conditional_on_version = 8;
-  google.protobuf.Timestamp release_time_utc = 9;
+  optional string request_template = 3;
+  optional double quantity = 4;
+  optional double price = 5;
+  optional string routing_id = 6;
+  optional uint32 version = 7;
+  optional uint32 conditional_on_version = 8;
+  optional google.protobuf.Timestamp release_time_utc = 9;
 }

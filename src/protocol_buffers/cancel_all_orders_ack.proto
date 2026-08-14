@@ -1,18 +1,18 @@
 message CancelAllOrdersAck {
   uint32 stream_id = 1;  // uint16
   string account = 2;
-  uint64 order_id = 3;
-  string exchange = 4;
-  string symbol = 5;
-  Side side = 6;
+  optional uint64 order_id = 3;
+  optional string exchange = 4;
+  optional string symbol = 5;
+  optional Side side = 6;
   Origin origin = 7;
   RequestStatus request_status = 8;
-  Error error = 9;
-  string text = 10;
+  optional Error error = 9;
+  optional string text = 10;
   string request_id = 11;
-  string external_account = 12;
-  uint32 number_of_affected_orders = 13;
-  google.protobuf.Timestamp round_trip_latency = 14;
+  optional string external_account = 12;
+  optional uint32 number_of_affected_orders = 13;
+  optional google.protobuf.Timestamp round_trip_latency = 14;
   string user = 15;
-  uint32 strategy_id = 16;
+  optional uint32 strategy_id = 16;
 }

@@ -4,8 +4,8 @@ message RateLimitTrigger {
   RateLimitType type = 3;
   repeated string users = 4;
   repeated string accounts = 5;
-  google.protobuf.Timestamp ban_expires = 6;
-  string triggered_by = 7;
+  optional google.protobuf.Timestamp ban_expires = 6;
+  optional string triggered_by = 7;
   BufferCapacity buffer_capacity = 8;
   uint32 remaining_requests = 9;
   uint32 request_limit = 10;

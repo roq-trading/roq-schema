@@ -4,5 +4,5 @@ message PortfolioUpdate {
   string account = 3;
   repeated Position positions = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
 }

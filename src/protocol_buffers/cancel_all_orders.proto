@@ -1,8 +1,8 @@
 message CancelAllOrders {
   string account = 1;
-  uint64 order_id = 2;
-  string exchange = 3;
-  string symbol = 4;
-  uint32 strategy_id = 5;
-  Side side = 6;
+  optional uint64 order_id = 2;
+  optional string exchange = 3;
+  optional string symbol = 4;
+  optional uint32 strategy_id = 5;
+  optional Side side = 6;
 }

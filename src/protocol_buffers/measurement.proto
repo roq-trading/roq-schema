@@ -1,4 +1,4 @@
 message Measurement {
   string name = 1;
-  double value = 2;
+  optional double value = 2;
 }

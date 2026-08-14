@@ -1,16 +1,16 @@
 message Handshake {
-  google.protobuf.Timestamp request_time_utc = 1;
-  string application_name = 2;
-  string application_version = 3;
-  string application_build_number = 4;
-  string hostname = 5;
-  string username = 6;
-  uint64 process_id = 7;
-  string service_name = 8;
+  optional google.protobuf.Timestamp request_time_utc = 1;
+  optional string application_name = 2;
+  optional string application_version = 3;
+  optional string application_build_number = 4;
+  optional string hostname = 5;
+  optional string username = 6;
+  optional uint64 process_id = 7;
+  optional string service_name = 8;
   string login = 9;
   string password = 10;
   repeated string accounts = 11;
   repeated ExchangeSymbol symbols = 12;
-  OrderCancelPolicy order_cancel_policy = 13;
-  OrderManagement order_management = 14;
+  optional OrderCancelPolicy order_cancel_policy = 13;
+  optional OrderManagement order_management = 14;
 }

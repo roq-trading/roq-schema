@@ -1,9 +1,9 @@
 message CancelOrder {
   string account = 1;
   uint64 order_id = 2;
-  string request_template = 3;
-  string routing_id = 4;
-  uint32 version = 5;
-  uint32 conditional_on_version = 6;
-  google.protobuf.Timestamp release_time_utc = 7;
+  optional string request_template = 3;
+  optional string routing_id = 4;
+  optional uint32 version = 5;
+  optional uint32 conditional_on_version = 6;
+  optional google.protobuf.Timestamp release_time_utc = 7;
 }

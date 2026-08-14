@@ -1,15 +1,15 @@
 message StreamStatus {
   uint32 stream_id = 1;  // uint16
-  string account = 2;
+  optional string account = 2;
   repeated SupportType supports = 3;
   Transport transport = 4;
   Protocol protocol = 5;
   repeated Encoding encoding = 6;
-  Priority priority = 7;
+  optional Priority priority = 7;
   ConnectionStatus connection_status = 8;
-  string reason = 9;
-  string interface = 10;
-  string authority = 11;
-  string path = 12;
-  string proxy = 13;
+  optional string reason = 9;
+  optional string interface = 10;
+  optional string authority = 11;
+  optional string path = 12;
+  optional string proxy = 13;
 }

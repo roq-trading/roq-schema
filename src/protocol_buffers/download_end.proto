@@ -1,4 +1,4 @@
 message DownloadEnd {
-  string account = 1;
-  uint64 max_order_id = 2;
+  optional string account = 1;
+  optional uint64 max_order_id = 2;
 }

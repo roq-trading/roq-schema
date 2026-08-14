@@ -7,5 +7,5 @@ message TimeSeriesUpdate {
   Origin origin = 6;
   repeated Bar bars = 7;
   UpdateType update_type = 8;
-  google.protobuf.Timestamp exchange_time_utc = 9;
+  optional google.protobuf.Timestamp exchange_time_utc = 9;
 }

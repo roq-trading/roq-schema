@@ -372,34 +372,34 @@ message Bar {
   double open_price = 3;
   double high_price = 4;
   double low_price = 5;
-  double close_price = 6;
-  double quantity = 7;
-  double base_amount = 8;
-  double quote_amount = 9;
-  uint32 number_of_trades = 10;
-  double vwap = 11;
+  optional double close_price = 6;
+  optional double quantity = 7;
+  optional double base_amount = 8;
+  optional double quote_amount = 9;
+  optional uint32 number_of_trades = 10;
+  optional double vwap = 11;
 }
 message ExchangeSymbol {
   string exchange = 1;
   string symbol = 2;
 }
 message Fill {
-  google.protobuf.Timestamp exchange_time_utc = 1;
+  optional google.protobuf.Timestamp exchange_time_utc = 1;
   string external_trade_id = 2;
   double quantity = 3;
   double price = 4;
-  Liquidity liquidity = 5;
-  double commission_amount = 6;
-  string commission_currency = 7;
-  double base_amount = 8;
-  double quote_amount = 9;
-  double profit_loss_amount = 10;
+  optional Liquidity liquidity = 5;
+  optional double commission_amount = 6;
+  optional string commission_currency = 7;
+  optional double base_amount = 8;
+  optional double quote_amount = 9;
+  optional double profit_loss_amount = 10;
 }
 message Layer {
   double bid_price = 1;
-  double bid_quantity = 2;
+  optional double bid_quantity = 2;
   double ask_price = 3;
-  double ask_quantity = 4;
+  optional double ask_quantity = 4;
 }
 message Leg {
   uint32 leg_id = 1;  // note! protobuf has no uint16
@@ -411,23 +411,23 @@ message Leg {
 message MBOUpdate {
   double price = 1;
   double quantity = 2;
-  uint64 priority = 3;
+  optional uint64 priority = 3;
   string order_id = 4;
   Side side = 5;
   UpdateAction action = 6;
-  UpdateReason reason = 7;
+  optional UpdateReason reason = 7;
 }
 message MBPUpdate {
   double price = 1;
   double quantity = 2;
-  double implied_quantity = 3;
-  uint32 number_of_orders = 4;  // uint16
+  optional double implied_quantity = 3;
+  optional uint32 number_of_orders = 4;  // uint16
   UpdateAction update_action = 5;
   uint32 price_level = 6;
 }
 message Measurement {
   string name = 1;
-  double value = 2;
+  optional double value = 2;
 }
 message Parameter {
   string label = 1;
@@ -441,36 +441,36 @@ message Position {
   string exchange = 1;
   string symbol = 2;
   double position = 3;
-  double profit_loss_amount = 4;
-  string profit_loss_currency = 5;
+  optional double profit_loss_amount = 4;
+  optional string profit_loss_currency = 5;
 }
 message Quote {
   uint32 quote_entry_id = 1;
   string exchange = 2;
   string symbol = 3;
-  double bid_price = 4;
-  double bid_quantity = 5;
-  double ask_price = 6;
-  double ask_quantity = 7;
+  optional double bid_price = 4;
+  optional double bid_quantity = 5;
+  optional double ask_price = 6;
+  optional double ask_quantity = 7;
   uint32 quote_set_id = 8;  // note! uint16
   repeated ExecutionInstruction execution_instructions = 9;
 }
 message RateLimit {
-  RateLimitType type = 1;
-  google.protobuf.Timestamp period = 2;
-  google.protobuf.Timestamp end_time_utc = 3;
+  optional RateLimitType type = 1;
+  optional google.protobuf.Timestamp period = 2;
+  optional google.protobuf.Timestamp end_time_utc = 3;
   uint32 limit = 4;
   uint32 value = 5;
 }
 message RiskLimit {
   string exchange = 1;
   string symbol = 2;
-  double long_position = 3;
-  double short_position = 4;
-  double long_position_limit = 5;
-  double short_position_limit = 6;
-  double long_risk_exposure_limit = 7;
-  double short_risk_exposure_limit = 8;
+  optional double long_position = 3;
+  optional double short_position = 4;
+  optional double long_position_limit = 5;
+  optional double short_position_limit = 6;
+  optional double long_risk_exposure_limit = 7;
+  optional double short_risk_exposure_limit = 8;
   bool allow_netting = 9;
 }
 message Route {
@@ -480,58 +480,58 @@ message Route {
 message Statistics {
   StatisticsType type = 1;
   double value = 2;
-  google.protobuf.Timestamp begin_time_utc = 3;
-  google.protobuf.Timestamp end_time_utc = 4;
+  optional google.protobuf.Timestamp begin_time_utc = 3;
+  optional google.protobuf.Timestamp end_time_utc = 4;
 }
 message TickSizeStep {
   double min_price = 1;
   double tick_size = 2;
 }
 message Trade {
-  Side side = 1;
+  optional Side side = 1;
   double price = 2;
   double quantity = 3;
-  string trade_id = 4;
-  string taker_order_id = 5;
-  string maker_order_id = 6;
+  optional string trade_id = 4;
+  optional string taker_order_id = 5;
+  optional string maker_order_id = 6;
 }
 
 // messages
 
 message CancelAllOrders {
   string account = 1;
-  uint64 order_id = 2;
-  string exchange = 3;
-  string symbol = 4;
-  uint32 strategy_id = 5;
-  Side side = 6;
+  optional uint64 order_id = 2;
+  optional string exchange = 3;
+  optional string symbol = 4;
+  optional uint32 strategy_id = 5;
+  optional Side side = 6;
 }
 message CancelAllOrdersAck {
   uint32 stream_id = 1;  // uint16
   string account = 2;
-  uint64 order_id = 3;
-  string exchange = 4;
-  string symbol = 5;
-  Side side = 6;
+  optional uint64 order_id = 3;
+  optional string exchange = 4;
+  optional string symbol = 5;
+  optional Side side = 6;
   Origin origin = 7;
   RequestStatus request_status = 8;
-  Error error = 9;
-  string text = 10;
+  optional Error error = 9;
+  optional string text = 10;
   string request_id = 11;
-  string external_account = 12;
-  uint32 number_of_affected_orders = 13;
-  google.protobuf.Timestamp round_trip_latency = 14;
+  optional string external_account = 12;
+  optional uint32 number_of_affected_orders = 13;
+  optional google.protobuf.Timestamp round_trip_latency = 14;
   string user = 15;
-  uint32 strategy_id = 16;
+  optional uint32 strategy_id = 16;
 }
 message CancelOrder {
   string account = 1;
   uint64 order_id = 2;
-  string request_template = 3;
-  string routing_id = 4;
-  uint32 version = 5;
-  uint32 conditional_on_version = 6;
-  google.protobuf.Timestamp release_time_utc = 7;
+  optional string request_template = 3;
+  optional string routing_id = 4;
+  optional uint32 version = 5;
+  optional uint32 conditional_on_version = 6;
+  optional google.protobuf.Timestamp release_time_utc = 7;
 }
 message CancelQuotes {
   string account = 1;
@@ -542,29 +542,29 @@ message CancelQuotesAck {
   string account = 2;
   Origin origin = 3;
   RequestStatus request_status = 4;
-  Error error = 5;
-  string text = 6;
+  optional Error error = 5;
+  optional string text = 6;
   string request_id = 7;
-  string external_account = 8;
-  uint32 number_of_affected_quotes = 9;
+  optional string external_account = 8;
+  optional uint32 number_of_affected_quotes = 9;
 }
 message Control {
   string request_id = 1;
   string user = 2;
   Action action = 3;
-  uint32 strategy_id = 4;
-  uint32 leg_id = 5;  // uint16
-  string account = 6;
-  string exchange = 7;
-  string symbol = 8;
+  optional uint32 strategy_id = 4;
+  optional uint32 leg_id = 5;  // uint16
+  optional string account = 6;
+  optional string exchange = 7;
+  optional string symbol = 8;
 }
 message ControlAck {
   string request_id = 1;
   string user = 2;
   Origin origin = 3;
   RequestStatus request_status = 4;
-  Error error = 5;
-  string text = 6;
+  optional Error error = 5;
+  optional string text = 6;
 }
 message CreateOrder {
   string account = 1;
@@ -572,21 +572,21 @@ message CreateOrder {
   string exchange = 3;
   string symbol = 4;
   Side side = 5;
-  PositionEffect position_effect = 6;
-  MarginMode margin_mode = 7;
-  QuantityType quantity_type = 8;
-  double max_show_quantity = 9;
+  optional PositionEffect position_effect = 6;
+  optional MarginMode margin_mode = 7;
+  optional QuantityType quantity_type = 8;
+  optional double max_show_quantity = 9;
   OrderType order_type = 10;
-  TimeInForce time_in_force = 11;
+  optional TimeInForce time_in_force = 11;
   repeated ExecutionInstruction execution_instructions = 12;
-  string request_template = 13;
-  double quantity = 14;
-  double price = 15;
-  double stop_price = 16;
-  double leverage = 17;
-  string routing_id = 18;
-  uint32 strategy_id = 19;
-  google.protobuf.Timestamp release_time_utc = 20;
+  optional string request_template = 13;
+  optional double quantity = 14;
+  optional double price = 15;
+  optional double stop_price = 16;
+  optional double leverage = 17;
+  optional string routing_id = 18;
+  optional uint32 strategy_id = 19;
+  optional google.protobuf.Timestamp release_time_utc = 20;
 }
 message CustomMatrix {
   string label = 1;
@@ -609,7 +609,7 @@ message CustomMatrixUpdate {
   repeated double data = 7;
   UpdateType update_type = 8;
   uint32 version = 9;
-  google.protobuf.Timestamp sending_time_utc = 10;
+  optional google.protobuf.Timestamp sending_time_utc = 10;
   string user = 11;
 }
 message CustomMetrics {
@@ -627,87 +627,87 @@ message CustomMetricsUpdate {
   string symbol = 4;
   repeated Measurement measurements = 5;
   UpdateType update_type = 6;
-  google.protobuf.Timestamp sending_time_utc = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
   string user = 8;
 }
 message DownloadBegin {
-  string account = 1;
+  optional string account = 1;
 }
 message DownloadEnd {
-  string account = 1;
-  uint64 max_order_id = 2;
+  optional string account = 1;
+  optional uint64 max_order_id = 2;
 }
 message ExternalLatency {
   uint32 stream_id = 1;  // uint16
-  string account = 2;
+  optional string account = 2;
   google.protobuf.Timestamp latency = 3;
 }
 message FundsUpdate {
   uint32 stream_id = 1;  // uint16
   string account = 2;
   string currency = 3;
-  MarginMode margin_mode = 4;
+  optional MarginMode margin_mode = 4;
   double balance = 5;
-  double hold = 6;
-  double borrowed = 7;
-  double unrealized_pnl = 8;
-  string external_account = 9;
+  optional double hold = 6;
+  optional double borrowed = 7;
+  optional double unrealized_pnl = 8;
+  optional string external_account = 9;
   UpdateType update_type = 10;
-  google.protobuf.Timestamp exchange_time_utc = 11;
-  uint64 exchange_sequence = 12;
-  google.protobuf.Timestamp sending_time_utc = 13;
+  optional google.protobuf.Timestamp exchange_time_utc = 11;
+  optional uint64 exchange_sequence = 12;
+  optional google.protobuf.Timestamp sending_time_utc = 13;
 }
 message GatewaySettings {
   uint32 api = 1;       // uint8
   uint32 instance = 2;  // uint8
   bool is_uat = 3;
   repeated SupportType supports = 4;
-  uint32 mbp_max_depth = 5;  // uint16
-  double mbp_tick_size_multiplier = 6;
-  double mbp_min_trade_vol_multiplier = 7;
+  optional uint32 mbp_max_depth = 5;  // uint16
+  optional double mbp_tick_size_multiplier = 6;
+  optional double mbp_min_trade_vol_multiplier = 7;
   bool mbp_allow_remove_non_existing = 8;
   bool mbp_allow_price_inversion = 9;
   bool mbp_checksum = 10;
   bool oms_download_has_state = 11;
   bool oms_download_has_routing_id = 12;
-  RequestIdType oms_request_id_type = 13;
+  optional RequestIdType oms_request_id_type = 13;
   repeated Filter oms_cancel_all_orders = 14;
-  Interval ts_interval = 15;
-  uint32 ts_max_history = 16;  // uint16
+  optional Interval ts_interval = 15;
+  optional uint32 ts_max_history = 16;  // uint16
 }
 message GatewayStatus {
-  string account = 1;
+  optional string account = 1;
   repeated SupportType supported = 2;
   repeated SupportType available = 3;
   repeated SupportType unavailable = 4;
 }
 message Handshake {
-  google.protobuf.Timestamp request_time_utc = 1;
-  string application_name = 2;
-  string application_version = 3;
-  string application_build_number = 4;
-  string hostname = 5;
-  string username = 6;
-  uint64 process_id = 7;
-  string service_name = 8;
+  optional google.protobuf.Timestamp request_time_utc = 1;
+  optional string application_name = 2;
+  optional string application_version = 3;
+  optional string application_build_number = 4;
+  optional string hostname = 5;
+  optional string username = 6;
+  optional uint64 process_id = 7;
+  optional string service_name = 8;
   string login = 9;
   string password = 10;
   repeated string accounts = 11;
   repeated ExchangeSymbol symbols = 12;
-  OrderCancelPolicy order_cancel_policy = 13;
-  OrderManagement order_management = 14;
+  optional OrderCancelPolicy order_cancel_policy = 13;
+  optional OrderManagement order_management = 14;
 }
 message HandshakeAck {
-  google.protobuf.Timestamp request_time_utc = 1;
-  google.protobuf.Timestamp response_time_utc = 2;
+  optional google.protobuf.Timestamp request_time_utc = 1;
+  optional google.protobuf.Timestamp response_time_utc = 2;
   uint64 session_id = 3;
   string package_name = 4;
   string package_version = 5;
   string package_build_number = 6;
-  string hostname = 7;
-  string username = 8;
-  uint64 process_id = 9;
-  string service_name = 10;
+  optional string hostname = 7;
+  optional string username = 8;
+  optional uint64 process_id = 9;
+  optional string service_name = 10;
   string api_name = 11;
   uint32 api = 12;       // uint8
   uint32 instance = 13;  // uint8
@@ -725,13 +725,13 @@ message MarketByOrderUpdate {
   string symbol = 3;
   repeated MBOUpdate orders = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
-  uint64 exchange_sequence = 7;
-  google.protobuf.Timestamp sending_time_utc = 8;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
+  optional uint64 exchange_sequence = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 8;
   Precision price_precision = 9;
   Precision quantity_precision = 10;
   uint32 max_depth = 11;  // uint16
-  uint32 checksum = 12;
+  optional uint32 checksum = 12;
 }
 message MarketByPriceUpdate {
   uint32 stream_id = 1;  // uint16
@@ -740,30 +740,30 @@ message MarketByPriceUpdate {
   repeated MBPUpdate bids = 4;
   repeated MBPUpdate asks = 5;
   UpdateType update_type = 6;
-  google.protobuf.Timestamp exchange_time_utc = 7;
-  uint64 exchange_sequence = 8;
-  google.protobuf.Timestamp sending_time_utc = 9;
+  optional google.protobuf.Timestamp exchange_time_utc = 7;
+  optional uint64 exchange_sequence = 8;
+  optional google.protobuf.Timestamp sending_time_utc = 9;
   Precision price_precision = 10;
   Precision quantity_precision = 11;
   uint32 max_depth = 12;  // uint16
-  uint32 checksum = 13;
+  optional uint32 checksum = 13;
 }
 message MarketStatus {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;
   string symbol = 3;
   TradingStatus trading_status = 4;
-  google.protobuf.Timestamp exchange_time_utc = 5;
-  uint64 exchange_sequence = 6;
-  google.protobuf.Timestamp sending_time_utc = 7;
+  optional google.protobuf.Timestamp exchange_time_utc = 5;
+  optional uint64 exchange_sequence = 6;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
 }
 message MassQuote {
   string account = 1;
   uint32 quote_id = 2;
   repeated Quote quotes = 3;
-  bool mmp_reset = 4;
-  string mmp_group = 5;
-  google.protobuf.Timestamp valid_until_utc = 6;
+  optional bool mmp_reset = 4;
+  optional string mmp_group = 5;
+  optional google.protobuf.Timestamp valid_until_utc = 6;
 }
 message MassQuoteAck {
   uint32 stream_id = 1;  // uint16
@@ -771,21 +771,21 @@ message MassQuoteAck {
   uint32 quote_id = 3;
   Origin origin = 4;
   RequestStatus request_status = 5;
-  Error error = 6;
-  string text = 7;
+  optional Error error = 6;
+  optional string text = 7;
   string request_id = 8;
-  string external_account = 9;
+  optional string external_account = 9;
 }
 message ModifyOrder {
   string account = 1;
   uint64 order_id = 2;
-  string request_template = 3;
-  double quantity = 4;
-  double price = 5;
-  string routing_id = 6;
-  uint32 version = 7;
-  uint32 conditional_on_version = 8;
-  google.protobuf.Timestamp release_time_utc = 9;
+  optional string request_template = 3;
+  optional double quantity = 4;
+  optional double price = 5;
+  optional string routing_id = 6;
+  optional uint32 version = 7;
+  optional uint32 conditional_on_version = 8;
+  optional google.protobuf.Timestamp release_time_utc = 9;
 }
 message OrderAck {
   uint32 stream_id = 1;  // uint16
@@ -794,30 +794,30 @@ message OrderAck {
   string exchange = 4;
   string symbol = 5;
   Side side = 6;
-  PositionEffect position_effect = 7;
-  MarginMode margin_mode = 8;
-  QuantityType quantity_type = 9;
+  optional PositionEffect position_effect = 7;
+  optional MarginMode margin_mode = 8;
+  optional QuantityType quantity_type = 9;
   RequestType request_type = 10;
   Origin origin = 11;
   RequestStatus request_status = 12;
-  Error error = 13;
-  string text = 14;
+  optional Error error = 13;
+  optional string text = 14;
   string request_id = 15;
-  string external_account = 16;
-  string external_order_id = 17;
+  optional string external_account = 16;
+  optional string external_order_id = 17;
   string client_order_id = 18;
-  double quantity = 19;
-  double price = 20;
-  double stop_price = 21;
-  double leverage = 22;
-  string routing_id = 23;
+  optional double quantity = 19;
+  optional double price = 20;
+  optional double stop_price = 21;
+  optional double leverage = 22;
+  optional string routing_id = 23;
   uint32 version = 24;
-  double risk_exposure = 25;
-  double risk_exposure_change = 26;
-  double traded_quantity = 27;
-  google.protobuf.Timestamp round_trip_latency = 28;
+  optional double risk_exposure = 25;
+  optional double risk_exposure_change = 26;
+  optional double traded_quantity = 27;
+  optional google.protobuf.Timestamp round_trip_latency = 28;
   string user = 29;
-  uint32 strategy_id = 30;
+  optional uint32 strategy_id = 30;
 }
 message OrderUpdate {
   uint32 stream_id = 1;  // uint16
@@ -826,41 +826,41 @@ message OrderUpdate {
   string exchange = 4;
   string symbol = 5;
   Side side = 6;
-  PositionEffect position_effect = 7;
-  MarginMode margin_mode = 8;
-  QuantityType quantity_type = 9;
-  double max_show_quantity = 10;
+  optional PositionEffect position_effect = 7;
+  optional MarginMode margin_mode = 8;
+  optional QuantityType quantity_type = 9;
+  optional double max_show_quantity = 10;
   OrderType order_type = 11;
-  TimeInForce time_in_force = 12;
+  optional TimeInForce time_in_force = 12;
   repeated ExecutionInstruction execution_instructions = 13;
-  google.protobuf.Timestamp create_time_utc = 14;
-  google.protobuf.Timestamp update_time_utc = 15;
-  string external_account = 16;
-  string external_order_id = 17;
+  optional google.protobuf.Timestamp create_time_utc = 14;
+  optional google.protobuf.Timestamp update_time_utc = 15;
+  optional string external_account = 16;
+  optional string external_order_id = 17;
   string client_order_id = 18;
   OrderStatus order_status = 19;
-  double quantity = 20;
-  double price = 21;
-  double stop_price = 22;
-  double leverage = 23;
-  double risk_exposure = 24;
-  double risk_exposure_change = 25;
-  double remaining_quantity = 26;
-  double traded_quantity = 27;
-  double average_traded_price = 28;
-  double last_traded_quantity = 29;
-  double last_traded_price = 30;
-  Liquidity last_liquidity = 31;
-  string routing_id = 32;
+  optional double quantity = 20;
+  optional double price = 21;
+  optional double stop_price = 22;
+  optional double leverage = 23;
+  optional double risk_exposure = 24;
+  optional double risk_exposure_change = 25;
+  optional double remaining_quantity = 26;
+  optional double traded_quantity = 27;
+  optional double average_traded_price = 28;
+  optional double last_traded_quantity = 29;
+  optional double last_traded_price = 30;
+  optional Liquidity last_liquidity = 31;
+  optional string routing_id = 32;
   uint32 max_request_version = 33;
   uint32 max_response_version = 34;
   uint32 max_accepted_version = 35;
   UpdateType update_type = 36;
-  google.protobuf.Timestamp exchange_time_utc = 37;
-  uint64 exchange_sequence = 38;
-  google.protobuf.Timestamp sending_time_utc = 39;
+  optional google.protobuf.Timestamp exchange_time_utc = 37;
+  optional uint64 exchange_sequence = 38;
+  optional google.protobuf.Timestamp sending_time_utc = 39;
   string user = 40;
-  uint32 strategy_id = 41;
+  optional uint32 strategy_id = 41;
 }
 message ParametersUpdate {
   repeated Parameter parameters = 1;
@@ -873,7 +873,7 @@ message Portfolio {
   string account = 3;
   repeated Position positions = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
   string session_id = 7;
   uint64 seqno = 8;
 }
@@ -883,21 +883,21 @@ message PortfolioUpdate {
   string account = 3;
   repeated Position positions = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
 }
 message PositionUpdate {
   uint32 stream_id = 1;  // uint16
   string account = 2;
   string exchange = 3;
   string symbol = 4;
-  MarginMode margin_mode = 5;
-  string external_account = 6;
-  double long_quantity = 7;
-  double short_quantity = 8;
+  optional MarginMode margin_mode = 5;
+  optional string external_account = 6;
+  optional double long_quantity = 7;
+  optional double short_quantity = 8;
   UpdateType update_type = 9;
-  google.protobuf.Timestamp exchange_time_utc = 10;
-  uint64 exchange_sequence = 11;
-  google.protobuf.Timestamp sending_time_utc = 12;
+  optional google.protobuf.Timestamp exchange_time_utc = 10;
+  optional uint64 exchange_sequence = 11;
+  optional google.protobuf.Timestamp sending_time_utc = 12;
 }
 message RateLimitTrigger {
   string name = 1;
@@ -905,15 +905,15 @@ message RateLimitTrigger {
   RateLimitType type = 3;
   repeated string users = 4;
   repeated string accounts = 5;
-  google.protobuf.Timestamp ban_expires = 6;
-  string triggered_by = 7;
+  optional google.protobuf.Timestamp ban_expires = 6;
+  optional string triggered_by = 7;
   BufferCapacity buffer_capacity = 8;
   uint32 remaining_requests = 9;
   uint32 request_limit = 10;
 }
 message RateLimitsUpdate {
   uint32 stream_id = 1;  // uint16
-  string account = 2;
+  optional string account = 2;
   Origin origin = 3;
   repeated RateLimit rate_limits = 4;
 }
@@ -923,34 +923,34 @@ message ReferenceData {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;
   string symbol = 3;
-  string description = 4;
-  SecurityType security_type = 5;
-  int32 external_security_id = 6;
-  string cfi_code = 7;
-  string base_currency = 8;
-  string quote_currency = 9;
-  string settlement_currency = 10;
-  string margin_currency = 11;
-  string commission_currency = 12;
-  double tick_size = 13;
+  optional string description = 4;
+  optional SecurityType security_type = 5;
+  optional int32 external_security_id = 6;
+  optional string cfi_code = 7;
+  optional string base_currency = 8;
+  optional string quote_currency = 9;
+  optional string settlement_currency = 10;
+  optional string margin_currency = 11;
+  optional string commission_currency = 12;
+  optional double tick_size = 13;
   repeated TickSizeStep tick_size_steps = 14;
-  double multiplier = 15;
-  double min_notional = 16;
-  double min_trade_vol = 17;
-  double max_trade_vol = 18;
-  double trade_vol_step_size = 19;
-  OptionType option_type = 20;
-  string strike_currency = 21;
-  double strike_price = 22;
-  string underlying = 23;
-  string time_zone = 24;
-  google.protobuf.Timestamp issue_date = 25;
-  google.protobuf.Timestamp settlement_date = 26;
-  google.protobuf.Timestamp expiry_datetime = 27;
-  google.protobuf.Timestamp expiry_datetime_utc = 28;
-  google.protobuf.Timestamp exchange_time_utc = 29;
-  uint64 exchange_sequence = 30;
-  google.protobuf.Timestamp sending_time_utc = 31;
+  optional double multiplier = 15;
+  optional double min_notional = 16;
+  optional double min_trade_vol = 17;
+  optional double max_trade_vol = 18;
+  optional double trade_vol_step_size = 19;
+  optional OptionType option_type = 20;
+  optional string strike_currency = 21;
+  optional double strike_price = 22;
+  optional string underlying = 23;
+  optional string time_zone = 24;
+  optional google.protobuf.Timestamp issue_date = 25;
+  optional google.protobuf.Timestamp settlement_date = 26;
+  optional google.protobuf.Timestamp expiry_datetime = 27;
+  optional google.protobuf.Timestamp expiry_datetime_utc = 28;
+  optional google.protobuf.Timestamp exchange_time_utc = 29;
+  optional uint64 exchange_sequence = 30;
+  optional google.protobuf.Timestamp sending_time_utc = 31;
   bool discard = 32;
 }
 message RiskLimits {
@@ -981,9 +981,9 @@ message StatisticsUpdate {
   string symbol = 3;
   repeated Statistics statistics = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
-  uint64 exchange_sequence = 7;
-  google.protobuf.Timestamp sending_time_utc = 8;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
+  optional uint64 exchange_sequence = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 8;
 }
 message StrategyUpdate {
   string user = 1;
@@ -994,18 +994,18 @@ message StrategyUpdate {
 }
 message StreamStatus {
   uint32 stream_id = 1;  // uint16
-  string account = 2;
+  optional string account = 2;
   repeated SupportType supports = 3;
   Transport transport = 4;
   Protocol protocol = 5;
   repeated Encoding encoding = 6;
-  Priority priority = 7;
+  optional Priority priority = 7;
   ConnectionStatus connection_status = 8;
-  string reason = 9;
-  string interface = 10;
-  string authority = 11;
-  string path = 12;
-  string proxy = 13;
+  optional string reason = 9;
+  optional string interface = 10;
+  optional string authority = 11;
+  optional string path = 12;
+  optional string proxy = 13;
 }
 message Subscribe {
   string exchange = 1;
@@ -1020,7 +1020,7 @@ message TimeSeriesUpdate {
   Origin origin = 6;
   repeated Bar bars = 7;
   UpdateType update_type = 8;
-  google.protobuf.Timestamp exchange_time_utc = 9;
+  optional google.protobuf.Timestamp exchange_time_utc = 9;
 }
 message TopOfBook {
   uint32 stream_id = 1;  // uint16
@@ -1028,9 +1028,9 @@ message TopOfBook {
   string symbol = 3;
   Layer layer = 4;
   UpdateType update_type = 5;
-  google.protobuf.Timestamp exchange_time_utc = 6;
-  uint64 exchange_sequence = 7;
-  google.protobuf.Timestamp sending_time_utc = 8;
+  optional google.protobuf.Timestamp exchange_time_utc = 6;
+  optional uint64 exchange_sequence = 7;
+  optional google.protobuf.Timestamp sending_time_utc = 8;
   Precision price_precision = 9;
   Precision quantity_precision = 10;
 }
@@ -1039,9 +1039,9 @@ message TradeSummary {
   string exchange = 2;
   string symbol = 3;
   repeated Trade trades = 4;
-  google.protobuf.Timestamp exchange_time_utc = 5;
-  uint64 exchange_sequence = 6;
-  google.protobuf.Timestamp sending_time_utc = 7;
+  optional google.protobuf.Timestamp exchange_time_utc = 5;
+  optional uint64 exchange_sequence = 6;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
   Precision price_precision = 8;
   Precision quantity_precision = 9;
 }
@@ -1052,22 +1052,22 @@ message TradeUpdate {
   string exchange = 4;
   string symbol = 5;
   Side side = 6;
-  PositionEffect position_effect = 7;
-  MarginMode margin_mode = 8;
-  QuantityType quantity_type = 9;
-  google.protobuf.Timestamp create_time_utc = 10;
-  google.protobuf.Timestamp update_time_utc = 11;
-  string external_account = 12;
+  optional PositionEffect position_effect = 7;
+  optional MarginMode margin_mode = 8;
+  optional QuantityType quantity_type = 9;
+  optional google.protobuf.Timestamp create_time_utc = 10;
+  optional google.protobuf.Timestamp update_time_utc = 11;
+  optional string external_account = 12;
   string external_order_id = 13;
   string client_order_id = 14;
   repeated Fill fills = 15;
-  string routing_id = 16;
+  optional string routing_id = 16;
   UpdateType update_type = 17;
-  google.protobuf.Timestamp exchange_time_utc = 18;
-  uint64 exchange_sequence = 19;
-  google.protobuf.Timestamp sending_time_utc = 20;
+  optional google.protobuf.Timestamp exchange_time_utc = 18;
+  optional uint64 exchange_sequence = 19;
+  optional google.protobuf.Timestamp sending_time_utc = 20;
   string user = 21;
-  uint32 strategy_id = 22;
+  optional uint32 strategy_id = 22;
 }
 
 // event

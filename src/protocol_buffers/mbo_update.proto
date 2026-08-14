@@ -1,9 +1,9 @@
 message MBOUpdate {
   double price = 1;
   double quantity = 2;
-  uint64 priority = 3;
+  optional uint64 priority = 3;
   string order_id = 4;
   Side side = 5;
   UpdateAction action = 6;
-  UpdateReason reason = 7;
+  optional UpdateReason reason = 7;
 }
