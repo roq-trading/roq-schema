@@ -1,0 +1,46 @@
+{
+  "name": "roq/codec/fix/QuoteCancel",
+  "type": "comp",
+  "tag": "Z",
+  "comment": "This message is used for mass quoting.",
+  "values": [
+    {
+      "tag": 131,
+      "name": "QuoteReqID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 117,
+      "name": "QuoteID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 298,
+      "name": "QuoteCancelType",
+      "type": "roq/fix/QuoteCancelType",
+      "required": true
+    },
+    {
+      "tag": 301,
+      "name": "QuoteResponseLevel",
+      "type": "roq/fix/QuoteResponseLevel"
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 295,
+      "name": "NoQuoteEntries",
+      "type": "roq/codec/fix/QuoteEntry",
+      "array": "std/span",
+      "required": true,
+      "outbound": {}
+    }
+  ]
+}

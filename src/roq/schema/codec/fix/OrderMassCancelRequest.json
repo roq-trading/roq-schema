@@ -1,0 +1,71 @@
+{
+  "name": "roq/codec/fix/OrderMassCancelRequest",
+  "type": "comp",
+  "tag": "q",
+  "comment": "This message is used to cancel orders.",
+  "values": [
+    {
+      "tag": 11,
+      "name": "ClOrdID",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 530,
+      "name": "MassCancelRequestType",
+      "type": "roq/fix/MassCancelRequestType",
+      "required": true,
+      "inbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`CANCEL_ORDERS_FOR_SECURITY` (:code:`1`)",
+          "* :code:`CANCEL_ALL_ORDERS` (:code:`7`)"
+        ]
+      }
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view"
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 54,
+      "name": "Side",
+      "type": "roq/fix/Side",
+      "inbound": {}
+    },
+    {
+      "tag": 60,
+      "name": "TransactTime",
+      "type": "std/milliseconds",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "inbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    }
+  ]
+}

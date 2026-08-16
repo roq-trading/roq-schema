@@ -1,0 +1,18 @@
+{
+  "name": "roq/codec/fix/Logout",
+  "type": "simple",
+  "tag": "5",
+  "comment":
+      "This message can be used by either side to initiate orderly session shutdown. The other side should respond with a :code:`Logout` (:code:`5`) message and then disconnect.",
+  "values": [
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "std/string_view",
+      "inbound": {},
+      "outbound": {
+        "comment": "Reason for the logout."
+      }
+    }
+  ]
+}

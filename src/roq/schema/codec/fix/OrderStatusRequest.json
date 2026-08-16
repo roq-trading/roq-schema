@@ -1,0 +1,67 @@
+{
+  "name": "roq/codec/fix/OrderStatusRequest",
+  "type": "comp",
+  "tag": "H",
+  "comment": "This message is used to request order status.",
+  "values": [
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 11,
+      "name": "ClOrdID",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/codec/fix/Party",
+      "array": "std/span",
+      "inbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 790,
+      "name": "OrdStatusReqID",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 54,
+      "name": "Side",
+      "type": "roq/fix/Side",
+      "required": true,
+      "inbound": {}
+    }
+  ]
+}

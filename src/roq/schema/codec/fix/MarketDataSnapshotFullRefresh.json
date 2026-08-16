@@ -1,0 +1,37 @@
+{
+  "name": "roq/codec/fix/MarketDataSnapshotFullRefresh",
+  "type": "comp",
+  "tag": "W",
+  "comment": "This message is used for snapshot when market data have been requested.",
+  "values": [
+    {
+      "tag": 262,
+      "name": "MDReqID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 268,
+      "name": "NoMdEntries",
+      "type": "roq/codec/fix/MDFull",
+      "array": "std/span",
+      "required": true,
+      "outbound": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+set(TARGET_NAME ${PROJECT_NAME}-codec-protobuf)
+
+add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto)
+
+add_custom_command(
+  OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/api.proto
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  COMMAND ${Python3_EXECUTABLE} generate_api.py > ${CMAKE_CURRENT_SOURCE_DIR}/api.proto
+  DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto.j2
+  VERBATIM)
+
+set(TARGET_DIR ${SCHEMA_DIR}/codec/protobuf)
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.proto DESTINATION ${TARGET_DIR})

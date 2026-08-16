@@ -1,0 +1,7 @@
+set(TARGET_NAME ${PROJECT_NAME}-meta)
+
+set(TARGET_DIR ${AUTOGEN_DIR})
+
+set(SOURCES meta.json)
+
+install(FILES ${SOURCES} DESTINATION ${TARGET_DIR})

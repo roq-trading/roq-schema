@@ -1,0 +1,14 @@
+set(TARGET_NAME ${PROJECT_NAME}-codec-flatbuffers)
+
+add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs)
+
+add_custom_command(
+  OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  COMMAND ${Python3_EXECUTABLE} generate_api.py > ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs
+  DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs.j2
+  VERBATIM)
+
+set(TARGET_DIR ${SCHEMA_DIR}/codec/flatbuffers)
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.fbs DESTINATION ${TARGET_DIR})

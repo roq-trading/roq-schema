@@ -1,0 +1,50 @@
+{
+  "name": "roq/codec/fix/TradingSessionStatus",
+  "type": "comp",
+  "tag": "h",
+  "comment": "This message is a response to :code:`TradingSessionRequest` (:code:`g`).",
+  "values": [
+    {
+      "tag": 335,
+      "name": "TradSesReqID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 325,
+      "name": "UnsolicitedIndicator",
+      "type": "std/bool"
+    },
+    {
+      "tag": 340,
+      "name": "TradSesStatus",
+      "type": "roq/fix/TradSesStatus",
+      "required": false,
+      "outbound": {}
+    },
+    {
+      "tag": 567,
+      "name": "TradSesStatusRejReason",
+      "type": "roq/fix/TradSesStatusRejReason",
+      "required": false,
+      "outbound": {
+        "comment": "Only sent with reject and then always :code:`OTHER` (:code:`99`)."
+      }
+    },
+    {
+      "tag": 58,
+      "name": "Text",
+      "type": "std/string_view",
+      "outbound": {
+        "comment": "Reason for reject."
+      }
+    }
+  ]
+}
