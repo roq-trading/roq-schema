@@ -1,6 +1,6 @@
 {
   "name": "roq/ExchangeSymbol",
-  "type": "message",
+  "type": "item",
   "comment": "Exchange and symbol",
   "values": [
     {
