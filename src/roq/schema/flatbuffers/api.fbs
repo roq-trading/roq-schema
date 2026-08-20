@@ -2,7 +2,7 @@
 
 /* !!! THIS FILE HAS BEEN AUTO-GENERATED !!! */
 
-namespace roq.schema.codec.flatbuffers;
+namespace roq.schema.flatbuffers;
 
 // - enums
 

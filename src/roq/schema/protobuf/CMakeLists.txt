@@ -1,4 +1,4 @@
-set(TARGET_NAME ${PROJECT_NAME}-codec-protobuf)
+set(TARGET_NAME ${PROJECT_NAME}-protobuf)
 
 add_custom_target(${TARGET_NAME} ALL DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto)
 
@@ -9,6 +9,6 @@ add_custom_command(
   DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/api.proto.j2
   VERBATIM)
 
-set(TARGET_DIR ${SCHEMA_DIR}/codec/protobuf)
+set(TARGET_DIR ${SCHEMA_DIR}/protobuf)
 
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/api.proto DESTINATION ${TARGET_DIR})
