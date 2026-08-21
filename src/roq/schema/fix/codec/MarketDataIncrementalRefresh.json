@@ -1,0 +1,22 @@
+{
+  "name": "roq/fix/codec/MarketDataIncrementalRefresh",
+  "type": "comp",
+  "tag": "X",
+  "comment": "This message is used for incremental updates when market data have been subscribed.",
+  "values": [
+    {
+      "tag": 262,
+      "name": "MdReqId",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 268,
+      "name": "NoMdEntries",
+      "type": "roq/fix/codec/MDInc",
+      "array": "std/span",
+      "required": true,
+      "outbound": {}
+    }
+  ]
+}

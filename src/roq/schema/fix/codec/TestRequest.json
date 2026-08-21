@@ -1,0 +1,19 @@
+{
+  "name": "roq/fix/codec/TestRequest",
+  "type": "simple",
+  "tag": "1",
+  "comment":
+      "This message can be sent by either side to verify the connection. The frequency must have been communicated through the :code:`Logon` (:code:`A`) messages.",
+  "values": [
+    {
+      "tag": 112,
+      "name": "TestReqId",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {},
+      "outbound": {
+        "comment": "Value to be echoed."
+      }
+    }
+  ]
+}

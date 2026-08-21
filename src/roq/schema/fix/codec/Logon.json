@@ -1,0 +1,73 @@
+{
+  "name": "roq/fix/codec/Logon",
+  "type": "simple",
+  "tag": "A",
+  "inbound":
+      "This message must be the first message sent by a connecting client session and is used to authenticate that client. See :ref:`authentication` for further details.",
+  "outbound": "This message is used to acknowledge successful authentication.",
+  "values": [
+    {
+      "tag": 98,
+      "name": "EncryptMethod",
+      "type": "roq/fix/EncryptMethod",
+      "required": true,
+      "inbound": {
+        "comment": "Only :code:`NONE` (:code:`0`) is supported."
+      },
+      "outbound": {
+        "comment": "Only :code:`NONE` (:code:`0`) is supported."
+      }
+    },
+    {
+      "tag": 108,
+      "name": "HeartBtInt",
+      "type": "std/uint16",
+      "required": true,
+      "inbound": {},
+      "outbound": {}
+    },
+    {
+      "tag": 95,
+      "name": "RawDataLength",
+      "type": "std/uint32"
+    },
+    {
+      "tag": 96,
+      "name": "RawData",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`authentication` for further details."
+      }
+    },
+    {
+      "tag": 141,
+      "name": "ResetSeqNumFlag",
+      "type": "std/bool",
+      "default": true,
+      "inbound": {
+        "comment": "Only :code:`YES` (:code:`Y`) is supported."
+      }
+    },
+    {
+      "tag": 789,
+      "name": "NextExpectedMsgSeqNum",
+      "type": "std/uint64"
+    },
+    {
+      "tag": 553,
+      "name": "Username",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`authentication` for further details."
+      }
+    },
+    {
+      "tag": 554,
+      "name": "Password",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`authentication` for further details."
+      }
+    }
+  ]
+}

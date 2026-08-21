@@ -1,0 +1,16 @@
+{
+  "name": "roq/fix/codec/PositionAmountData",
+  "type": "item",
+  "values": [
+    {
+      "tag": 707,
+      "name": "PosAmtType",
+      "type": "roq/fix/PosAmtType"
+    },
+    {
+      "tag": 708,
+      "name": "PosAmt",
+      "type": "roq/Decimal"
+    }
+  ]
+}

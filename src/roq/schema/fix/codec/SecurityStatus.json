@@ -1,0 +1,51 @@
+{
+  "name": "roq/fix/codec/SecurityStatus",
+  "type": "comp",
+  "tag": "f",
+  "comment": "This message is a reponse to :code:`SecurityStatusRequest` (:code:`e`)",
+  "values": [
+    {
+      "tag": 324,
+      "name": "SecurityStatusReqID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "outbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "outbound": {}
+    },
+    {
+      "tag": 325,
+      "name": "UnsolicitedIndicator",
+      "type": "std/bool"
+    },
+    {
+      "tag": 326,
+      "name": "SecurityTradingStatus",
+      "type": "roq/fix/SecurityTradingStatus",
+      "required": false,
+      "outbound": {}
+    },
+    {
+      "tag": 60,
+      "name": "TransactTime",
+      "type": "std/milliseconds"
+    }
+  ]
+}

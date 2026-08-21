@@ -1,0 +1,51 @@
+{
+  "name": "roq/fix/codec/SecurityDefinitionRequest",
+  "type": "comp",
+  "tag": "c",
+  "inbound": "This message is used to request a security definition.",
+  "values": [
+    {
+      "tag": 320,
+      "name": "SecurityReqId",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 321,
+      "name": "SecurityRequestType",
+      "type": "roq/fix/SecurityRequestType",
+      "required": true,
+      "inbound": {
+        "comment": "Unused."
+      }
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view"
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "inbound": {
+        "comment": "Only :code:`SNAPSHOT` (:code:`0`) is supported."
+      }
+    }
+  ]
+}

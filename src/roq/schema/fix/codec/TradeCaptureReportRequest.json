@@ -1,0 +1,73 @@
+{
+  "name": "roq/fix/codec/TradeCaptureReportRequest",
+  "type": "comp",
+  "tag": "AD",
+  "comment": "This message is used to request trade capture reports.",
+  "values": [
+    {
+      "tag": 568,
+      "name": "TradeRequestID",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 569,
+      "name": "TradeRequestType",
+      "type": "roq/fix/TradeRequestType",
+      "required": true
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "inbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`SNAPSHOT:` (:code:`0`)",
+          "* :code:`SNAPSHOT_UPDATES:` (:code:`1`)",
+          "* :code:`UNSUBSCRIBE:` (:code:`2`)"
+        ]
+      }
+    },
+    {
+      "tag": 37,
+      "name": "OrderID",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 11,
+      "name": "ClOrdID",
+      "type": "std/string_view",
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/fix/codec/Party",
+      "array": "std/span",
+      "inbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "inbound": {}
+    }
+  ]
+}

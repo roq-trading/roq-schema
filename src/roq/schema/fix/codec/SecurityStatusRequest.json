@@ -1,0 +1,45 @@
+{
+  "name": "roq/fix/codec/SecurityStatusRequest",
+  "type": "comp",
+  "tag": "e",
+  "comment": "This message is used to request current trading status for a security.",
+  "values": [
+    {
+      "tag": 324,
+      "name": "SecurityStatusReqId",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {}
+    },
+    {
+      "tag": 263,
+      "name": "SubscriptionRequestType",
+      "type": "roq/fix/SubscriptionRequestType",
+      "required": true,
+      "inbound": {
+        "comment": "Only :code:`SNAPSHOT` (:code:`0`) is supported."
+      }
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view"
+    }
+  ]
+}

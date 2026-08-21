@@ -1,3 +1,5 @@
+add_subdirectory(codec)
+
 set(TARGET_NAME ${PROJECT_NAME}-fix)
 
 set(TARGET_DIR ${SCHEMA_DIR}/fix)

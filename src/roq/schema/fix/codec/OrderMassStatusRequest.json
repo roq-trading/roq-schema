@@ -1,0 +1,71 @@
+{
+  "name": "roq/fix/codec/OrderMassStatusRequest",
+  "type": "comp",
+  "tag": "AF",
+  "comment": "This message is used to request the status of orders matching the filters.",
+  "values": [
+    {
+      "tag": 584,
+      "name": "MassStatusReqID",
+      "type": "std/string_view",
+      "required": true,
+      "inbound": {
+        "comment": "See :ref:`request_id` for further details."
+      }
+    },
+    {
+      "tag": 585,
+      "name": "MassStatusReqType",
+      "type": "roq/fix/MassStatusReqType",
+      "required": true,
+      "inbound": {
+        "comment": [
+          "Possible values",
+          "",
+          "* :code:`STATUS_FOR_ORDERS_FOR_A_SECURITY` (:code:`1`)",
+          "* :code:`STATUS_FOR_ALL_ORDERS` (:code:`7`)"
+        ]
+      }
+    },
+    {
+      "tag": 453,
+      "name": "NoPartyIDS",
+      "type": "roq/fix/codec/Party",
+      "array": "std/span",
+      "inbound": {
+        "filter": "roq-fix-bridge",
+        "comment": "See :ref:`routing` for further details."
+      }
+    },
+    {
+      "tag": 1,
+      "name": "Account",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 336,
+      "name": "TradingSessionID",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 55,
+      "name": "Symbol",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 207,
+      "name": "SecurityExchange",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
+      "tag": 54,
+      "name": "Side",
+      "type": "roq/fix/Side",
+      "inbound": {}
+    }
+  ]
+}
