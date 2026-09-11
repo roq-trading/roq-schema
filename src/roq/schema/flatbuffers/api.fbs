@@ -84,6 +84,7 @@ enum Error:uint8 {
   InvalidMarginMode,
   InvalidQuantityType,
   InvalidReleaseTime,
+  SettlementInProgress,
 }
 enum ExecutionInstruction:uint8 {
   Undefined = 0,

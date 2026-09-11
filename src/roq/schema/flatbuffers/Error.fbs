@@ -39,4 +39,5 @@ enum Error:uint8 {
   InvalidMarginMode,
   InvalidQuantityType,
   InvalidReleaseTime,
+  SettlementInProgress,
 }

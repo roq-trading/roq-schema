@@ -157,6 +157,10 @@
     {
       "name": "InvalidReleaseTime",
       "comment": "Invalid release time"
+    },
+    {
+      "name": "SettlementInProgress",
+      "comment": "Platform locked (settlement in progress)"
     }
   ]
 }
