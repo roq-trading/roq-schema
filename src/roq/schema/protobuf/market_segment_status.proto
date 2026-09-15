@@ -1,0 +1,9 @@
+message MarketSegmentStatus {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string market_segment = 3;
+  TradingStatus trading_status = 4;
+  optional google.protobuf.Timestamp exchange_time_utc = 5;
+  optional uint64 exchange_sequence = 6;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
+}

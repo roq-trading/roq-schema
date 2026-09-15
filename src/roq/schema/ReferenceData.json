@@ -31,6 +31,11 @@
       "comment": "Security ID"
     },
     {
+      "name": "marketSegment",
+      "type": "std/string_view",
+      "comment": "Identifies the group of symbols (markets)"
+    },
+    {
       "name": "cfiCode",
       "type": "std/string_view",
       "comment": "CFI code"

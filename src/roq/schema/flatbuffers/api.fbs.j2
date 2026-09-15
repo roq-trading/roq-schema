@@ -90,6 +90,7 @@ namespace roq.schema.flatbuffers;
 {% include "LegsUpdate.fbs" %}
 {% include "MarketByOrderUpdate.fbs" %}
 {% include "MarketByPriceUpdate.fbs" %}
+{% include "MarketSegmentStatus.fbs" %}
 {% include "MarketStatus.fbs" %}
 {% include "MassQuote.fbs" %}
 {% include "MassQuoteAck.fbs" %}
@@ -203,7 +204,8 @@ union Message {
   StrategyUpdate,
   LegsUpdate,
   Subscribe,
-  HandshakeAck
+  HandshakeAck,
+  MarketSegmentStatus
 }
 
 table SourceInfo {

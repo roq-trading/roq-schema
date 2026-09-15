@@ -1,0 +1,37 @@
+{
+  "name": "roq/MarketSegmentStatus",
+  "type": "message",
+  "comment": "Update relating to current trading status of a group of symbols (markets)",
+  "values": [
+    {
+      "name": "streamId",
+      "type": "std/uint16"
+    },
+    {
+      "name": "exchange",
+      "type": "std/string_view"
+    },
+    {
+      "name": "marketSegment",
+      "type": "std/string_view",
+      "comment": "Identifies the group of symbols (markets)"
+    },
+    {
+      "name": "tradingStatus",
+      "type": "roq/TradingStatus",
+      "comment": "Trading status"
+    },
+    {
+      "name": "exchangeTimeUtc",
+      "type": "std/nanoseconds"
+    },
+    {
+      "name": "exchangeSequence",
+      "type": "std/uint64"
+    },
+    {
+      "name": "sendingTimeUtc",
+      "type": "std/nanoseconds"
+    }
+  ]
+}

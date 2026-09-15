@@ -18,8 +18,9 @@
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
     <type name="ExternalTradeId" primitiveType="char" length="40"/>
     <type name="Label" primitiveType="char" length="32"/>
-    <type name="MatrixKey" primitiveType="char" length="8"/>
     <type name="MBOOrderId" primitiveType="char" length="36"/>
+    <type name="MarketSegment" primitiveType="char" length="32"/>
+    <type name="MatrixKey" primitiveType="char" length="8"/>
     <type name="MeasurementKey" primitiveType="char" length="8"/>
     <type name="ParameterKey" primitiveType="char" length="32"/>
     <type name="ParameterValue" primitiveType="char" length="32"/>
@@ -32,8 +33,8 @@
     <type name="Text" primitiveType="char" length="64"/>
     <type name="Time" primitiveType="int64" description="nanoseconds"/>
     <type name="TimeZone" primitiveType="char" length="32"/>
-    <type name="User" primitiveType="char" length="16"/>
     <type name="UUID" primitiveType="uint8" length="16"/>
+    <type name="User" primitiveType="char" length="16"/>
     <!-- composite -->
     <composite name="Layer">
       <type name="bidPrice" primitiveType="double"/>
@@ -744,31 +745,32 @@
     <field id="203" name="description" type="Description"/>
     <field id="204" name="securityType" type="SecurityType"/>
     <field id="205" name="externalSecurityId" type="int32"/>
-    <field id="206" name="cfiCode" type="CFICode"/>
-    <field id="207" name="baseCurrency" type="Currency"/>
-    <field id="208" name="quoteCurrency" type="Currency"/>
-    <field id="209" name="settlementCurrency" type="Currency"/>
-    <field id="210" name="marginCurrency" type="Currency"/>
-    <field id="211" name="commissionCurrency" type="Currency"/>
-    <field id="212" name="tickSize" type="double"/>
-    <field id="213" name="multiplier" type="double"/>
-    <field id="214" name="minNotional" type="double"/>
-    <field id="215" name="minTradeVol" type="double"/>
-    <field id="216" name="maxTradeVol" type="double"/>
-    <field id="217" name="tradeVolStepSize" type="double"/>
-    <field id="218" name="optionType" type="OptionType"/>
-    <field id="219" name="strikeCurrency" type="Currency"/>
-    <field id="220" name="strikePrice" type="double"/>
-    <field id="221" name="underlying" type="Symbol"/>
-    <field id="222" name="timeZone" type="TimeZone"/>
-    <field id="223" name="issueDate" type="Days"/>
-    <field id="224" name="settlementDate" type="Days"/>
-    <field id="225" name="expiryDateTime" type="Seconds"/>
-    <field id="226" name="expiryDateTimeUtc" type="Seconds"/>
-    <field id="227" name="exchangeTimeUtc" type="DateTime"/>
-    <field id="228" name="exchangeSequence" type="uint64"/>
-    <field id="229" name="sendingTimeUtc" type="DateTime"/>
-    <field id="230" name="discard" type="Boolean"/>
+    <field id="206" name="marketSegment" type="MarketSegment"/>
+    <field id="207" name="cfiCode" type="CFICode"/>
+    <field id="208" name="baseCurrency" type="Currency"/>
+    <field id="209" name="quoteCurrency" type="Currency"/>
+    <field id="210" name="settlementCurrency" type="Currency"/>
+    <field id="211" name="marginCurrency" type="Currency"/>
+    <field id="212" name="commissionCurrency" type="Currency"/>
+    <field id="213" name="tickSize" type="double"/>
+    <field id="214" name="multiplier" type="double"/>
+    <field id="215" name="minNotional" type="double"/>
+    <field id="216" name="minTradeVol" type="double"/>
+    <field id="217" name="maxTradeVol" type="double"/>
+    <field id="218" name="tradeVolStepSize" type="double"/>
+    <field id="219" name="optionType" type="OptionType"/>
+    <field id="220" name="strikeCurrency" type="Currency"/>
+    <field id="221" name="strikePrice" type="double"/>
+    <field id="222" name="underlying" type="Symbol"/>
+    <field id="223" name="timeZone" type="TimeZone"/>
+    <field id="224" name="issueDate" type="Days"/>
+    <field id="225" name="settlementDate" type="Days"/>
+    <field id="226" name="expiryDateTime" type="Seconds"/>
+    <field id="227" name="expiryDateTimeUtc" type="Seconds"/>
+    <field id="228" name="exchangeTimeUtc" type="DateTime"/>
+    <field id="229" name="exchangeSequence" type="uint64"/>
+    <field id="230" name="sendingTimeUtc" type="DateTime"/>
+    <field id="231" name="discard" type="Boolean"/>
     <group id="300" name="tickSizeSteps" blockLength="16" dimensionType="groupSize">
       <field id="301" name="minPrice" type="double"/>
       <field id="302" name="tickSize" type="double"/>
@@ -783,6 +785,20 @@
     <field id="200" name="streamId" type="uint16"/>
     <field id="201" name="exchange" type="Exchange"/>
     <field id="202" name="symbol" type="Symbol"/>
+    <field id="203" name="tradingStatus" type="TradingStatus"/>
+    <field id="204" name="exchangeTimeUtc" type="DateTime"/>
+    <field id="205" name="exchangeSequence" type="uint64"/>
+    <field id="206" name="sendingTimeUtc" type="DateTime"/>
+  </message>
+  <message id="5122" name="MarketSegmentStatus">
+    <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
+    <field id="101" name="sourceSessionId" type="UUID" semanticType="MessageInfo"/>
+    <field id="102" name="sourceSeqNo" type="uint64" semanticType="MessageInfo"/>
+    <field id="103" name="originCreateTimeUtc" type="DateTime" semanticType="MessageInfo"/>
+    <field id="104" name="isLast" type="Boolean" semanticType="MessageInfo"/>
+    <field id="200" name="streamId" type="uint16"/>
+    <field id="201" name="exchange" type="Exchange"/>
+    <field id="202" name="marketSegment" type="MarketSegment"/>
     <field id="203" name="tradingStatus" type="TradingStatus"/>
     <field id="204" name="exchangeTimeUtc" type="DateTime"/>
     <field id="205" name="exchangeSequence" type="uint64"/>

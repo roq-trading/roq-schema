@@ -749,6 +749,15 @@ message MarketByPriceUpdate {
   uint32 max_depth = 12;  // uint16
   optional uint32 checksum = 13;
 }
+message MarketSegmentStatus {
+  uint32 stream_id = 1;  // uint16
+  string exchange = 2;
+  string market_segment = 3;
+  TradingStatus trading_status = 4;
+  optional google.protobuf.Timestamp exchange_time_utc = 5;
+  optional uint64 exchange_sequence = 6;
+  optional google.protobuf.Timestamp sending_time_utc = 7;
+}
 message MarketStatus {
   uint32 stream_id = 1;  // uint16
   string exchange = 2;
@@ -927,32 +936,33 @@ message ReferenceData {
   optional string description = 4;
   optional SecurityType security_type = 5;
   optional int32 external_security_id = 6;
-  optional string cfi_code = 7;
-  optional string base_currency = 8;
-  optional string quote_currency = 9;
-  optional string settlement_currency = 10;
-  optional string margin_currency = 11;
-  optional string commission_currency = 12;
-  optional double tick_size = 13;
-  repeated TickSizeStep tick_size_steps = 14;
-  optional double multiplier = 15;
-  optional double min_notional = 16;
-  optional double min_trade_vol = 17;
-  optional double max_trade_vol = 18;
-  optional double trade_vol_step_size = 19;
-  optional OptionType option_type = 20;
-  optional string strike_currency = 21;
-  optional double strike_price = 22;
-  optional string underlying = 23;
-  optional string time_zone = 24;
-  optional google.protobuf.Timestamp issue_date = 25;
-  optional google.protobuf.Timestamp settlement_date = 26;
-  optional google.protobuf.Timestamp expiry_datetime = 27;
-  optional google.protobuf.Timestamp expiry_datetime_utc = 28;
-  optional google.protobuf.Timestamp exchange_time_utc = 29;
-  optional uint64 exchange_sequence = 30;
-  optional google.protobuf.Timestamp sending_time_utc = 31;
-  bool discard = 32;
+  optional string market_segment = 7;
+  optional string cfi_code = 8;
+  optional string base_currency = 9;
+  optional string quote_currency = 10;
+  optional string settlement_currency = 11;
+  optional string margin_currency = 12;
+  optional string commission_currency = 13;
+  optional double tick_size = 14;
+  repeated TickSizeStep tick_size_steps = 15;
+  optional double multiplier = 16;
+  optional double min_notional = 17;
+  optional double min_trade_vol = 18;
+  optional double max_trade_vol = 19;
+  optional double trade_vol_step_size = 20;
+  optional OptionType option_type = 21;
+  optional string strike_currency = 22;
+  optional double strike_price = 23;
+  optional string underlying = 24;
+  optional string time_zone = 25;
+  optional google.protobuf.Timestamp issue_date = 26;
+  optional google.protobuf.Timestamp settlement_date = 27;
+  optional google.protobuf.Timestamp expiry_datetime = 28;
+  optional google.protobuf.Timestamp expiry_datetime_utc = 29;
+  optional google.protobuf.Timestamp exchange_time_utc = 30;
+  optional uint64 exchange_sequence = 31;
+  optional google.protobuf.Timestamp sending_time_utc = 32;
+  bool discard = 33;
 }
 message RiskLimits {
   string user = 1;
@@ -1127,6 +1137,7 @@ message Event {
     // - market data
     ReferenceData reference_data = 5120;
     MarketStatus market_status = 5121;
+    MarketSegmentStatus market_segment_status = 5122;
     TopOfBook top_of_book = 5140;
     MarketByPriceUpdate market_by_price_update = 5141;
     MarketByOrderUpdate market_by_order_update = 5142;

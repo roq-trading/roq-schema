@@ -95,6 +95,7 @@ import "google/protobuf/timestamp.proto";
 {% include "legs_update.proto" %}
 {% include "market_by_order_update.proto" %}
 {% include "market_by_price_update.proto" %}
+{% include "market_segment_status.proto" %}
 {% include "market_status.proto" %}
 {% include "mass_quote.proto" %}
 {% include "mass_quote_ack.proto" %}
@@ -177,6 +178,7 @@ message Event {
     // - market data
     ReferenceData reference_data = 5120;
     MarketStatus market_status = 5121;
+    MarketSegmentStatus market_segment_status = 5122;
     TopOfBook top_of_book = 5140;
     MarketByPriceUpdate market_by_price_update = 5141;
     MarketByOrderUpdate market_by_order_update = 5142;

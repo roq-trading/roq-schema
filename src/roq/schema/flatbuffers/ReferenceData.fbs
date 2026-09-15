@@ -31,4 +31,5 @@ table ReferenceData {
   cfi_code:string;
   tick_size_steps:[TickSizeStep];
   external_security_id:int32;
+  market_segment:string;
 }

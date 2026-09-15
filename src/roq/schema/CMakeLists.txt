@@ -56,6 +56,7 @@ set(SOURCES
     MarginMode.json
     MarketByOrderUpdate.json
     MarketByPriceUpdate.json
+    MarketSegmentStatus.json
     MarketStatus.json
     MassQuote.json
     MassQuoteAck.json
@@ -74,8 +75,8 @@ set(SOURCES
     ParametersUpdate.json
     Portfolio.json
     PortfolioUpdate.json
-    PositionEffect.json
     Position.json
+    PositionEffect.json
     PositionUpdate.json
     Precision.json
     Priority.json
@@ -84,9 +85,9 @@ set(SOURCES
     QuantityType.json
     Quote.json
     RateLimit.json
-    RateLimitsUpdate.json
     RateLimitTrigger.json
     RateLimitType.json
+    RateLimitsUpdate.json
     Ready.json
     ReferenceData.json
     RemoveRoutes.json
@@ -96,8 +97,8 @@ set(SOURCES
     RiskLimit.json
     RiskLimits.json
     RiskLimitsUpdate.json
-    RouteAck.json
     Route.json
+    RouteAck.json
     RouteRequestStatus.json
     Routing.json
     SecurityType.json
@@ -115,8 +116,8 @@ set(SOURCES
     SupportType.json
     TickSizeStep.json
     TimeInForce.json
-    Timer.json
     TimeSeriesUpdate.json
+    Timer.json
     TopOfBook.json
     Trade.json
     TradeSummary.json
