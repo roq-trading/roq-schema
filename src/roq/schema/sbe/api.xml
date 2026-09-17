@@ -13,6 +13,7 @@
     <type name="Days" primitiveType="int32" description="days since epoch"/>
     <type name="Description" primitiveType="char" length="128"/>
     <type name="Exchange" primitiveType="char" length="32"/>
+    <type name="ExecutionDestination" primitiveType="char" length="16"/>
     <type name="ExternalAccount" primitiveType="char" length="64"/>
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
@@ -958,14 +959,15 @@
     <field id="209" name="orderType" type="OrderType"/>
     <field id="210" name="timeInForce" type="TimeInForce"/>
     <field id="211" name="executionInstructions" type="ExecutionInstruction"/>
-    <field id="212" name="requestTemplate" type="RequestTemplate"/>
-    <field id="213" name="quantity" type="double"/>
-    <field id="214" name="price" type="double"/>
-    <field id="215" name="stopPrice" type="double"/>
-    <field id="216" name="leverage" type="double"/>
-    <field id="217" name="routingId" type="RoutingId"/>
-    <field id="218" name="strategyId" type="uint32"/>
-    <field id="219" name="releaseTimeUtc" type="DateTime"/>
+    <field id="212" name="executionDestination" type="ExecutionDestination"/>
+    <field id="213" name="requestTemplate" type="RequestTemplate"/>
+    <field id="214" name="quantity" type="double"/>
+    <field id="215" name="price" type="double"/>
+    <field id="216" name="stopPrice" type="double"/>
+    <field id="217" name="leverage" type="double"/>
+    <field id="218" name="routingId" type="RoutingId"/>
+    <field id="219" name="strategyId" type="uint32"/>
+    <field id="220" name="releaseTimeUtc" type="DateTime"/>
   </message>
   <message id="6002" name="ModifyOrder">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>
@@ -1077,34 +1079,35 @@
     <field id="210" name="orderType" type="OrderType"/>
     <field id="211" name="timeInForce" type="TimeInForce"/>
     <field id="212" name="executionInstructions" type="ExecutionInstruction"/>
-    <field id="213" name="createTimeUtc" type="DateTime"/>
-    <field id="214" name="updateTimeUtc" type="DateTime"/>
-    <field id="215" name="externalAccount" type="ExternalAccount"/>
-    <field id="216" name="externalOrderId" type="ExternalOrderId"/>
-    <field id="217" name="clientOrderId" type="ClientOrderId"/>
-    <field id="218" name="orderStatus" type="OrderStatus"/>
-    <field id="219" name="quantity" type="double"/>
-    <field id="220" name="price" type="double"/>
-    <field id="221" name="stopPrice" type="double"/>
-    <field id="222" name="leverage" type="double"/>
-    <field id="223" name="riskExposure" type="double"/>
-    <field id="224" name="riskExposureChange" type="double"/>
-    <field id="225" name="remainingQuantity" type="double"/>
-    <field id="226" name="tradedQuantity" type="double"/>
-    <field id="227" name="averageTradedPrice" type="double"/>
-    <field id="228" name="lastTradedQuantity" type="double"/>
-    <field id="229" name="lastTradedPrice" type="double"/>
-    <field id="230" name="lastLiquidity" type="Liquidity"/>
-    <field id="231" name="routingId" type="RoutingId"/>
-    <field id="232" name="maxRequestVersion" type="uint32"/>
-    <field id="233" name="maxResponseVersion" type="uint32"/>
-    <field id="234" name="maxAcceptedVersion" type="uint32"/>
-    <field id="235" name="updateType" type="UpdateType"/>
-    <field id="236" name="exchangeTimeUtc" type="DateTime"/>
-    <field id="237" name="exchangeSequence" type="uint64"/>
-    <field id="238" name="sendingTimeUtc" type="DateTime"/>
-    <field id="239" name="user" type="User"/>
-    <field id="240" name="strategyId" type="uint32"/>
+    <field id="213" name="executionDestination" type="ExecutionDestination"/>
+    <field id="214" name="createTimeUtc" type="DateTime"/>
+    <field id="215" name="updateTimeUtc" type="DateTime"/>
+    <field id="216" name="externalAccount" type="ExternalAccount"/>
+    <field id="217" name="externalOrderId" type="ExternalOrderId"/>
+    <field id="218" name="clientOrderId" type="ClientOrderId"/>
+    <field id="219" name="orderStatus" type="OrderStatus"/>
+    <field id="220" name="quantity" type="double"/>
+    <field id="221" name="price" type="double"/>
+    <field id="222" name="stopPrice" type="double"/>
+    <field id="223" name="leverage" type="double"/>
+    <field id="224" name="riskExposure" type="double"/>
+    <field id="225" name="riskExposureChange" type="double"/>
+    <field id="226" name="remainingQuantity" type="double"/>
+    <field id="227" name="tradedQuantity" type="double"/>
+    <field id="228" name="averageTradedPrice" type="double"/>
+    <field id="229" name="lastTradedQuantity" type="double"/>
+    <field id="230" name="lastTradedPrice" type="double"/>
+    <field id="231" name="lastLiquidity" type="Liquidity"/>
+    <field id="232" name="routingId" type="RoutingId"/>
+    <field id="233" name="maxRequestVersion" type="uint32"/>
+    <field id="234" name="maxResponseVersion" type="uint32"/>
+    <field id="235" name="maxAcceptedVersion" type="uint32"/>
+    <field id="236" name="updateType" type="UpdateType"/>
+    <field id="237" name="exchangeTimeUtc" type="DateTime"/>
+    <field id="238" name="exchangeSequence" type="uint64"/>
+    <field id="239" name="sendingTimeUtc" type="DateTime"/>
+    <field id="240" name="user" type="User"/>
+    <field id="241" name="strategyId" type="uint32"/>
   </message>
   <!-- 70xx quote management -->
   <message id="7001" name="MassQuote">

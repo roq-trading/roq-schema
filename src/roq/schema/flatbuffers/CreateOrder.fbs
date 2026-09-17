@@ -21,4 +21,5 @@ table CreateOrder {
   quantity_type:QuantityType;
   leverage:double = nan;
   release_time_utc:int64;
+  execution_destination:string;
 }

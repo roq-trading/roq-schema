@@ -46,6 +46,12 @@
       "inbound": {}
     },
     {
+      "tag": 100,
+      "name": "ExDestination",
+      "type": "std/string_view",
+      "inbound": {}
+    },
+    {
       "tag": 386,
       "name": "NoTradingSessions",
       "type": "roq/fix/codec/TradingSession",

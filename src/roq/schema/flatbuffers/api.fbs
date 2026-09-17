@@ -584,6 +584,7 @@ table CreateOrder {
   quantity_type:QuantityType;
   leverage:double = nan;
   release_time_utc:int64;
+  execution_destination:string;
 }
 table CustomMatrix {
   label:string;
@@ -875,6 +876,7 @@ table OrderUpdate {
   exchange_time_utc:int64;
   exchange_sequence:uint64;
   leverage:double = nan;
+  execution_destination:string;
 }
 table ParametersUpdate {
   parameters:[Parameter];

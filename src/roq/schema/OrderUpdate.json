@@ -60,6 +60,11 @@
       "array": "roq/Mask"
     },
     {
+      "name": "executionDestination",
+      "type": "std/string_view",
+      "comment": "Execution destination (requires ecxhange support)"
+    },
+    {
       "name": "createTimeUtc",
       "type": "std/nanoseconds"
     },

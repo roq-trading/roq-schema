@@ -56,6 +56,11 @@
       "array": "roq/Mask"
     },
     {
+      "name": "executionDestination",
+      "type": "std/string_view",
+      "comment": "Execution destination (requires ecxhange support)"
+    },
+    {
       "name": "requestTemplate",
       "type": "std/string_view"
     },
