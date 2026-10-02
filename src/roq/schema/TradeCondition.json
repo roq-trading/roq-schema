@@ -1,0 +1,22 @@
+{
+  "name": "roq/TradeCondition",
+  "type": "enum_bit_32",
+  "comment": "Enumeration of trade conditions",
+  "values": [
+    {
+      "name": "ImpliedMatching",
+      "comment": "Matching implied from spread markets",
+      "position": 0
+    },
+    {
+      "name": "ForcedLiquidation",
+      "comment": "Forced order liquidation",
+      "position": 1
+    },
+    {
+      "name": "RetailPriceImprovement",
+      "comment": "Retail Price Improvement",
+      "position": 2
+    }
+  ]
+}

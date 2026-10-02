@@ -4,6 +4,17 @@
   "comment": "Represents a single trade (a match) as part of trade reporting by the exchange",
   "values": [
     {
+      "name": "tradeConditions",
+      "type": "roq/TradeCondition",
+      "array": "roq/Mask",
+      "comment": "Trade conditions (bit-mask)"
+    },
+    {
+      "name": "tradeType",
+      "type": "roq/TradeType",
+      "comment": "Trade type"
+    },
+    {
       "name": "side",
       "type": "roq/Side",
       "comment": "Side (by convention: side of the taker)"

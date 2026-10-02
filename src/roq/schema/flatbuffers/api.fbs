@@ -188,6 +188,11 @@ enum Precision:uint8 {
   _14,
   _15
 }
+enum Priority:uint32 {
+  Undefined,
+  Primary,
+  Secondary,
+}
 enum Protocol:uint8 {
   Undefined,
   FIX,
@@ -200,11 +205,6 @@ enum QuantityType:uint8 {
   Undefined,
   Units,
   Contracts
-}
-enum Priority:uint32 {
-  Undefined,
-  Primary,
-  Secondary,
 }
 enum RateLimitType:uint8 {
   Undefined,
@@ -313,6 +313,17 @@ enum TimeInForce:uint8 {
   GOOD_FOR_TIME,
   GFA,
   GFM
+}
+enum TradeCondition:uint32 {
+  Undefined = 0,
+  ImpliedMatching = 1,
+  ForcedLiquidation = 2,
+  RetailPriceImprovement = 4,
+}
+enum TradeType:uint8 {
+  Undefined,
+  Regular,
+  Block,
 }
 enum TradingStatus:uint8 {
   Undefined,
@@ -484,6 +495,8 @@ table Trade {
   trade_id:string;
   taker_order_id:string;
   maker_order_id:string;
+  trade_conditions:uint32;
+  trade_type:TradeType;
 }
 table UUID {
   high:uint64;

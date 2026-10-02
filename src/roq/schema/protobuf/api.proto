@@ -323,6 +323,17 @@ enum TimeInForce {
   TIME_IN_FORCE_GFA = 12;
   TIME_IN_FORCE_GFM = 13;
 }
+enum TradeCondition {
+  TRADE_CONDITION_UNSPECIFIED = 0;
+  TRADE_CONDITION_IMPLIED_MATCHING = 1;
+  TRADE_CONDITION_FORCED_LIQUIDATION = 2;
+  TRADE_CONDITION_RETAIL_PRICE_IMPROVEMENT = 4;
+}
+enum TradeType {
+  TRADE_TYPE_UNSPECIFIED = 0;
+  TRADE_TYPE_REGULAR = 1;
+  TRADE_TYPE_BLOCK = 2;
+}
 enum TradingStatus {
   TRADING_STATUS_UNSPECIFIED = 0;
   TRADING_STATUS_START_OF_DAY = 1;
@@ -489,12 +500,14 @@ message TickSizeStep {
   double tick_size = 2;
 }
 message Trade {
-  optional Side side = 1;
-  double price = 2;
-  double quantity = 3;
-  optional string trade_id = 4;
-  optional string taker_order_id = 5;
-  optional string maker_order_id = 6;
+  repeated TradeCondition trade_conditions = 1;
+  optional TradeType trade_type = 2;
+  optional Side side = 3;
+  double price = 4;
+  double quantity = 5;
+  optional string trade_id = 6;
+  optional string taker_order_id = 7;
+  optional string maker_order_id = 8;
 }
 
 // messages

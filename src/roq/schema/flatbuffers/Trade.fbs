@@ -5,4 +5,6 @@ table Trade {
   trade_id:string;
   taker_order_id:string;
   maker_order_id:string;
+  trade_conditions:uint32;
+  trade_type:TradeType;
 }

@@ -1,0 +1,5 @@
+enum TradeType:uint8 {
+  Undefined,
+  Regular,
+  Block,
+}

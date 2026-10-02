@@ -1,0 +1,6 @@
+enum TradeCondition:uint32 {
+  Undefined = 0,
+  ImpliedMatching = 1,
+  ForcedLiquidation = 2,
+  RetailPriceImprovement = 4,
+}

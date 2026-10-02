@@ -120,7 +120,9 @@ set(SOURCES
     Timer.json
     TopOfBook.json
     Trade.json
+    TradeCondition.json
     TradeSummary.json
+    TradeType.json
     TradeUpdate.json
     TradingStatus.json
     Transport.json

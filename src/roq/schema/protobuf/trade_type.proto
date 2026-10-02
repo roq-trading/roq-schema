@@ -1,0 +1,5 @@
+enum TradeType {
+  TRADE_TYPE_UNSPECIFIED = 0;
+  TRADE_TYPE_REGULAR = 1;
+  TRADE_TYPE_BLOCK = 2;
+}

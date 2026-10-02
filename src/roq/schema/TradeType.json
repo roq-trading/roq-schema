@@ -1,0 +1,15 @@
+{
+  "name": "roq/TradeType",
+  "type": "enum",
+  "comment": "Enumeration of the type of trade",
+  "values": [
+    {
+      "name": "Regular",
+      "comment": "Regular trade"
+    },
+    {
+      "name": "Block",
+      "comment": "Block trade"
+    }
+  ]
+}

@@ -16,7 +16,6 @@
     <type name="ExecutionDestination" primitiveType="char" length="16"/>
     <type name="ExternalAccount" primitiveType="char" length="64"/>
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
-    <type name="ExternalOrderId" primitiveType="char" length="64"/>
     <type name="ExternalTradeId" primitiveType="char" length="40"/>
     <type name="Label" primitiveType="char" length="32"/>
     <type name="MBOOrderId" primitiveType="char" length="36"/>
@@ -301,6 +300,16 @@
       <validValue name="GoodForTime" description="GoodForTime">11</validValue>
       <validValue name="GFA" description="GFA">12</validValue>
       <validValue name="GFM" description="GFM">13</validValue>
+    </enum>
+    <set name="TradeCondition" encodingType="uint32">
+      <choice name="ImpliedMatching" description="ImpliedMatching">0</choice>
+      <choice name="ForcedLiquidation" description="ForcedLiquidation">1</choice>
+      <choice name="RetailPriceImprovement" description="RetailPriceImprovement">2</choice>
+    </set>
+    <enum name="TradeType" encodingType="uint8">
+      <validValue name="Undefined" description="Undefined">0</validValue>
+      <validValue name="Regular" description="Regular">1</validValue>
+      <validValue name="Block" description="Block">2</validValue>
     </enum>
     <enum name="TradingStatus" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>
@@ -897,13 +906,15 @@
     <field id="205" name="sendingTimeUtc" type="DateTime"/>
     <field id="206" name="pricePrecision" type="Precision"/>
     <field id="207" name="quantityPrecision" type="Precision"/>
-    <group id="300" name="trades" blockLength="186" dimensionType="groupSize">
-      <field id="301" name="side" type="Side"/>
-      <field id="302" name="price" type="double"/>
-      <field id="303" name="quantity" type="double"/>
-      <field id="304" name="tradeId" type="ExternalTradeId"/>
-      <field id="305" name="takerOrderId" type="ExternalOrderId"/>
-      <field id="306" name="makerOrderId" type="ExternalOrderId"/>
+    <group id="300" name="trades" blockLength="192" dimensionType="groupSize">
+      <field id="301" name="tradeConditions" type="TradeCondition"/>
+      <field id="302" name="tradeType" type="TradeType"/>
+      <field id="303" name="side" type="Side"/>
+      <field id="304" name="price" type="double"/>
+      <field id="305" name="quantity" type="double"/>
+      <field id="306" name="tradeId" type="ExternalTradeId"/>
+      <field id="307" name="takerOrderId" type="ExternalOrderId"/>
+      <field id="308" name="makerOrderId" type="ExternalOrderId"/>
     </group>
   </message>
   <message id="5180" name="StatisticsUpdate">
