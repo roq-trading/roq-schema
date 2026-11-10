@@ -27,7 +27,7 @@
     },
     {
       "name": "externalSecurityId",
-      "type": "std/int32",
+      "type": "std/int64",
       "comment": "Security ID"
     },
     {

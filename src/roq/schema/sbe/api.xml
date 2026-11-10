@@ -754,7 +754,7 @@
     <field id="202" name="symbol" type="Symbol"/>
     <field id="203" name="description" type="Description"/>
     <field id="204" name="securityType" type="SecurityType"/>
-    <field id="205" name="externalSecurityId" type="int32"/>
+    <field id="205" name="externalSecurityId" type="int64"/>
     <field id="206" name="marketSegment" type="MarketSegment"/>
     <field id="207" name="cfiCode" type="CFICode"/>
     <field id="208" name="baseCurrency" type="Currency"/>

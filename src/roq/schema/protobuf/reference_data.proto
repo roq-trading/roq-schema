@@ -4,7 +4,7 @@ message ReferenceData {
   string symbol = 3;
   optional string description = 4;
   optional SecurityType security_type = 5;
-  optional int32 external_security_id = 6;
+  optional int64 external_security_id = 6;
   optional string market_segment = 7;
   optional string cfi_code = 8;
   optional string base_currency = 9;
