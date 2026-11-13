@@ -9,7 +9,8 @@ message StreamStatus {
   ConnectionStatus connection_status = 8;
   optional string reason = 9;
   optional string interface = 10;
-  optional string authority = 11;
-  optional string path = 12;
-  optional string proxy = 13;
+  optional string proxy = 11;
+  optional string peer = 12;
+  optional string authority = 13;
+  optional string path = 14;
 }

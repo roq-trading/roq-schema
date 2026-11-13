@@ -686,9 +686,10 @@
     <field id="208" name="reason" type="Text"/>
     <!-- TODO include these ???
     <field id="209" name="interface" type="Text"/>
-    <field id="210" name="authority" type="Text"/>
-    <field id="211" name="path" type="Text"/>
-    <field id="212" name="proxy" type="Text"/>
+    <field id="210" name="proxy" type="Text"/>
+    <field id="211" name="peer" type="Text"/>
+    <field id="212" name="authority" type="Text"/>
+    <field id="213" name="path" type="Text"/>
     -->
   </message>
   <message id="4103" name="ExternalLatency">

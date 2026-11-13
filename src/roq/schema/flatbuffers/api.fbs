@@ -1045,6 +1045,7 @@ table StreamStatus {
   path:string;
   proxy:string;
   reason:string;
+  peer:string;
 }
 table Subscribe {
   exchange:string;

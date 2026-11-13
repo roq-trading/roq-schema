@@ -12,4 +12,5 @@ table StreamStatus {
   path:string;
   proxy:string;
   reason:string;
+  peer:string;
 }
