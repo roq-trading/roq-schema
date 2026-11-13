@@ -71,6 +71,11 @@
       "type": "std/string_view"
     },
     {
+      "name": "externalTraceId",
+      "type": "std/string_view",
+      "comment": "Request/response trace (from exchange or CDN)"
+    },
+    {
       "name": "externalAccount",
       "type": "std/string_view"
     },

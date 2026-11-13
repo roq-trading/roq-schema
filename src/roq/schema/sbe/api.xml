@@ -16,6 +16,7 @@
     <type name="ExecutionDestination" primitiveType="char" length="16"/>
     <type name="ExternalAccount" primitiveType="char" length="64"/>
     <type name="ExternalOrderId" primitiveType="char" length="64"/>
+    <type name="ExternalTraceId" primitiveType="char" length="40"/>
     <type name="ExternalTradeId" primitiveType="char" length="40"/>
     <type name="Label" primitiveType="char" length="32"/>
     <type name="MBOOrderId" primitiveType="char" length="36"/>
@@ -1056,21 +1057,22 @@
     <field id="212" name="error" type="Error"/>
     <field id="213" name="text" type="Text"/>
     <field id="214" name="requestId" type="RequestId"/>
-    <field id="215" name="externalAccount" type="ExternalAccount"/>
-    <field id="216" name="externalOrderId" type="ExternalOrderId"/>
-    <field id="217" name="clientOrderId" type="ClientOrderId"/>
-    <field id="218" name="quantity" type="double"/>
-    <field id="219" name="price" type="double"/>
-    <field id="220" name="stopPrice" type="double"/>
-    <field id="221" name="leverage" type="double"/>
-    <field id="222" name="routingId" type="RoutingId"/>
-    <field id="223" name="version" type="uint32"/>
-    <field id="224" name="riskExposure" type="double"/>
-    <field id="225" name="riskExposureChange" type="double"/>
-    <field id="226" name="tradedQuantity" type="double"/>
-    <field id="227" name="roundTripLatency" type="Time"/>
-    <field id="228" name="user" type="User"/>
-    <field id="229" name="strategyId" type="uint32"/>
+    <field id="215" name="externalTraceId" type="ExternalTraceId"/>
+    <field id="216" name="externalAccount" type="ExternalAccount"/>
+    <field id="217" name="externalOrderId" type="ExternalOrderId"/>
+    <field id="218" name="clientOrderId" type="ClientOrderId"/>
+    <field id="219" name="quantity" type="double"/>
+    <field id="220" name="price" type="double"/>
+    <field id="221" name="stopPrice" type="double"/>
+    <field id="222" name="leverage" type="double"/>
+    <field id="223" name="routingId" type="RoutingId"/>
+    <field id="224" name="version" type="uint32"/>
+    <field id="225" name="riskExposure" type="double"/>
+    <field id="226" name="riskExposureChange" type="double"/>
+    <field id="227" name="tradedQuantity" type="double"/>
+    <field id="228" name="roundTripLatency" type="Time"/>
+    <field id="229" name="user" type="User"/>
+    <field id="230" name="strategyId" type="uint32"/>
   </message>
   <message id="6102" name="OrderUpdate">
     <field id="100" name="sourceName" type="Source" semanticType="MessageInfo"/>

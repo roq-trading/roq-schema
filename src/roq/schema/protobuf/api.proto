@@ -827,21 +827,22 @@ message OrderAck {
   optional Error error = 13;
   optional string text = 14;
   string request_id = 15;
-  optional string external_account = 16;
-  optional string external_order_id = 17;
-  string client_order_id = 18;
-  optional double quantity = 19;
-  optional double price = 20;
-  optional double stop_price = 21;
-  optional double leverage = 22;
-  optional string routing_id = 23;
-  uint32 version = 24;
-  optional double risk_exposure = 25;
-  optional double risk_exposure_change = 26;
-  optional double traded_quantity = 27;
-  optional google.protobuf.Timestamp round_trip_latency = 28;
-  string user = 29;
-  optional uint32 strategy_id = 30;
+  optional string external_trace_id = 16;
+  optional string external_account = 17;
+  optional string external_order_id = 18;
+  string client_order_id = 19;
+  optional double quantity = 20;
+  optional double price = 21;
+  optional double stop_price = 22;
+  optional double leverage = 23;
+  optional string routing_id = 24;
+  uint32 version = 25;
+  optional double risk_exposure = 26;
+  optional double risk_exposure_change = 27;
+  optional double traded_quantity = 28;
+  optional google.protobuf.Timestamp round_trip_latency = 29;
+  string user = 30;
+  optional uint32 strategy_id = 31;
 }
 message OrderUpdate {
   uint32 stream_id = 1;  // uint16

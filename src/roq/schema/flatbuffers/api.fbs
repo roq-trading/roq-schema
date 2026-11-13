@@ -843,6 +843,7 @@ table OrderAck {
   margin_mode:MarginMode;
   quantity_type:QuantityType;
   leverage:double = nan;
+  external_trace_id:string;
 }
 table OrderUpdate {
   stream_id:uint16;
