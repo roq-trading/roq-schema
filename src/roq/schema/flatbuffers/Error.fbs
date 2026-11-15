@@ -40,4 +40,5 @@ enum Error:uint8 {
   InvalidQuantityType,
   InvalidReleaseTime,
   SettlementInProgress,
+  PostOnlyWouldMatch,
 }

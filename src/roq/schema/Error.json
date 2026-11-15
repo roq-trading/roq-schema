@@ -161,6 +161,10 @@
     {
       "name": "SettlementInProgress",
       "comment": "Platform locked (settlement in progress)"
+    },
+    {
+      "name": "PostOnlyWouldMatch",
+      "comment": "Post-only order would match"
     }
   ]
 }
