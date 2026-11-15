@@ -892,6 +892,7 @@ table OrderUpdate {
   exchange_sequence:uint64;
   leverage:double = nan;
   execution_destination:string;
+  external_trace_id:string;
 }
 table ParametersUpdate {
   parameters:[Parameter];

@@ -73,6 +73,11 @@
       "type": "std/nanoseconds"
     },
     {
+      "name": "externalTraceId",
+      "type": "std/string_view",
+      "comment": "Exchange or CDN trace"
+    },
+    {
       "name": "externalAccount",
       "type": "std/string_view"
     },
