@@ -41,4 +41,5 @@ enum Error:uint8 {
   InvalidReleaseTime,
   SettlementInProgress,
   PostOnlyWouldMatch,
+  ReduceOnlyWouldIncrease,
 }

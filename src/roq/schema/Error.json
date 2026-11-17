@@ -165,6 +165,10 @@
     {
       "name": "PostOnlyWouldMatch",
       "comment": "Post-only order would match"
+    },
+    {
+      "name": "ReduceOnlyWouldIncrease",
+      "comment": "Reduce-only order would increase"
     }
   ]
 }

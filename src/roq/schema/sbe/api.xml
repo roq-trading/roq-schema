@@ -141,6 +141,7 @@
       <validValue name="InvalidReleaseTime" description="InvalidReleaseTime">39</validValue>
       <validValue name="SettlementInProgress" description="SettlementInProgress">40</validValue>
       <validValue name="PostOnlyWouldMatch" description="PostOnlyWouldMatch">41</validValue>
+      <validValue name="ReduceOnlyWouldIncrease" description="ReduceOnlyWouldIncrease">42</validValue>
     </enum>
     <enum name="Liquidity" encodingType="uint8">
       <validValue name="Undefined" description="Undefined">0</validValue>

@@ -86,6 +86,7 @@ enum Error:uint8 {
   InvalidReleaseTime,
   SettlementInProgress,
   PostOnlyWouldMatch,
+  ReduceOnlyWouldIncrease,
 }
 enum ExecutionInstruction:uint8 {
   Undefined = 0,
