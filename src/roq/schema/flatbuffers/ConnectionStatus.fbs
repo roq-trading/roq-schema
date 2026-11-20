@@ -2,7 +2,7 @@ enum ConnectionStatus:uint8 {
   Undefined,
   Disconnected,
   Connecting,
-  LoginSent,
+  Authenticating,
   Downloading,
   Ready,
   LoggedOut

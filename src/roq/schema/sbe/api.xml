@@ -93,7 +93,7 @@
       <validValue name="Undefined" description="Undefined">0</validValue>
       <validValue name="Disconnected" description="Disconnected">1</validValue>
       <validValue name="Connecting" description="Connecting">2</validValue>
-      <validValue name="LoginSent" description="LoginSent">3</validValue>
+      <validValue name="Authenticating" description="Authenticating">3</validValue>
       <validValue name="Downloading" description="Downloading">4</validValue>
       <validValue name="Ready" description="Ready">5</validValue>
       <validValue name="LoggedOut" description="LoggedOut">6</validValue>

@@ -12,8 +12,8 @@
       "comment": "Connecting"
     },
     {
-      "name": "LoginSent",
-      "comment": "Login sent"
+      "name": "Authenticating",
+      "comment": "Authenticating"
     },
     {
       "name": "Downloading",
